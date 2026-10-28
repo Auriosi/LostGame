@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cuhpq2c2toh5n"]
+
+[ext_resource type="PackedScene" uid="uid://d0nnovlwvrq2x" path="res://player.tscn" id="1_wbfu4"]
+
+[node name="Game" type="Node2D" unique_id=803513325]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1440472577]
+color = Color(0, 0, 0, 1)
+
+[node name="Player" parent="." unique_id=825249305 instance=ExtResource("1_wbfu4")]
