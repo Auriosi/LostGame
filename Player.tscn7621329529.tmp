@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://d0nnovlwvrq2x"]
+
+[ext_resource type="Script" uid="uid://cx7p6xdk07jnc" path="res://player.gd" id="1_4flbx"]
+
+[sub_resource type="Gradient" id="Gradient_onrkg"]
+offsets = PackedFloat32Array(0, 0.18072289, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xkndl"]
+gradient = SubResource("Gradient_onrkg")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_i3pqv"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wb4oo"]
+gradient = SubResource("Gradient_i3pqv")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_sweqy"]
+interpolation_color_space = 1
+offsets = PackedFloat32Array(0, 0.53614455, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.36305904, 0.36305904, 0.36305904, 0.10843372, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u44n3"]
+gradient = SubResource("Gradient_sweqy")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_2hs0m"]
+offsets = PackedFloat32Array(0, 0.19879518, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.30722892, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_s1fef"]
+gradient = SubResource("Gradient_2hs0m")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_4flbx"]
+offsets = PackedFloat32Array(0, 0.14457831, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.72289157, 0.72289157, 0.72289157, 0.72289157, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4flbx"]
+gradient = SubResource("Gradient_4flbx")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_1jxqw"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1jxqw"]
+gradient = SubResource("Gradient_1jxqw")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_hqtel"]
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0.8)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bowr3"]
+gradient = SubResource("Gradient_hqtel")
+width = 1024
+height = 1024
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+
+[node name="Player" type="Node2D" unique_id=825249305]
+z_index = 1
+script = ExtResource("1_4flbx")
+
+[node name="Player Image" type="Sprite2D" parent="." unique_id=935549269]
+z_index = 1
+texture = SubResource("GradientTexture2D_xkndl")
+
+[node name="Player Light" type="PointLight2D" parent="Player Image" unique_id=536030114]
+z_index = 1
+texture = SubResource("GradientTexture2D_wb4oo")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1172262349]
+z_index = 1
+
+[node name="Flare Ring" type="Node2D" parent="." unique_id=1010446183]
+z_index = 1
+
+[node name="Flare Charge 1" type="Node2D" parent="Flare Ring" unique_id=1520632793]
+z_index = 1
+position = Vector2(0, -75)
+
+[node name="Charge Image" type="Sprite2D" parent="Flare Ring/Flare Charge 1" unique_id=335182790]
+z_index = 1
+rotation = 0.7853982
+texture = SubResource("GradientTexture2D_u44n3")
+
+[node name="PointLight2D" type="PointLight2D" parent="Flare Ring/Flare Charge 1" unique_id=83699161]
+z_index = 1
+texture = SubResource("GradientTexture2D_s1fef")
+
+[node name="Flare Charge 2" type="Node2D" parent="Flare Ring" unique_id=2124020871]
+z_index = 1
+position = Vector2(-65, 37.5)
+rotation = -0.58119464
+
+[node name="Charge Image" type="Sprite2D" parent="Flare Ring/Flare Charge 2" unique_id=206910628]
+z_index = 1
+rotation = 0.7853982
+texture = SubResource("GradientTexture2D_u44n3")
+
+[node name="PointLight2D" type="PointLight2D" parent="Flare Ring/Flare Charge 2" unique_id=962853894]
+z_index = 1
+texture = SubResource("GradientTexture2D_s1fef")
+
+[node name="Flare Charge 3" type="Node2D" parent="Flare Ring" unique_id=809559462]
+z_index = 1
+position = Vector2(65, 37.5)
+rotation = 0.58119464
+
+[node name="Charge Image" type="Sprite2D" parent="Flare Ring/Flare Charge 3" unique_id=1673811012]
+z_index = 1
+rotation = 0.7853982
+texture = SubResource("GradientTexture2D_u44n3")
+
+[node name="PointLight2D" type="PointLight2D" parent="Flare Ring/Flare Charge 3" unique_id=336988212]
+z_index = 1
+texture = SubResource("GradientTexture2D_s1fef")
+
+[node name="Mouse Light" type="Node2D" parent="." unique_id=1659381829]
+z_index = 1
+
+[node name="Light Image" type="Sprite2D" parent="Mouse Light" unique_id=1585806228]
+z_index = 1
+texture = SubResource("GradientTexture2D_4flbx")
+
+[node name="Player Light" type="PointLight2D" parent="Mouse Light/Light Image" unique_id=1526691493]
+z_index = 1
+texture = SubResource("GradientTexture2D_1jxqw")
+
+[node name="Fog" type="Node2D" parent="." unique_id=1800945353]
+z_index = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Fog" unique_id=969185726]
+z_index = 1
+scale = Vector2(5, 5)
+texture = SubResource("GradientTexture2D_bowr3")

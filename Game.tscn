@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cuhpq2c2toh5n"]
 
-[ext_resource type="PackedScene" uid="uid://d0nnovlwvrq2x" path="res://player.tscn" id="1_wbfu4"]
+[ext_resource type="PackedScene" uid="uid://d0nnovlwvrq2x" path="res://Player.tscn" id="1_wbfu4"]
+[ext_resource type="PackedScene" uid="uid://cbv62wg4caqjc" path="res://Aspect.tscn" id="2_xkndl"]
 
 [node name="Game" type="Node2D" unique_id=803513325]
 
@@ -8,3 +9,12 @@
 color = Color(0, 0, 0, 1)
 
 [node name="Player" parent="." unique_id=825249305 instance=ExtResource("1_wbfu4")]
+
+[node name="Aspect" parent="." unique_id=891206100 instance=ExtResource("2_xkndl")]
+position = Vector2(-699, -528)
+
+[node name="Aspect2" parent="." unique_id=1473109528 instance=ExtResource("2_xkndl")]
+position = Vector2(-749, -196)
+
+[node name="Aspect3" parent="." unique_id=1102357904 instance=ExtResource("2_xkndl")]
+position = Vector2(423, -348)

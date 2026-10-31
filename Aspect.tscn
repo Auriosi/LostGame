@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cbv62wg4caqjc"]
+
+[ext_resource type="Script" uid="uid://df4y527r1dcu4" path="res://aspect.gd" id="1_buvuw"]
+
+[sub_resource type="Gradient" id="Gradient_wbfu4"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qsuaf"]
+gradient = SubResource("Gradient_wbfu4")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="Gradient" id="Gradient_xkndl"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wb4oo"]
+gradient = SubResource("Gradient_xkndl")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="Gradient" id="Gradient_dw3l3"]
+offsets = PackedFloat32Array(0, 0.50555557, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.48200002, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_s1fef"]
+gradient = SubResource("Gradient_dw3l3")
+width = 128
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_buvuw"]
+
+[node name="Aspect" type="Node2D" unique_id=891206100]
+script = ExtResource("1_buvuw")
+
+[node name="Light" type="Sprite2D" parent="." unique_id=124056658]
+texture = SubResource("GradientTexture2D_qsuaf")
+
+[node name="PointLight2D" type="PointLight2D" parent="Light" unique_id=871393954]
+position = Vector2(0, 4)
+texture = SubResource("GradientTexture2D_wb4oo")
+
+[node name="Horizontal Light" type="Sprite2D" parent="." unique_id=1481030507]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("GradientTexture1D_s1fef")
+
+[node name="Vertical Light" type="Sprite2D" parent="." unique_id=1825477331]
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+texture = SubResource("GradientTexture1D_s1fef")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=449040268]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2083570053]
+position = Vector2(0, 1.245)
+shape = SubResource("CircleShape2D_buvuw")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
