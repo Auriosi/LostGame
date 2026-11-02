@@ -43,6 +43,13 @@ var Summon_Time = 0
 
 var Lose_State = false
 
+var Tutorial = false
+var Tutorial_Fade = 0
+
+var Tab_Active = true
+
+var Tab_Fade = 1
+
 @onready var Camera = $Camera2D
 
 @onready var Flare_1 = $"Flare Ring/Flare Charge 1"
@@ -64,6 +71,9 @@ var Lose_State = false
 @onready var Flare_Ring = $"Flare Ring"
 @onready var Flare_Light = $"Mouse Light"
 
+@onready var UI = $"CanvasLayer/Player UI"
+@onready var Tab = $"CanvasLayer/Tab notifier"
+
 const FLARE = preload("res://flare.tscn")
 
 func _process(delta):
@@ -74,6 +84,7 @@ func _process(delta):
 	_player_zoom(delta)
 	_Conceal(delta)
 	_Flare_Light(delta)
+	_Tutorial(delta)
 	if Lose_State == true:
 		get_tree().change_scene_to_file("res://Lose Game.tscn")
 # Deals with the player's movement and acceleration
@@ -336,3 +347,26 @@ func _Spawn_Flare():
 	var flare = FLARE.instantiate()
 	flare.global_position = get_global_mouse_position()
 	get_tree().current_scene.add_child(flare)
+
+func _Tutorial(delta):
+	UI.modulate = Color(1,1,1,Tutorial_Fade)
+	Tab.modulate = Color(1,1,1,Tab_Fade)
+	if Input.is_action_just_pressed("Tutorial"):
+		Tutorial = true
+	if Input.is_action_just_released("Tutorial"):
+		Tutorial = false
+		Tab_Active = false
+	if Tutorial == true:
+		if Tutorial_Fade < 1:
+			Tutorial_Fade += 5 * delta
+		else:
+			Tutorial_Fade = 1
+	else:
+		if Tutorial_Fade > 0:
+			Tutorial_Fade -= 5 * delta
+		else:
+			Tutorial_Fade = 0
+	if Tab_Active == false:
+		if Tab_Fade > 0:
+			Tab_Fade -= 1 * delta
+			

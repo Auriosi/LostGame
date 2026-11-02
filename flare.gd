@@ -16,6 +16,8 @@ var target_light_amount = 1.5
 
 
 func _process(delta):
+	print(float(light * timer) / timer_max)
+	print(target_light_amount)
 	Flare_Image.modulate = Color(1,1,1,float(light * timer) / timer_max)
 	Hori_Image.modulate = Color(1,1,1,float(light * timer) / timer_max)
 	Vert_Image.modulate = Color(1,1,1,float(light * timer) / timer_max)
@@ -34,5 +36,6 @@ func _process(delta):
 		light += (target_light_amount - light) * delta * 1
 	if light > target_light_amount:
 		light += (target_light_amount - light) * delta
-		
+	if float(light * timer) / timer_max < 0:
+		queue_free()
 	
