@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://rqmtydsobabi"]
+
+[ext_resource type="Script" uid="uid://cwhjuankhlnj7" path="res://lose_game.gd" id="1_3jjs2"]
+
+[sub_resource type="Gradient" id="Gradient_xhfnw"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qsuaf"]
+gradient = SubResource("Gradient_xhfnw")
+
+[node name="Label" type="Label" unique_id=99612200]
+modulate = Color(1, 1, 1, 0)
+light_mask = 16
+visibility_layer = 16
+z_index = 10
+texture_filter = 1
+offset_left = -100.0
+offset_top = -12.0
+offset_right = 100.0
+offset_bottom = 13.0
+scale = Vector2(4, 4)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "The Darkness took you..."
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_3jjs2")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=868002219]
+light_mask = 16
+visibility_layer = 16
+position = Vector2(99.875, 12.25)
+scale = Vector2(4.4960938, 2.5273438)
+range_item_cull_mask = 16
+texture = SubResource("GradientTexture2D_qsuaf")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=269146090]
+position = Vector2(100, 12.4)
+
+[node name="Button" type="Button" parent="." unique_id=1853649191]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 30.0
+offset_right = 150.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0.060530208, 0.06053043, 0.060530253, 1)
+theme_override_colors/font_outline_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+theme_override_constants/outline_size = 3
+text = "Close Game"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

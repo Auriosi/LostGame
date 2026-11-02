@@ -120,11 +120,9 @@ color = Color(1, 1, 1, 0)
 texture = SubResource("GradientTexture2D_s1fef")
 
 [node name="Flare Charge 2" type="Node2D" parent="Flare Ring" unique_id=2124020871]
-visible = false
 modulate = Color(1, 1, 1, 0)
 z_index = 1
 position = Vector2(0, 75)
-rotation = -0.58119464
 
 [node name="Charge Image" type="Sprite2D" parent="Flare Ring/Flare Charge 2" unique_id=206910628]
 z_index = 1

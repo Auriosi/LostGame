@@ -10,7 +10,7 @@ var vertical_acceleration_target = 0
 
 var mouse = Vector2(0,0)
 
-var flares = 0
+var flares = 3
 
 var flare_1_position_target = 0
 var flare_2_position_target = 0
@@ -27,13 +27,21 @@ var flare_3_fade_in = 0
 var light = 1
 
 var target_Zoom = Vector2(1,1)
+var stealth_Zoom = Vector2(1,1)
 var current_Zoom = Vector2(1,1)
+var Zoom_Speed = 4
+var stealth_Zoom_Tension = 0.1
+
+var Darkness = 0
 
 var Conceal = false
-
 var Concealment = 1
-
 var Concealment_Slowdown = 0.25
+
+var Summon = false
+var Summon_Time = 0
+
+var Lose_State = false
 
 @onready var Camera = $Camera2D
 
@@ -53,6 +61,8 @@ var Concealment_Slowdown = 0.25
 @onready var Mouse_Area_2D = $"Mouse Light/Mouse Area 2D"
 @onready var Interaction_Area_2D = $"Interaction Area 2D"
 
+const FLARE = preload("res://flare.tscn")
+
 func _process(delta):
 	_player_movement(delta)
 	_player_camera()
@@ -60,6 +70,9 @@ func _process(delta):
 	_player_mouse()
 	_player_zoom(delta)
 	_Conceal(delta)
+	_Flare_Light(delta)
+	if Lose_State == true:
+		get_tree().change_scene_to_file("res://Lose Game.tscn")
 # Deals with the player's movement and acceleration
 func _player_movement(delta):
 	# To Determine the speed the player is going.
@@ -151,16 +164,29 @@ func _player_charges(delta):
 		Flare_2.visible = false
 		Flare_3.visible = false
 		if Conceal == false:
-			flare_1_active = true
+			if Summon_Time >= 1:
+				flare_1_active = false
+				Summon_Time = 0
+			elif Summon == false:
+				flare_1_active = true
+		else:
+			flare_1_active = false
 	if flares == 2:
 		flare_2_position_target = Vector2(0, 75)
-		Flare_2.position = flare_2_position_target
+		if Flare_2.position != flare_2_position_target:
+			Flare_2.position -= ( (Flare_2.position - flare_2_position_target) ) * delta
 		Flare_1.visible = true
 		Flare_2.visible = true
 		Flare_3.visible = false
 		if Conceal == false:
 			flare_1_active = true
-			flare_2_active = true
+			if Summon_Time >= 1:
+				flare_2_active = false
+				Summon_Time = 0
+			elif Summon == false:
+				flare_2_active = true
+		else:
+			flare_2_active = false
 	if flares == 3:
 		flare_2_position_target = Vector2(-65, 37.5)
 		flare_3_position_target = Vector2(65, 37.5)
@@ -172,7 +198,11 @@ func _player_charges(delta):
 		if Conceal == false:
 			flare_1_active = true
 			flare_2_active = true
-			flare_3_active = true
+			if Summon_Time >= 1:
+				flare_3_active = false
+				Summon_Time = 0
+			elif Summon == false:
+				flare_3_active = true
 	if flare_1_active == true:
 		if flare_1_fade_in < 1:
 			Flare_1.modulate = Color(1,1,1,flare_1_fade_in)
@@ -183,6 +213,10 @@ func _player_charges(delta):
 			Flare_1.modulate = Color(1,1,1,flare_1_fade_in)
 			Flare_1_Light.color = Color(1,1,1,flare_1_fade_in)
 			flare_1_fade_in -= 5 * delta
+			if Summon == true && flare_1_fade_in <= 0:
+				Summon = false
+				flares -= 1
+				_Spawn_Flare()
 	if flare_2_active == true:
 		if flare_2_fade_in < 1:
 			Flare_2.modulate = Color(1,1,1,flare_2_fade_in)
@@ -193,6 +227,10 @@ func _player_charges(delta):
 			Flare_2.modulate = Color(1,1,1,flare_2_fade_in)
 			Flare_2_Light.color = Color(1,1,1,flare_2_fade_in)
 			flare_2_fade_in -= 5 * delta
+			if Summon == true && flare_2_fade_in <= 0:
+				Summon = false
+				flares -= 1
+				_Spawn_Flare()
 	if flare_3_active == true:
 		if flare_3_fade_in < 1:
 			Flare_3.modulate = Color(1,1,1,flare_3_fade_in)
@@ -203,6 +241,10 @@ func _player_charges(delta):
 			Flare_3.modulate = Color(1,1,1,flare_3_fade_in)
 			Flare_3_Light.color = Color(1,1,1,flare_3_fade_in)
 			flare_3_fade_in -= 5 * delta
+			if Summon == true && flare_3_fade_in <= 0:
+				Summon = false
+				flares -= 1
+				_Spawn_Flare()
 # Deals with the player's mouse light
 func _player_mouse(): 
 	light = 500 / (abs(mouse.x - position.x) + abs(mouse.y - position.y) )
@@ -213,24 +255,41 @@ func _player_mouse():
 	Mouse.position = get_global_mouse_position() - position
 # Deals with the player's zoom mechanic
 func _player_zoom(delta):
-	if Input.is_action_just_pressed("Zoom Out"):
+	if Input.is_action_just_pressed("Zoom Out") && Conceal == false:
 		if target_Zoom.x > 0.25:
-			target_Zoom += Vector2(-0.25,-0.25)
-	if Input.is_action_just_pressed("Zoom In"):
+			target_Zoom += Vector2(-16,-16) * delta
+	if Input.is_action_just_pressed("Zoom In") && Conceal == false:
 		if target_Zoom.x < 1:
-			target_Zoom += Vector2(0.25,0.25)
-	if current_Zoom > target_Zoom:
-		current_Zoom += (target_Zoom - current_Zoom) * delta * 4
-	elif current_Zoom < target_Zoom:
-		current_Zoom += (target_Zoom - current_Zoom) * delta * 4
-	Camera.zoom = current_Zoom
+			target_Zoom += Vector2(16,16) * delta
+	#if Conceal == true:
+		#if stealth_Zoom.x < 1:
+			#stealth_Zoom += Vector2(16,16) * delta
+	if Conceal == true:
+		stealth_Zoom += Vector2(stealth_Zoom_Tension,stealth_Zoom_Tension) * delta
+		stealth_Zoom_Tension -= 0.001 * delta
+		if current_Zoom > stealth_Zoom:
+			current_Zoom += (stealth_Zoom - current_Zoom) * delta * Zoom_Speed
+		elif current_Zoom < stealth_Zoom:
+			current_Zoom += (stealth_Zoom - current_Zoom) * delta * Zoom_Speed
+		Camera.zoom = current_Zoom
+	else:
+		stealth_Zoom = Vector2(1,1)
+		if current_Zoom > target_Zoom:
+			current_Zoom += (target_Zoom - current_Zoom) * delta * Zoom_Speed
+		elif current_Zoom < target_Zoom:
+			current_Zoom += (target_Zoom - current_Zoom) * delta * Zoom_Speed
+		Camera.zoom = current_Zoom
 # Deals with the player's conceal mechanic
 func _Conceal(delta):
+	if Darkness > 30:
+		Lose_State = true
 	if Input.is_action_just_pressed("Conceal"):
 		Conceal = true
 	if Input.is_action_just_released("Conceal"):
 		Conceal = false
+		Darkness = 0
 	if Conceal == true:
+		Darkness += 1 * delta
 		if Concealment_Slowdown > 0.125:
 			Concealment_Slowdown -= 1 * delta
 		else:
@@ -255,3 +314,18 @@ func _Conceal(delta):
 			Mouse_Light_Image.modulate = Color(1,1,1,Concealment)
 			Mouse_Light.color = Color(1,1,1,Concealment) 
 			Player_Light.color = Color(1,1,1,Concealment + 0.05)
+# Deals with summoning a flare
+func _Flare_Light(delta):
+	if Input.is_action_just_pressed("Summon"):
+		Summon = true
+	if Input.is_action_just_released("Summon"):
+		Summon = false
+		Summon_Time = 0
+	if Input.is_action_pressed("Summon"):
+		if Summon == true:
+			Summon_Time += 1 * delta
+# Spawns the flare entity in the current scene
+func _Spawn_Flare():
+	var flare = FLARE.instantiate()
+	flare.global_position = get_global_mouse_position()
+	get_tree().current_scene.add_child(flare)
