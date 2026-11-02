@@ -12,8 +12,9 @@ var Player_In_Range = false
 
 var falloff = 3
 
-
 var flare_given = false
+
+var Activate = false
 
 func _ready():
 	Light.color = Color(1,1,1,randf_range(0.25, 1))
@@ -22,7 +23,9 @@ func _ready():
 	Vert_Light.modulate = Color(1,1,1,randf_range(0.25, 1))
 
 func _process(delta):
-	if Player_In_Range == true:
+	if Player_In_Range == true && Player.flares < 3:
+		Activate = true
+	if Activate == true:
 		if Light.energy > 0:
 			Light.energy += falloff * delta
 			falloff -= 10 * delta

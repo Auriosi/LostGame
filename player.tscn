@@ -86,6 +86,13 @@ fill_to = Vector2(0.5, 1)
 [sub_resource type="CircleShape2D" id="CircleShape2D_khhxn"]
 radius = 214.23819
 
+[sub_resource type="Gradient" id="Gradient_dw050"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 0, 0, 0.5)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_khhxn"]
+gradient = SubResource("Gradient_dw050")
+
 [node name="Player" type="Node2D" unique_id=825249305]
 z_index = 1
 script = ExtResource("1_4flbx")
@@ -120,11 +127,9 @@ color = Color(1, 1, 1, 0)
 texture = SubResource("GradientTexture2D_s1fef")
 
 [node name="Flare Charge 2" type="Node2D" parent="Flare Ring" unique_id=2124020871]
-visible = false
 modulate = Color(1, 1, 1, 0)
 z_index = 1
 position = Vector2(0, 75)
-rotation = -0.58119464
 
 [node name="Charge Image" type="Sprite2D" parent="Flare Ring/Flare Charge 2" unique_id=206910628]
 z_index = 1
@@ -183,3 +188,52 @@ texture = SubResource("GradientTexture2D_bowr3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Area 2D" unique_id=1875942621]
 shape = SubResource("CircleShape2D_khhxn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1586715561]
+
+[node name="Player UI" type="Node2D" parent="CanvasLayer" unique_id=1817028825]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Player UI" unique_id=1451321204]
+position = Vector2(586, 323.5)
+scale = Vector2(19.3125, 11.109375)
+texture = SubResource("GradientTexture2D_khhxn")
+
+[node name="Conceal" type="Label" parent="CanvasLayer/Player UI" unique_id=2063957607]
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 275.0
+offset_bottom = 50.0
+scale = Vector2(2, 2)
+text = "Hold Space to conceal your light"
+
+[node name="Flare" type="Label" parent="CanvasLayer/Player UI" unique_id=951767833]
+offset_left = 25.0
+offset_top = 150.0
+offset_right = 495.0
+offset_bottom = 175.0
+scale = Vector2(2, 2)
+text = "Hold Left Click to light a flare on the direction of  your mouse"
+
+[node name="Conceal Advice" type="Label" parent="CanvasLayer/Player UI" unique_id=1558683795]
+offset_left = 25.0
+offset_top = 275.0
+offset_right = 317.0
+offset_bottom = 300.0
+scale = Vector2(2, 2)
+text = "Do not conceal your light for too long,"
+
+[node name="Conceal Advice 2" type="Label" parent="CanvasLayer/Player UI" unique_id=1906532410]
+offset_left = 25.0
+offset_top = 400.0
+offset_right = 317.0
+offset_bottom = 425.0
+scale = Vector2(2, 2)
+text = "The Darkness is unrelenting"
+
+[node name="Tab notifier" type="Label" parent="CanvasLayer" unique_id=1576404363]
+offset_left = 15.0
+offset_top = 585.0
+offset_right = 181.0
+offset_bottom = 608.0
+scale = Vector2(2, 2)
+text = "Press Tab for Tutorial"

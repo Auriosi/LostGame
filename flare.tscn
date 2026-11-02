@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dseyopopsaxia"]
+
+[ext_resource type="Script" uid="uid://coirbifwbjfc" path="res://flare.gd" id="1_7sllj"]
+
+[sub_resource type="Gradient" id="Gradient_1cc6u"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_s1fef"]
+gradient = SubResource("Gradient_1cc6u")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="Gradient_7sllj"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.30100003, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_s1fef"]
+gradient = SubResource("Gradient_7sllj")
+width = 1024
+
+[sub_resource type="Gradient" id="Gradient_3ilud"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_khhxn"]
+gradient = SubResource("Gradient_3ilud")
+width = 1024
+height = 1024
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="Flare" type="Node2D" unique_id=1477580966]
+script = ExtResource("1_7sllj")
+
+[node name="Flare Image" type="Sprite2D" parent="." unique_id=1880771364]
+modulate = Color(1, 1, 1, 0)
+texture = SubResource("GradientTexture2D_s1fef")
+
+[node name="Hori Image" type="Sprite2D" parent="." unique_id=44481287]
+texture = SubResource("GradientTexture1D_s1fef")
+
+[node name="Vert Image" type="Sprite2D" parent="." unique_id=927748877]
+rotation = 1.5707964
+texture = SubResource("GradientTexture1D_s1fef")
+
+[node name="Flare Light" type="PointLight2D" parent="." unique_id=1103502266]
+texture = SubResource("GradientTexture2D_khhxn")
