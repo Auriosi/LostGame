@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://d12pqce22lfoa"]
+
+[ext_resource type="Script" uid="uid://dbsrwfu3oujl1" path="res://hate.gd" id="1_opcgs"]
+
+[sub_resource type="Gradient" id="Gradient_wbfu4"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ojsri"]
+gradient = SubResource("Gradient_wbfu4")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="Gradient" id="Gradient_xkndl"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gtmlx"]
+gradient = SubResource("Gradient_xkndl")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_opcgs"]
+radius = 90.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ojsri"]
+radius = 20.0
+
+[node name="Hate" type="Node2D" unique_id=1094046924]
+script = ExtResource("1_opcgs")
+
+[node name="Light" type="Sprite2D" parent="." unique_id=324704464]
+texture = SubResource("GradientTexture2D_ojsri")
+
+[node name="PointLight2D" type="PointLight2D" parent="Light" unique_id=651356442]
+position = Vector2(0, 4)
+color = Color(1, 0.627451, 0.57254905, 1)
+texture = SubResource("GradientTexture2D_gtmlx")
+
+[node name="HuntArea2D" type="Area2D" parent="." unique_id=2017537920]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HuntArea2D" unique_id=1369465337]
+position = Vector2(0, 1.245)
+shape = SubResource("CircleShape2D_opcgs")
+
+[node name="DecoyArea2D" type="Area2D" parent="." unique_id=1811089315]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DecoyArea2D" unique_id=796399074]
+position = Vector2(0, 1.245)
+shape = SubResource("CircleShape2D_ojsri")

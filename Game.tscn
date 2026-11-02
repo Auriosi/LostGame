@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cuhpq2c2toh5n"]
 
-[ext_resource type="PackedScene" uid="uid://d0nnovlwvrq2x" path="res://Player.tscn" id="1_wbfu4"]
+[ext_resource type="PackedScene" uid="uid://d0nnovlwvrq2x" path="res://player.tscn" id="1_wbfu4"]
 [ext_resource type="PackedScene" uid="uid://cbv62wg4caqjc" path="res://Aspect.tscn" id="2_xkndl"]
+[ext_resource type="PackedScene" uid="uid://d12pqce22lfoa" path="res://hate.tscn" id="3_u44n3"]
 
 [node name="Game" type="Node2D" unique_id=803513325]
 
@@ -16,5 +17,5 @@ position = Vector2(-699, -528)
 [node name="Aspect2" parent="." unique_id=1473109528 instance=ExtResource("2_xkndl")]
 position = Vector2(-749, -196)
 
-[node name="Aspect3" parent="." unique_id=1102357904 instance=ExtResource("2_xkndl")]
-position = Vector2(423, -348)
+[node name="Hate" parent="." unique_id=1094046924 instance=ExtResource("3_u44n3")]
+position = Vector2(1256, -545)
