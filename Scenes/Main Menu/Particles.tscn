@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dy42iw2yjljxk"]
-
-[ext_resource type="Script" uid="uid://bb28bvb38m5f2" path="res://Scripts/Main Menu/particles.gd" id="1_5ehqd"]
-
-[node name="Particles" type="Node2D"]
-script = ExtResource("1_5ehqd")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(3, 3)
