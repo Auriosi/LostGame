@@ -1,0 +1,1311 @@
+[gd_scene format=3 uid="uid://fs8fb4gaqr5s"]
+
+[ext_resource type="AudioStream" uid="uid://dwo3pmvojqaon" path="res://Sounds/Story Sounds/Plant Sentience/Static Sound Effect 1.mp3" id="1_7armq"]
+[ext_resource type="Script" uid="uid://fnsyyhqi6gfl" path="res://audio_visualizer.gd" id="1_tlg4i"]
+[ext_resource type="AudioStream" uid="uid://d1jr3078gcryd" path="res://Sounds/Story Sounds/Plant Sentience/Static Sound Effect 2.mp3" id="3_byssn"]
+[ext_resource type="AudioStream" uid="uid://cc1hdu248n5tu" path="res://Sounds/Story Sounds/Plant Sentience/Static Sound Effect 3.mp3" id="4_vnltd"]
+[ext_resource type="AudioStream" uid="uid://cmo3akcu3i8yv" path="res://Sounds/Story Sounds/Plant Sentience/Static Sound Effect 4.mp3" id="5_b67bp"]
+[ext_resource type="AudioStream" uid="uid://csxfyeihfqkgu" path="res://Sounds/Story Sounds/Plant Sentience/Static Sound Effect 5.mp3" id="6_oyx6c"]
+
+[sub_resource type="Gradient" id="Gradient_tlg4i"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.056291588, 0.056291603, 0.056291573, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0f3ej"]
+gradient = SubResource("Gradient_tlg4i")
+
+[node name="AudioVisualizer" type="Control" unique_id=1263990448]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -990.0
+offset_top = -510.0
+offset_right = -990.0
+offset_bottom = -510.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tlg4i")
+
+[node name="Static1" type="AudioStreamPlayer" parent="." unique_id=1006849022]
+stream = ExtResource("1_7armq")
+bus = &"Visualizer Test"
+
+[node name="Static2" type="AudioStreamPlayer" parent="." unique_id=894535200]
+stream = ExtResource("3_byssn")
+bus = &"Visualizer Test"
+
+[node name="Static3" type="AudioStreamPlayer" parent="." unique_id=1673869442]
+stream = ExtResource("4_vnltd")
+bus = &"Visualizer Test"
+
+[node name="Static4" type="AudioStreamPlayer" parent="." unique_id=794631004]
+stream = ExtResource("5_b67bp")
+bus = &"Visualizer Test"
+
+[node name="Static5" type="AudioStreamPlayer" parent="." unique_id=881234485]
+stream = ExtResource("6_oyx6c")
+bus = &"Visualizer Test"
+
+[node name="CircleBase" type="TextureRect" parent="." unique_id=1545740551]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -249.0
+offset_top = -73.0
+offset_right = 251.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.18, 2.18)
+pivot_offset = Vector2(250, 75)
+texture = SubResource("GradientTexture2D_0f3ej")
+expand_mode = 1
+
+[node name="Right" type="Control" parent="CircleBase" unique_id=1098650164]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bottom" type="Control" parent="CircleBase/Right" unique_id=1746761809]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1866964213]
+layout_mode = 0
+offset_left = -205.68808
+offset_top = 19.082567
+offset_right = -203.68808
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect2" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=664953958]
+layout_mode = 0
+offset_left = -199.72478
+offset_top = 19.082567
+offset_right = -197.72478
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect3" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=339516618]
+layout_mode = 0
+offset_left = -193.76147
+offset_top = 19.082567
+offset_right = -191.76147
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect4" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1536625446]
+layout_mode = 0
+offset_left = -187.79817
+offset_top = 19.082567
+offset_right = -185.79817
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect5" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1992929927]
+layout_mode = 0
+offset_left = -181.83487
+offset_top = 19.082567
+offset_right = -179.83487
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect6" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1868591831]
+layout_mode = 0
+offset_left = -175.87157
+offset_top = 19.082567
+offset_right = -173.87157
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect7" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=400333883]
+layout_mode = 0
+offset_left = -169.90826
+offset_top = 19.082567
+offset_right = -167.90826
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect8" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=163018120]
+layout_mode = 0
+offset_left = -163.94496
+offset_top = 19.082567
+offset_right = -161.94496
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect9" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1415310084]
+layout_mode = 0
+offset_left = -157.98167
+offset_top = 19.082567
+offset_right = -155.98167
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect10" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=241686304]
+layout_mode = 0
+offset_left = -152.01837
+offset_top = 19.082567
+offset_right = -150.01837
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect11" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=961257932]
+layout_mode = 0
+offset_left = -146.05507
+offset_top = 19.082567
+offset_right = -144.05507
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect12" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=81106235]
+layout_mode = 0
+offset_left = -140.09177
+offset_top = 19.082567
+offset_right = -138.09177
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect13" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1157180158]
+layout_mode = 0
+offset_left = -134.12846
+offset_top = 19.082567
+offset_right = -132.12846
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect14" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=2127514943]
+layout_mode = 0
+offset_left = -128.16515
+offset_top = 19.082567
+offset_right = -126.165146
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect15" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=837240278]
+layout_mode = 0
+offset_left = -122.20185
+offset_top = 19.082567
+offset_right = -120.20185
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect16" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1563544144]
+layout_mode = 0
+offset_left = -116.23855
+offset_top = 19.082567
+offset_right = -114.23855
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect17" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=45813281]
+layout_mode = 0
+offset_left = -110.27524
+offset_top = 19.082567
+offset_right = -108.27524
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect18" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=916474736]
+layout_mode = 0
+offset_left = -104.311935
+offset_top = 19.082567
+offset_right = -102.311935
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect19" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1212567896]
+layout_mode = 0
+offset_left = -98.34863
+offset_top = 19.082567
+offset_right = -96.34863
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect20" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=302816625]
+layout_mode = 0
+offset_left = -92.38533
+offset_top = 19.082567
+offset_right = -90.38533
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect21" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1222709601]
+layout_mode = 0
+offset_left = -86.42203
+offset_top = 19.082567
+offset_right = -84.42203
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect22" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1509600712]
+layout_mode = 0
+offset_left = -80.458725
+offset_top = 19.082567
+offset_right = -78.458725
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect23" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=507200787]
+layout_mode = 0
+offset_left = -74.49542
+offset_top = 19.082567
+offset_right = -72.49542
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect24" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=374781593]
+layout_mode = 0
+offset_left = -68.53212
+offset_top = 19.082567
+offset_right = -66.53212
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect25" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1425910497]
+layout_mode = 0
+offset_left = -62.56883
+offset_top = 19.082567
+offset_right = -60.56883
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect26" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=2035099352]
+layout_mode = 0
+offset_left = -56.605526
+offset_top = 19.082567
+offset_right = -54.605526
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect27" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1455940733]
+layout_mode = 0
+offset_left = -50.642223
+offset_top = 19.082567
+offset_right = -48.642223
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect28" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1293537856]
+layout_mode = 0
+offset_left = -44.67892
+offset_top = 19.082567
+offset_right = -42.67892
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect29" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1981129845]
+layout_mode = 0
+offset_left = -38.71562
+offset_top = 19.082567
+offset_right = -36.71562
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect30" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1655752220]
+layout_mode = 0
+offset_left = -32.752308
+offset_top = 19.082567
+offset_right = -30.752308
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect31" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=435425269]
+layout_mode = 0
+offset_left = -26.789005
+offset_top = 19.082567
+offset_right = -24.789005
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect32" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=671551233]
+layout_mode = 0
+offset_left = -20.825703
+offset_top = 19.082567
+offset_right = -18.825703
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect33" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1793252826]
+layout_mode = 0
+offset_left = -14.862392
+offset_top = 19.082567
+offset_right = -12.862392
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect34" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1533551877]
+layout_mode = 0
+offset_left = -8.89909
+offset_top = 19.082567
+offset_right = -6.89909
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect35" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1957746411]
+layout_mode = 0
+offset_left = -2.9357874
+offset_top = 19.082567
+offset_right = -0.93578744
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect36" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=551434524]
+layout_mode = 0
+offset_left = 3.0275228
+offset_top = 19.082567
+offset_right = 5.027523
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect37" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1719061752]
+layout_mode = 0
+offset_left = 8.990826
+offset_top = 19.082567
+offset_right = 10.990826
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect38" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1034879776]
+layout_mode = 0
+offset_left = 14.954128
+offset_top = 19.082567
+offset_right = 16.954128
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect39" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1953915920]
+layout_mode = 0
+offset_left = 20.91742
+offset_top = 19.082567
+offset_right = 22.91742
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect40" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1593588984]
+layout_mode = 0
+offset_left = 26.880722
+offset_top = 19.082567
+offset_right = 28.880722
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect41" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1503020721]
+layout_mode = 0
+offset_left = 32.844025
+offset_top = 19.082567
+offset_right = 34.844025
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect42" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1665298292]
+layout_mode = 0
+offset_left = 38.807327
+offset_top = 19.082567
+offset_right = 40.807327
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect43" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1030376613]
+layout_mode = 0
+offset_left = 44.77063
+offset_top = 19.082567
+offset_right = 46.77063
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect44" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=840951404]
+layout_mode = 0
+offset_left = 50.733932
+offset_top = 19.082567
+offset_right = 52.733932
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect45" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1403330449]
+layout_mode = 0
+offset_left = 56.697235
+offset_top = 19.082567
+offset_right = 58.697235
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect46" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=2110571103]
+layout_mode = 0
+offset_left = 62.660538
+offset_top = 19.082567
+offset_right = 64.66054
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect47" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1848827702]
+layout_mode = 0
+offset_left = 68.623825
+offset_top = 19.082567
+offset_right = 70.623825
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect48" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=792508950]
+layout_mode = 0
+offset_left = 74.58713
+offset_top = 19.082567
+offset_right = 76.58713
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect49" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1369748986]
+layout_mode = 0
+offset_left = 80.55043
+offset_top = 19.082567
+offset_right = 82.55043
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect50" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=866868535]
+layout_mode = 0
+offset_left = 86.51373
+offset_top = 19.082567
+offset_right = 88.51373
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect51" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=2010761112]
+layout_mode = 0
+offset_left = 92.477036
+offset_top = 19.082567
+offset_right = 94.477036
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect52" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=148361618]
+layout_mode = 0
+offset_left = 98.44035
+offset_top = 19.082567
+offset_right = 100.44035
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect53" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=740865515]
+layout_mode = 0
+offset_left = 104.40365
+offset_top = 19.082567
+offset_right = 106.40365
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect54" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=367527048]
+layout_mode = 0
+offset_left = 110.36695
+offset_top = 19.082567
+offset_right = 112.36695
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect55" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=2117011591]
+layout_mode = 0
+offset_left = 116.33026
+offset_top = 19.082567
+offset_right = 118.33026
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect56" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=529781335]
+layout_mode = 0
+offset_left = 122.293564
+offset_top = 19.082567
+offset_right = 124.293564
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect57" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=254910037]
+layout_mode = 0
+offset_left = 128.25687
+offset_top = 19.082567
+offset_right = 130.25687
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect58" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=194930085]
+layout_mode = 0
+offset_left = 134.22017
+offset_top = 19.082567
+offset_right = 136.22017
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect59" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1971261653]
+layout_mode = 0
+offset_left = 140.18347
+offset_top = 19.082567
+offset_right = 142.18347
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect60" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=717415049]
+layout_mode = 0
+offset_left = 146.14677
+offset_top = 19.082567
+offset_right = 148.14677
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect61" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=510987253]
+layout_mode = 0
+offset_left = 152.11008
+offset_top = 19.082567
+offset_right = 154.11008
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect62" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=986550718]
+layout_mode = 0
+offset_left = 158.07338
+offset_top = 19.082567
+offset_right = 160.07338
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect63" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=20220719]
+layout_mode = 0
+offset_left = 164.03667
+offset_top = 19.082567
+offset_right = 166.03667
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect64" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1034010645]
+layout_mode = 0
+offset_left = 169.99997
+offset_top = 19.082567
+offset_right = 171.99997
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect65" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1471326166]
+layout_mode = 0
+offset_left = 175.96327
+offset_top = 19.082567
+offset_right = 177.96327
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect66" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1217091094]
+layout_mode = 0
+offset_left = 181.92657
+offset_top = 19.082567
+offset_right = 183.92657
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect67" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=497945996]
+layout_mode = 0
+offset_left = 187.88988
+offset_top = 19.082567
+offset_right = 189.88988
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect68" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=718046844]
+layout_mode = 0
+offset_left = 193.8532
+offset_top = 19.082567
+offset_right = 195.8532
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect69" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=2019093861]
+layout_mode = 0
+offset_left = 199.8165
+offset_top = 19.082567
+offset_right = 201.8165
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect70" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=635433886]
+layout_mode = 0
+offset_left = 205.7798
+offset_top = 19.082567
+offset_right = 207.7798
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect71" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=403123810]
+layout_mode = 0
+offset_left = 211.7431
+offset_top = 19.082567
+offset_right = 213.7431
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect72" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1101728182]
+layout_mode = 0
+offset_left = 217.7064
+offset_top = 19.082567
+offset_right = 219.7064
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect73" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1883253143]
+layout_mode = 0
+offset_left = 223.66971
+offset_top = 19.082567
+offset_right = 225.66971
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect74" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=686486042]
+layout_mode = 0
+offset_left = 229.63303
+offset_top = 19.082567
+offset_right = 231.63303
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect75" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=1112858530]
+layout_mode = 0
+offset_left = 235.59633
+offset_top = 19.082567
+offset_right = 237.59633
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect76" type="ColorRect" parent="CircleBase/Right/Bottom" unique_id=447326401]
+layout_mode = 0
+offset_left = 241.55963
+offset_top = 19.082567
+offset_right = 243.55963
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="Top" type="Control" parent="CircleBase/Right" unique_id=1632790872]
+anchors_preset = 0
+offset_left = 37.87
+offset_top = 38.191
+offset_right = 77.869965
+offset_bottom = 78.19101
+rotation = 3.1415927
+
+[node name="ColorRect" type="ColorRect" parent="CircleBase/Right/Top" unique_id=2147360713]
+layout_mode = 0
+offset_left = -205.68808
+offset_top = 19.082567
+offset_right = -203.68808
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect2" type="ColorRect" parent="CircleBase/Right/Top" unique_id=83699026]
+layout_mode = 0
+offset_left = -199.72478
+offset_top = 19.082567
+offset_right = -197.72478
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect3" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1896033275]
+layout_mode = 0
+offset_left = -193.76147
+offset_top = 19.082567
+offset_right = -191.76147
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect4" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1252021601]
+layout_mode = 0
+offset_left = -187.79817
+offset_top = 19.082567
+offset_right = -185.79817
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect5" type="ColorRect" parent="CircleBase/Right/Top" unique_id=2106892085]
+layout_mode = 0
+offset_left = -181.83487
+offset_top = 19.082567
+offset_right = -179.83487
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect6" type="ColorRect" parent="CircleBase/Right/Top" unique_id=834637474]
+layout_mode = 0
+offset_left = -175.87157
+offset_top = 19.082567
+offset_right = -173.87157
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect7" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1653468035]
+layout_mode = 0
+offset_left = -169.90826
+offset_top = 19.082567
+offset_right = -167.90826
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect8" type="ColorRect" parent="CircleBase/Right/Top" unique_id=307329190]
+layout_mode = 0
+offset_left = -163.94496
+offset_top = 19.082567
+offset_right = -161.94496
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect9" type="ColorRect" parent="CircleBase/Right/Top" unique_id=664814434]
+layout_mode = 0
+offset_left = -157.98167
+offset_top = 19.082567
+offset_right = -155.98167
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect10" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1113983756]
+layout_mode = 0
+offset_left = -152.01837
+offset_top = 19.082567
+offset_right = -150.01837
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect11" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1236323344]
+layout_mode = 0
+offset_left = -146.05507
+offset_top = 19.082567
+offset_right = -144.05507
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect12" type="ColorRect" parent="CircleBase/Right/Top" unique_id=744482966]
+layout_mode = 0
+offset_left = -140.09177
+offset_top = 19.082567
+offset_right = -138.09177
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect13" type="ColorRect" parent="CircleBase/Right/Top" unique_id=852895383]
+layout_mode = 0
+offset_left = -134.12846
+offset_top = 19.082567
+offset_right = -132.12846
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect14" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1425547912]
+layout_mode = 0
+offset_left = -128.16515
+offset_top = 19.082567
+offset_right = -126.165146
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect15" type="ColorRect" parent="CircleBase/Right/Top" unique_id=174750571]
+layout_mode = 0
+offset_left = -122.20185
+offset_top = 19.082567
+offset_right = -120.20185
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect16" type="ColorRect" parent="CircleBase/Right/Top" unique_id=2070796583]
+layout_mode = 0
+offset_left = -116.23855
+offset_top = 19.082567
+offset_right = -114.23855
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect17" type="ColorRect" parent="CircleBase/Right/Top" unique_id=698700642]
+layout_mode = 0
+offset_left = -110.27524
+offset_top = 19.082567
+offset_right = -108.27524
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect18" type="ColorRect" parent="CircleBase/Right/Top" unique_id=24495946]
+layout_mode = 0
+offset_left = -104.311935
+offset_top = 19.082567
+offset_right = -102.311935
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect19" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1490436528]
+layout_mode = 0
+offset_left = -98.34863
+offset_top = 19.082567
+offset_right = -96.34863
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect20" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1386168947]
+layout_mode = 0
+offset_left = -92.38533
+offset_top = 19.082567
+offset_right = -90.38533
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect21" type="ColorRect" parent="CircleBase/Right/Top" unique_id=2116689177]
+layout_mode = 0
+offset_left = -86.42203
+offset_top = 19.082567
+offset_right = -84.42203
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect22" type="ColorRect" parent="CircleBase/Right/Top" unique_id=499459878]
+layout_mode = 0
+offset_left = -80.458725
+offset_top = 19.082567
+offset_right = -78.458725
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect23" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1400708134]
+layout_mode = 0
+offset_left = -74.49542
+offset_top = 19.082567
+offset_right = -72.49542
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect24" type="ColorRect" parent="CircleBase/Right/Top" unique_id=258322684]
+layout_mode = 0
+offset_left = -68.53212
+offset_top = 19.082567
+offset_right = -66.53212
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect25" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1374887549]
+layout_mode = 0
+offset_left = -62.56883
+offset_top = 19.082567
+offset_right = -60.56883
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect26" type="ColorRect" parent="CircleBase/Right/Top" unique_id=184014801]
+layout_mode = 0
+offset_left = -56.605526
+offset_top = 19.082567
+offset_right = -54.605526
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect27" type="ColorRect" parent="CircleBase/Right/Top" unique_id=480295017]
+layout_mode = 0
+offset_left = -50.642223
+offset_top = 19.082567
+offset_right = -48.642223
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect28" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1265729969]
+layout_mode = 0
+offset_left = -44.67892
+offset_top = 19.082567
+offset_right = -42.67892
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect29" type="ColorRect" parent="CircleBase/Right/Top" unique_id=88444094]
+layout_mode = 0
+offset_left = -38.71562
+offset_top = 19.082567
+offset_right = -36.71562
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect30" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1137645603]
+layout_mode = 0
+offset_left = -32.752308
+offset_top = 19.082567
+offset_right = -30.752308
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect31" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1615371172]
+layout_mode = 0
+offset_left = -26.789005
+offset_top = 19.082567
+offset_right = -24.789005
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect32" type="ColorRect" parent="CircleBase/Right/Top" unique_id=140707319]
+layout_mode = 0
+offset_left = -20.825703
+offset_top = 19.082567
+offset_right = -18.825703
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect33" type="ColorRect" parent="CircleBase/Right/Top" unique_id=871272409]
+layout_mode = 0
+offset_left = -14.862392
+offset_top = 19.082567
+offset_right = -12.862392
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect34" type="ColorRect" parent="CircleBase/Right/Top" unique_id=2007789489]
+layout_mode = 0
+offset_left = -8.89909
+offset_top = 19.082567
+offset_right = -6.89909
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect35" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1082893889]
+layout_mode = 0
+offset_left = -2.9357874
+offset_top = 19.082567
+offset_right = -0.93578744
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect36" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1589435940]
+layout_mode = 0
+offset_left = 3.0275228
+offset_top = 19.082567
+offset_right = 5.027523
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect37" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1679856156]
+layout_mode = 0
+offset_left = 8.990826
+offset_top = 19.082567
+offset_right = 10.990826
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect38" type="ColorRect" parent="CircleBase/Right/Top" unique_id=553032088]
+layout_mode = 0
+offset_left = 14.954128
+offset_top = 19.082567
+offset_right = 16.954128
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect39" type="ColorRect" parent="CircleBase/Right/Top" unique_id=713706642]
+layout_mode = 0
+offset_left = 20.91742
+offset_top = 19.082567
+offset_right = 22.91742
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect40" type="ColorRect" parent="CircleBase/Right/Top" unique_id=366515645]
+layout_mode = 0
+offset_left = 26.880722
+offset_top = 19.082567
+offset_right = 28.880722
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect41" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1917083549]
+layout_mode = 0
+offset_left = 32.844025
+offset_top = 19.082567
+offset_right = 34.844025
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect42" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1350423644]
+layout_mode = 0
+offset_left = 38.807327
+offset_top = 19.082567
+offset_right = 40.807327
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect43" type="ColorRect" parent="CircleBase/Right/Top" unique_id=141990975]
+layout_mode = 0
+offset_left = 44.77063
+offset_top = 19.082567
+offset_right = 46.77063
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect44" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1823707109]
+layout_mode = 0
+offset_left = 50.733932
+offset_top = 19.082567
+offset_right = 52.733932
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect45" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1366788093]
+layout_mode = 0
+offset_left = 56.697235
+offset_top = 19.082567
+offset_right = 58.697235
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect46" type="ColorRect" parent="CircleBase/Right/Top" unique_id=2107035949]
+layout_mode = 0
+offset_left = 62.660538
+offset_top = 19.082567
+offset_right = 64.66054
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect47" type="ColorRect" parent="CircleBase/Right/Top" unique_id=556451717]
+layout_mode = 0
+offset_left = 68.623825
+offset_top = 19.082567
+offset_right = 70.623825
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect48" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1618647122]
+layout_mode = 0
+offset_left = 74.58713
+offset_top = 19.082567
+offset_right = 76.58713
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect49" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1505013856]
+layout_mode = 0
+offset_left = 80.55043
+offset_top = 19.082567
+offset_right = 82.55043
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect50" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1923218577]
+layout_mode = 0
+offset_left = 86.51373
+offset_top = 19.082567
+offset_right = 88.51373
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect51" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1045780946]
+layout_mode = 0
+offset_left = 92.477036
+offset_top = 19.082567
+offset_right = 94.477036
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect52" type="ColorRect" parent="CircleBase/Right/Top" unique_id=442735958]
+layout_mode = 0
+offset_left = 98.44035
+offset_top = 19.082567
+offset_right = 100.44035
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect53" type="ColorRect" parent="CircleBase/Right/Top" unique_id=290487814]
+layout_mode = 0
+offset_left = 104.40365
+offset_top = 19.082567
+offset_right = 106.40365
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect54" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1840415498]
+layout_mode = 0
+offset_left = 110.36695
+offset_top = 19.082567
+offset_right = 112.36695
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect55" type="ColorRect" parent="CircleBase/Right/Top" unique_id=787388943]
+layout_mode = 0
+offset_left = 116.33026
+offset_top = 19.082567
+offset_right = 118.33026
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect56" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1585811507]
+layout_mode = 0
+offset_left = 122.293564
+offset_top = 19.082567
+offset_right = 124.293564
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect57" type="ColorRect" parent="CircleBase/Right/Top" unique_id=686619126]
+layout_mode = 0
+offset_left = 128.25687
+offset_top = 19.082567
+offset_right = 130.25687
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect58" type="ColorRect" parent="CircleBase/Right/Top" unique_id=577805904]
+layout_mode = 0
+offset_left = 134.22017
+offset_top = 19.082567
+offset_right = 136.22017
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect59" type="ColorRect" parent="CircleBase/Right/Top" unique_id=511203302]
+layout_mode = 0
+offset_left = 140.18347
+offset_top = 19.082567
+offset_right = 142.18347
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect60" type="ColorRect" parent="CircleBase/Right/Top" unique_id=2045945773]
+layout_mode = 0
+offset_left = 146.14677
+offset_top = 19.082567
+offset_right = 148.14677
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect61" type="ColorRect" parent="CircleBase/Right/Top" unique_id=158512370]
+layout_mode = 0
+offset_left = 152.11008
+offset_top = 19.082567
+offset_right = 154.11008
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect62" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1705177068]
+layout_mode = 0
+offset_left = 158.07338
+offset_top = 19.082567
+offset_right = 160.07338
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect63" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1076986623]
+layout_mode = 0
+offset_left = 164.03667
+offset_top = 19.082567
+offset_right = 166.03667
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect64" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1771551506]
+layout_mode = 0
+offset_left = 169.99997
+offset_top = 19.082567
+offset_right = 171.99997
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect65" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1074189987]
+layout_mode = 0
+offset_left = 175.96327
+offset_top = 19.082567
+offset_right = 177.96327
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect66" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1255868497]
+layout_mode = 0
+offset_left = 181.92657
+offset_top = 19.082567
+offset_right = 183.92657
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect67" type="ColorRect" parent="CircleBase/Right/Top" unique_id=73172097]
+layout_mode = 0
+offset_left = 187.88988
+offset_top = 19.082567
+offset_right = 189.88988
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect68" type="ColorRect" parent="CircleBase/Right/Top" unique_id=862364552]
+layout_mode = 0
+offset_left = 193.8532
+offset_top = 19.082567
+offset_right = 195.8532
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect69" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1179030580]
+layout_mode = 0
+offset_left = 199.8165
+offset_top = 19.082567
+offset_right = 201.8165
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect70" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1395435717]
+layout_mode = 0
+offset_left = 205.7798
+offset_top = 19.082567
+offset_right = 207.7798
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect71" type="ColorRect" parent="CircleBase/Right/Top" unique_id=141452701]
+layout_mode = 0
+offset_left = 211.7431
+offset_top = 19.082567
+offset_right = 213.7431
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect72" type="ColorRect" parent="CircleBase/Right/Top" unique_id=1045613996]
+layout_mode = 0
+offset_left = 217.7064
+offset_top = 19.082567
+offset_right = 219.7064
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect73" type="ColorRect" parent="CircleBase/Right/Top" unique_id=664258702]
+layout_mode = 0
+offset_left = 223.66971
+offset_top = 19.082567
+offset_right = 225.66971
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect74" type="ColorRect" parent="CircleBase/Right/Top" unique_id=266694408]
+layout_mode = 0
+offset_left = 229.63303
+offset_top = 19.082567
+offset_right = 231.63303
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect75" type="ColorRect" parent="CircleBase/Right/Top" unique_id=47571381]
+layout_mode = 0
+offset_left = 235.59633
+offset_top = 19.082567
+offset_right = 237.59633
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)
+
+[node name="ColorRect76" type="ColorRect" parent="CircleBase/Right/Top" unique_id=699223023]
+layout_mode = 0
+offset_left = 241.55963
+offset_top = 19.082567
+offset_right = 243.55963
+offset_bottom = 20.082567
+pivot_offset_ratio = Vector2(1, 0.5)

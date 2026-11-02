@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2uaqyk5enan2"
+path="res://.godot/imported/Voice(9).mp3-6a431302aa681048bbe6cb09f23ee3d1.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Story Sounds/Teaser/Voice(9).mp3"
+dest_files=["res://.godot/imported/Voice(9).mp3-6a431302aa681048bbe6cb09f23ee3d1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

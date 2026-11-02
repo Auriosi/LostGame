@@ -1,0 +1,680 @@
+[gd_scene format=3 uid="uid://bjktwer0e8tgu"]
+
+[ext_resource type="Script" uid="uid://ckvtawbnxbs2q" path="res://Scenes/Story/teaser_cutscene.gd" id="1_hbu4t"]
+[ext_resource type="Texture2D" uid="uid://ctl7gwunwipsq" path="res://Sprites/Story/Teaser/Containment Unit.png" id="1_omb8o"]
+[ext_resource type="Shader" uid="uid://yhay8mdujumx" path="res://Teaser Cutscene.gdshader" id="2_q2232"]
+[ext_resource type="AudioStream" uid="uid://bya75qn7mk0gb" path="res://Sounds/Story Sounds/Teaser/Teaser Static.mp3" id="4_d6uk3"]
+[ext_resource type="AudioStream" uid="uid://b0e73gcl1vvfe" path="res://Sounds/Story Sounds/Teaser/Flower Lounge.mp3" id="4_xc35k"]
+[ext_resource type="Texture2D" uid="uid://cj5yu0om3puyb" path="res://Sprites/Story/Teaser/Containment Unit Flower 3 Bottom.png" id="5_syved"]
+[ext_resource type="Texture2D" uid="uid://kiph7uhspt4x" path="res://Sprites/Story/Teaser/Containment Unit Flower 3 Left Leg.png" id="6_bm86s"]
+[ext_resource type="Texture2D" uid="uid://ctnhfscg340pk" path="res://Sprites/Story/Teaser/Containment Unit Flower 3 Right Leg.png" id="7_468oq"]
+[ext_resource type="Script" uid="uid://8fld062amxnd" path="res://Scenes/Story/flower_3.gd" id="7_bq16t"]
+[ext_resource type="Texture2D" uid="uid://vy4ucpaey6xi" path="res://Sprites/Story/Teaser/Containment Unit Flower 3 Left Sprout.png" id="8_bq16t"]
+[ext_resource type="Texture2D" uid="uid://cvnyxlfxevkf7" path="res://Sprites/Story/Teaser/Containment Unit Flower 3 Main Sprout.png" id="9_4janx"]
+[ext_resource type="Texture2D" uid="uid://uwiwuu1svgm7" path="res://Sprites/Story/Teaser/Containment Unit Flower 3 Right Sprout.png" id="10_4aoua"]
+[ext_resource type="Texture2D" uid="uid://cmdirxxt3085g" path="res://Sprites/Story/Teaser/Containment Unit Flower 3 Left Bulb.png" id="11_fffdq"]
+[ext_resource type="Texture2D" uid="uid://dcbprmerekd16" path="res://Sprites/Story/Teaser/Containment Unit Flower 3 Main Bulb.png" id="12_nm1kj"]
+[ext_resource type="Texture2D" uid="uid://ccb5fn8skqj7j" path="res://Sprites/Story/Teaser/Containment Unit Flower 3 Right Bulb.png" id="13_gtxfj"]
+[ext_resource type="Texture2D" uid="uid://q385wqiu4xjh" path="res://Sprites/Story/Teaser/Containment Unit Flower 1.png" id="14_bm86s"]
+[ext_resource type="Texture2D" uid="uid://dnxxp12df8pnm" path="res://Sprites/Story/Teaser/Containment Unit Flower 2.png" id="15_468oq"]
+[ext_resource type="Texture2D" uid="uid://bpr83fdfp4ni8" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Front1.png" id="17_14jyp"]
+[ext_resource type="Texture2D" uid="uid://7v1r6mx3422b" path="res://Sprites/Story/Teaser/Child/Containment Unit4.png" id="17_qkaqi"]
+[ext_resource type="Texture2D" uid="uid://xnj8gm5hu6bj" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Front4.png" id="18_5fhkt"]
+[ext_resource type="Texture2D" uid="uid://f7tfee55y2y2" path="res://Sprites/Story/Teaser/Child/Containment Unit5.png" id="18_64t43"]
+[ext_resource type="Texture2D" uid="uid://bh81u66n7fkhe" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Front5.png" id="19_oimvv"]
+[ext_resource type="Texture2D" uid="uid://d1ipanr8jt4ml" path="res://Sprites/Story/Teaser/Child/Containment Unit6.png" id="19_yebhk"]
+[ext_resource type="Texture2D" uid="uid://eil6bmv7cgk3" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Front6.png" id="20_2yv2a"]
+[ext_resource type="Texture2D" uid="uid://0pyltadn8qss" path="res://Sprites/Story/Teaser/Child/Containment Unit7.png" id="20_oj721"]
+[ext_resource type="Texture2D" uid="uid://btikk36830b65" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Front2.png" id="21_h0iuq"]
+[ext_resource type="Texture2D" uid="uid://bhv6ugvkvq5yw" path="res://Sprites/Story/Teaser/Child/Containment Unit8.png" id="21_w25li"]
+[ext_resource type="Texture2D" uid="uid://cshuc33qr6vk5" path="res://Sprites/Story/Teaser/Child/Containment Unit9.png" id="22_50ka4"]
+[ext_resource type="Texture2D" uid="uid://dmqlepf6i7x4o" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Front3.png" id="22_c7sx8"]
+[ext_resource type="Texture2D" uid="uid://ryiteqmgpiqr" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Front7.png" id="23_ghptt"]
+[ext_resource type="Texture2D" uid="uid://cbmsqk8sgssu6" path="res://Sprites/Story/Teaser/Child/Containment Unit10.png" id="23_w72gs"]
+[ext_resource type="Texture2D" uid="uid://bva8ggahy4uej" path="res://Sprites/Story/Teaser/Child/Containment Unit11.png" id="24_4ikv7"]
+[ext_resource type="Texture2D" uid="uid://hnrbj3sqmgxc" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Front8.png" id="24_kaecs"]
+[ext_resource type="Texture2D" uid="uid://bpt01ouv30c3c" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Front9.png" id="25_b80j7"]
+[ext_resource type="Texture2D" uid="uid://tv3y7lw4f03q" path="res://Sprites/Story/Teaser/Child/Containment Unit12.png" id="25_tgt0s"]
+[ext_resource type="Texture2D" uid="uid://b444pa3x1753o" path="res://Sprites/Story/Teaser/Child/Containment Unit13.png" id="26_bfqvt"]
+[ext_resource type="Texture2D" uid="uid://b5j2tdlphuuwx" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Front10.png" id="26_xwjmq"]
+[ext_resource type="Texture2D" uid="uid://bky0y1vben67y" path="res://Sprites/Story/Teaser/Child/Containment Unit14.png" id="27_0aayn"]
+[ext_resource type="Texture2D" uid="uid://dbats4t7ak3lf" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Front11.png" id="27_ym4mj"]
+[ext_resource type="Texture2D" uid="uid://chseqopf60f6e" path="res://Sprites/Story/Teaser/Child/Containment Unit15.png" id="28_14jyp"]
+[ext_resource type="Texture2D" uid="uid://cpt6t2qo31kqs" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Back1.png" id="28_l2nqj"]
+[ext_resource type="Texture2D" uid="uid://b72uxn67mnvff" path="res://Sprites/Story/Teaser/Child/Containment Unit16.png" id="29_5fhkt"]
+[ext_resource type="Texture2D" uid="uid://dvyhwqlel4add" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Back4.png" id="29_lqglm"]
+[ext_resource type="Texture2D" uid="uid://8puinuavip6g" path="res://Sprites/Story/Teaser/Child/Containment Unit1.png" id="30_oimvv"]
+[ext_resource type="Texture2D" uid="uid://cjtun3t7cf1cx" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Back5.png" id="30_xc35k"]
+[ext_resource type="Texture2D" uid="uid://beahtrhdwlalg" path="res://Sprites/Story/Teaser/Child/Containment Unit2.png" id="31_2yv2a"]
+[ext_resource type="Texture2D" uid="uid://dtg71capj5spd" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Back6.png" id="31_dfoat"]
+[ext_resource type="Texture2D" uid="uid://b0s06cxahf4sy" path="res://Sprites/Story/Teaser/Child/Containment Unit3.png" id="32_h0iuq"]
+[ext_resource type="Texture2D" uid="uid://c8df1nr31u8v4" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Back2.png" id="32_unefx"]
+[ext_resource type="Texture2D" uid="uid://bpts5hvg14obm" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Back3.png" id="33_keh8e"]
+[ext_resource type="Texture2D" uid="uid://digg0kjjq4ttk" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Back7.png" id="34_cu0oi"]
+[ext_resource type="Texture2D" uid="uid://c2d3egq6c34le" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Back8.png" id="35_tb7l2"]
+[ext_resource type="Texture2D" uid="uid://bef6ym33codwm" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Back9.png" id="36_p252g"]
+[ext_resource type="Texture2D" uid="uid://dfltlxir3jrgs" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Back10.png" id="37_rpfy4"]
+[ext_resource type="Texture2D" uid="uid://dfrue05opghm4" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Back11.png" id="38_8jicv"]
+[ext_resource type="Texture2D" uid="uid://evin7sucro2f" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Bulb1.png" id="39_i7qyf"]
+[ext_resource type="Texture2D" uid="uid://bp2x2nkb2ks87" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Bulb4.png" id="40_4jiit"]
+[ext_resource type="Texture2D" uid="uid://2j87c4c0e31i" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Bulb5.png" id="41_apnad"]
+[ext_resource type="Texture2D" uid="uid://m4rtev78yls5" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Bulb6.png" id="42_tby1o"]
+[ext_resource type="Texture2D" uid="uid://burl3hsbm6jkd" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Bulb2.png" id="43_u22v7"]
+[ext_resource type="Texture2D" uid="uid://c3bx38wt2hcbf" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Bulb3.png" id="44_lwlnt"]
+[ext_resource type="Texture2D" uid="uid://bt36753cxfcc4" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Bulb7.png" id="45_2caen"]
+[ext_resource type="Texture2D" uid="uid://cgth3brd1mrgq" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Bulb8.png" id="46_b6sgs"]
+[ext_resource type="Texture2D" uid="uid://c1v2tuop4wd5n" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Bulb9.png" id="47_ucko2"]
+[ext_resource type="Texture2D" uid="uid://bvi052i2csme4" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Bulb10.png" id="48_3j84e"]
+[ext_resource type="Texture2D" uid="uid://kacis7dbtxt6" path="res://Sprites/Story/Teaser/Flower/Containment Unit Flower (Animated) Bulb11.png" id="49_y70rl"]
+[ext_resource type="Script" uid="uid://bnw2736i8syg0" path="res://Scenes/Story/camera_2d.gd" id="65_lqglm"]
+
+[sub_resource type="Gradient" id="Gradient_bq16t"]
+colors = PackedColorArray(1, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4janx"]
+gradient = SubResource("Gradient_bq16t")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="Gradient_468oq"]
+colors = PackedColorArray(1, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bq16t"]
+gradient = SubResource("Gradient_468oq")
+width = 96
+height = 96
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7smij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_14jyp")
+}],
+"loop": true,
+"name": &"Idle 1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_oimvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2yv2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_oimvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5fhkt")
+}],
+"loop": true,
+"name": &"Idle 2",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_14jyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_h0iuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_h0iuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_h0iuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_c7sx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_c7sx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5fhkt")
+}],
+"loop": false,
+"name": &"Lunge 1",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_ghptt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ghptt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_kaecs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_kaecs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_b80j7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_b80j7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_xwjmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ym4mj")
+}],
+"loop": false,
+"name": &"Lunge 2",
+"speed": 35.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e8sef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_l2nqj")
+}],
+"loop": true,
+"name": &"Idle 1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_lqglm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_xc35k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_dfoat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_xc35k")
+}],
+"loop": true,
+"name": &"Idle 2",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_l2nqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_unefx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_unefx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_unefx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_keh8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_keh8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_lqglm")
+}],
+"loop": false,
+"name": &"Lunge 1",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_cu0oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_cu0oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_tb7l2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_tb7l2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_p252g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_p252g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_rpfy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_8jicv")
+}],
+"loop": false,
+"name": &"Lunge 2",
+"speed": 35.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grbch"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_i7qyf")
+}],
+"loop": true,
+"name": &"Idle 1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_4jiit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_apnad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_tby1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_apnad")
+}],
+"loop": true,
+"name": &"Idle 2",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_i7qyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_u22v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_u22v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_u22v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_lwlnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_lwlnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_4jiit")
+}],
+"loop": false,
+"name": &"Lunge 1",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_2caen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_2caen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_b6sgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_b6sgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ucko2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ucko2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_3j84e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_y70rl")
+}],
+"loop": false,
+"name": &"Lunge 2",
+"speed": 35.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_xc35k"]
+offsets = PackedFloat32Array(0.33888888, 0.51111114, 0.67777777)
+colors = PackedColorArray(0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dfoat"]
+gradient = SubResource("Gradient_xc35k")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h0iuq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_qkaqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_qkaqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_64t43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_yebhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_oj721")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_oj721")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_w25li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_50ka4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_w72gs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_w72gs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4ikv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tgt0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_bfqvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_bfqvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_0aayn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_14jyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_5fhkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_5fhkt")
+}],
+"loop": false,
+"name": &"Crawling",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_oimvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_oimvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2yv2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_h0iuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_qkaqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_qkaqi")
+}],
+"loop": false,
+"name": &"Falling",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_oimvv")
+}],
+"loop": false,
+"name": &"Standing",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_atd7g"]
+shader = ExtResource("2_q2232")
+shader_parameter/amount = 40.0
+
+[sub_resource type="Gradient" id="Gradient_4janx"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4aoua"]
+gradient = SubResource("Gradient_4janx")
+
+[sub_resource type="Gradient" id="Gradient_4aoua"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fffdq"]
+gradient = SubResource("Gradient_4aoua")
+
+[node name="Teaser Scene" type="Node2D" unique_id=1658396003]
+script = ExtResource("1_hbu4t")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=753520151]
+position = Vector2(987, 681.24)
+scale = Vector2(4.55, 4.55)
+texture = ExtResource("1_omb8o")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=674746884]
+color = Color(0.2852064, 0.21510246, 0.14763612, 1)
+
+[node name="Static" type="AudioStreamPlayer2D" parent="." unique_id=951160574]
+stream = ExtResource("4_d6uk3")
+volume_db = 3.0
+
+[node name="Flower Lounge" type="AudioStreamPlayer2D" parent="." unique_id=612957385]
+stream = ExtResource("4_xc35k")
+volume_db = 15.0
+
+[node name="Flower 1" type="Sprite2D" parent="." unique_id=980417840]
+visible = false
+position = Vector2(987, 670.63)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("14_bm86s")
+
+[node name="Flower 2" type="Sprite2D" parent="." unique_id=2120355755]
+visible = false
+position = Vector2(987, 670.63)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("15_468oq")
+
+[node name="Flower 3 (Phase 1)" type="Node2D" parent="." unique_id=2115453036]
+visible = false
+position = Vector2(987.125, 670.63)
+scale = Vector2(4.5, 4.5)
+script = ExtResource("7_bq16t")
+
+[node name="Bottom" type="Sprite2D" parent="Flower 3 (Phase 1)" unique_id=1994706981]
+light_mask = 5
+texture = ExtResource("5_syved")
+
+[node name="Left Leg" type="Sprite2D" parent="Flower 3 (Phase 1)/Bottom" unique_id=1513731211]
+light_mask = 5
+texture = ExtResource("6_bm86s")
+
+[node name="Left Sprout" type="Sprite2D" parent="Flower 3 (Phase 1)/Bottom/Left Leg" unique_id=32290475]
+light_mask = 5
+texture = ExtResource("8_bq16t")
+
+[node name="Left Bulb" type="Sprite2D" parent="Flower 3 (Phase 1)/Bottom/Left Leg/Left Sprout" unique_id=146850921]
+light_mask = 5
+texture = ExtResource("11_fffdq")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Flower 3 (Phase 1)/Bottom/Left Leg/Left Sprout/Left Bulb" unique_id=1246276429]
+position = Vector2(-24.25, -29.473328)
+scale = Vector2(0.22222222, 0.22222222)
+texture = SubResource("GradientTexture2D_4janx")
+
+[node name="Right Leg" type="Sprite2D" parent="Flower 3 (Phase 1)/Bottom" unique_id=257494239]
+light_mask = 5
+texture = ExtResource("7_468oq")
+
+[node name="Main Sprout" type="Sprite2D" parent="Flower 3 (Phase 1)/Bottom/Right Leg" unique_id=38321733]
+light_mask = 5
+position = Vector2(4.416665, -33.917778)
+texture = ExtResource("9_4janx")
+offset = Vector2(-4.42, 33.925)
+
+[node name="Main Bulb" type="Sprite2D" parent="Flower 3 (Phase 1)/Bottom/Right Leg/Main Sprout" unique_id=647374756]
+light_mask = 5
+position = Vector2(2.8888884, -32.000004)
+texture = ExtResource("12_nm1kj")
+offset = Vector2(-6.445, 65.995)
+
+[node name="PointLight2D" type="PointLight2D" parent="Flower 3 (Phase 1)/Bottom/Right Leg/Main Sprout/Main Bulb" unique_id=797037368]
+position = Vector2(-1.3333302, -12)
+scale = Vector2(0.22222222, 0.22222222)
+texture = SubResource("GradientTexture2D_bq16t")
+
+[node name="Right Sprout" type="Sprite2D" parent="Flower 3 (Phase 1)/Bottom/Right Leg" unique_id=521493113]
+light_mask = 5
+texture = ExtResource("10_4aoua")
+
+[node name="Right Bulb" type="Sprite2D" parent="Flower 3 (Phase 1)/Bottom/Right Leg/Right Sprout" unique_id=2038645039]
+light_mask = 5
+texture = ExtResource("13_gtxfj")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Flower 3 (Phase 1)/Bottom/Right Leg/Right Sprout/Right Bulb" unique_id=860650021]
+position = Vector2(35.08333, -61.695557)
+scale = Vector2(0.22222222, 0.22222222)
+texture = SubResource("GradientTexture2D_4janx")
+
+[node name="Flower 3 (Phase 2)" type="Node2D" parent="." unique_id=1239972593]
+position = Vector2(987.125, 670.63)
+scale = Vector2(4.5, 4.5)
+
+[node name="Front" type="AnimatedSprite2D" parent="Flower 3 (Phase 2)" unique_id=1176457508]
+sprite_frames = SubResource("SpriteFrames_7smij")
+animation = &"Lunge 2"
+frame = 7
+
+[node name="Right Bulb" type="PointLight2D" parent="Flower 3 (Phase 2)/Front" unique_id=1623812966]
+position = Vector2(-141.13889, -109.02889)
+scale = Vector2(0.22222222, 0.22222222)
+texture = SubResource("GradientTexture2D_4janx")
+
+[node name="Middle Bulb" type="PointLight2D" parent="Flower 3 (Phase 2)/Front" unique_id=1951615892]
+position = Vector2(-155.80554, -63.473335)
+scale = Vector2(0.22222222, 0.22222222)
+texture = SubResource("GradientTexture2D_bq16t")
+
+[node name="Back" type="AnimatedSprite2D" parent="Flower 3 (Phase 2)" unique_id=868838868]
+sprite_frames = SubResource("SpriteFrames_e8sef")
+animation = &"Lunge 2"
+frame = 7
+
+[node name="Blub" type="AnimatedSprite2D" parent="Flower 3 (Phase 2)" unique_id=1750194093]
+sprite_frames = SubResource("SpriteFrames_grbch")
+animation = &"Lunge 2"
+frame = 7
+
+[node name="Left Bulb" type="PointLight2D" parent="Flower 3 (Phase 2)/Blub" unique_id=2965497]
+position = Vector2(-128.47223, -43.251114)
+scale = Vector2(0.22222222, 0.22222222)
+texture = SubResource("GradientTexture2D_4janx")
+
+[node name="Bulb2" type="Sprite2D" parent="Flower 3 (Phase 2)" unique_id=1622559097]
+visible = false
+position = Vector2(-128, -44)
+texture = ExtResource("49_y70rl")
+offset = Vector2(128, 44)
+
+[node name="Left Bulb" type="PointLight2D" parent="Flower 3 (Phase 2)/Bulb2" unique_id=3852508]
+scale = Vector2(0.22222222, 0.22222222)
+texture = SubResource("GradientTexture2D_4janx")
+
+[node name="Sparkling Light Node" type="Node2D" parent="Flower 3 (Phase 2)" unique_id=911825350]
+visible = false
+position = Vector2(-128.5, -43.5)
+
+[node name="PointLight Horizontal" type="PointLight2D" parent="Flower 3 (Phase 2)/Sparkling Light Node" unique_id=36280922]
+texture = SubResource("GradientTexture1D_dfoat")
+
+[node name="PointLight Vertical" type="PointLight2D" parent="Flower 3 (Phase 2)/Sparkling Light Node" unique_id=439865718]
+rotation = 1.5707964
+texture = SubResource("GradientTexture1D_dfoat")
+
+[node name="Child" type="AnimatedSprite2D" parent="." unique_id=207248001]
+visible = false
+position = Vector2(987, 681.24)
+scale = Vector2(4.5, 4.5)
+sprite_frames = SubResource("SpriteFrames_h0iuq")
+animation = &"Crawling"
+frame = 17
+frame_progress = 1.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=996367562]
+position = Vector2(990, 510)
+script = ExtResource("65_lqglm")
+
+[node name="Filter" type="Node2D" parent="Camera2D" unique_id=1908706261]
+position = Vector2(-1016, -562)
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/Filter" unique_id=1431869981]
+light_mask = 0
+z_index = 1
+material = SubResource("ShaderMaterial_atd7g")
+offset_left = -45.0
+offset_top = 20.0
+offset_right = 321.294
+offset_bottom = 210.187
+scale = Vector2(5.725, 5.725)
+mouse_filter = 2
+color = Color(0.4309424, 0.3174442, 0.22708061, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Camera2D/Filter" unique_id=1835974768]
+visible = false
+offset_left = 20.0
+offset_top = 47.0
+offset_right = 367.074
+offset_bottom = 226.597
+scale = Vector2(5.725, 5.725)
+
+[node name="Label" type="Label" parent="Camera2D" unique_id=66574885]
+offset_left = -890.4
+offset_top = -510.0
+offset_right = 750.0
+offset_bottom = -365.685
+theme_override_font_sizes/font_size = 64
+text = "Status: Null"
+vertical_alignment = 1
+
+[node name="Text Screen" type="Node2D" parent="Camera2D" unique_id=1500054488]
+position = Vector2(-990, -510)
+
+[node name="Background" type="Sprite2D" parent="Camera2D/Text Screen" unique_id=1375576737]
+position = Vector2(992.5, 512)
+scale = Vector2(34.782, 17.962)
+texture = SubResource("GradientTexture2D_4aoua")
+
+[node name="Text" type="Label" parent="Camera2D/Text Screen" unique_id=1326299462]
+light_mask = 16
+offset_left = 280.0
+offset_top = 179.0
+offset_right = 601.3334
+offset_bottom = 318.1111
+scale = Vector2(4.5, 4.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.5921569, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+autowrap_trim_flags = 0
+justification_flags = 235
+
+[node name="PointLight2D" type="PointLight2D" parent="Camera2D/Text Screen" unique_id=953841676]
+position = Vector2(989, 506)
+scale = Vector2(30.84375, 15.875)
+range_item_cull_mask = 16
+texture = SubResource("GradientTexture2D_fffdq")

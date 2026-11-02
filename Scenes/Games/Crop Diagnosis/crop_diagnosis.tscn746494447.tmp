@@ -1,0 +1,874 @@
+[gd_scene load_steps=31 format=3 uid="uid://dcnbowixiarv8"]
+
+[ext_resource type="Script" uid="uid://bivf2wgo73gcn" path="res://Scenes/Games/Crop Diagnosis/crop_diagnosis.gd" id="1_lmn86"]
+[ext_resource type="Texture2D" uid="uid://ccqs05b3w4we0" path="res://Sprites/Close Button.png" id="1_wvuh6"]
+[ext_resource type="Texture2D" uid="uid://dss77d6p2200n" path="res://Sprites/Close Button (Pressed) .png" id="2_lmn86"]
+[ext_resource type="Texture2D" uid="uid://cnvrjgbixya2f" path="res://Sprites/Crop Diagnosis/Text Box.png" id="4_g0wfs"]
+[ext_resource type="Texture2D" uid="uid://3spare77de4i" path="res://Sprites/Crop Diagnosis/Text Box Pressed.png" id="5_0qwel"]
+[ext_resource type="Texture2D" uid="uid://cfwypev6c1qnh" path="res://Sprites/Crop Diagnosis/Text Box Hover.png" id="6_c46hf"]
+[ext_resource type="Texture2D" uid="uid://c5itb6dbqevte" path="res://Sprites/Crop Diagnosis/Text Box Disabled.png" id="7_npkbx"]
+[ext_resource type="Texture2D" uid="uid://ddwwximpsrdx2" path="res://Sprites/Crop Diagnosis/Crop Examination Table (Inner).png" id="8_npkbx"]
+[ext_resource type="Texture2D" uid="uid://dppv3rgtkqj4l" path="res://Sprites/Settings Button.png" id="9_4q5wx"]
+[ext_resource type="Texture2D" uid="uid://dj8sc5yti1pmw" path="res://Sprites/Crop Diagnosis/Crop Examination Table (Outer).png" id="9_ei6ld"]
+
+[sub_resource type="Gradient" id="Gradient_1p1je"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.088559814, 0.08855996, 0.08855983, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u34cv"]
+gradient = SubResource("Gradient_1p1je")
+
+[sub_resource type="Gradient" id="Gradient_pmv4g"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.008773377, 0.08191074, 0.09313341, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7kd4u"]
+gradient = SubResource("Gradient_pmv4g")
+
+[sub_resource type="Gradient" id="Gradient_b836b"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wvuh6"]
+gradient = SubResource("Gradient_b836b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g0wfs"]
+texture = ExtResource("1_wvuh6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqjkh"]
+texture = ExtResource("2_lmn86")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iwayx"]
+texture = ExtResource("1_wvuh6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0qwel"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c46hf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0qwel"]
+texture = ExtResource("4_g0wfs")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ei6ld"]
+texture = ExtResource("4_g0wfs")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4q5wx"]
+texture = ExtResource("5_0qwel")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nbiau"]
+texture = ExtResource("6_c46hf")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l1mwf"]
+texture = ExtResource("7_npkbx")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epq0j"]
+
+[sub_resource type="Gradient" id="Gradient_ei6ld"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4q5wx"]
+gradient = SubResource("Gradient_ei6ld")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_epq0j"]
+texture = ExtResource("9_4q5wx")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+expand_margin_left = 8.0
+expand_margin_top = 3.0
+expand_margin_right = 8.0
+expand_margin_bottom = 3.0
+
+[node name="Crop Diagnosis" type="Node2D"]
+light_mask = 2
+visibility_layer = 2
+script = ExtResource("1_lmn86")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(2.75, 2.25)
+texture = SubResource("GradientTexture2D_u34cv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(2.7, 2.2)
+texture = SubResource("GradientTexture2D_7kd4u")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(4, 2.5)
+energy = 0.5
+range_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_wvuh6")
+
+[node name="Close Button" type="Button" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_left = 70.0
+offset_top = -67.0
+offset_right = 83.0
+offset_bottom = -54.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_g0wfs")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wqjkh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iwayx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0qwel")
+theme_override_styles/focus = SubResource("StyleBoxTexture_c46hf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Labels" type="Node2D" parent="."]
+position = Vector2(-80, -67)
+
+[node name="Apples" type="Label" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 12.0
+offset_top = -1.0
+offset_right = 19.0
+offset_bottom = 50.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Oranges" type="Label" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 19.0
+offset_bottom = 63.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Bananas" type="Label" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 12.0
+offset_top = 25.0
+offset_right = 19.0
+offset_bottom = 76.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Strawberries" type="Label" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 12.0
+offset_top = 38.0
+offset_right = 19.0
+offset_bottom = 89.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Blueberries" type="Label" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 12.0
+offset_top = 51.0
+offset_right = 19.0
+offset_bottom = 102.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Potatos" type="Label" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 12.0
+offset_top = 70.0
+offset_right = 19.0
+offset_bottom = 121.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Tomatos" type="Label" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 12.0
+offset_top = 83.0
+offset_right = 19.0
+offset_bottom = 134.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Carrots" type="Label" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 12.0
+offset_top = 96.0
+offset_right = 19.0
+offset_bottom = 147.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Cucumbers" type="Label" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 12.0
+offset_top = 109.0
+offset_right = 19.0
+offset_bottom = 160.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Corn" type="Label" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 12.0
+offset_top = 122.0
+offset_right = 19.0
+offset_bottom = 173.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Apples Button" type="Button" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 51.435
+offset_bottom = 54.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Oranges Button" type="Button" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -4.0
+offset_top = 12.0
+offset_right = 51.435
+offset_bottom = 67.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Bananas Button" type="Button" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -4.0
+offset_top = 25.0
+offset_right = 51.435
+offset_bottom = 80.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Strawberries Button" type="Button" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -4.0
+offset_top = 38.0
+offset_right = 51.435
+offset_bottom = 93.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Blueberries Button" type="Button" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -4.0
+offset_top = 51.0
+offset_right = 51.435
+offset_bottom = 106.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Potatos Button" type="Button" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -4.0
+offset_top = 70.0
+offset_right = 51.435
+offset_bottom = 125.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Tomatos Button" type="Button" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -4.0
+offset_top = 83.0
+offset_right = 51.435
+offset_bottom = 138.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Carrots Button" type="Button" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -4.0
+offset_top = 96.0
+offset_right = 51.435
+offset_bottom = 151.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Cucumbers Button" type="Button" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -4.0
+offset_top = 109.0
+offset_right = 51.435
+offset_bottom = 164.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Corn Button" type="Button" parent="Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -4.0
+offset_top = 122.0
+offset_right = 51.435
+offset_bottom = 177.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Area2D"]
+light_mask = 10
+visibility_layer = 10
+offset_left = 38.0
+offset_top = -106.0
+offset_right = 138.0
+offset_bottom = -6.0
+max_value = 15.0
+step = 0.025
+fill_mode = 4
+texture_progress = ExtResource("8_npkbx")
+
+[node name="CropExaminationTable(outer)" type="Sprite2D" parent="Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(88, -56)
+texture = ExtResource("9_ei6ld")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+visible = false
+position = Vector2(57, -29)
+scale = Vector2(0.5, 0.5)
+polygon = PackedVector2Array(-12, -12, -12, -8, -10, -8, -10, -6, -8, -6, -8, -2, -6, -2, -6, 0, -4, 0, -4, 2, -2, 2, -2, 4, 0, 4, 0, 6, 2, 6, 2, 8, 4, 8, 4, 10, 6, 10, 6, 12, 8, 12, 8, 14, 10, 14, 10, 16, 14, 16, 14, 18, 16, 18, 16, 20, 20, 20, 20, 22, 24, 22, 24, 24, 28, 24, 28, 26, 32, 26, 32, 28, 38, 28, 38, 30, 48, 30, 48, 32, 76, 32, 76, 30, 86, 30, 86, 28, 92, 28, 92, 26, 96, 26, 96, 24, 100, 24, 100, 22, 104, 22, 104, 20, 108, 20, 108, 18, 110, 18, 110, 16, 114, 16, 114, 14, 116, 14, 116, 12, 118, 12, 118, 10, 120, 10, 120, 8, 122, 8, 122, 6, 124, 6, 124, 4, 126, 4, 126, 2, 128, 2, 128, 0, 130, 0, 130, -2, 132, -2, 132, -6, 134, -6, 134, -8, 136, -8, 136, -12, 138, -12, 138, -16, 140, -16, 140, -20, 142, -20, 142, -24, 144, -24, 144, -30, 146, -30, 146, -40, 148, -40, 148, -68, 146, -68, 146, -78, 144, -78, 144, -84, 142, -84, 142, -88, 140, -88, 140, -92, 138, -92, 138, -96, 136, -96, 136, -100, 134, -100, 134, -102, 132, -102, 132, -106, 130, -106, 130, -108, 128, -108, 128, -110, 126, -110, 126, -112, 124, -112, 124, -114, 122, -114, 122, -116, 120, -116, 120, -118, 118, -118, 118, -120, 116, -120, 116, -122, 114, -122, 114, -124, 110, -124, 110, -126, 108, -126, 108, -128, 104, -128, 104, -130, 100, -130, 100, -132, 96, -132, 96, -134, 92, -134, 92, -136, 86, -136, 86, -138, 76, -138, 76, -140, 48, -140, 48, -138, 38, -138, 38, -136, 32, -136, 32, -134, 28, -134, 28, -132, 24, -132, 24, -130, 20, -130, 20, -128, 16, -128, 16, -126, 14, -126, 14, -124, 10, -124, 10, -122, 8, -122, 8, -120, 6, -120, 6, -118, 4, -118, 4, -116, 2, -116, 2, -114, 0, -114, 0, -112, -2, -112, -2, -110, -4, -110, -4, -108, -6, -108, -6, -106, -8, -106, -8, -102, -10, -102, -10, -100, -12, -100, -12, -96, -14, -96, -14, -92, -16, -92, -16, -88, -18, -88, -18, -84, -20, -84, -20, -78, -22, -78, -22, -68, -24, -68, -24, -40, -22, -40, -22, -30, -20, -30, -20, -24, -18, -24, -18, -20, -16, -20, -16, -16, -14, -16, -14, -12)
+
+[node name="Fruit" type="Sprite2D" parent="Area2D"]
+light_mask = 10
+visibility_layer = 10
+position = Vector2(88, -56.000004)
+scale = Vector2(1.5, 1.5)
+
+[node name="PointLight2D" type="PointLight2D" parent="Area2D"]
+position = Vector2(52.000008, -20.000008)
+rotation = 0.7853982
+scale = Vector2(0.5, 1)
+range_item_cull_mask = 8
+texture = SubResource("GradientTexture1D_4q5wx")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Area2D"]
+position = Vector2(52, -92)
+rotation = 2.3561945
+scale = Vector2(0.5, 1)
+range_item_cull_mask = 8
+texture = SubResource("GradientTexture1D_4q5wx")
+
+[node name="Examine Button" type="Button" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_top = 2.0
+offset_right = 306.0
+offset_bottom = 102.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Examine"
+
+[node name="Cancel Button" type="Button" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_top = 19.0
+offset_right = 306.0
+offset_bottom = 119.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Cancel"
+
+[node name="Research Button" type="Button" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_top = 36.0
+offset_right = 306.0
+offset_bottom = 136.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Research"
+
+[node name="Library Button" type="Button" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_top = 53.0
+offset_right = 306.0
+offset_bottom = 153.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Library"
+
+[node name="Conclusive Labels" type="Node2D" parent="."]
+position = Vector2(48, 2)
+scale = Vector2(1.088, 1.088)
+
+[node name="Points Earned" type="Label" parent="Conclusive Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_right = 222.0
+offset_bottom = 51.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "Points Earned"
+
+[node name="Scientific" type="Label" parent="Conclusive Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_top = 6.0
+offset_right = 222.0
+offset_bottom = 57.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "Scientific:"
+
+[node name="Scientific Points" type="Label" parent="Conclusive Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_top = 12.0
+offset_right = 222.0
+offset_bottom = 114.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "0"
+
+[node name="Genome" type="Label" parent="Conclusive Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_top = 24.0
+offset_right = 222.0
+offset_bottom = 75.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "Genome:"
+
+[node name="Genome Points" type="Label" parent="Conclusive Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_top = 30.0
+offset_right = 222.0
+offset_bottom = 132.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "0"
+
+[node name="Specialized" type="Label" parent="Conclusive Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_top = 42.0
+offset_right = 222.0
+offset_bottom = 93.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "Specialized:"
+
+[node name="Specialized Points" type="Label" parent="Conclusive Labels"]
+light_mask = 2
+visibility_layer = 2
+offset_top = 48.0
+offset_right = 222.0
+offset_bottom = 150.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "0"
+
+[node name="Research Tab" type="Node2D" parent="."]
+position = Vector2(-33, 28)
+
+[node name="Sprite2D" type="Sprite2D" parent="Research Tab"]
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(1, 1.25)
+texture = SubResource("GradientTexture2D_u34cv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Research Tab"]
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.95, 1.2)
+texture = SubResource("GradientTexture2D_7kd4u")
+
+[node name="Scientific" type="Button" parent="Research Tab"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -27.0
+offset_top = -26.0
+offset_right = 146.325
+offset_bottom = 21.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Scientific"
+alignment = 0
+
+[node name="Genome" type="Button" parent="Research Tab"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -27.0
+offset_top = -15.0
+offset_right = 146.325
+offset_bottom = 32.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Genome
+"
+alignment = 0
+
+[node name="Specialized" type="Button" parent="Research Tab"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -27.0
+offset_top = -4.0
+offset_right = 146.325
+offset_bottom = 43.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Specialized"
+alignment = 0
+
+[node name="Balanced" type="Button" parent="Research Tab"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -27.0
+offset_top = 7.0
+offset_right = 146.325
+offset_bottom = 54.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Balanced"
+alignment = 0
+
+[node name="Points Earned" type="Label" parent="Research Tab"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -27.0
+offset_top = -36.0
+offset_right = 195.0
+offset_bottom = 15.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "Choose Point Bonus Desired"
+
+[node name="Scientific Points" type="Label" parent="Research Tab"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 2.0
+offset_top = -24.999998
+offset_right = 102.0
+offset_bottom = 20.000002
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Test"
+visible_characters = 5
+visible_ratio = 1.25
+
+[node name="Genome Points" type="Label" parent="Research Tab"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 2.0
+offset_top = -14.0
+offset_right = 102.0
+offset_bottom = 31.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Test"
+visible_characters = 5
+visible_ratio = 1.25
+
+[node name="Specialized Points" type="Label" parent="Research Tab"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 102.0
+offset_bottom = 42.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Test"
+
+[node name="Conclusion" type="Button" parent="Research Tab"]
+light_mask = 2
+visibility_layer = 2
+offset_left = -27.0
+offset_top = 17.000002
+offset_right = 336.375
+offset_bottom = 69.542
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Conclude Research"
+alignment = 0
+
+[node name="Close Button" type="Button" parent="Research Tab"]
+light_mask = 2
+visibility_layer = 2
+offset_left = 19.0
+offset_top = 27.0
+offset_right = 32.0
+offset_bottom = 40.0
+scale = Vector2(0.75, 0.75)
+theme_override_styles/normal = SubResource("StyleBoxTexture_g0wfs")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wqjkh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iwayx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0qwel")
+theme_override_styles/focus = SubResource("StyleBoxTexture_c46hf")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_up" from="Close Button" to="." method="_on_close_button_button_up"]
+[connection signal="toggled" from="Labels/Apples Button" to="." method="_on_apples_button_toggled"]
+[connection signal="toggled" from="Labels/Oranges Button" to="." method="_on_oranges_button_toggled"]
+[connection signal="toggled" from="Labels/Bananas Button" to="." method="_on_bananas_button_toggled"]
+[connection signal="toggled" from="Labels/Strawberries Button" to="." method="_on_strawberries_button_toggled"]
+[connection signal="toggled" from="Labels/Blueberries Button" to="." method="_on_blueberries_button_toggled"]
+[connection signal="toggled" from="Labels/Potatos Button" to="." method="_on_potatos_button_toggled"]
+[connection signal="toggled" from="Labels/Tomatos Button" to="." method="_on_tomatos_button_toggled"]
+[connection signal="toggled" from="Labels/Carrots Button" to="." method="_on_carrots_button_toggled"]
+[connection signal="toggled" from="Labels/Cucumbers Button" to="." method="_on_cucumbers_button_toggled"]
+[connection signal="toggled" from="Labels/Corn Button" to="." method="_on_corn_button_toggled"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="button_down" from="Examine Button" to="." method="_on_examine_button_button_down"]
+[connection signal="button_down" from="Cancel Button" to="." method="_on_cancel_button_button_down"]
+[connection signal="button_down" from="Research Button" to="." method="_on_research_button_button_down"]
+[connection signal="button_down" from="Research Tab/Scientific" to="." method="_on_scientific_button_down"]
+[connection signal="button_down" from="Research Tab/Genome" to="." method="_on_genome_button_down"]
+[connection signal="button_down" from="Research Tab/Specialized" to="." method="_on_specialized_button_down"]
+[connection signal="button_down" from="Research Tab/Balanced" to="." method="_on_balanced_button_down"]
+[connection signal="button_down" from="Research Tab/Conclusion" to="." method="_on_conclusion_button_down"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bj7ox2rsrhvi6"]
+
+[ext_resource type="Script" uid="uid://cxwxbju0mm3uq" path="res://menu_scene.gd" id="1_hko7e"]
+[ext_resource type="Texture2D" uid="uid://5vtd5rrdqmjh" path="res://Flower.png" id="1_vbts7"]
+[ext_resource type="Script" uid="uid://dlf2oqkw6ln3l" path="res://mouse.gd" id="3_i4wrx"]
+[ext_resource type="Texture2D" uid="uid://jurwmyhrviim" path="res://Loading Bar.png" id="3_mfwt2"]
+
+[node name="Menu Scene" type="Node2D"]
+script = ExtResource("1_hko7e")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(0, -250)
+scale = Vector2(3, 3)
+texture = ExtResource("1_vbts7")
+
+[node name="Mouse" type="Node2D" parent="."]
+scale = Vector2(0.025, 0.025)
+script = ExtResource("3_i4wrx")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Mouse"]
+offset_left = -480.0
+offset_top = -479.99997
+offset_right = 520.0
+offset_bottom = 520.0
+fill_mode = 4
+texture_progress = ExtResource("3_mfwt2")
+texture_progress_offset = Vector2(-20, -20)

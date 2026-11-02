@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://xsuyfac2yuho"]
+
+[ext_resource type="Script" uid="uid://di3quxhfnv8ey" path="res://Scripts/Main Menu/Settings/settings_menu.gd" id="1_0cmel"]
+[ext_resource type="Script" uid="uid://chr5ors4c2nhy" path="res://Scripts/Main Menu/Settings/music_settings_menu.gd" id="2_0cmel"]
+
+[sub_resource type="Gradient" id="Gradient_0cmel"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mlw3h"]
+gradient = SubResource("Gradient_0cmel")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfps0"]
+bg_color = Color(0.6, 0.6, 0.6, 0.10980392)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfekf"]
+bg_color = Color(0.6, 0.6, 0.6, 0.10980392)
+
+[node name="Settings Menu" type="Control" unique_id=858525168]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0cmel")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1611758015]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 0.7529412)
+z_index = 2
+position = Vector2(990, 509.99994)
+scale = Vector2(7.7343745, 1019.99994)
+texture = SubResource("GradientTexture1D_mlw3h")
+
+[node name="Sound" type="Label" parent="." unique_id=1232479516]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 175.0
+offset_bottom = 75.0
+scale = Vector2(5, 5)
+text = "Sound"
+
+[node name="Sound Effects Volume" type="Label" parent="." unique_id=887536868]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 200.0
+offset_right = 174.99997
+offset_bottom = 225.00002
+scale = Vector2(3, 3)
+text = "Sound Effects"
+
+[node name="Sound Effect Slider" type="HSlider" parent="." unique_id=406398116]
+z_index = 2
+layout_mode = 0
+offset_left = 450.0
+offset_top = 200.0
+offset_right = 550.00006
+offset_bottom = 224.99998
+scale = Vector2(3, 3)
+max_value = 1.0
+step = 0.001
+script = ExtResource("2_0cmel")
+bus_name = "Sound Effects"
+
+[node name="Music Volume" type="Label" parent="." unique_id=26100188]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 325.0
+offset_right = 175.0
+offset_bottom = 350.0
+scale = Vector2(3, 3)
+text = "Music"
+
+[node name="Music Volume Slider" type="HSlider" parent="." unique_id=1982924284]
+z_index = 2
+layout_mode = 0
+offset_left = 450.0
+offset_top = 325.0
+offset_right = 550.0
+offset_bottom = 350.00006
+scale = Vector2(3, 3)
+max_value = 1.0
+step = 0.001
+script = ExtResource("2_0cmel")
+bus_name = "Music"
+
+[node name="UI Volume" type="Label" parent="." unique_id=1709403881]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 450.0
+offset_right = 174.99997
+offset_bottom = 474.99985
+scale = Vector2(3, 3)
+text = "UI"
+
+[node name="UI Volume Slider" type="HSlider" parent="." unique_id=2001566587]
+z_index = 2
+layout_mode = 0
+offset_left = 450.0
+offset_top = 450.0
+offset_right = 550.0
+offset_bottom = 475.0
+scale = Vector2(3, 3)
+max_value = 1.0
+step = 0.001
+script = ExtResource("2_0cmel")
+bus_name = "UI"
+
+[node name="Ambient Volume" type="Label" parent="." unique_id=833782696]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 575.0
+offset_right = 174.99997
+offset_bottom = 599.99963
+scale = Vector2(3, 3)
+text = "Ambient"
+
+[node name="Ambient Volume Slider" type="HSlider" parent="." unique_id=386543170]
+z_index = 2
+layout_mode = 0
+offset_left = 450.0
+offset_top = 575.0
+offset_right = 550.0
+offset_bottom = 599.99963
+scale = Vector2(3, 3)
+max_value = 1.0
+step = 0.001
+script = ExtResource("2_0cmel")
+bus_name = "Ambience"
+
+[node name="Resolution" type="Label" parent="." unique_id=1141838257]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 675.0
+offset_right = 190.0
+offset_bottom = 700.0
+scale = Vector2(5, 5)
+text = "Resolution"
+
+[node name="Resolution Options" type="OptionButton" parent="." unique_id=1762716632]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 825.0
+offset_right = 750.0
+offset_bottom = 959.0
+fit_to_longest_item = false
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1753941475]
+visible = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D" unique_id=1127745479]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 0.7529412)
+z_index = 2
+position = Vector2(905, 417.00003)
+scale = Vector2(2, 300)
+texture = SubResource("GradientTexture1D_mlw3h")
+
+[node name="Text" type="Label" parent="Node2D" unique_id=1153083853]
+light_mask = 0
+z_index = 2
+offset_left = 664.0
+offset_top = 283.0
+offset_right = 824.0
+offset_bottom = 332.0
+scale = Vector2(3, 3)
+text = "Do you want to keep
+this resolution?"
+
+[node name="Count Down" type="Label" parent="Node2D" unique_id=378406934]
+light_mask = 0
+z_index = 2
+offset_left = 1046.0
+offset_top = 360.0
+offset_right = 1206.0
+offset_bottom = 409.0
+scale = Vector2(3, 3)
+text = "5"
+visible_characters = 1
+
+[node name="Yes" type="Button" parent="Node2D" unique_id=679572912]
+z_index = 2
+offset_left = 676.0
+offset_top = 458.0
+offset_right = 876.0
+offset_bottom = 538.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_tfps0")
+text = "Yes
+"
+
+[node name="No" type="Button" parent="Node2D" unique_id=86454904]
+z_index = 2
+offset_left = 929.0
+offset_top = 458.0
+offset_right = 1129.0
+offset_bottom = 538.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfekf")
+text = "No
+"
+
+[connection signal="item_selected" from="Resolution Options" to="." method="_on_resolution_options_item_selected"]
+[connection signal="pressed" from="Node2D/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Node2D/No" to="." method="_on_no_pressed"]

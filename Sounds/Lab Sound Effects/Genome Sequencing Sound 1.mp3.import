@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bylkd0e7knfr8"
+path="res://.godot/imported/Genome Sequencing Sound 1.mp3-7f71ebbcd503041d73a4eaef3749fca7.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Lab Sound Effects/Genome Sequencing Sound 1.mp3"
+dest_files=["res://.godot/imported/Genome Sequencing Sound 1.mp3-7f71ebbcd503041d73a4eaef3749fca7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

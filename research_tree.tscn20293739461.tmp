@@ -1,0 +1,884 @@
+[gd_scene load_steps=24 format=3 uid="uid://c6cjbi6mttu5d"]
+
+[ext_resource type="Script" uid="uid://ct3xj06phxcv6" path="res://research_tree.gd" id="1_eje52"]
+[ext_resource type="Texture2D" uid="uid://dxjkr4pe6il3n" path="res://Dot.png" id="1_j1j84"]
+[ext_resource type="Script" uid="uid://bmjdf3flpcylb" path="res://scientific_research_1.gd" id="2_0ejxu"]
+[ext_resource type="Texture2D" uid="uid://ccqs05b3w4we0" path="res://Sprites/Close Button.png" id="3_b4uxt"]
+[ext_resource type="Script" uid="uid://dtqgg44i17vpn" path="res://upgrade_node.gd" id="3_q1gma"]
+[ext_resource type="Texture2D" uid="uid://dss77d6p2200n" path="res://Sprites/Close Button (Pressed) .png" id="4_0ejxu"]
+
+[sub_resource type="Gradient" id="Gradient_qdi06"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eje52"]
+gradient = SubResource("Gradient_qdi06")
+
+[sub_resource type="Gradient" id="Gradient_adg83"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.105352856, 0.121948, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_m4nqy"]
+gradient = SubResource("Gradient_adg83")
+
+[sub_resource type="Curve" id="Curve_m4nqy"]
+_data = [Vector2(0, 0.25468588), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_j1j84"]
+_data = [Vector2(0, 0.24867451), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b4uxt"]
+radius = 1.8
+
+[sub_resource type="Theme" id="Theme_q1gma"]
+
+[sub_resource type="Gradient" id="Gradient_exuk5"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 0.20786569, 0.23237243, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j1j84"]
+gradient = SubResource("Gradient_exuk5")
+
+[sub_resource type="Gradient" id="Gradient_b4uxt"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.18359044, 0.18359044, 0.18359044, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0ejxu"]
+gradient = SubResource("Gradient_b4uxt")
+fill_from = Vector2(0.021367522, 0.008547009)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q1gma"]
+texture = ExtResource("3_b4uxt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d3m66"]
+texture = ExtResource("4_0ejxu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x7tas"]
+texture = ExtResource("3_b4uxt")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d0cgm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rvvre"]
+
+[node name="Research Tree" type="Node2D"]
+script = ExtResource("1_eje52")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(11, 3)
+energy = 0.5
+range_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_eje52")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(11, 3)
+texture = SubResource("GradientTexture2D_m4nqy")
+
+[node name="Scientific Research 1" type="Node2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-130, 10)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("2_0ejxu")
+
+[node name="DNA Research Set 1" type="Node2D" parent="Scientific Research 1"]
+light_mask = 2
+visibility_layer = 2
+
+[node name="DNA Strand 1" type="Line2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+points = PackedVector2Array(0, 0, 10, -10, 20, -20, 30, -20, 40, -30, 50, -30, 60, -30, 70, -20, 80, -20, 90, -10, 100, 0, 90, 10, 80, 20, 70, 20, 60, 30, 50, 30, 40, 30, 30, 20, 20, 20, 10, 10)
+closed = true
+width_curve = SubResource("Curve_m4nqy")
+default_color = Color(0, 0.45140088, 0.49171078, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 32
+
+[node name="Lesser Line 1" type="Line2D" parent="Scientific Research 1/DNA Research Set 1/DNA Strand 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(10, 0)
+points = PackedVector2Array(20, -20, 20, -10, 20, 0, 20, 10, 20, 20)
+width_curve = SubResource("Curve_j1j84")
+default_color = Color(0, 0.45140088, 0.49171078, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 32
+
+[node name="Greater Line 1" type="Line2D" parent="Scientific Research 1/DNA Research Set 1/DNA Strand 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(30, 0)
+points = PackedVector2Array(20, -30, 20, -20, 20, -10, 20, 0, 20, 10, 20, 20, 20, 30)
+width_curve = SubResource("Curve_j1j84")
+default_color = Color(0, 0.45140088, 0.49171078, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 32
+
+[node name="Lesser Line 2" type="Line2D" parent="Scientific Research 1/DNA Research Set 1/DNA Strand 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(50, 0)
+points = PackedVector2Array(20, -20, 20, -10, 20, 0, 20, 10, 20, 20)
+width_curve = SubResource("Curve_j1j84")
+default_color = Color(0, 0.45140088, 0.49171078, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 32
+
+[node name="DNA Strand 2" type="Line2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+points = PackedVector2Array(0, 0, 10, -10, 20, -20, 30, -20, 40, -30, 50, -30, 60, -30, 70, -20, 80, -20, 90, -10, 100, 0, 90, 10, 80, 20, 70, 20, 60, 30, 50, 30, 40, 30, 30, 20, 20, 20, 10, 10)
+closed = true
+width = 7.5
+width_curve = SubResource("Curve_m4nqy")
+default_color = Color(5.053729e-07, 0.2891619, 0.31583586, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 32
+
+[node name="Lesser Line 1" type="Line2D" parent="Scientific Research 1/DNA Research Set 1/DNA Strand 2"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(10, 0)
+points = PackedVector2Array(20, -20, 20, -10, 20, 0, 20, 10, 20, 20)
+width = 7.5
+width_curve = SubResource("Curve_j1j84")
+default_color = Color(5.053729e-07, 0.2891619, 0.31583586, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 32
+
+[node name="Greater Line 1" type="Line2D" parent="Scientific Research 1/DNA Research Set 1/DNA Strand 2"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(30, 0)
+points = PackedVector2Array(20, -30, 20, -20, 20, -10, 20, 0, 20, 10, 20, 20, 20, 30)
+width = 7.5
+width_curve = SubResource("Curve_j1j84")
+default_color = Color(5.053729e-07, 0.2891619, 0.31583586, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 32
+
+[node name="Lesser Line 2" type="Line2D" parent="Scientific Research 1/DNA Research Set 1/DNA Strand 2"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(50, 0)
+points = PackedVector2Array(20, -20, 20, -10, 20, 0, 20, 10, 20, 20)
+width = 7.5
+width_curve = SubResource("Curve_j1j84")
+default_color = Color(5.053729e-07, 0.2891619, 0.31583586, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+round_precision = 32
+
+[node name="GSp1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+script = ExtResource("3_q1gma")
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp1"]
+modulate = Color(0, 0.2901961, 0.31764707, 0.9882353)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSp1Area2D" type="Area2D" parent="Scientific Research 1/DNA Research Set 1/GSp1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scientific Research 1/DNA Research Set 1/GSp1/GSp1Area2D"]
+shape = SubResource("CircleShape2D_b4uxt")
+
+[node name="Container" type="Container" parent="Scientific Research 1/DNA Research Set 1/GSp1"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.105, 0.105)
+theme = SubResource("Theme_q1gma")
+
+[node name="Label" type="Label" parent="Scientific Research 1/DNA Research Set 1/GSp1/Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Test Text"
+
+[node name="GSp2_1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(10, -10)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp2_1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp2_1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSp2_2" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(10, 10)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp2_2"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp2_2"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSq1B1_1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(20, -20)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq1B1_1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq1B1_1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSq1B1_2" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(20, 20)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq1B1_2"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq1B1_2"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GI1 (Dual)" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(30, -20)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GI1 (Dual)"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GI1 (Dual)"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot3" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GI1 (Dual)"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-0.125, 39.875)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot4" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GI1 (Dual)"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-0.125, 39.875)
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSqM1_1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(30, -10)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSqM1_1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSqM1_1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSqM1_2" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(30, 10)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSqM1_2"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSqM1_2"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GI3" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(30, 0)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GI3"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GI3"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSp3_1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(40, -30)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp3_1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp3_1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSp3_2" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(40, 30)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp3_2"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp3_2"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GI2 (Dual)" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(50, -30)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GI2 (Dual)"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GI2 (Dual)"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot3" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GI2 (Dual)"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-0.125, 59.875)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot4" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GI2 (Dual)"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-0.125, 59.875)
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSq1M2_1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(50, -20)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq1M2_1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq1M2_1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSq1M2_2" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(50, 20)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq1M2_2"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq1M2_2"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSq13B1_1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(50, -10)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq13B1_1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq13B1_1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSq13B1_2" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(50, 10)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq13B1_2"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq13B1_2"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSq1C1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(50, 0)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq1C1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq1C1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="PDSq1B1_1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(60, -30)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/PDSq1B1_1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/PDSq1B1_1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="PDSq1B1_2" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(60, 30)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/PDSq1B1_2"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/PDSq1B1_2"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="PDSp1_1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(70, -20)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/PDSp1_1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/PDSp1_1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="PDSp1_2" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(70, 20)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/PDSp1_2"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/PDSp1_2"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSq2B1_1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(70, -10)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq2B1_1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq2B1_1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSq2B1_2" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(70, 10)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq2B1_2"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSq2B1_2"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="TGS1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(70, 0)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/TGS1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/TGS1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="PDSq1M1_1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(80, -20)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/PDSq1M1_1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/PDSq1M1_1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="PDSq1M1_2" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(80, 20)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/PDSq1M1_2"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/PDSq1M1_2"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSp4_1" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(90, -10)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp4_1"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp4_1"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="GSp4_2" type="Node2D" parent="Scientific Research 1/DNA Research Set 1"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(90, 10)
+
+[node name="Dot" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp4_2"]
+modulate = Color(0, 0.13526577, 0.15133888, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("1_j1j84")
+
+[node name="Dot2" type="Sprite2D" parent="Scientific Research 1/DNA Research Set 1/GSp4_2"]
+modulate = Color(0, 0.2901961, 0.31764707, 1)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(0.065, 0.065)
+texture = ExtResource("1_j1j84")
+
+[node name="Background Tint" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.39215687)
+light_mask = 2
+visibility_layer = 2
+scale = Vector2(11, 3)
+texture = SubResource("GradientTexture2D_j1j84")
+
+[node name="Bar" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0, -65)
+scale = Vector2(4.55, 0.35)
+texture = SubResource("GradientTexture2D_0ejxu")
+
+[node name="Scientific Points Title" type="Label" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_left = 86.0
+offset_top = 62.999996
+offset_right = 363.0
+offset_bottom = 176.0
+scale = Vector2(0.12, 0.12)
+theme_override_colors/font_color = Color(3.080368e-06, 0.60609865, 0.73682934, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 60
+text = "Scientific:"
+vertical_alignment = 1
+
+[node name="Scientific Points" type="Label" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_left = 128.0
+offset_top = 62.999996
+offset_right = 244.66663
+offset_bottom = 176.0
+scale = Vector2(0.12, 0.12)
+theme_override_colors/font_color = Color(3.080368e-06, 0.60609865, 0.73682934, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Genome Points Title" type="Label" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_left = 86.0
+offset_top = 49.0
+offset_right = 363.0
+offset_bottom = 162.0
+scale = Vector2(0.12, 0.12)
+theme_override_colors/font_color = Color(3.080368e-06, 0.60609865, 0.73682934, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 60
+text = "Genome:"
+vertical_alignment = 1
+
+[node name="Genome Points" type="Label" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_left = 128.0
+offset_top = 49.0
+offset_right = 244.66663
+offset_bottom = 162.0
+scale = Vector2(0.12, 0.12)
+theme_override_colors/font_color = Color(3.080368e-06, 0.60609865, 0.73682934, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Specialized Points Title" type="Label" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_left = 85.99999
+offset_top = 35.0
+offset_right = 423.0
+offset_bottom = 148.0
+scale = Vector2(0.12, 0.12)
+theme_override_colors/font_color = Color(3.080368e-06, 0.60609865, 0.73682934, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 60
+text = "Specialized:"
+vertical_alignment = 1
+
+[node name="Specialized Points" type="Label" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_left = 127.99999
+offset_top = 34.999992
+offset_right = 244.66663
+offset_bottom = 147.99998
+scale = Vector2(0.12, 0.12)
+theme_override_colors/font_color = Color(3.080368e-06, 0.60609865, 0.73682934, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close Button Sequencing" type="Button" parent="."]
+light_mask = 2
+visibility_layer = 2
+offset_left = 127.0
+offset_top = -70.0
+offset_right = 140.0
+offset_bottom = -57.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_q1gma")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_d3m66")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x7tas")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_d0cgm")
+theme_override_styles/focus = SubResource("StyleBoxTexture_rvvre")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="Scientific Research 1/DNA Research Set 1/GSp1/GSp1Area2D" to="Scientific Research 1/DNA Research Set 1/GSp1" method="_on_g_sp_1_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Scientific Research 1/DNA Research Set 1/GSp1/GSp1Area2D" to="Scientific Research 1/DNA Research Set 1/GSp1" method="_on_g_sp_1_area_2d_mouse_exited"]
+[connection signal="pressed" from="Close Button Sequencing" to="." method="_on_close_button_sequencing_pressed"]

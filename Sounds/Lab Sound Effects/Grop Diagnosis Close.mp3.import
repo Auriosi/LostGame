@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3iqvo0t6ieh8"
+path="res://.godot/imported/Grop Diagnosis Close.mp3-3923e074fab0d53c9637e667d5323f88.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Lab Sound Effects/Grop Diagnosis Close.mp3"
+dest_files=["res://.godot/imported/Grop Diagnosis Close.mp3-3923e074fab0d53c9637e667d5323f88.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

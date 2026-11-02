@@ -1,0 +1,1708 @@
+[gd_scene format=3 uid="uid://c6cjbi6mttu5d"]
+
+[ext_resource type="Script" uid="uid://ct3xj06phxcv6" path="res://Scripts/Research Tree/research_tree.gd" id="1_eje52"]
+[ext_resource type="Script" uid="uid://bmjdf3flpcylb" path="res://Scripts/Research Tree/scientific_research.gd" id="2_0ejxu"]
+[ext_resource type="PackedScene" uid="uid://cod1svlbni0do" path="res://Scenes/Games/Research Tree/scientific_research_branch_base_part.tscn" id="3_333ad"]
+[ext_resource type="PackedScene" uid="uid://dwetsjcypl7dy" path="res://Scenes/Games/Research Tree/Upgrade Node.tscn" id="3_m2v5s"]
+[ext_resource type="Texture2D" uid="uid://bx5scbthg4xlj" path="res://Sprites/Reserach Tree/Scientific Upgrade Button (Pressed).png" id="4_ug0hw"]
+[ext_resource type="Texture2D" uid="uid://wy64hkvfgddk" path="res://Sprites/Reserach Tree/Scientific Upgrade Button (Hover).png" id="5_333ad"]
+[ext_resource type="PackedScene" uid="uid://cqrhv6u4gusbs" path="res://Scenes/Games/Research Tree/scientific_research_branch_upgrade_part.tscn" id="5_m2v5s"]
+[ext_resource type="Texture2D" uid="uid://bcgsdb0w60bbp" path="res://Sprites/Reserach Tree/Scientific Upgrade Button (Activated).png" id="6_s1dly"]
+[ext_resource type="Script" uid="uid://bmqk33pgab0iu" path="res://Scripts/Research Tree/genome_research.gd" id="9_333ad"]
+[ext_resource type="PackedScene" uid="uid://qpy1tfr1y8pm" path="res://Scenes/Games/Research Tree/ground_research_set_1.tscn" id="10_s1dly"]
+[ext_resource type="Script" uid="uid://tbps7tkpj2ld" path="res://Scripts/Research Tree/ground_research_set_1.gd" id="11_s1dly"]
+[ext_resource type="Script" uid="uid://c26uxoapqkjur" path="res://Scenes/Games/Research Tree/root_1.gd" id="12_hj2nn"]
+[ext_resource type="PackedScene" uid="uid://c3xjq63uy8dqb" path="res://Scenes/Games/Research Tree/ground_research_set_unique.tscn" id="12_m2v5s"]
+[ext_resource type="PackedScene" uid="uid://bgaqakka0j8ft" path="res://Scenes/Games/Research Tree/Upgrade Node 2.tscn" id="12_uji0d"]
+[ext_resource type="Script" uid="uid://dwh2fvnlo2706" path="res://Scenes/Games/Research Tree/root_2.gd" id="14_0o2dl"]
+[ext_resource type="Script" uid="uid://b08cur7fwev7g" path="res://Scenes/Games/Research Tree/root_3.gd" id="15_y2pnq"]
+[ext_resource type="Script" uid="uid://6dairgtk6ly8" path="res://Scenes/Games/Research Tree/root_4.gd" id="16_rfebt"]
+
+[sub_resource type="Gradient" id="Gradient_qdi06"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eje52"]
+gradient = SubResource("Gradient_qdi06")
+
+[sub_resource type="Gradient" id="Gradient_adg83"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.20784314, 0.23137255, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_m4nqy"]
+gradient = SubResource("Gradient_adg83")
+
+[sub_resource type="Gradient" id="Gradient_ichtx"]
+offsets = PackedFloat32Array(0.0071174377)
+colors = PackedColorArray(0.446777, 0.44677705, 0.44677705, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ssg8p"]
+gradient = SubResource("Gradient_ichtx")
+
+[sub_resource type="Gradient" id="Gradient_ssg8p"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ayjbm"]
+gradient = SubResource("Gradient_ssg8p")
+
+[sub_resource type="Curve" id="Curve_m4nqy"]
+_data = [Vector2(0, 0.25468588), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_j1j84"]
+_data = [Vector2(0, 0.24867451), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_ug0hw"]
+_data = [Vector2(0.0030581057, 0.15182936), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_333ad"]
+_data = [Vector2(0, 0.15182936), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ym53v"]
+texture = ExtResource("4_ug0hw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qqiwh"]
+texture = ExtResource("4_ug0hw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6oidu"]
+texture = ExtResource("5_333ad")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7oqe8"]
+texture = ExtResource("6_s1dly")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i2qt5"]
+
+[sub_resource type="Gradient" id="Gradient_m2v5s"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.20784314, 0.23137255, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_333ad"]
+gradient = SubResource("Gradient_m2v5s")
+
+[sub_resource type="Gradient" id="Gradient_exuk5"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 0.20786569, 0.23237243, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j1j84"]
+gradient = SubResource("Gradient_exuk5")
+
+[sub_resource type="Curve" id="Curve_8w1p8"]
+_data = [Vector2(0, 0.2459721), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_m2v5s"]
+_data = [Vector2(0, 0.14822769), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Gradient" id="Gradient_ug0hw"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.20784314, 0.23137255, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f14m1"]
+gradient = SubResource("Gradient_ug0hw")
+
+[node name="Research Tree" type="Node2D" unique_id=1164846287]
+light_mask = 4
+visibility_layer = 4
+script = ExtResource("1_eje52")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1812313834]
+light_mask = 4
+visibility_layer = 4
+scale = Vector2(23.455, 15.43)
+energy = 0.25
+range_item_cull_mask = 4
+texture = SubResource("GradientTexture2D_eje52")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=892807565]
+visible = false
+light_mask = 4
+visibility_layer = 4
+scale = Vector2(11, 3)
+texture = SubResource("GradientTexture2D_m4nqy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2051743009]
+visible = false
+
+[node name="Stats" type="Node2D" parent="CanvasLayer" unique_id=1894927534]
+light_mask = 4
+visibility_layer = 4
+z_index = 5
+position = Vector2(770.99994, 518.99994)
+scale = Vector2(5, 5)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Stats" unique_id=319006677]
+light_mask = 4
+visibility_layer = 4
+z_index = 6
+position = Vector2(-94.4, -15.29)
+scale = Vector2(1.46, 0.83)
+texture = SubResource("GradientTexture2D_ssg8p")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/Stats/Sprite2D" unique_id=963754355]
+light_mask = 4
+visibility_layer = 4
+z_index = 6
+scale = Vector2(0.96774197, 0.952381)
+texture = SubResource("GradientTexture2D_ayjbm")
+
+[node name="Genome Sequencing" type="Label" parent="CanvasLayer/Stats" unique_id=751823841]
+light_mask = 4
+visibility_layer = 4
+z_index = 6
+offset_left = -138.0
+offset_top = -42.0
+offset_right = 21.0
+offset_bottom = -19.0
+scale = Vector2(0.5, 0.5)
+text = "Genome Sequencing"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Stats" unique_id=1251645670]
+light_mask = 4
+visibility_layer = 4
+z_index = 6
+offset_left = -138.0
+offset_top = -29.0
+offset_right = 154.095
+offset_bottom = 100.880005
+scale = Vector2(0.3, 0.3)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Scientific Research Points" type="Label" parent="CanvasLayer/Stats/ScrollContainer" unique_id=1310894806]
+light_mask = 4
+visibility_layer = 4
+z_index = 6
+layout_mode = 2
+text = "Scientific Research Points"
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/Stats" unique_id=718500922]
+light_mask = 4
+visibility_layer = 4
+z_index = 6
+position = Vector2(-94.28001, 42.71)
+scale = Vector2(1.46, 0.83)
+texture = SubResource("GradientTexture2D_ssg8p")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/Stats/Sprite2D2" unique_id=1248733749]
+light_mask = 4
+visibility_layer = 4
+z_index = 6
+scale = Vector2(0.96774197, 0.952381)
+texture = SubResource("GradientTexture2D_ayjbm")
+
+[node name="Plant Development" type="Label" parent="CanvasLayer/Stats" unique_id=926473275]
+light_mask = 4
+visibility_layer = 4
+z_index = 6
+offset_left = -137.88
+offset_top = 16.0
+offset_right = 21.119995
+offset_bottom = 39.0
+scale = Vector2(0.5, 0.5)
+text = "Plant Development"
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="CanvasLayer/Stats" unique_id=1898894622]
+light_mask = 4
+visibility_layer = 4
+z_index = 6
+offset_left = -137.88
+offset_top = 29.0
+offset_right = 154.215
+offset_bottom = 158.88
+scale = Vector2(0.3, 0.3)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Scientific Research Points" type="Label" parent="CanvasLayer/Stats/ScrollContainer2" unique_id=23017911]
+light_mask = 4
+visibility_layer = 4
+z_index = 6
+layout_mode = 2
+text = "Scientific Research Points"
+
+[node name="Scientific Research" type="Node2D" parent="." unique_id=1567099746]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-130, 10)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("2_0ejxu")
+
+[node name="DNA Research Set 1" parent="Scientific Research" unique_id=968292021 instance=ExtResource("3_333ad")]
+position = Vector2(-250, 0)
+
+[node name="DNA Strand 1" parent="Scientific Research/DNA Research Set 1" index="0" unique_id=68947796]
+width_curve = SubResource("Curve_m4nqy")
+
+[node name="Lesser Line 1" parent="Scientific Research/DNA Research Set 1/DNA Strand 1" index="0" unique_id=2102779010]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="Greater Line 1" parent="Scientific Research/DNA Research Set 1/DNA Strand 1" index="1" unique_id=1446403320]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="Lesser Line 2" parent="Scientific Research/DNA Research Set 1/DNA Strand 1" index="2" unique_id=1852567515]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="DNA Strand 2" parent="Scientific Research/DNA Research Set 1" index="1" unique_id=2083371930]
+width_curve = SubResource("Curve_ug0hw")
+
+[node name="Lesser Line 1" parent="Scientific Research/DNA Research Set 1/DNA Strand 2" index="0" unique_id=1833145302]
+width_curve = SubResource("Curve_333ad")
+
+[node name="Greater Line 1" parent="Scientific Research/DNA Research Set 1/DNA Strand 2" index="1" unique_id=175648454]
+width_curve = SubResource("Curve_333ad")
+
+[node name="Lesser Line 2" parent="Scientific Research/DNA Research Set 1/DNA Strand 2" index="2" unique_id=406282301]
+width_curve = SubResource("Curve_333ad")
+
+[node name="1_1" parent="Scientific Research/DNA Research Set 1" index="2" unique_id=1440157359]
+visible = true
+
+[node name="Button" parent="Scientific Research/DNA Research Set 1/1_1" index="0" unique_id=1050345927]
+theme_override_styles/normal = SubResource("StyleBoxTexture_ym53v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qqiwh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6oidu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7oqe8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i2qt5")
+
+[node name="1_1 2_1" parent="Scientific Research/DNA Research Set 1" index="3" unique_id=1882504889]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="1_1 2_2" parent="Scientific Research/DNA Research Set 1" index="4" unique_id=598388334]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="2_1 3_1" parent="Scientific Research/DNA Research Set 1" index="7" unique_id=626548732]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="3_1 4_1" parent="Scientific Research/DNA Research Set 1" index="11" unique_id=664699806]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_1 4_2" parent="Scientific Research/DNA Research Set 1" index="14" unique_id=1217501064]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_2 4_3" parent="Scientific Research/DNA Research Set 1" index="16" unique_id=1475900564]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_3 4_4" parent="Scientific Research/DNA Research Set 1" index="18" unique_id=724151801]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_4 4_5" parent="Scientific Research/DNA Research Set 1" index="20" unique_id=1603367795]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_1 5_1" parent="Scientific Research/DNA Research Set 1" index="22" unique_id=521652574]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_5 5_2" parent="Scientific Research/DNA Research Set 1" index="23" unique_id=113019636]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="5_1 6_1" parent="Scientific Research/DNA Research Set 1" index="26" unique_id=2114929117]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="5_2 6_7" parent="Scientific Research/DNA Research Set 1" index="27" unique_id=1813732927]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_1 6_2" parent="Scientific Research/DNA Research Set 1" index="29" unique_id=759209251]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_2 6_3" parent="Scientific Research/DNA Research Set 1" index="31" unique_id=1630520098]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_3 6_4" parent="Scientific Research/DNA Research Set 1" index="33" unique_id=721339786]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_4 6_5" parent="Scientific Research/DNA Research Set 1" index="35" unique_id=1724032212]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_5 6_6" parent="Scientific Research/DNA Research Set 1" index="37" unique_id=191521025]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_6 6_7" parent="Scientific Research/DNA Research Set 1" index="39" unique_id=1188063370]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_1 7_1" parent="Scientific Research/DNA Research Set 1" index="41" unique_id=2079782365]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_7 7_2" parent="Scientific Research/DNA Research Set 1" index="42" unique_id=276677736]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="7_1 8_1" parent="Scientific Research/DNA Research Set 1" index="45" unique_id=1585583861]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="7_2 8_5" parent="Scientific Research/DNA Research Set 1" index="46" unique_id=2093815555]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_1 8_2" parent="Scientific Research/DNA Research Set 1" index="48" unique_id=1193233375]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_2 8_3" parent="Scientific Research/DNA Research Set 1" index="50" unique_id=1329947097]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_3 8_4" parent="Scientific Research/DNA Research Set 1" index="52" unique_id=1120204576]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_4 8_5" parent="Scientific Research/DNA Research Set 1" index="54" unique_id=1476794889]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_1 9_1" parent="Scientific Research/DNA Research Set 1" index="56" unique_id=693992745]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_4 9_2" parent="Scientific Research/DNA Research Set 1" index="57" unique_id=1888586810]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="9_1 10_1" parent="Scientific Research/DNA Research Set 1" index="60" unique_id=1362768021]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="9_2 10_2" parent="Scientific Research/DNA Research Set 1" index="61" unique_id=693733126]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="10_1 11_1" parent="Scientific Research/DNA Research Set 1" index="64" unique_id=373613439]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="10_1 11_2" parent="Scientific Research/DNA Research Set 1" index="65" unique_id=179355639]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="DNA Research Set 2" parent="Scientific Research" unique_id=449073077 instance=ExtResource("3_333ad")]
+position = Vector2(-150, 0)
+
+[node name="DNA Strand 1" parent="Scientific Research/DNA Research Set 2" index="0" unique_id=68947796]
+width_curve = SubResource("Curve_m4nqy")
+
+[node name="Lesser Line 1" parent="Scientific Research/DNA Research Set 2/DNA Strand 1" index="0" unique_id=2102779010]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="Greater Line 1" parent="Scientific Research/DNA Research Set 2/DNA Strand 1" index="1" unique_id=1446403320]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="Lesser Line 2" parent="Scientific Research/DNA Research Set 2/DNA Strand 1" index="2" unique_id=1852567515]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="DNA Strand 2" parent="Scientific Research/DNA Research Set 2" index="1" unique_id=2083371930]
+width_curve = SubResource("Curve_ug0hw")
+
+[node name="Lesser Line 1" parent="Scientific Research/DNA Research Set 2/DNA Strand 2" index="0" unique_id=1833145302]
+width_curve = SubResource("Curve_333ad")
+
+[node name="Greater Line 1" parent="Scientific Research/DNA Research Set 2/DNA Strand 2" index="1" unique_id=175648454]
+width_curve = SubResource("Curve_333ad")
+
+[node name="Lesser Line 2" parent="Scientific Research/DNA Research Set 2/DNA Strand 2" index="2" unique_id=406282301]
+width_curve = SubResource("Curve_333ad")
+
+[node name="1_1 2_1" parent="Scientific Research/DNA Research Set 2" index="3" unique_id=1882504889]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="1_1 2_2" parent="Scientific Research/DNA Research Set 2" index="4" unique_id=598388334]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="2_1 3_1" parent="Scientific Research/DNA Research Set 2" index="7" unique_id=626548732]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="3_1 4_1" parent="Scientific Research/DNA Research Set 2" index="11" unique_id=664699806]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_1 4_2" parent="Scientific Research/DNA Research Set 2" index="14" unique_id=1217501064]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_2 4_3" parent="Scientific Research/DNA Research Set 2" index="16" unique_id=1475900564]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_3 4_4" parent="Scientific Research/DNA Research Set 2" index="18" unique_id=724151801]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_4 4_5" parent="Scientific Research/DNA Research Set 2" index="20" unique_id=1603367795]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_1 5_1" parent="Scientific Research/DNA Research Set 2" index="22" unique_id=521652574]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_5 5_2" parent="Scientific Research/DNA Research Set 2" index="23" unique_id=113019636]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="5_1 6_1" parent="Scientific Research/DNA Research Set 2" index="26" unique_id=2114929117]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="5_2 6_7" parent="Scientific Research/DNA Research Set 2" index="27" unique_id=1813732927]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_1 6_2" parent="Scientific Research/DNA Research Set 2" index="29" unique_id=759209251]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_2 6_3" parent="Scientific Research/DNA Research Set 2" index="31" unique_id=1630520098]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_3 6_4" parent="Scientific Research/DNA Research Set 2" index="33" unique_id=721339786]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_4 6_5" parent="Scientific Research/DNA Research Set 2" index="35" unique_id=1724032212]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_5 6_6" parent="Scientific Research/DNA Research Set 2" index="37" unique_id=191521025]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_6 6_7" parent="Scientific Research/DNA Research Set 2" index="39" unique_id=1188063370]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_1 7_1" parent="Scientific Research/DNA Research Set 2" index="41" unique_id=2079782365]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_7 7_2" parent="Scientific Research/DNA Research Set 2" index="42" unique_id=276677736]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="7_1 8_1" parent="Scientific Research/DNA Research Set 2" index="45" unique_id=1585583861]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="7_2 8_5" parent="Scientific Research/DNA Research Set 2" index="46" unique_id=2093815555]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_1 8_2" parent="Scientific Research/DNA Research Set 2" index="48" unique_id=1193233375]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_2 8_3" parent="Scientific Research/DNA Research Set 2" index="50" unique_id=1329947097]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_3 8_4" parent="Scientific Research/DNA Research Set 2" index="52" unique_id=1120204576]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_4 8_5" parent="Scientific Research/DNA Research Set 2" index="54" unique_id=1476794889]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_1 9_1" parent="Scientific Research/DNA Research Set 2" index="56" unique_id=693992745]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_4 9_2" parent="Scientific Research/DNA Research Set 2" index="57" unique_id=1888586810]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="9_1 10_1" parent="Scientific Research/DNA Research Set 2" index="60" unique_id=1362768021]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="9_2 10_2" parent="Scientific Research/DNA Research Set 2" index="61" unique_id=693733126]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="10_1 11_1" parent="Scientific Research/DNA Research Set 2" index="64" unique_id=373613439]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="10_1 11_2" parent="Scientific Research/DNA Research Set 2" index="65" unique_id=179355639]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="DNA Research Set 3" parent="Scientific Research" unique_id=737739926 instance=ExtResource("3_333ad")]
+position = Vector2(-50, 0)
+
+[node name="DNA Strand 1" parent="Scientific Research/DNA Research Set 3" index="0" unique_id=68947796]
+width_curve = SubResource("Curve_m4nqy")
+
+[node name="Lesser Line 1" parent="Scientific Research/DNA Research Set 3/DNA Strand 1" index="0" unique_id=2102779010]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="Greater Line 1" parent="Scientific Research/DNA Research Set 3/DNA Strand 1" index="1" unique_id=1446403320]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="Lesser Line 2" parent="Scientific Research/DNA Research Set 3/DNA Strand 1" index="2" unique_id=1852567515]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="DNA Strand 2" parent="Scientific Research/DNA Research Set 3" index="1" unique_id=2083371930]
+width_curve = SubResource("Curve_ug0hw")
+
+[node name="Lesser Line 1" parent="Scientific Research/DNA Research Set 3/DNA Strand 2" index="0" unique_id=1833145302]
+width_curve = SubResource("Curve_333ad")
+
+[node name="Greater Line 1" parent="Scientific Research/DNA Research Set 3/DNA Strand 2" index="1" unique_id=175648454]
+width_curve = SubResource("Curve_333ad")
+
+[node name="Lesser Line 2" parent="Scientific Research/DNA Research Set 3/DNA Strand 2" index="2" unique_id=406282301]
+width_curve = SubResource("Curve_333ad")
+
+[node name="1_1 2_1" parent="Scientific Research/DNA Research Set 3" index="3" unique_id=1882504889]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="1_1 2_2" parent="Scientific Research/DNA Research Set 3" index="4" unique_id=598388334]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="2_1 3_1" parent="Scientific Research/DNA Research Set 3" index="7" unique_id=626548732]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="3_1 4_1" parent="Scientific Research/DNA Research Set 3" index="11" unique_id=664699806]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_1 4_2" parent="Scientific Research/DNA Research Set 3" index="14" unique_id=1217501064]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_2 4_3" parent="Scientific Research/DNA Research Set 3" index="16" unique_id=1475900564]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_3 4_4" parent="Scientific Research/DNA Research Set 3" index="18" unique_id=724151801]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_4 4_5" parent="Scientific Research/DNA Research Set 3" index="20" unique_id=1603367795]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_1 5_1" parent="Scientific Research/DNA Research Set 3" index="22" unique_id=521652574]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_5 5_2" parent="Scientific Research/DNA Research Set 3" index="23" unique_id=113019636]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="5_1 6_1" parent="Scientific Research/DNA Research Set 3" index="26" unique_id=2114929117]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="5_2 6_7" parent="Scientific Research/DNA Research Set 3" index="27" unique_id=1813732927]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_1 6_2" parent="Scientific Research/DNA Research Set 3" index="29" unique_id=759209251]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_2 6_3" parent="Scientific Research/DNA Research Set 3" index="31" unique_id=1630520098]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_3 6_4" parent="Scientific Research/DNA Research Set 3" index="33" unique_id=721339786]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_4 6_5" parent="Scientific Research/DNA Research Set 3" index="35" unique_id=1724032212]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_5 6_6" parent="Scientific Research/DNA Research Set 3" index="37" unique_id=191521025]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_6 6_7" parent="Scientific Research/DNA Research Set 3" index="39" unique_id=1188063370]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_1 7_1" parent="Scientific Research/DNA Research Set 3" index="41" unique_id=2079782365]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_7 7_2" parent="Scientific Research/DNA Research Set 3" index="42" unique_id=276677736]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="7_1 8_1" parent="Scientific Research/DNA Research Set 3" index="45" unique_id=1585583861]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="7_2 8_5" parent="Scientific Research/DNA Research Set 3" index="46" unique_id=2093815555]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_1 8_2" parent="Scientific Research/DNA Research Set 3" index="48" unique_id=1193233375]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_2 8_3" parent="Scientific Research/DNA Research Set 3" index="50" unique_id=1329947097]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_3 8_4" parent="Scientific Research/DNA Research Set 3" index="52" unique_id=1120204576]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_4 8_5" parent="Scientific Research/DNA Research Set 3" index="54" unique_id=1476794889]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_1 9_1" parent="Scientific Research/DNA Research Set 3" index="56" unique_id=693992745]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_4 9_2" parent="Scientific Research/DNA Research Set 3" index="57" unique_id=1888586810]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="9_1 10_1" parent="Scientific Research/DNA Research Set 3" index="60" unique_id=1362768021]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="9_2 10_2" parent="Scientific Research/DNA Research Set 3" index="61" unique_id=693733126]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="10_1 11_1" parent="Scientific Research/DNA Research Set 3" index="64" unique_id=373613439]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="10_1 11_2" parent="Scientific Research/DNA Research Set 3" index="65" unique_id=179355639]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="DNA Research Set 4" parent="Scientific Research" unique_id=1890375431 instance=ExtResource("3_333ad")]
+position = Vector2(50, 0)
+
+[node name="DNA Strand 1" parent="Scientific Research/DNA Research Set 4" index="0" unique_id=68947796]
+width_curve = SubResource("Curve_m4nqy")
+
+[node name="Lesser Line 1" parent="Scientific Research/DNA Research Set 4/DNA Strand 1" index="0" unique_id=2102779010]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="Greater Line 1" parent="Scientific Research/DNA Research Set 4/DNA Strand 1" index="1" unique_id=1446403320]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="Lesser Line 2" parent="Scientific Research/DNA Research Set 4/DNA Strand 1" index="2" unique_id=1852567515]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="DNA Strand 2" parent="Scientific Research/DNA Research Set 4" index="1" unique_id=2083371930]
+width_curve = SubResource("Curve_ug0hw")
+
+[node name="Lesser Line 1" parent="Scientific Research/DNA Research Set 4/DNA Strand 2" index="0" unique_id=1833145302]
+width_curve = SubResource("Curve_333ad")
+
+[node name="Greater Line 1" parent="Scientific Research/DNA Research Set 4/DNA Strand 2" index="1" unique_id=175648454]
+width_curve = SubResource("Curve_333ad")
+
+[node name="Lesser Line 2" parent="Scientific Research/DNA Research Set 4/DNA Strand 2" index="2" unique_id=406282301]
+width_curve = SubResource("Curve_333ad")
+
+[node name="1_1 2_1" parent="Scientific Research/DNA Research Set 4" index="3" unique_id=1882504889]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="1_1 2_2" parent="Scientific Research/DNA Research Set 4" index="4" unique_id=598388334]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="2_1 3_1" parent="Scientific Research/DNA Research Set 4" index="7" unique_id=626548732]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="3_1 4_1" parent="Scientific Research/DNA Research Set 4" index="11" unique_id=664699806]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_1 4_2" parent="Scientific Research/DNA Research Set 4" index="14" unique_id=1217501064]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_2 4_3" parent="Scientific Research/DNA Research Set 4" index="16" unique_id=1475900564]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_3 4_4" parent="Scientific Research/DNA Research Set 4" index="18" unique_id=724151801]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_4 4_5" parent="Scientific Research/DNA Research Set 4" index="20" unique_id=1603367795]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_1 5_1" parent="Scientific Research/DNA Research Set 4" index="22" unique_id=521652574]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_5 5_2" parent="Scientific Research/DNA Research Set 4" index="23" unique_id=113019636]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="5_1 6_1" parent="Scientific Research/DNA Research Set 4" index="26" unique_id=2114929117]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="5_2 6_7" parent="Scientific Research/DNA Research Set 4" index="27" unique_id=1813732927]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_1 6_2" parent="Scientific Research/DNA Research Set 4" index="29" unique_id=759209251]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_2 6_3" parent="Scientific Research/DNA Research Set 4" index="31" unique_id=1630520098]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_3 6_4" parent="Scientific Research/DNA Research Set 4" index="33" unique_id=721339786]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_4 6_5" parent="Scientific Research/DNA Research Set 4" index="35" unique_id=1724032212]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_5 6_6" parent="Scientific Research/DNA Research Set 4" index="37" unique_id=191521025]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_6 6_7" parent="Scientific Research/DNA Research Set 4" index="39" unique_id=1188063370]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_1 7_1" parent="Scientific Research/DNA Research Set 4" index="41" unique_id=2079782365]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_7 7_2" parent="Scientific Research/DNA Research Set 4" index="42" unique_id=276677736]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="7_1 8_1" parent="Scientific Research/DNA Research Set 4" index="45" unique_id=1585583861]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="7_2 8_5" parent="Scientific Research/DNA Research Set 4" index="46" unique_id=2093815555]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_1 8_2" parent="Scientific Research/DNA Research Set 4" index="48" unique_id=1193233375]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_2 8_3" parent="Scientific Research/DNA Research Set 4" index="50" unique_id=1329947097]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_3 8_4" parent="Scientific Research/DNA Research Set 4" index="52" unique_id=1120204576]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_4 8_5" parent="Scientific Research/DNA Research Set 4" index="54" unique_id=1476794889]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_1 9_1" parent="Scientific Research/DNA Research Set 4" index="56" unique_id=693992745]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_4 9_2" parent="Scientific Research/DNA Research Set 4" index="57" unique_id=1888586810]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="9_1 10_1" parent="Scientific Research/DNA Research Set 4" index="60" unique_id=1362768021]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="9_2 10_2" parent="Scientific Research/DNA Research Set 4" index="61" unique_id=693733126]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="10_1 11_1" parent="Scientific Research/DNA Research Set 4" index="64" unique_id=373613439]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="10_1 11_2" parent="Scientific Research/DNA Research Set 4" index="65" unique_id=179355639]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="DNA Research Set 5" parent="Scientific Research" unique_id=2068302300 instance=ExtResource("3_333ad")]
+position = Vector2(150, 0)
+
+[node name="DNA Strand 1" parent="Scientific Research/DNA Research Set 5" index="0" unique_id=68947796]
+width_curve = SubResource("Curve_m4nqy")
+
+[node name="Lesser Line 1" parent="Scientific Research/DNA Research Set 5/DNA Strand 1" index="0" unique_id=2102779010]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="Greater Line 1" parent="Scientific Research/DNA Research Set 5/DNA Strand 1" index="1" unique_id=1446403320]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="Lesser Line 2" parent="Scientific Research/DNA Research Set 5/DNA Strand 1" index="2" unique_id=1852567515]
+width_curve = SubResource("Curve_j1j84")
+
+[node name="DNA Strand 2" parent="Scientific Research/DNA Research Set 5" index="1" unique_id=2083371930]
+width_curve = SubResource("Curve_ug0hw")
+
+[node name="Lesser Line 1" parent="Scientific Research/DNA Research Set 5/DNA Strand 2" index="0" unique_id=1833145302]
+width_curve = SubResource("Curve_333ad")
+
+[node name="Greater Line 1" parent="Scientific Research/DNA Research Set 5/DNA Strand 2" index="1" unique_id=175648454]
+width_curve = SubResource("Curve_333ad")
+
+[node name="Lesser Line 2" parent="Scientific Research/DNA Research Set 5/DNA Strand 2" index="2" unique_id=406282301]
+width_curve = SubResource("Curve_333ad")
+
+[node name="1_1 2_1" parent="Scientific Research/DNA Research Set 5" index="3" unique_id=1882504889]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="1_1 2_2" parent="Scientific Research/DNA Research Set 5" index="4" unique_id=598388334]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="2_1 3_1" parent="Scientific Research/DNA Research Set 5" index="7" unique_id=626548732]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="3_1 4_1" parent="Scientific Research/DNA Research Set 5" index="11" unique_id=664699806]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_1 4_2" parent="Scientific Research/DNA Research Set 5" index="14" unique_id=1217501064]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_2 4_3" parent="Scientific Research/DNA Research Set 5" index="16" unique_id=1475900564]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_3 4_4" parent="Scientific Research/DNA Research Set 5" index="18" unique_id=724151801]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_4 4_5" parent="Scientific Research/DNA Research Set 5" index="20" unique_id=1603367795]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_1 5_1" parent="Scientific Research/DNA Research Set 5" index="22" unique_id=521652574]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="4_5 5_2" parent="Scientific Research/DNA Research Set 5" index="23" unique_id=113019636]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="5_1 6_1" parent="Scientific Research/DNA Research Set 5" index="26" unique_id=2114929117]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="5_2 6_7" parent="Scientific Research/DNA Research Set 5" index="27" unique_id=1813732927]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_1 6_2" parent="Scientific Research/DNA Research Set 5" index="29" unique_id=759209251]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_2 6_3" parent="Scientific Research/DNA Research Set 5" index="31" unique_id=1630520098]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_3 6_4" parent="Scientific Research/DNA Research Set 5" index="33" unique_id=721339786]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_4 6_5" parent="Scientific Research/DNA Research Set 5" index="35" unique_id=1724032212]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_5 6_6" parent="Scientific Research/DNA Research Set 5" index="37" unique_id=191521025]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_6 6_7" parent="Scientific Research/DNA Research Set 5" index="39" unique_id=1188063370]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_1 7_1" parent="Scientific Research/DNA Research Set 5" index="41" unique_id=2079782365]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="6_7 7_2" parent="Scientific Research/DNA Research Set 5" index="42" unique_id=276677736]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="7_1 8_1" parent="Scientific Research/DNA Research Set 5" index="45" unique_id=1585583861]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="7_2 8_5" parent="Scientific Research/DNA Research Set 5" index="46" unique_id=2093815555]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_1 8_2" parent="Scientific Research/DNA Research Set 5" index="48" unique_id=1193233375]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_2 8_3" parent="Scientific Research/DNA Research Set 5" index="50" unique_id=1329947097]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_3 8_4" parent="Scientific Research/DNA Research Set 5" index="52" unique_id=1120204576]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_4 8_5" parent="Scientific Research/DNA Research Set 5" index="54" unique_id=1476794889]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_1 9_1" parent="Scientific Research/DNA Research Set 5" index="56" unique_id=693992745]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="8_4 9_2" parent="Scientific Research/DNA Research Set 5" index="57" unique_id=1888586810]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="9_1 10_1" parent="Scientific Research/DNA Research Set 5" index="60" unique_id=1362768021]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="9_2 10_2" parent="Scientific Research/DNA Research Set 5" index="61" unique_id=693733126]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="10_1 11_1" parent="Scientific Research/DNA Research Set 5" index="64" unique_id=373613439]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="10_1 11_2" parent="Scientific Research/DNA Research Set 5" index="65" unique_id=179355639]
+texture = SubResource("GradientTexture2D_333ad")
+
+[node name="11_1" parent="Scientific Research/DNA Research Set 5" unique_id=1404222105 instance=ExtResource("3_m2v5s")]
+offset_left = 100.0
+offset_top = 0.0
+offset_right = 108.0
+offset_bottom = 7.999997
+metadata/_edit_use_anchors_ = true
+
+[node name="DNA Research Set Bonus 1" parent="Scientific Research" unique_id=480241777 instance=ExtResource("5_m2v5s")]
+position = Vector2(-250, -100)
+
+[node name="DNA Research Set Bonus 2" parent="Scientific Research" unique_id=1607600732 instance=ExtResource("5_m2v5s")]
+position = Vector2(-150, -100)
+scale = Vector2(1, -1)
+
+[node name="DNA Research Set Bonus 3" parent="Scientific Research" unique_id=930774646 instance=ExtResource("5_m2v5s")]
+position = Vector2(-50, -100)
+
+[node name="DNA Research Set Bonus 4" parent="Scientific Research" unique_id=743736188 instance=ExtResource("5_m2v5s")]
+position = Vector2(50, -100)
+scale = Vector2(1, -1)
+
+[node name="DNA Research Set Bonus 5" parent="Scientific Research" unique_id=1541270525 instance=ExtResource("5_m2v5s")]
+position = Vector2(150, -100)
+
+[node name="11_1" parent="Scientific Research/DNA Research Set Bonus 5" unique_id=865600089 instance=ExtResource("3_m2v5s")]
+offset_left = 100.0
+offset_top = 0.0
+offset_right = 108.0
+offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
+
+[node name="DNA Research Set Bonus2 1" parent="Scientific Research" unique_id=1599358604 instance=ExtResource("5_m2v5s")]
+position = Vector2(-250, 100)
+scale = Vector2(1, -1)
+
+[node name="DNA Research Set Bonus2 2" parent="Scientific Research" unique_id=779148683 instance=ExtResource("5_m2v5s")]
+position = Vector2(-150, 100)
+
+[node name="DNA Research Set Bonus2 3" parent="Scientific Research" unique_id=1689112546 instance=ExtResource("5_m2v5s")]
+position = Vector2(-50, 100)
+scale = Vector2(1, -1)
+
+[node name="DNA Research Set Bonus2 4" parent="Scientific Research" unique_id=52896997 instance=ExtResource("5_m2v5s")]
+position = Vector2(50, 100)
+
+[node name="DNA Research Set Bonus2 5" parent="Scientific Research" unique_id=1101504134 instance=ExtResource("5_m2v5s")]
+position = Vector2(150, 100)
+scale = Vector2(1, -1)
+
+[node name="11_1" parent="Scientific Research/DNA Research Set Bonus2 5" unique_id=1606905549 instance=ExtResource("3_m2v5s")]
+offset_left = 100.0
+offset_top = 0.0
+offset_right = 108.0
+offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Background Tint" type="Sprite2D" parent="." unique_id=389588586]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-50, 28)
+scale = Vector2(23.455, 15.43)
+texture = SubResource("GradientTexture2D_j1j84")
+
+[node name="Genome Research" type="Node2D" parent="." unique_id=1861153714]
+position = Vector2(-50, 0)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("9_333ad")
+
+[node name="Ground Research Set 1" parent="Genome Research" unique_id=1716431571 instance=ExtResource("10_s1dly")]
+z_index = 10
+script = ExtResource("11_s1dly")
+
+[node name="Base" parent="Genome Research/Ground Research Set 1" index="0" unique_id=775627091]
+z_index = 10
+
+[node name="1_1" parent="Genome Research/Ground Research Set 1/Base" index="0" unique_id=633957936]
+z_index = 12
+
+[node name="1_1 2_1" parent="Genome Research/Ground Research Set 1/Base" index="1" unique_id=1525937803]
+z_index = 11
+
+[node name="2_1" parent="Genome Research/Ground Research Set 1/Base" index="2" unique_id=503642552]
+z_index = 12
+
+[node name="2_1 3_1" parent="Genome Research/Ground Research Set 1/Base" index="3" unique_id=452383142]
+z_index = 11
+
+[node name="3_1" parent="Genome Research/Ground Research Set 1/Base" index="4" unique_id=2074445266]
+z_index = 12
+
+[node name="3_1 4_1" parent="Genome Research/Ground Research Set 1/Base" index="5" unique_id=760588403]
+z_index = 11
+
+[node name="4_1" parent="Genome Research/Ground Research Set 1/Base" index="6" unique_id=850296984]
+z_index = 12
+
+[node name="4_1 5_1" parent="Genome Research/Ground Research Set 1/Base" index="7" unique_id=1451833404]
+z_index = 11
+
+[node name="5_1" parent="Genome Research/Ground Research Set 1/Base" index="8" unique_id=1426453565]
+z_index = 12
+
+[node name="Ground Line" parent="Genome Research/Ground Research Set 1/Base" index="9" unique_id=1247498887]
+z_index = 10
+
+[node name="Ground Line2" parent="Genome Research/Ground Research Set 1/Base" index="10" unique_id=86414573]
+z_index = 10
+
+[node name="Connector" parent="Genome Research/Ground Research Set 1" index="1" unique_id=1081846817]
+z_index = 10
+
+[node name="Connector" parent="Genome Research/Ground Research Set 1/Connector" index="0" unique_id=1809541933]
+z_index = 10
+
+[node name="Connector2" parent="Genome Research/Ground Research Set 1/Connector" index="1" unique_id=1998132611]
+z_index = 10
+
+[node name="5_1 6_1" parent="Genome Research/Ground Research Set 1/Connector" index="2" unique_id=1299644760]
+z_index = 11
+
+[node name="6_1" parent="Genome Research/Ground Research Set 1/Connector" index="3" unique_id=145440962]
+z_index = 12
+
+[node name="6_1 7_1" parent="Genome Research/Ground Research Set 1/Connector" index="4" unique_id=1643975287]
+z_index = 11
+
+[node name="Root1" type="Node2D" parent="Genome Research/Ground Research Set 1" unique_id=1022423774]
+script = ExtResource("12_hj2nn")
+
+[node name="6_2_1" parent="Genome Research/Ground Research Set 1/Root1" unique_id=739789931 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 40.000004
+offset_top = 15.333334
+offset_right = 48.000004
+offset_bottom = 23.333332
+metadata/_edit_use_anchors_ = true
+
+[node name="6_2_2" parent="Genome Research/Ground Research Set 1/Root1" unique_id=2001457468 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 60.000004
+offset_top = 15.333334
+offset_right = 68.0
+offset_bottom = 23.333332
+metadata/_edit_use_anchors_ = true
+
+[node name="6_3" parent="Genome Research/Ground Research Set 1/Root1" unique_id=1233772599 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 59.999996
+offset_top = 25.333334
+offset_right = 67.999985
+offset_bottom = 33.333336
+metadata/_edit_use_anchors_ = true
+
+[node name="Connector2" type="Line2D" parent="Genome Research/Ground Research Set 1/Root1" unique_id=1864960063]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(2.000002, 16)
+points = PackedVector2Array(38, -0.66666603, 48, -11.333333, 58, -0.66666603, 58, 12)
+width_curve = SubResource("Curve_8w1p8")
+default_color = Color(0.05882353, 0.48235294, 0, 1)
+
+[node name="Connector3" type="Line2D" parent="Genome Research/Ground Research Set 1/Root1" unique_id=922404413]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(2.000002, 16)
+points = PackedVector2Array(38, -0.66666603, 48, -11.333333, 58, -0.66666603, 58, 12)
+width_curve = SubResource("Curve_m2v5s")
+default_color = Color(0, 0.3137255, 0.06666667, 1)
+
+[node name="6_1 6_2_1" type="Sprite2D" parent="Genome Research/Ground Research Set 1/Root1" unique_id=910674858]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(45.333336, 9.999998)
+rotation = -2.3282692
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_1 6_2_2" type="Sprite2D" parent="Genome Research/Ground Research Set 1/Root1" unique_id=189486796]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(55.333336, 9.999998)
+rotation = 2.3439772
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_2_2 6_3" type="Sprite2D" parent="Genome Research/Ground Research Set 1/Root1" unique_id=304245118]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(60.000004, 21.333336)
+rotation = -3.132866
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="Ground Research Set 2" parent="Genome Research" unique_id=286371161 instance=ExtResource("10_s1dly")]
+z_index = 10
+position = Vector2(60, 0)
+script = ExtResource("11_s1dly")
+
+[node name="Base" parent="Genome Research/Ground Research Set 2" index="0" unique_id=775627091]
+z_index = 10
+
+[node name="1_1" parent="Genome Research/Ground Research Set 2/Base" index="0" unique_id=633957936]
+z_index = 12
+
+[node name="1_1 2_1" parent="Genome Research/Ground Research Set 2/Base" index="1" unique_id=1525937803]
+z_index = 11
+
+[node name="2_1" parent="Genome Research/Ground Research Set 2/Base" index="2" unique_id=503642552]
+z_index = 12
+
+[node name="2_1 3_1" parent="Genome Research/Ground Research Set 2/Base" index="3" unique_id=452383142]
+z_index = 11
+
+[node name="3_1" parent="Genome Research/Ground Research Set 2/Base" index="4" unique_id=2074445266]
+z_index = 12
+
+[node name="3_1 4_1" parent="Genome Research/Ground Research Set 2/Base" index="5" unique_id=760588403]
+z_index = 11
+
+[node name="4_1" parent="Genome Research/Ground Research Set 2/Base" index="6" unique_id=850296984]
+z_index = 12
+
+[node name="4_1 5_1" parent="Genome Research/Ground Research Set 2/Base" index="7" unique_id=1451833404]
+z_index = 11
+
+[node name="5_1" parent="Genome Research/Ground Research Set 2/Base" index="8" unique_id=1426453565]
+z_index = 12
+
+[node name="Ground Line" parent="Genome Research/Ground Research Set 2/Base" index="9" unique_id=1247498887]
+z_index = 10
+
+[node name="Ground Line2" parent="Genome Research/Ground Research Set 2/Base" index="10" unique_id=86414573]
+z_index = 10
+
+[node name="Connector" parent="Genome Research/Ground Research Set 2" index="1" unique_id=1081846817]
+z_index = 10
+
+[node name="Connector" parent="Genome Research/Ground Research Set 2/Connector" index="0" unique_id=1809541933]
+z_index = 10
+
+[node name="Connector2" parent="Genome Research/Ground Research Set 2/Connector" index="1" unique_id=1998132611]
+z_index = 10
+
+[node name="5_1 6_1" parent="Genome Research/Ground Research Set 2/Connector" index="2" unique_id=1299644760]
+z_index = 11
+
+[node name="6_1" parent="Genome Research/Ground Research Set 2/Connector" index="3" unique_id=145440962]
+z_index = 12
+
+[node name="6_1 7_1" parent="Genome Research/Ground Research Set 2/Connector" index="4" unique_id=1643975287]
+z_index = 11
+
+[node name="Root2" type="Node2D" parent="Genome Research/Ground Research Set 2" unique_id=1666412789]
+script = ExtResource("14_0o2dl")
+
+[node name="6_2_1" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1573246183 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 40.000004
+offset_top = 15.333334
+offset_right = 48.000004
+offset_bottom = 23.333332
+metadata/_edit_use_anchors_ = true
+
+[node name="6_2_2" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1166000141 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 60.000004
+offset_top = 15.333334
+offset_right = 68.0
+offset_bottom = 23.333332
+metadata/_edit_use_anchors_ = true
+
+[node name="6_3_1" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1767138029 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 32.666668
+offset_top = 24.666668
+offset_right = 40.66666
+offset_bottom = 32.66667
+metadata/_edit_use_anchors_ = true
+
+[node name="6_3_2" parent="Genome Research/Ground Research Set 2/Root2" unique_id=9206371 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 46.666668
+offset_top = 24.666668
+offset_right = 54.66666
+offset_bottom = 32.66667
+metadata/_edit_use_anchors_ = true
+
+[node name="6_3_3" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1780506631 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 68.0
+offset_top = 24.666668
+offset_right = 75.99999
+offset_bottom = 32.66667
+metadata/_edit_use_anchors_ = true
+
+[node name="Connector2" type="Line2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=225268894]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(2.000002, 16)
+points = PackedVector2Array(38, -0.66666603, 48, -11.333333, 58, -0.66666603, 66, 9.333334)
+width_curve = SubResource("Curve_8w1p8")
+default_color = Color(0.05882353, 0.48235294, 0, 1)
+
+[node name="Connector3" type="Line2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=284979776]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(2.000002, 16)
+points = PackedVector2Array(38, -0.66666603, 48, -11.333333, 58, -0.66666603, 66, 9.333334)
+width_curve = SubResource("Curve_m2v5s")
+default_color = Color(0, 0.3137255, 0.06666667, 1)
+
+[node name="6_1 6_2_1" type="Sprite2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=333075278]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(45.333336, 9.999998)
+rotation = -2.3282692
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_1 6_2_2" type="Sprite2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=826680041]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(55.333336, 9.999998)
+rotation = 2.3439772
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_2_2 6_3_3" type="Sprite2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1860470897]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(64.666664, 20.666664)
+rotation = -3.830253
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="Connector_2" type="Line2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1020448437]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(2.000002, 16)
+points = PackedVector2Array(30.666666, 9.333334, 38, -0.66666603, 44.666664, 9.333334)
+width_curve = SubResource("Curve_8w1p8")
+default_color = Color(0.05882353, 0.48235294, 0, 1)
+
+[node name="Connector_3" type="Line2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1866826148]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(-8.000001, 26.666668)
+points = PackedVector2Array(40, -0.66666794, 48, -11.333333, 54.66667, -1.333334)
+width_curve = SubResource("Curve_m2v5s")
+default_color = Color(0, 0.3137255, 0.06666667, 1)
+
+[node name="6_2_1 6_3_1" type="Sprite2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1205528444]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(36.66667, 20)
+rotation = -2.488319
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_2_2 6_3_2" type="Sprite2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=58585683]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(44, 20.666664)
+rotation = -3.830253
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="Connector_4" type="Line2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1786847578]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(14.666668, 26.666668)
+points = PackedVector2Array(32.4, 9.333, 32.4, -2)
+width_curve = SubResource("Curve_8w1p8")
+default_color = Color(0.05882353, 0.48235294, 0, 1)
+
+[node name="Connector_5" type="Line2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=521637042]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(14.666668, 36.666668)
+points = PackedVector2Array(32.4, -0.667, 32.4, -11.333)
+width_curve = SubResource("Curve_m2v5s")
+default_color = Color(0, 0.3137255, 0.06666667, 1)
+
+[node name="6_4_1" parent="Genome Research/Ground Research Set 2/Root2" unique_id=654171611 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 46.666668
+offset_top = 35.333336
+offset_right = 54.66666
+offset_bottom = 43.33334
+metadata/_edit_use_anchors_ = true
+
+[node name="6_4_2" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1712473874 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 74.00001
+offset_top = 35.333332
+offset_right = 82.0
+offset_bottom = 43.333336
+metadata/_edit_use_anchors_ = true
+
+[node name="Connector_6" type="Line2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1296922740]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(35.6, 27.333332)
+points = PackedVector2Array(39.066673, 8.666666, 32.4, -2)
+width_curve = SubResource("Curve_8w1p8")
+default_color = Color(0.05882353, 0.48235294, 0, 1)
+
+[node name="Connector_7" type="Line2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=384636981]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(35.6, 37.333336)
+points = PackedVector2Array(39.066673, -1.3333359, 32.40001, -12.000002)
+width_curve = SubResource("Curve_m2v5s")
+default_color = Color(0, 0.3137255, 0.06666667, 1)
+
+[node name="6_3_2 6_4_1" type="Sprite2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1583147606]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(47.33334, 30)
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_3_3 6_4_2" type="Sprite2D" parent="Genome Research/Ground Research Set 2/Root2" unique_id=1614706105]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(71.33333, 30.000006)
+rotation = -0.56199604
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="Ground Research Set 3" parent="Genome Research" unique_id=1524152227 instance=ExtResource("10_s1dly")]
+z_index = 10
+position = Vector2(120, 0)
+script = ExtResource("11_s1dly")
+
+[node name="Base" parent="Genome Research/Ground Research Set 3" index="0" unique_id=775627091]
+z_index = 10
+
+[node name="1_1" parent="Genome Research/Ground Research Set 3/Base" index="0" unique_id=633957936]
+z_index = 12
+
+[node name="1_1 2_1" parent="Genome Research/Ground Research Set 3/Base" index="1" unique_id=1525937803]
+z_index = 11
+
+[node name="2_1" parent="Genome Research/Ground Research Set 3/Base" index="2" unique_id=503642552]
+z_index = 12
+
+[node name="2_1 3_1" parent="Genome Research/Ground Research Set 3/Base" index="3" unique_id=452383142]
+z_index = 11
+
+[node name="3_1" parent="Genome Research/Ground Research Set 3/Base" index="4" unique_id=2074445266]
+z_index = 12
+
+[node name="3_1 4_1" parent="Genome Research/Ground Research Set 3/Base" index="5" unique_id=760588403]
+z_index = 11
+
+[node name="4_1" parent="Genome Research/Ground Research Set 3/Base" index="6" unique_id=850296984]
+z_index = 12
+
+[node name="4_1 5_1" parent="Genome Research/Ground Research Set 3/Base" index="7" unique_id=1451833404]
+z_index = 11
+
+[node name="5_1" parent="Genome Research/Ground Research Set 3/Base" index="8" unique_id=1426453565]
+z_index = 12
+
+[node name="Ground Line" parent="Genome Research/Ground Research Set 3/Base" index="9" unique_id=1247498887]
+z_index = 10
+
+[node name="Ground Line2" parent="Genome Research/Ground Research Set 3/Base" index="10" unique_id=86414573]
+z_index = 10
+
+[node name="Connector" parent="Genome Research/Ground Research Set 3" index="1" unique_id=1081846817]
+z_index = 10
+
+[node name="Connector" parent="Genome Research/Ground Research Set 3/Connector" index="0" unique_id=1809541933]
+z_index = 10
+
+[node name="Connector2" parent="Genome Research/Ground Research Set 3/Connector" index="1" unique_id=1998132611]
+z_index = 10
+
+[node name="5_1 6_1" parent="Genome Research/Ground Research Set 3/Connector" index="2" unique_id=1299644760]
+z_index = 11
+
+[node name="6_1" parent="Genome Research/Ground Research Set 3/Connector" index="3" unique_id=145440962]
+z_index = 12
+
+[node name="6_1 7_1" parent="Genome Research/Ground Research Set 3/Connector" index="4" unique_id=1643975287]
+z_index = 11
+
+[node name="Root3" type="Node2D" parent="Genome Research/Ground Research Set 3" unique_id=759238695]
+script = ExtResource("15_y2pnq")
+
+[node name="6_2_1" parent="Genome Research/Ground Research Set 3/Root3" unique_id=1554075163 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 40.000004
+offset_top = 15.333334
+offset_right = 48.000004
+offset_bottom = 23.333332
+metadata/_edit_use_anchors_ = true
+
+[node name="6_2_2" parent="Genome Research/Ground Research Set 3/Root3" unique_id=353373927 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 60.000004
+offset_top = 15.333334
+offset_right = 68.0
+offset_bottom = 23.333332
+metadata/_edit_use_anchors_ = true
+
+[node name="Connector2" type="Line2D" parent="Genome Research/Ground Research Set 3/Root3" unique_id=556246457]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(2.000002, 16)
+points = PackedVector2Array(38, -0.66666603, 48, -11.333333, 58, -0.66666603, 64.66667, 8.666668)
+width_curve = SubResource("Curve_8w1p8")
+default_color = Color(0.05882353, 0.48235294, 0, 1)
+
+[node name="Connector3" type="Line2D" parent="Genome Research/Ground Research Set 3/Root3" unique_id=1494227335]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(2.000002, 16)
+points = PackedVector2Array(38, -0.66666603, 48, -11.333333, 58, -0.66666603, 64.66667, 8.666668)
+width_curve = SubResource("Curve_m2v5s")
+default_color = Color(0, 0.3137255, 0.06666667, 1)
+
+[node name="6_1 6_2_1" type="Sprite2D" parent="Genome Research/Ground Research Set 3/Root3" unique_id=1016763161]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(45.333336, 9.999998)
+rotation = -2.3282692
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_1 6_2_2" type="Sprite2D" parent="Genome Research/Ground Research Set 3/Root3" unique_id=1884939678]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(55.333336, 9.999998)
+rotation = 2.3439772
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_3_1" parent="Genome Research/Ground Research Set 3/Root3" unique_id=1603098014 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 40.0
+offset_top = 24.666666
+offset_right = 47.999992
+offset_bottom = 32.666664
+metadata/_edit_use_anchors_ = true
+
+[node name="6_3_2" parent="Genome Research/Ground Research Set 3/Root3" unique_id=1697689463 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 52.66666
+offset_top = 24.666668
+offset_right = 60.666653
+offset_bottom = 32.666664
+metadata/_edit_use_anchors_ = true
+
+[node name="6_3_3" parent="Genome Research/Ground Research Set 3/Root3" unique_id=1429051233 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 67.333336
+offset_top = 24.666666
+offset_right = 75.33333
+offset_bottom = 32.666664
+metadata/_edit_use_anchors_ = true
+
+[node name="Connector4" type="Line2D" parent="Genome Research/Ground Research Set 3/Root3" unique_id=189849369]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(2, 16)
+points = PackedVector2Array(38, 9.333334, 38, -0.66666603)
+width_curve = SubResource("Curve_8w1p8")
+default_color = Color(0.05882353, 0.48235294, 0, 1)
+
+[node name="Connector5" type="Line2D" parent="Genome Research/Ground Research Set 3/Root3" unique_id=216726207]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(2, 16)
+points = PackedVector2Array(38, 9.333334, 38, -0.66666603)
+width_curve = SubResource("Curve_m2v5s")
+default_color = Color(0, 0.3137255, 0.06666667, 1)
+
+[node name="6_2_2 6_3_3" type="Sprite2D" parent="Genome Research/Ground Research Set 3/Root3" unique_id=1068028021]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(63.33333, 20.000004)
+rotation = 2.586578
+scale = Vector2(0.06899999, 0.23286468)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_2_2 6_3_2" type="Sprite2D" parent="Genome Research/Ground Research Set 3/Root3" unique_id=53674472]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(56.666664, 20.000002)
+rotation = -2.5691247
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_2_1 6_3_1" type="Sprite2D" parent="Genome Research/Ground Research Set 3/Root3" unique_id=1314434188]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(40.000008, 20.000002)
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_4" parent="Genome Research/Ground Research Set 3/Root3" unique_id=414490917 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 52.66666
+offset_top = 34.666668
+offset_right = 60.666653
+offset_bottom = 42.666664
+metadata/_edit_use_anchors_ = true
+
+[node name="Connector6" type="Line2D" parent="Genome Research/Ground Research Set 3/Root3" unique_id=1502171559]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(14.666667, 16.666666)
+points = PackedVector2Array(38.372, 18.667, 38.372, 8.667, 45.418, -2)
+width_curve = SubResource("Curve_8w1p8")
+default_color = Color(0.05882353, 0.48235294, 0, 1)
+
+[node name="Connector7" type="Line2D" parent="Genome Research/Ground Research Set 3/Root3" unique_id=1440959508]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(14.666667, 16.666666)
+points = PackedVector2Array(38.385, 19.333, 38.395, 8.667, 45.333336, -2.000001)
+width_curve = SubResource("Curve_m2v5s")
+default_color = Color(0, 0.3137255, 0.06666667, 1)
+
+[node name="6_3_2 6_4" type="Sprite2D" parent="Genome Research/Ground Research Set 3/Root3" unique_id=124085292]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(53.33333, 30)
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="Ground Research Set 4" parent="Genome Research" unique_id=1988895464 instance=ExtResource("10_s1dly")]
+z_index = 10
+position = Vector2(180, 0)
+script = ExtResource("11_s1dly")
+
+[node name="Base" parent="Genome Research/Ground Research Set 4" index="0" unique_id=775627091]
+z_index = 10
+
+[node name="1_1" parent="Genome Research/Ground Research Set 4/Base" index="0" unique_id=633957936]
+z_index = 12
+
+[node name="1_1 2_1" parent="Genome Research/Ground Research Set 4/Base" index="1" unique_id=1525937803]
+z_index = 11
+
+[node name="2_1" parent="Genome Research/Ground Research Set 4/Base" index="2" unique_id=503642552]
+z_index = 12
+
+[node name="2_1 3_1" parent="Genome Research/Ground Research Set 4/Base" index="3" unique_id=452383142]
+z_index = 11
+
+[node name="3_1" parent="Genome Research/Ground Research Set 4/Base" index="4" unique_id=2074445266]
+z_index = 12
+
+[node name="3_1 4_1" parent="Genome Research/Ground Research Set 4/Base" index="5" unique_id=760588403]
+z_index = 11
+
+[node name="4_1" parent="Genome Research/Ground Research Set 4/Base" index="6" unique_id=850296984]
+z_index = 12
+
+[node name="4_1 5_1" parent="Genome Research/Ground Research Set 4/Base" index="7" unique_id=1451833404]
+z_index = 11
+
+[node name="5_1" parent="Genome Research/Ground Research Set 4/Base" index="8" unique_id=1426453565]
+z_index = 12
+
+[node name="Ground Line" parent="Genome Research/Ground Research Set 4/Base" index="9" unique_id=1247498887]
+z_index = 10
+
+[node name="Ground Line2" parent="Genome Research/Ground Research Set 4/Base" index="10" unique_id=86414573]
+z_index = 10
+
+[node name="Connector" parent="Genome Research/Ground Research Set 4" index="1" unique_id=1081846817]
+z_index = 10
+
+[node name="Connector" parent="Genome Research/Ground Research Set 4/Connector" index="0" unique_id=1809541933]
+z_index = 10
+
+[node name="Connector2" parent="Genome Research/Ground Research Set 4/Connector" index="1" unique_id=1998132611]
+z_index = 10
+
+[node name="5_1 6_1" parent="Genome Research/Ground Research Set 4/Connector" index="2" unique_id=1299644760]
+z_index = 11
+
+[node name="6_1" parent="Genome Research/Ground Research Set 4/Connector" index="3" unique_id=145440962]
+z_index = 12
+
+[node name="6_1 7_1" parent="Genome Research/Ground Research Set 4/Connector" index="4" unique_id=1643975287]
+z_index = 11
+
+[node name="Root4" type="Node2D" parent="Genome Research/Ground Research Set 4" unique_id=1053581034]
+script = ExtResource("16_rfebt")
+
+[node name="6_2_1" parent="Genome Research/Ground Research Set 4/Root4" unique_id=2008496320 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 40.000004
+offset_top = 15.333334
+offset_right = 48.000004
+offset_bottom = 23.333332
+metadata/_edit_use_anchors_ = true
+
+[node name="6_2_2" parent="Genome Research/Ground Research Set 4/Root4" unique_id=1752111695 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 60.000004
+offset_top = 15.333334
+offset_right = 68.0
+offset_bottom = 23.333332
+metadata/_edit_use_anchors_ = true
+
+[node name="6_3" parent="Genome Research/Ground Research Set 4/Root4" unique_id=627956231 instance=ExtResource("12_uji0d")]
+z_index = 12
+offset_left = 39.999996
+offset_top = 25.333334
+offset_right = 47.999985
+offset_bottom = 33.333336
+metadata/_edit_use_anchors_ = true
+
+[node name="Connector2" type="Line2D" parent="Genome Research/Ground Research Set 4/Root4" unique_id=151023470]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(2.000002, 16)
+points = PackedVector2Array(38, 9.488, 38, -0.66666603, 48, -11.333333, 58, -0.66666603)
+width_curve = SubResource("Curve_8w1p8")
+default_color = Color(0.05882353, 0.48235294, 0, 1)
+
+[node name="Connector3" type="Line2D" parent="Genome Research/Ground Research Set 4/Root4" unique_id=862495706]
+light_mask = 4
+visibility_layer = 4
+z_index = 10
+position = Vector2(2.000002, 16)
+points = PackedVector2Array(38, 9.333334, 38, -0.66666603, 48, -11.333333, 58, -0.66666603)
+width_curve = SubResource("Curve_m2v5s")
+default_color = Color(0, 0.3137255, 0.06666667, 1)
+
+[node name="6_1 6_2_1" type="Sprite2D" parent="Genome Research/Ground Research Set 4/Root4" unique_id=1118911560]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(45.333336, 9.999998)
+rotation = -2.3282692
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_1 6_2_2" type="Sprite2D" parent="Genome Research/Ground Research Set 4/Root4" unique_id=1395015860]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(55.333336, 9.999998)
+rotation = 2.3439772
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="6_2_1 6_3" type="Sprite2D" parent="Genome Research/Ground Research Set 4/Root4" unique_id=1733132743]
+light_mask = 4
+visibility_layer = 4
+z_index = 11
+position = Vector2(40.000004, 20)
+rotation = -3.132866
+scale = Vector2(0.069, 0.2328647)
+texture = SubResource("GradientTexture2D_f14m1")
+
+[node name="Ground Research Set 5" parent="Genome Research" unique_id=1911676017 instance=ExtResource("12_m2v5s")]
+z_index = 10
+position = Vector2(240, 0)
+
+[node name="Base" parent="Genome Research/Ground Research Set 5" index="0" unique_id=775627091]
+z_index = 10
+
+[node name="1_1" parent="Genome Research/Ground Research Set 5/Base" index="0" unique_id=633957936]
+z_index = 12
+
+[node name="1_1 2_1" parent="Genome Research/Ground Research Set 5/Base" index="1" unique_id=1525937803]
+z_index = 11
+
+[node name="2_1" parent="Genome Research/Ground Research Set 5/Base" index="2" unique_id=503642552]
+z_index = 12
+
+[node name="2_1 3_1" parent="Genome Research/Ground Research Set 5/Base" index="3" unique_id=452383142]
+z_index = 11
+
+[node name="3_1" parent="Genome Research/Ground Research Set 5/Base" index="4" unique_id=2074445266]
+z_index = 12
+
+[node name="3_1 4_1" parent="Genome Research/Ground Research Set 5/Base" index="5" unique_id=760588403]
+z_index = 11
+
+[node name="4_1" parent="Genome Research/Ground Research Set 5/Base" index="6" unique_id=850296984]
+z_index = 12
+
+[node name="4_1 5_1" parent="Genome Research/Ground Research Set 5/Base" index="7" unique_id=1451833404]
+z_index = 11
+
+[node name="5_1" parent="Genome Research/Ground Research Set 5/Base" index="8" unique_id=1426453565]
+z_index = 12
+
+[node name="Ground Line" parent="Genome Research/Ground Research Set 5/Base" index="9" unique_id=1247498887]
+z_index = 10
+
+[node name="Ground Line2" parent="Genome Research/Ground Research Set 5/Base" index="10" unique_id=86414573]
+z_index = 10
+
+[editable path="Scientific Research/DNA Research Set 1"]
+[editable path="Scientific Research/DNA Research Set 1/1_1"]
+[editable path="Scientific Research/DNA Research Set 2"]
+[editable path="Scientific Research/DNA Research Set 3"]
+[editable path="Scientific Research/DNA Research Set 4"]
+[editable path="Scientific Research/DNA Research Set 5"]
+[editable path="Scientific Research/DNA Research Set Bonus 5"]
+[editable path="Scientific Research/DNA Research Set Bonus2 5"]
+[editable path="Genome Research/Ground Research Set 1"]
+[editable path="Genome Research/Ground Research Set 2"]
+[editable path="Genome Research/Ground Research Set 3"]
+[editable path="Genome Research/Ground Research Set 4"]
+[editable path="Genome Research/Ground Research Set 5"]

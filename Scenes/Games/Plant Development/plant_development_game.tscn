@@ -1,0 +1,1598 @@
+[gd_scene format=3 uid="uid://duygbmx6bj7if"]
+
+[ext_resource type="Script" uid="uid://u1raqhy1p1vt" path="res://Scripts/Games/Plant Development/plant_development_game.gd" id="1_g63sw"]
+[ext_resource type="PackedScene" uid="uid://bhws0lctbviu" path="res://Scenes/Games/Plant Development/plant_sections.tscn" id="2_j4fpq"]
+[ext_resource type="AudioStream" uid="uid://bihhf5qxj3xuj" path="res://Sounds/UI Sound Effects/Mechanical Button Interact.mp3" id="5_68ke7"]
+[ext_resource type="Texture2D" uid="uid://dppv3rgtkqj4l" path="res://Sprites/Misc/Settings Button.png" id="5_g63sw"]
+[ext_resource type="Texture2D" uid="uid://crhga2j8cbm64" path="res://Sprites/Plant Development/Climate Button.png" id="7_wimkd"]
+[ext_resource type="Texture2D" uid="uid://l5irkqu3punm" path="res://Sprites/Plant Development/HEAT symbol.png" id="9_2l3tv"]
+[ext_resource type="Texture2D" uid="uid://dpfm50400li42" path="res://Sprites/Plant Development/COLD symbol.png" id="10_1p1je"]
+[ext_resource type="Texture2D" uid="uid://c1ra6ojxfm65b" path="res://Sprites/Plant Development/TOXIC symbol.png" id="10_b836b"]
+[ext_resource type="Script" uid="uid://cgb28dy1mv3o6" path="res://Scripts/Games/Plant Development/option_button.gd" id="11_2l3tv"]
+[ext_resource type="Texture2D" uid="uid://cj6b7abrmluv6" path="res://Sprites/Plant Development/RAD symbol.png" id="11_pmv4g"]
+[ext_resource type="PackedScene" uid="uid://bge5tjsbfmbeg" path="res://Scenes/Games/Plant Development/sequence_inputs.tscn" id="12_1p1je"]
+[ext_resource type="AudioStream" uid="uid://b8jntd5vj6l6h" path="res://Sounds/UI Sound Effects/Mechanical Button Hover.mp3" id="12_esb5a"]
+[ext_resource type="Texture2D" uid="uid://ccqs05b3w4we0" path="res://Sprites/Misc/Close Button.png" id="12_pmv4g"]
+[ext_resource type="Texture2D" uid="uid://wce0xj04xyru" path="res://Sprites/Lab/Tutorial_Button.png" id="12_vmcqk"]
+[ext_resource type="Texture2D" uid="uid://4jn4v1l4dv25" path="res://Sprites/Misc/Settings Button Hover.png" id="13_2oofx"]
+[ext_resource type="Texture2D" uid="uid://jrr7dmgu801w" path="res://Sprites/Misc/Close Button (Hover).png" id="13_854mn"]
+[ext_resource type="Texture2D" uid="uid://dss77d6p2200n" path="res://Sprites/Misc/Close Button (Pressed) .png" id="13_b836b"]
+[ext_resource type="Texture2D" uid="uid://bi1fh7kj4whaa" path="res://Sprites/Lab/Tutorial_Button (Pressed).png" id="13_esb5a"]
+[ext_resource type="Texture2D" uid="uid://hiu0ha6l527p" path="res://Sprites/Misc/Settings Button Pressed.png" id="14_7vu78"]
+[ext_resource type="Texture2D" uid="uid://b265yfa52c4hn" path="res://Sprites/Lab/Tutorial_Button (Hover).png" id="14_854mn"]
+[ext_resource type="AudioStream" uid="uid://xp45vwy3dm8i" path="res://Sounds/Lab Sound Effects/Crop Development Close.mp3" id="14_vhipy"]
+[ext_resource type="Script" uid="uid://d1foa5s3stmek" path="res://Scenes/Games/Plant Development/tutorial_button.gd" id="15_vmcqk"]
+[ext_resource type="Texture2D" uid="uid://du1dnypvdtrn7" path="res://Sprites/Lab/Tutorial Back Button.png" id="19_68ke7"]
+[ext_resource type="Texture2D" uid="uid://dfdilwdkaxtyn" path="res://Sprites/Lab/Tutorial Back Button (Pressed).png" id="20_dkurw"]
+[ext_resource type="Texture2D" uid="uid://b1v73nvvwhxii" path="res://Sprites/Lab/Tutorial Back Button (Hover).png" id="21_nqn2y"]
+[ext_resource type="Texture2D" uid="uid://c10c4eromvtem" path="res://Sprites/Tutorial/New Tab Notifier.png" id="24_oubrg"]
+[ext_resource type="AudioStream" uid="uid://ctwls2lhnholn" path="res://Sounds/UI Sound Effects/Mechanical Button Fail.mp3" id="26_dkurw"]
+[ext_resource type="Texture2D" uid="uid://cqebjl0m7j5pa" path="res://Sprites/Misc/Tutorial Box Design..png" id="27_nqn2y"]
+[ext_resource type="Texture2D" uid="uid://3367arlhduif" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112102.png" id="29_1vuef"]
+[ext_resource type="Texture2D" uid="uid://bolmmasun0ef7" path="res://Sprites/Plant Development/Sequence Input [empty].png" id="30_p6eqq"]
+[ext_resource type="Texture2D" uid="uid://cdcth2j30f0y1" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112241.png" id="31_rlu3u"]
+[ext_resource type="Texture2D" uid="uid://dkluc41piy5cp" path="res://Sprites/Plant Development/Sequence Input [inserted].png" id="32_ecoep"]
+[ext_resource type="Texture2D" uid="uid://cmxlxekgx5w67" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112339.png" id="33_bx7uc"]
+[ext_resource type="Texture2D" uid="uid://b1u73gt5qd8q2" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112403.png" id="34_u8ixg"]
+[ext_resource type="Texture2D" uid="uid://dw83ypiarm107" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112421.png" id="35_mr5ql"]
+[ext_resource type="Texture2D" uid="uid://4cefc48ny548" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 150509.png" id="36_aoc4d"]
+[ext_resource type="Texture2D" uid="uid://gplryawed5d4" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112437.png" id="37_cgsri"]
+[ext_resource type="Texture2D" uid="uid://cvpdq42wugq25" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112449.png" id="38_47761"]
+[ext_resource type="Texture2D" uid="uid://bbckrupvx73tg" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112458.png" id="39_p6eqq"]
+[ext_resource type="Texture2D" uid="uid://calrlmsb0ckxt" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112509.png" id="40_ecoep"]
+[ext_resource type="Texture2D" uid="uid://cbkybespimtue" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112518.png" id="41_uvc7i"]
+[ext_resource type="Texture2D" uid="uid://b0gs5377bok18" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112554.png" id="42_p6eqq"]
+[ext_resource type="Texture2D" uid="uid://x8vau0caod7l" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112652.png" id="43_ecoep"]
+[ext_resource type="Texture2D" uid="uid://d3feexhb5xxas" path="res://Sprites/Plant Development/Tutorial Images/Screenshot 2026-05-13 112904.png" id="44_uvc7i"]
+[ext_resource type="Texture2D" uid="uid://dfnbc35k4vwcb" path="res://Sprites/Tutorial/Tab (Normal).png" id="47_2bsi0"]
+[ext_resource type="Texture2D" uid="uid://dp75nc1du1cxs" path="res://Sprites/Tutorial/Tab (Selected).png" id="48_dh5dr"]
+[ext_resource type="Texture2D" uid="uid://bt5e02aenenay" path="res://Sprites/Tutorial/Tab (Disabled).png" id="49_uiatv"]
+
+[sub_resource type="Gradient" id="Gradient_2oofx"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.088559814, 0.08855996, 0.08855983, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uhokc"]
+gradient = SubResource("Gradient_2oofx")
+
+[sub_resource type="Gradient" id="Gradient_7vu78"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.12955844, 0.12955847, 0.12955844, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ncj7w"]
+gradient = SubResource("Gradient_7vu78")
+
+[sub_resource type="Gradient" id="Gradient_nc5ww"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3g0yq"]
+gradient = SubResource("Gradient_nc5ww")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wimkd"]
+texture = ExtResource("5_g63sw")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+expand_margin_right = 3.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w1mlx"]
+texture = ExtResource("7_wimkd")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r7ehw"]
+texture = ExtResource("7_wimkd")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pmv4g"]
+texture = ExtResource("7_wimkd")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b836b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_up84b"]
+texture = ExtResource("7_wimkd")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r2job"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xjhy1"]
+texture = ExtResource("7_wimkd")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j4fpq"]
+texture = ExtResource("12_pmv4g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j75vj"]
+texture = ExtResource("13_b836b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qhwvs"]
+texture = ExtResource("13_854mn")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_up84b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r2job"]
+
+[sub_resource type="Gradient" id="Gradient_r1j64"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 0.23085755, 0.235125, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pmv4g"]
+gradient = SubResource("Gradient_r1j64")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nc5ww"]
+texture = ExtResource("13_2oofx")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+modulate_color = Color(1, 1, 1, 0.44313726)
+
+[sub_resource type="Gradient" id="Gradient_p6eqq"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.39308554, 0.3930855, 0.39308548, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yhks8"]
+gradient = SubResource("Gradient_p6eqq")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jg7bg"]
+texture = ExtResource("12_pmv4g")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e2wy0"]
+texture = ExtResource("13_b836b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uwmtj"]
+texture = ExtResource("13_854mn")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p1t2b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p0518"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uuoqq"]
+texture = ExtResource("47_2bsi0")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3slwg"]
+texture = ExtResource("48_dh5dr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rkcuu"]
+texture = ExtResource("49_uiatv")
+
+[node name="Plant Development" type="Node2D" unique_id=539914559]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 2
+z_index = 3
+scale = Vector2(0.95, 0.95)
+script = ExtResource("1_g63sw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1811983164]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+visibility_layer = 2
+z_index = 3
+scale = Vector2(2.75, 2.25)
+texture = SubResource("GradientTexture2D_uhokc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1286675135]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+visibility_layer = 2
+z_index = 3
+scale = Vector2(2.7, 2.2)
+texture = SubResource("GradientTexture2D_ncj7w")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=551761785]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 3
+scale = Vector2(4, 2.5)
+range_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_3g0yq")
+
+[node name="Plant Sections" parent="." unique_id=1923337917 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-15.5, 0)
+
+[node name="Plant Sections2" parent="." unique_id=452865617 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(3.5, 0)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Plant Sections3" parent="." unique_id=1522727758 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-15.5, 19)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="Plant Sections4" parent="." unique_id=890811915 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(3.4999998, 19)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="Plant Sections5" parent="." unique_id=2014857439 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-15.5, -19)
+scale = Vector2(0.99999994, 0.99999994)
+Expansion_Level = 1
+
+[node name="Plant Sections6" parent="." unique_id=962260198 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(3.4999998, -19)
+scale = Vector2(0.9999999, 0.9999999)
+Expansion_Level = 1
+
+[node name="Plant Sections7" parent="." unique_id=1575482382 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-34.5, 0)
+scale = Vector2(0.99999994, 0.99999994)
+Expansion_Level = 1
+
+[node name="Plant Sections8" parent="." unique_id=1473780386 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-34.5, 19)
+scale = Vector2(0.9999999, 0.9999999)
+Expansion_Level = 1
+
+[node name="Plant Sections9" parent="." unique_id=606039550 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-34.5, -19)
+scale = Vector2(0.99999994, 0.99999994)
+Expansion_Level = 1
+
+[node name="Plant Sections10" parent="." unique_id=1016037295 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-15.5, 38)
+scale = Vector2(0.9999999, 0.9999999)
+Expansion_Level = 2
+
+[node name="Plant Sections11" parent="." unique_id=839848497 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(3.4999995, 38)
+scale = Vector2(0.9999998, 0.9999998)
+Expansion_Level = 2
+
+[node name="Plant Sections12" parent="." unique_id=1782935339 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-34.5, 38)
+scale = Vector2(0.9999998, 0.9999998)
+Expansion_Level = 2
+
+[node name="Plant Sections13" parent="." unique_id=1374550342 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-53.499996, 0)
+scale = Vector2(0.9999999, 0.9999999)
+Expansion_Level = 2
+
+[node name="Plant Sections14" parent="." unique_id=413425027 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-53.499996, 19)
+scale = Vector2(0.9999998, 0.9999998)
+Expansion_Level = 2
+
+[node name="Plant Sections15" parent="." unique_id=1585195160 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-53.499996, -19)
+scale = Vector2(0.9999998, 0.9999998)
+Expansion_Level = 2
+
+[node name="Plant Sections16" parent="." unique_id=1578161469 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-53.499996, 38)
+scale = Vector2(0.9999998, 0.9999998)
+Expansion_Level = 2
+
+[node name="Plant Sections17" parent="." unique_id=375714519 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(22.499998, 0)
+scale = Vector2(0.9999998, 0.9999998)
+Expansion_Level = 3
+
+[node name="Plant Sections18" parent="." unique_id=557966518 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(22.499998, 19)
+scale = Vector2(0.99999976, 0.99999976)
+Expansion_Level = 3
+
+[node name="Plant Sections19" parent="." unique_id=1131080137 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(22.499998, -19)
+scale = Vector2(0.99999976, 0.99999976)
+Expansion_Level = 3
+
+[node name="Plant Sections20" parent="." unique_id=1937926508 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(22.499998, 38)
+scale = Vector2(0.99999976, 0.99999976)
+Expansion_Level = 3
+
+[node name="Plant Sections21" parent="." unique_id=2129922202 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-15.5, -37.5)
+scale = Vector2(0.9999999, 0.9999999)
+Expansion_Level = 3
+
+[node name="Plant Sections22" parent="." unique_id=1461864163 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(3.4999995, -37.5)
+scale = Vector2(0.9999998, 0.9999998)
+Expansion_Level = 3
+
+[node name="Plant Sections23" parent="." unique_id=30728991 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-34.5, -37.5)
+scale = Vector2(0.9999999, 0.9999999)
+Expansion_Level = 3
+
+[node name="Plant Sections24" parent="." unique_id=1794565860 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-53.499992, -37.5)
+scale = Vector2(0.99999976, 0.99999976)
+Expansion_Level = 3
+
+[node name="Plant Sections25" parent="." unique_id=604187820 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(22.499998, -37.5)
+scale = Vector2(0.99999976, 0.99999976)
+Expansion_Level = 3
+
+[node name="Plant Sections26" parent="." unique_id=1532220905 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-15.5, -56.5)
+scale = Vector2(0.9999998, 0.9999998)
+Expansion_Level = 4
+
+[node name="Plant Sections27" parent="." unique_id=402058849 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(3.4999995, -56.5)
+scale = Vector2(0.99999976, 0.99999976)
+Expansion_Level = 4
+
+[node name="Plant Sections28" parent="." unique_id=69795137 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-34.5, -56.5)
+scale = Vector2(0.9999998, 0.9999998)
+Expansion_Level = 4
+
+[node name="Plant Sections29" parent="." unique_id=781475113 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-53.499992, -56.5)
+scale = Vector2(0.9999997, 0.9999997)
+Expansion_Level = 4
+
+[node name="Plant Sections30" parent="." unique_id=2083313633 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(22.499996, -56.5)
+scale = Vector2(0.9999997, 0.9999997)
+Expansion_Level = 4
+
+[node name="Plant Sections31" parent="." unique_id=115108014 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-72.5, 0)
+scale = Vector2(0.99999976, 0.99999976)
+Expansion_Level = 4
+
+[node name="Plant Sections32" parent="." unique_id=723933374 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-72.5, 19)
+scale = Vector2(0.9999997, 0.9999997)
+Expansion_Level = 4
+
+[node name="Plant Sections33" parent="." unique_id=951360760 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-72.5, -19)
+scale = Vector2(0.9999997, 0.9999997)
+Expansion_Level = 4
+
+[node name="Plant Sections34" parent="." unique_id=368993972 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-72.5, 38)
+scale = Vector2(0.9999997, 0.9999997)
+Expansion_Level = 4
+
+[node name="Plant Sections35" parent="." unique_id=1196681437 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-72.5, -37.5)
+scale = Vector2(0.9999997, 0.9999997)
+Expansion_Level = 4
+
+[node name="Plant Sections36" parent="." unique_id=1674859403 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-72.5, -56.5)
+scale = Vector2(0.9999997, 0.9999997)
+Expansion_Level = 4
+
+[node name="Plant Sections37" parent="." unique_id=1015203428 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(41.5, 0)
+scale = Vector2(0.9999997, 0.9999997)
+Expansion_Level = 5
+
+[node name="Plant Sections38" parent="." unique_id=2081956056 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(41.5, 19)
+scale = Vector2(0.99999964, 0.99999964)
+Expansion_Level = 5
+
+[node name="Plant Sections39" parent="." unique_id=1185003345 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(41.5, -19)
+scale = Vector2(0.99999964, 0.99999964)
+Expansion_Level = 5
+
+[node name="Plant Sections40" parent="." unique_id=1917291941 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(41.5, 38)
+scale = Vector2(0.99999964, 0.99999964)
+Expansion_Level = 5
+
+[node name="Plant Sections41" parent="." unique_id=104186349 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(41.5, -37.5)
+scale = Vector2(0.99999964, 0.99999964)
+Expansion_Level = 5
+
+[node name="Plant Sections42" parent="." unique_id=1710111221 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(41.5, -56.5)
+scale = Vector2(0.99999964, 0.99999964)
+Expansion_Level = 5
+
+[node name="Plant Sections43" parent="." unique_id=18144135 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-15.5, 56.5)
+scale = Vector2(0.99999976, 0.99999976)
+Expansion_Level = 5
+
+[node name="Plant Sections44" parent="." unique_id=1680093589 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(3.4999995, 56.5)
+scale = Vector2(0.9999997, 0.9999997)
+Expansion_Level = 5
+
+[node name="Plant Sections45" parent="." unique_id=1877330927 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-34.5, 56.5)
+scale = Vector2(0.99999976, 0.99999976)
+Expansion_Level = 5
+
+[node name="Plant Sections46" parent="." unique_id=665228611 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-53.499992, 56.5)
+scale = Vector2(0.99999964, 0.99999964)
+Expansion_Level = 5
+
+[node name="Plant Sections47" parent="." unique_id=1178910436 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(22.499994, 56.5)
+scale = Vector2(0.99999964, 0.99999964)
+Expansion_Level = 5
+
+[node name="Plant Sections48" parent="." unique_id=549705435 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-72.5, 56.5)
+scale = Vector2(0.99999964, 0.99999964)
+Expansion_Level = 5
+
+[node name="Plant Sections49" parent="." unique_id=39878788 instance=ExtResource("2_j4fpq")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(41.5, 56.5)
+scale = Vector2(0.99999964, 0.99999964)
+Expansion_Level = 5
+
+[node name="Iterate Button" type="Button" parent="." unique_id=1898342614]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+visibility_layer = 2
+z_index = 3
+offset_left = 53.684204
+offset_top = 36.842102
+offset_right = 253.6842
+offset_bottom = 110.17545
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_wimkd")
+text = "Iterate"
+metadata/_edit_use_anchors_ = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Iterate Button" unique_id=1098747053]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 2
+stream = ExtResource("12_esb5a")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="Iterate Button" unique_id=295384525]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+stream = ExtResource("5_68ke7")
+volume_db = -7.0
+
+[node name="Reset Button" type="Button" parent="." unique_id=96010308]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+visibility_layer = 2
+z_index = 3
+offset_left = 53.684
+offset_top = 50.342
+offset_right = 253.68399
+offset_bottom = 167.0499
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_wimkd")
+disabled = true
+action_mode = 0
+text = "Reset"
+metadata/_edit_use_anchors_ = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Reset Button" unique_id=1409301547]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 2
+stream = ExtResource("12_esb5a")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="Reset Button" unique_id=1993181651]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+stream = ExtResource("5_68ke7")
+volume_db = -7.0
+
+[node name="Climate Label" type="Label" parent="." unique_id=1262399969]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 3
+offset_left = 52.63158
+offset_top = -52.63158
+offset_right = 177.63156
+offset_bottom = -2.6315804
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.5803947, 0.23460585, 0, 1)
+theme_override_constants/line_spacing = 5
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_w1mlx")
+text = "Climate"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Climate Button" type="OptionButton" parent="." unique_id=869025560]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 3
+offset_left = 52.969
+offset_top = -38.605
+offset_right = 263.96912
+offset_bottom = 55.26887
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxTexture_r7ehw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pmv4g")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_b836b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_up84b")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_r2job")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_xjhy1")
+clip_text = true
+expand_icon = true
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/text = "None"
+popup/item_0/id = 0
+popup/item_1/text = "Heated"
+popup/item_1/icon = ExtResource("9_2l3tv")
+popup/item_1/id = 1
+popup/item_1/disabled = true
+popup/item_2/text = "Frozen"
+popup/item_2/icon = ExtResource("10_1p1je")
+popup/item_2/id = 2
+popup/item_2/disabled = true
+popup/item_3/text = "Toxic"
+popup/item_3/icon = ExtResource("10_b836b")
+popup/item_3/id = 3
+popup/item_3/disabled = true
+popup/item_4/text = "Radioactive"
+popup/item_4/icon = ExtResource("11_pmv4g")
+popup/item_4/id = 4
+popup/item_4/disabled = true
+script = ExtResource("11_2l3tv")
+metadata/_edit_use_anchors_ = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Climate Button" unique_id=195066951]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 2
+stream = ExtResource("12_esb5a")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="Climate Button" unique_id=816046108]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+stream = ExtResource("5_68ke7")
+volume_db = -7.0
+
+[node name="Close Button Sequencing" type="Button" parent="." unique_id=2000511187]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+visibility_layer = 2
+z_index = 3
+offset_left = 71.0
+offset_top = -68.0
+offset_right = 84.0
+offset_bottom = -55.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_j4fpq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j75vj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qhwvs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_up84b")
+theme_override_styles/focus = SubResource("StyleBoxTexture_r2job")
+metadata/_edit_use_anchors_ = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Close Button Sequencing" unique_id=1558942285]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 2
+stream = ExtResource("12_esb5a")
+bus = &"UI"
+
+[node name="Close" type="AudioStreamPlayer2D" parent="Close Button Sequencing" unique_id=1012189176]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+stream = ExtResource("14_vhipy")
+volume_db = 15.0
+
+[node name="Sequence Inputs" parent="." unique_id=321398212 instance=ExtResource("12_1p1je")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-104, -50)
+
+[node name="Sequence Inputs2" parent="." unique_id=98868698 instance=ExtResource("12_1p1je")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-104, 0)
+
+[node name="Sequence Inputs3" parent="." unique_id=454943239 instance=ExtResource("12_1p1je")]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+z_index = 3
+position = Vector2(-104, 50)
+
+[node name="LED Stat Board" type="Node2D" parent="." unique_id=1190038467]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 3
+position = Vector2(-1.0526316, -9.473684)
+
+[node name="Longevity Title" type="Label" parent="LED Stat Board" unique_id=1973329787]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 6
+offset_left = 55.789474
+offset_top = -12.631578
+offset_right = 194.78947
+offset_bottom = 32.368454
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0.6784314, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Longevity"
+metadata/_edit_use_anchors_ = true
+
+[node name="Longevity Stat" type="Label" parent="LED Stat Board" unique_id=769564802]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 6
+offset_left = 55.789474
+offset_top = -6.6315765
+offset_right = 194.78947
+offset_bottom = 38.368454
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 32
+text = "0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Growth Title" type="Label" parent="LED Stat Board" unique_id=614041451]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 6
+offset_left = 55.789474
+offset_top = 1.368423
+offset_right = 194.78947
+offset_bottom = 46.368454
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0.3529412, 0.11372549, 1)
+theme_override_font_sizes/font_size = 25
+text = "Growth"
+metadata/_edit_use_anchors_ = true
+
+[node name="Growth Stat" type="Label" parent="LED Stat Board" unique_id=1199849254]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 6
+offset_left = 55.789474
+offset_top = 7.3684235
+offset_right = 194.78947
+offset_bottom = 52.368454
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 32
+text = "0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Yield Title" type="Label" parent="LED Stat Board" unique_id=325908254]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 6
+offset_left = 55.789474
+offset_top = 15.368423
+offset_right = 194.78947
+offset_bottom = 60.368454
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0.3529412, 0.60784316, 1)
+theme_override_font_sizes/font_size = 25
+text = "Yield"
+metadata/_edit_use_anchors_ = true
+
+[node name="Yield Stat" type="Label" parent="LED Stat Board" unique_id=1684297256]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 6
+offset_left = 55.789474
+offset_top = 21.368423
+offset_right = 194.78947
+offset_bottom = 66.368454
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 32
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="Survivability Title" type="Label" parent="LED Stat Board" unique_id=1462441042]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 6
+offset_left = 55.789474
+offset_top = 29.368423
+offset_right = 194.78947
+offset_bottom = 74.368454
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0.5568628, 0.23529412, 0.003921569, 1)
+theme_override_font_sizes/font_size = 25
+text = "Survivability"
+metadata/_edit_use_anchors_ = true
+
+[node name="Survivability Stat" type="Label" parent="LED Stat Board" unique_id=1881210903]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 6
+offset_left = 55.789474
+offset_top = 35.368423
+offset_right = 194.78947
+offset_bottom = 80.368454
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 32
+text = "0"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LED Stat Board" type="Sprite2D" parent="LED Stat Board" unique_id=123200346]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 3
+position = Vector2(69.989, 15.449)
+scale = Vector2(0.498, 0.897)
+texture = SubResource("GradientTexture2D_pmv4g")
+
+[node name="Label" type="Label" parent="." unique_id=1826304086]
+visible = false
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 10
+offset_left = -85.0
+offset_top = -16.45
+offset_right = 155.0
+offset_bottom = 30.649998
+scale = Vector2(0.7, 0.7)
+theme_override_colors/font_color = Color(6.016344e-08, 0.23951283, 0.23959509, 1)
+theme_override_colors/font_outline_color = Color(1.0973811e-05, 0.89443445, 0.89443445, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_nc5ww")
+text = "Sequencing"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Label" unique_id=2062036385]
+modulate = Color(0.9098039, 0.9098039, 0.9098039, 0.31764707)
+light_mask = 18
+z_index = 10
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 10.0
+scale = Vector2(4.8, 4.71)
+max_value = 15.0
+step = 0.025
+texture_progress = ExtResource("14_7vu78")
+
+[node name="Tutorial Tab (Ref)" type="Node2D" parent="." unique_id=1367213178]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 3
+position = Vector2(150, 120)
+
+[node name="Tutorial Button" type="TextureButton" parent="Tutorial Tab (Ref)" unique_id=1864357223]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+offset_left = -95.048
+offset_top = -188.031
+offset_right = -82.048
+offset_bottom = -175.031
+texture_normal = ExtResource("12_vmcqk")
+texture_pressed = ExtResource("13_esb5a")
+texture_hover = ExtResource("14_854mn")
+script = ExtResource("15_vmcqk")
+metadata/_edit_use_anchors_ = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Tutorial Button" unique_id=1873180255]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+z_index = 2
+stream = ExtResource("12_esb5a")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Tutorial Button" unique_id=1394769685]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+stream = ExtResource("5_68ke7")
+volume_db = -7.0
+
+[node name="Upgrade Notifier" type="Sprite2D" parent="Tutorial Tab (Ref)/Tutorial Button" unique_id=284569127]
+modulate = Color(0.90794176, 0.9079417, 0.90794176, 1)
+light_mask = 18
+position = Vector2(13, 1)
+rotation = 3.1415927
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("24_oubrg")
+
+[node name="Node" type="Node" parent="Tutorial Tab (Ref)/Tutorial Button" unique_id=1816265849]
+
+[node name="Node2D" type="Node2D" parent="Tutorial Tab (Ref)" unique_id=1233566958]
+visible = false
+z_index = 3
+position = Vector2(-186, -171)
+
+[node name="Background" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=83637259]
+z_index = 10
+position = Vector2(37.5, 24.5)
+scale = Vector2(0.7774999, 0.51)
+texture = ExtResource("27_nqn2y")
+
+[node name="Line2D" type="Line2D" parent="Tutorial Tab (Ref)/Node2D/Background" unique_id=2027598666]
+z_index = 10
+position = Vector2(0, 3.42)
+points = PackedVector2Array(49.5, -52.9, 49.5, 46.1, -49.5, 46.1, -49.5, -52.9)
+closed = true
+width = 1.0
+default_color = Color(0.1764706, 0.1764706, 0.1764706, 1)
+
+[node name="Control" type="Control" parent="Tutorial Tab (Ref)/Node2D" unique_id=1915973839]
+z_index = 10
+layout_mode = 3
+anchors_preset = 0
+offset_left = -80.0
+offset_top = -23.0
+offset_right = 151.0
+offset_bottom = 126.0
+
+[node name="Left Movement" type="TextureButton" parent="Tutorial Tab (Ref)/Node2D" unique_id=292818584]
+z_index = 10
+offset_top = 38.0
+offset_right = 12.999991
+offset_bottom = 51.0
+texture_normal = ExtResource("19_68ke7")
+texture_pressed = ExtResource("20_dkurw")
+texture_hover = ExtResource("21_nqn2y")
+flip_h = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Left Movement" unique_id=626928471]
+z_index = 10
+stream = ExtResource("12_esb5a")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Left Movement" unique_id=17283940]
+z_index = 10
+stream = ExtResource("5_68ke7")
+volume_db = -7.0
+
+[node name="Right Movement" type="TextureButton" parent="Tutorial Tab (Ref)/Node2D" unique_id=1348304691]
+z_index = 10
+offset_left = 61.76471
+offset_top = 38.0
+offset_right = 74.76471
+offset_bottom = 51.000008
+texture_normal = ExtResource("19_68ke7")
+texture_pressed = ExtResource("20_dkurw")
+texture_hover = ExtResource("21_nqn2y")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Right Movement" unique_id=901866862]
+z_index = 10
+stream = ExtResource("12_esb5a")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Right Movement" unique_id=187796073]
+z_index = 10
+stream = ExtResource("5_68ke7")
+volume_db = -7.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Tutorial Tab (Ref)/Node2D" unique_id=143564996]
+visibility_layer = 4
+z_index = 10
+offset_right = 845.36
+offset_bottom = 394.32
+scale = Vector2(0.089, 0.089)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Node Name" type="Label" parent="Tutorial Tab (Ref)/Node2D/ScrollContainer" unique_id=1939836482]
+visibility_layer = 4
+z_index = 10
+custom_minimum_size = Vector2(829.36, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+autowrap_mode = 3
+
+[node name="PointLight2D" type="PointLight2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=1025063067]
+z_index = 10
+position = Vector2(36, 50.999992)
+scale = Vector2(6.055, 3.259)
+blend_mode = 2
+range_layer_max = 1
+range_item_cull_mask = 16
+texture = SubResource("GradientTexture2D_yhks8")
+
+[node name="Close Button Sequencing" type="Button" parent="Tutorial Tab (Ref)/Node2D" unique_id=1287535999]
+visibility_layer = 2
+z_index = 10
+offset_left = 78.23529
+offset_top = -0.73529816
+offset_right = 91.23529
+offset_bottom = 12.264702
+theme_override_styles/normal = SubResource("StyleBoxTexture_jg7bg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_e2wy0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_uwmtj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_p1t2b")
+theme_override_styles/focus = SubResource("StyleBoxTexture_p0518")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Close Button Sequencing" unique_id=549666972]
+z_index = 10
+stream = ExtResource("12_esb5a")
+bus = &"UI"
+
+[node name="Close" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Close Button Sequencing" unique_id=1533336594]
+z_index = 10
+stream = ExtResource("26_dkurw")
+
+[node name="Tier 1 Level 6-1" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=1451604025]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(166.52632, 120.47368)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("29_1vuef")
+
+[node name="Tier 1 Level 6-2" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=1177930359]
+visible = false
+light_mask = 2
+z_index = 9
+position = Vector2(-68.001, -0.579)
+texture = ExtResource("30_p6eqq")
+
+[node name="Tier 1 Level 6-3" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=1925528747]
+visible = false
+light_mask = 2
+z_index = 9
+position = Vector2(-68, 49.55)
+texture = ExtResource("30_p6eqq")
+
+[node name="Tier 1 Level 6-4" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=533115627]
+visible = false
+light_mask = 2
+z_index = 9
+position = Vector2(-68.003, 99.521)
+texture = ExtResource("30_p6eqq")
+
+[node name="Tier 1 Level 7-1" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=120378902]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(166.5263, 120.47368)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("31_rlu3u")
+
+[node name="Tier 1 Level 7-2" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=951525726]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(-67.986, -0.479)
+texture = ExtResource("32_ecoep")
+
+[node name="Tier 1 Level 8" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=1155288406]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(-67.976, 50.287)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("33_bx7uc")
+
+[node name="Tier 1 Level 9" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=1096892412]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(105.122, 93.57)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("34_u8ixg")
+
+[node name="Tier 1 Level 11" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=1822791389]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(105.111, 110.3)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("35_mr5ql")
+
+[node name="Tier 2 Level 2" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=128432738]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(30.129, 60.666)
+scale = Vector2(0.119, 0.119)
+texture = ExtResource("36_aoc4d")
+
+[node name="Tier 2 Level 3" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=1405403081]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(105.044, 57.086)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("37_cgsri")
+
+[node name="Tier 2 Level 4" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=46045132]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(105.072, 35.706)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("38_47761")
+
+[node name="Tier 2 Level 5" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=1739576126]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(105.097, 50.037)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("39_p6eqq")
+
+[node name="Tier 2 Level 6" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=1517308330]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(105.079, 64.089)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("40_ecoep")
+
+[node name="Tier 2 Level 7" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=1906818908]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(104.986, 78.388)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("41_uvc7i")
+
+[node name="Tier 3 Level 2" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=1703914333]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(105.019, 19.176)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("42_p6eqq")
+
+[node name="Tier 3 Level 3" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=112498428]
+visible = false
+light_mask = 2
+z_index = 6
+position = Vector2(105.147, 30.585)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("43_ecoep")
+
+[node name="Tier 4 Level 2" type="Node2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=554358099]
+visible = false
+light_mask = 2
+position = Vector2(-35.372, -4.884)
+
+[node name="Sprite 2D" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=1112291204]
+light_mask = 2
+z_index = 6
+position = Vector2(-1.5258789e-05, 0)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D2" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=548466189]
+light_mask = 2
+z_index = 6
+position = Vector2(18.649, -0.023)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D3" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=1982140212]
+light_mask = 2
+z_index = 6
+position = Vector2(37.26, -0.011)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D4" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=1031404787]
+light_mask = 2
+z_index = 6
+position = Vector2(55.9, -0.011)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D5" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=1829582903]
+light_mask = 2
+z_index = 6
+position = Vector2(74.585, -0.011)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D6" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=1142151902]
+light_mask = 2
+z_index = 6
+position = Vector2(93.3, -0.011)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D7" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=1680195394]
+light_mask = 2
+z_index = 6
+position = Vector2(111.975, -0.011)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D8" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=942190020]
+light_mask = 2
+z_index = 6
+position = Vector2(0, 18.785)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D9" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=1600486826]
+light_mask = 2
+z_index = 6
+position = Vector2(0, 37.46)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D10" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=29851697]
+light_mask = 2
+z_index = 6
+position = Vector2(0, 56.16)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D11" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=998735312]
+light_mask = 2
+z_index = 6
+position = Vector2(0, 74.74)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D12" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=1303862900]
+light_mask = 2
+z_index = 6
+position = Vector2(0, 93.265)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D13" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=1002552141]
+light_mask = 2
+z_index = 6
+position = Vector2(0, 111.865)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D14" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=49577815]
+light_mask = 2
+z_index = 6
+position = Vector2(18.679, 18.743)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D15" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=1225924464]
+light_mask = 2
+z_index = 6
+position = Vector2(37.272, 37.222)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D16" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=1945126851]
+light_mask = 2
+z_index = 6
+position = Vector2(55.857, 55.872)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D17" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=2110731620]
+light_mask = 2
+z_index = 6
+position = Vector2(74.457, 74.407)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D18" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=1545037403]
+light_mask = 2
+z_index = 6
+position = Vector2(93.092, 92.862)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D19" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 2" unique_id=966249526]
+light_mask = 2
+z_index = 6
+position = Vector2(111.697, 111.402)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Tier 4 Level 5" type="Node2D" parent="Tutorial Tab (Ref)/Node2D" unique_id=558263135]
+visible = false
+light_mask = 2
+position = Vector2(-73.722, -42.599)
+scale = Vector2(1.01, 1.01)
+
+[node name="Sprite 2D15" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 5" unique_id=422830983]
+light_mask = 2
+z_index = 6
+position = Vector2(112.307, 36.982)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D16" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 5" unique_id=89016626]
+light_mask = 2
+z_index = 6
+position = Vector2(93.342, 55.872)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D17" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 5" unique_id=611726335]
+light_mask = 2
+z_index = 6
+position = Vector2(74.457, 74.407)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D18" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 5" unique_id=1431174345]
+light_mask = 2
+z_index = 6
+position = Vector2(55.672, 92.862)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Sprite 2D19" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Tier 4 Level 5" unique_id=1052465926]
+light_mask = 2
+z_index = 6
+position = Vector2(36.832, 111.402)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("44_uvc7i")
+
+[node name="Basic" type="Button" parent="Tutorial Tab (Ref)/Node2D" unique_id=1770287823]
+z_index = 10
+offset_left = -1.0
+offset_top = -6.0
+offset_right = 84.0
+offset_bottom = 19.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0.5661015, 0.56610143, 1)
+theme_override_colors/font_pressed_color = Color(1.1551381e-06, 0.41809556, 0.4180955, 1)
+theme_override_colors/font_hover_color = Color(5.1018596e-06, 0.72485834, 0.72485805, 1)
+theme_override_colors/font_disabled_color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_uuoqq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3slwg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rkcuu")
+toggle_mode = true
+text = "Basic"
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Basic" unique_id=1818308775]
+z_index = 10
+stream = ExtResource("12_esb5a")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Basic" unique_id=1237000716]
+z_index = 10
+stream = ExtResource("5_68ke7")
+volume_db = -7.0
+
+[node name="Upgrade Notifier" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Basic" unique_id=627222548]
+position = Vector2(87.5, 0)
+rotation = 3.1415927
+texture = ExtResource("24_oubrg")
+
+[node name="Plants" type="Button" parent="Tutorial Tab (Ref)/Node2D" unique_id=1275537708]
+z_index = 10
+offset_left = 18.0
+offset_top = -6.0
+offset_right = 103.0
+offset_bottom = 19.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0.5661015, 0.56610143, 1)
+theme_override_colors/font_pressed_color = Color(1.1551381e-06, 0.41809556, 0.4180955, 1)
+theme_override_colors/font_hover_color = Color(5.1018596e-06, 0.72485834, 0.72485805, 1)
+theme_override_colors/font_disabled_color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_uuoqq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3slwg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rkcuu")
+disabled = true
+toggle_mode = true
+button_pressed = true
+text = "Plants
+"
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Plants" unique_id=144923164]
+z_index = 10
+stream = ExtResource("12_esb5a")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Plants" unique_id=1818597017]
+z_index = 10
+stream = ExtResource("5_68ke7")
+volume_db = -7.0
+
+[node name="Upgrade Notifier" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Plants" unique_id=2026356216]
+position = Vector2(87.5, 0)
+rotation = 3.1415927
+texture = ExtResource("24_oubrg")
+
+[node name="Environment" type="Button" parent="Tutorial Tab (Ref)/Node2D" unique_id=2023286545]
+z_index = 10
+offset_left = 37.0
+offset_top = -6.0
+offset_right = 137.0
+offset_bottom = 19.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0.5661015, 0.56610143, 1)
+theme_override_colors/font_pressed_color = Color(1.1551381e-06, 0.41809556, 0.4180955, 1)
+theme_override_colors/font_hover_color = Color(5.1018596e-06, 0.72485834, 0.72485805, 1)
+theme_override_colors/font_disabled_color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_uuoqq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3slwg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rkcuu")
+disabled = true
+toggle_mode = true
+button_pressed = true
+text = "Environment"
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Environment" unique_id=474254899]
+z_index = 10
+stream = ExtResource("12_esb5a")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Environment" unique_id=1094877358]
+z_index = 10
+stream = ExtResource("5_68ke7")
+volume_db = -7.0
+
+[node name="Upgrade Notifier" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Environment" unique_id=1611119000]
+visible = false
+position = Vector2(102, 0)
+rotation = 3.1415927
+texture = ExtResource("24_oubrg")
+
+[node name="Combos" type="Button" parent="Tutorial Tab (Ref)/Node2D" unique_id=541436010]
+z_index = 10
+offset_left = 59.0
+offset_top = -6.0
+offset_right = 144.0
+offset_bottom = 19.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0.5661015, 0.56610143, 1)
+theme_override_colors/font_pressed_color = Color(1.1551381e-06, 0.41809556, 0.4180955, 1)
+theme_override_colors/font_hover_color = Color(5.1018596e-06, 0.72485834, 0.72485805, 1)
+theme_override_colors/font_disabled_color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_uuoqq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3slwg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rkcuu")
+disabled = true
+toggle_mode = true
+button_pressed = true
+text = "Combos"
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Combos" unique_id=965522908]
+z_index = 10
+stream = ExtResource("12_esb5a")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="Tutorial Tab (Ref)/Node2D/Combos" unique_id=711354824]
+z_index = 10
+stream = ExtResource("5_68ke7")
+volume_db = -7.0
+
+[node name="Upgrade Notifier" type="Sprite2D" parent="Tutorial Tab (Ref)/Node2D/Combos" unique_id=451514545]
+visible = false
+position = Vector2(87.5, 0)
+rotation = 3.1415927
+texture = ExtResource("24_oubrg")
+
+[connection signal="mouse_entered" from="Iterate Button" to="." method="_on_iterate_button_mouse_entered"]
+[connection signal="pressed" from="Iterate Button" to="." method="_on_iterate_button_pressed"]
+[connection signal="mouse_entered" from="Reset Button" to="." method="_on_reset_button_mouse_entered"]
+[connection signal="pressed" from="Reset Button" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections2" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections3" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections4" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections5" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections6" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections7" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections8" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections9" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections10" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections11" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections12" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections13" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections14" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections15" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections16" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections17" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections18" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections19" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections20" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections21" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections22" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections23" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections24" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections25" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections26" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections27" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections28" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections29" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections30" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections31" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections32" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections33" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections34" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections35" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections36" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections37" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections38" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections39" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections40" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections41" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections42" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections43" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections44" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections45" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections46" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections47" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections48" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Reset Button" to="Plant Sections49" method="_on_reset_button_pressed"]
+[connection signal="item_selected" from="Climate Button" to="." method="_on_climate_button_item_selected"]
+[connection signal="mouse_entered" from="Climate Button" to="." method="_on_climate_button_mouse_entered"]
+[connection signal="button_up" from="Close Button Sequencing" to="." method="_on_close_button_sequencing_button_up"]
+[connection signal="mouse_entered" from="Close Button Sequencing" to="." method="_on_close_button_sequencing_mouse_entered"]
+[connection signal="pressed" from="Close Button Sequencing" to="." method="_on_close_button_sequencing_pressed"]
+[connection signal="pressed" from="Tutorial Tab (Ref)/Tutorial Button" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="Tutorial Tab (Ref)/Node2D/Left Movement" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_left_movement_mouse_entered"]
+[connection signal="pressed" from="Tutorial Tab (Ref)/Node2D/Left Movement" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_left_movement_pressed"]
+[connection signal="mouse_entered" from="Tutorial Tab (Ref)/Node2D/Right Movement" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_right_movement_mouse_entered"]
+[connection signal="pressed" from="Tutorial Tab (Ref)/Node2D/Right Movement" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_right_movement_pressed"]
+[connection signal="pressed" from="Tutorial Tab (Ref)/Node2D/Close Button Sequencing" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_close_button_sequencing_pressed"]
+[connection signal="mouse_entered" from="Tutorial Tab (Ref)/Node2D/Basic" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_basic_mouse_entered"]
+[connection signal="pressed" from="Tutorial Tab (Ref)/Node2D/Basic" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_basic_pressed"]
+[connection signal="mouse_entered" from="Tutorial Tab (Ref)/Node2D/Plants" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_plants_mouse_entered"]
+[connection signal="pressed" from="Tutorial Tab (Ref)/Node2D/Plants" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_plants_pressed"]
+[connection signal="pressed" from="Tutorial Tab (Ref)/Node2D/Environment" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_environment_pressed"]
+[connection signal="mouse_entered" from="Tutorial Tab (Ref)/Node2D/Combos" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_combos_mouse_entered"]
+[connection signal="pressed" from="Tutorial Tab (Ref)/Node2D/Combos" to="Tutorial Tab (Ref)/Tutorial Button" method="_on_combos_pressed"]

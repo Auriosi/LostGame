@@ -1,0 +1,1850 @@
+[gd_scene format=3 uid="uid://b8tp7e7nkm6d"]
+
+[ext_resource type="Script" uid="uid://dbd8l7hbjxj7q" path="res://Scenes/Story/Plant Sentience/plant_sentience.gd" id="1_cpr2w"]
+[ext_resource type="Texture2D" uid="uid://d0gm68agv83qf" path="res://Sprites/Story/Plant Sentience/Background.png" id="1_og8ws"]
+[ext_resource type="Texture2D" uid="uid://dbudcxxc7wanx" path="res://Sprites/Story/Plant Sentience/Sound Machine/Sound Machine Game.png" id="2_gpvh3"]
+[ext_resource type="Texture2D" uid="uid://c3jc23pj8u064" path="res://Sprites/Story/Plant Sentience/Pot.png" id="2_wmd1o"]
+[ext_resource type="Script" uid="uid://biecganvelqky" path="res://Scenes/Story/Plant Sentience/flower_test.gd" id="4_bsmxk"]
+[ext_resource type="Shader" uid="uid://bogqnvj76d71q" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation/Camera Shader.gdshader" id="5_a0kor"]
+[ext_resource type="Shader" uid="uid://ccdw2voqjh4yr" path="res://Scenes/Story/Plant Sentience/plant_sentience.gdshader" id="5_aae7i"]
+[ext_resource type="Texture2D" uid="uid://dq186x008by36" path="res://Sprites/Story/Plant Sentience/Flower Day 4/Flower Day 4 (Stem 1).png" id="5_gp6q4"]
+[ext_resource type="Script" uid="uid://dc0hndgqagn0y" path="res://Scenes/Story/Plant Sentience/x_ray.gd" id="5_rk0mu"]
+[ext_resource type="Texture2D" uid="uid://m1jgelpsp3u3" path="res://Sprites/Story/Plant Sentience/Flower Day 4/Flower Day 4 (Leaf 1).png" id="6_6dnu1"]
+[ext_resource type="Texture2D" uid="uid://d2hv8q4w2oene" path="res://Sprites/Story/Plant Sentience/Flower Day 4/Flower Day 4 (Stem 2).png" id="6_cl0t8"]
+[ext_resource type="Texture2D" uid="uid://ck65qli1r8ibo" path="res://Sprites/Story/Plant Sentience/Mat_Answer_Table_1.png" id="6_rk0mu"]
+[ext_resource type="Texture2D" uid="uid://bw1a8j3y15yfi" path="res://Sprites/Story/Plant Sentience/Flower Day 4/Flower Day 4 (Roots).png" id="7_bsmxk"]
+[ext_resource type="Texture2D" uid="uid://dg273wqwhlnu7" path="res://Sprites/Story/Plant Sentience/Flower Day 4/Flower Day 4 (Stem 3).png" id="7_btyfj"]
+[ext_resource type="Texture2D" uid="uid://cgnwh7lw1texh" path="res://Sprites/Story/Plant Sentience/UI/Computer.png" id="7_m4dcj"]
+[ext_resource type="Texture2D" uid="uid://di01ewn3emytb" path="res://Sprites/Story/Plant Sentience/Flower Day 4/Flower Day 4 (Flower).png" id="8_6odrs"]
+[ext_resource type="Texture2D" uid="uid://dmvvndbqox7ft" path="res://Sprites/Story/Plant Sentience/UI/X-Ray Machine.png" id="8_f580x"]
+[ext_resource type="Texture2D" uid="uid://mv1iqui4fg42" path="res://Sprites/Story/Plant Sentience/UI/Containment Chamber.png" id="8_nb2ls"]
+[ext_resource type="Texture2D" uid="uid://cf5hk8ohntbvh" path="res://Sprites/Story/Plant Sentience/UI/Computer Outline.png" id="8_vpha7"]
+[ext_resource type="Script" uid="uid://cjetdj2oilc5f" path="res://Scenes/Story/Plant Sentience/computer_area_2d.gd" id="9_lo6md"]
+[ext_resource type="Texture2D" uid="uid://cvfo8sr72jts3" path="res://Sprites/Story/Plant Sentience/UI/Petri Dish.png" id="9_m2g3u"]
+[ext_resource type="Texture2D" uid="uid://rvrs30ivog7m" path="res://Sprites/Story/Plant Sentience/UI/Sound Machine.png" id="10_l21iv"]
+[ext_resource type="Texture2D" uid="uid://c6u6ofwhtsqfg" path="res://Sprites/Story/Plant Sentience/UI/X-Ray Machine Outline.png" id="10_lo6md"]
+[ext_resource type="Script" uid="uid://cva2w2c432hs2" path="res://Scenes/Story/Plant Sentience/day_5_flower.gd" id="11_qhjme"]
+[ext_resource type="Texture2D" uid="uid://d33cn47l2v6gj" path="res://Sprites/Story/Plant Sentience/Flower Day 5/Flower Day 5 (Stem 1).png" id="11_rt6kg"]
+[ext_resource type="Script" uid="uid://dhuvhmux5f12w" path="res://Scenes/Story/Plant Sentience/xray_area_2d.gd" id="12_gpvh3"]
+[ext_resource type="Texture2D" uid="uid://b7723110ru3r3" path="res://Sprites/Story/Plant Sentience/UI/Petri Dish Outline.png" id="12_rk0mu"]
+[ext_resource type="Texture2D" uid="uid://dbh7vu34ck0y" path="res://Sprites/Story/Plant Sentience/Flower Day 5/Flower Day 5 (Stem 2).png" id="12_s4m2k"]
+[ext_resource type="Texture2D" uid="uid://ccsoit18paiam" path="res://Sprites/Story/Plant Sentience/Flower Day 5/Flower Day 5 (Stem 3).png" id="13_ku1n0"]
+[ext_resource type="Texture2D" uid="uid://bwnm63ger3ghw" path="res://Sprites/Story/Plant Sentience/Flower Day 5/Flower Day 5 (Roots).png" id="14_f3g7g"]
+[ext_resource type="Texture2D" uid="uid://cpdrn0l74v0h1" path="res://Sprites/Story/Plant Sentience/UI/Sound Machine Outline.png" id="14_gpvh3"]
+[ext_resource type="Texture2D" uid="uid://dud5rr2rqx26w" path="res://Sprites/Story/Plant Sentience/Flower Day 5/Flower Day 5 (Leaf 2).png" id="14_ku1n0"]
+[ext_resource type="Texture2D" uid="uid://ktiemagh4ukl" path="res://Sprites/Story/Plant Sentience/Flower Day 6/Flower Day 6 (Roots).png" id="15_47s03"]
+[ext_resource type="Texture2D" uid="uid://cnef5rwaia3yy" path="res://Sprites/Story/Plant Sentience/Flower Day 5/Flower Day 5 (Leaf 1).png" id="15_f3g7g"]
+[ext_resource type="Texture2D" uid="uid://disknswk3yh4o" path="res://Sprites/Story/Plant Sentience/Flower Day 8/Flower Day 8 (Roots).png" id="16_c08kl"]
+[ext_resource type="Script" uid="uid://cclivo88nh4j5" path="res://Scenes/Story/Plant Sentience/Harvest_Activation_Area_2d.gd" id="16_w0ody"]
+[ext_resource type="Texture2D" uid="uid://bd6brc58v07xe" path="res://Sprites/Story/Plant Sentience/Flower Day 9/Flower Day 9 (Roots).png" id="17_dwcor"]
+[ext_resource type="Texture2D" uid="uid://bk7krlklnsetw" path="res://Sprites/Story/Plant Sentience/Flower Day 6/Flower Day 6 (Stem 1).png" id="17_rtim6"]
+[ext_resource type="Script" uid="uid://crh5sg0jws6nh" path="res://Scenes/Story/Plant Sentience/soundmachine_area_2d.gd" id="18_7dlc1"]
+[ext_resource type="Script" uid="uid://vxyu5cwt3wd3" path="res://Scenes/Story/Plant Sentience/day_6_flower.gd" id="18_fi2ca"]
+[ext_resource type="Texture2D" uid="uid://dqm35y6qdcvs8" path="res://Sprites/Story/Plant Sentience/Flower Day 6/Flower Day 6 (Stem 2).png" id="18_lt125"]
+[ext_resource type="Texture2D" uid="uid://cqwjeko241k7w" path="res://Sprites/Story/Plant Sentience/Flower Day 10/Flower Day 10 (Roots).png" id="18_y0n8t"]
+[ext_resource type="Texture2D" uid="uid://dm30v02grgt8q" path="res://Sprites/Story/Plant Sentience/Flower Day 6/Flower Day 6 (Stem 3).png" id="19_wc6v8"]
+[ext_resource type="Texture2D" uid="uid://boh83fb0y6p7g" path="res://Sprites/Story/Plant Sentience/Flower Day 6/Flower Day 6 (Flower).png" id="20_0jdi3"]
+[ext_resource type="Script" uid="uid://mb3a4suehcws" path="res://Scenes/Story/Plant Sentience/sound_machine_game.gd" id="20_uqqh6"]
+[ext_resource type="PackedScene" uid="uid://fs8fb4gaqr5s" path="res://audio_visualizer.tscn" id="21_7dlc1"]
+[ext_resource type="Texture2D" uid="uid://hc0mpinmh18w" path="res://Sprites/Story/Plant Sentience/Flower Day 6/Flower Day 6 (Leaf 2).png" id="21_iehox"]
+[ext_resource type="Texture2D" uid="uid://b51vg8f7fuvoq" path="res://Sprites/Story/Plant Sentience/Sound Machine/Sound Machine Button Base.png" id="22_60mfq"]
+[ext_resource type="Texture2D" uid="uid://t14xd70h4eff" path="res://Sprites/Story/Plant Sentience/Flower Day 6/Flower Day 6 (Leaf 1).png" id="22_qlupa"]
+[ext_resource type="Script" uid="uid://cslha3iqefwhc" path="res://Scenes/Story/Plant Sentience/sprite_2d.gd" id="23_60mfq"]
+[ext_resource type="Texture2D" uid="uid://r4gpw3lo3dvd" path="res://Sprites/Story/Plant Sentience/Flower Day 8/Flower Day 8 (Stem 1).png" id="24_fye50"]
+[ext_resource type="Texture2D" uid="uid://c4o7ndnscpwp3" path="res://Sprites/Story/Plant Sentience/Sound Machine/Outline Sound Machine Button.png" id="24_vw2iq"]
+[ext_resource type="Texture2D" uid="uid://cn1dd6r0tt0bh" path="res://Sprites/Story/Plant Sentience/Flower Day 8/Flower Day 8 (Stem 2).png" id="25_ebwsw"]
+[ext_resource type="Texture2D" uid="uid://ewhq87uhb45h" path="res://Sprites/Story/Plant Sentience/Sound Machine/Sound Machine Button Indicator.png" id="25_retap"]
+[ext_resource type="Script" uid="uid://ve47adlbj0np" path="res://Scenes/Story/Plant Sentience/day_8_flower.gd" id="26_cpr2w"]
+[ext_resource type="Texture2D" uid="uid://bu24kv4xw8qed" path="res://Sprites/Story/Plant Sentience/Flower Day 8/Flower Day 8 (Stem 3).png" id="26_yfbei"]
+[ext_resource type="Texture2D" uid="uid://catpkn8mu0m3i" path="res://Sprites/Story/Plant Sentience/Flower Day 8/Flower Day 8 (Flower).png" id="27_tq0h5"]
+[ext_resource type="Texture2D" uid="uid://dunbcnie6rg7a" path="res://Sprites/Story/Plant Sentience/Sound Machine/Sound Machine Switch Toggle.png" id="27_u7bht"]
+[ext_resource type="Shader" uid="uid://cgcq50p0ygn4c" path="res://Audio_Visualizer_Static.gdshader" id="27_x6q8p"]
+[ext_resource type="Texture2D" uid="uid://dvoc7k1h8sa3e" path="res://Sprites/Story/Plant Sentience/Sound Machine/Sound Machine Switch Toggle Outline.png" id="28_4axep"]
+[ext_resource type="Texture2D" uid="uid://ctjqw2lfd631y" path="res://Sprites/Story/Plant Sentience/Flower Day 8/Flower Day 8 (Leaf 3).png" id="28_lyj0f"]
+[ext_resource type="Texture2D" uid="uid://bbgbdfmnvt6cs" path="res://Sprites/Story/Plant Sentience/Flower Day 8/Flower Day 8 (Leaf 1).png" id="29_3r5j5"]
+[ext_resource type="Texture2D" uid="uid://ddgg8xlp2wfcc" path="res://Sprites/Story/Plant Sentience/Sound Machine/Camera Image.png" id="29_a0kor"]
+[ext_resource type="Script" uid="uid://hv6r5h0vc4uj" path="res://Scenes/Story/Plant Sentience/area_2d.gd" id="29_c70hv"]
+[ext_resource type="Script" uid="uid://cahapiw260ptn" path="res://Scenes/Story/Plant Sentience/camera.gd" id="30_b3w6a"]
+[ext_resource type="Texture2D" uid="uid://gky8eeuq888" path="res://Sprites/Story/Plant Sentience/Flower Day 8/Flower Day 8 (Leaf 2).png" id="30_wb4xx"]
+[ext_resource type="Texture2D" uid="uid://b7rfkp6q42fte" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation/Ungilation1.png" id="31_b3w6a"]
+[ext_resource type="Texture2D" uid="uid://crso376myrehw" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation/Ungilation2.png" id="32_1ovbh"]
+[ext_resource type="Texture2D" uid="uid://5vau3xhykl6v" path="res://Sprites/Story/Plant Sentience/Flower Day 9/Flower Day 9 (Stem 1).png" id="32_q0nym"]
+[ext_resource type="Texture2D" uid="uid://c32qr746i3jta" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation Jumpscare/Ungilation Jumpscare1.png" id="32_v633a"]
+[ext_resource type="Texture2D" uid="uid://dfs8jnlg6j2w7" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation Jumpscare/Ungilation Jumpscare2.png" id="33_fv24p"]
+[ext_resource type="Texture2D" uid="uid://cpbcxyvst2d0r" path="res://Sprites/Story/Plant Sentience/Flower Day 9/Flower Day 9 (Stem 2).png" id="33_s5p7m"]
+[ext_resource type="Texture2D" uid="uid://bn8nbmi40rh5p" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation/Ungilation3.png" id="33_sk55g"]
+[ext_resource type="Texture2D" uid="uid://5kxxnpts115k" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation/Ungilation4.png" id="34_4f40e"]
+[ext_resource type="Texture2D" uid="uid://bb3atxiaqwklw" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation Jumpscare/Ungilation Jumpscare3.png" id="34_x6q8p"]
+[ext_resource type="Texture2D" uid="uid://dk3cv15ah4jyh" path="res://Sprites/Story/Plant Sentience/Flower Day 9/Flower Day 9 (Stem 3).png" id="34_yvdkt"]
+[ext_resource type="Texture2D" uid="uid://bgulebwcnha2c" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation Jumpscare/Ungilation Jumpscare4.png" id="35_aae7i"]
+[ext_resource type="Texture2D" uid="uid://bs3hak266dy3s" path="res://Sprites/Story/Plant Sentience/Flower Day 9/Flower Day 9 (Flower).png" id="35_feqnq"]
+[ext_resource type="Script" uid="uid://dp7twqaevss68" path="res://Scenes/Story/Plant Sentience/day_9_flower.gd" id="35_gemuf"]
+[ext_resource type="Texture2D" uid="uid://bxyiwvrpsmirl" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation/Ungilation5.png" id="35_lq06n"]
+[ext_resource type="Texture2D" uid="uid://dvgoyvsg7fbj3" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation/Ungilation6.png" id="36_75nbf"]
+[ext_resource type="Texture2D" uid="uid://dlmgqg3a31ntb" path="res://Sprites/Story/Plant Sentience/Flower Day 9/Flower Day 9 (Leaf 5).png" id="36_or7bv"]
+[ext_resource type="Texture2D" uid="uid://b1fme7o1o6wvt" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation Jumpscare/Ungilation Jumpscare5.png" id="36_xpegn"]
+[ext_resource type="Texture2D" uid="uid://bb758dicfwkrl" path="res://Sprites/Story/Plant Sentience/Flower Day 9/Flower Day 9 (Leaf 3).png" id="37_10mfg"]
+[ext_resource type="Texture2D" uid="uid://bpou7ytr0hrlo" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation/Ungilation7.png" id="37_i1pk6"]
+[ext_resource type="Texture2D" uid="uid://7jrlnd3kbwis" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation Jumpscare/Ungilation Jumpscare6.png" id="37_p1d0y"]
+[ext_resource type="Texture2D" uid="uid://c3msh4nfyhyay" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation/Ungilation8.png" id="38_1x5ei"]
+[ext_resource type="Texture2D" uid="uid://db73h1gp8eyeg" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation Jumpscare/Ungilation Jumpscare7.png" id="38_k0u5j"]
+[ext_resource type="Texture2D" uid="uid://bw17q8koyd364" path="res://Sprites/Story/Plant Sentience/Flower Day 9/Flower Day 9 (Leaf 4).png" id="38_ucuo3"]
+[ext_resource type="Texture2D" uid="uid://do51t85p6k3o7" path="res://Sprites/Story/Plant Sentience/Flower Day 9/Flower Day 9 (Leaf 1).png" id="39_6v6k5"]
+[ext_resource type="Texture2D" uid="uid://3yq5np3yas2e" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation Jumpscare/Ungilation Jumpscare8.png" id="39_hjvjk"]
+[ext_resource type="Texture2D" uid="uid://ctellsg34sqhr" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation/Ungilation9.png" id="39_v633a"]
+[ext_resource type="Texture2D" uid="uid://bs4pmhhkeof00" path="res://Sprites/Story/Plant Sentience/Flower Day 9/Flower Day 9 (Leaf 2).png" id="40_02gvp"]
+[ext_resource type="Texture2D" uid="uid://dyaqsmhpt3kh0" path="res://Sprites/Story/Plant Sentience/Sound Machine/Ungliation/Ungilation10.png" id="40_fv24p"]
+[ext_resource type="Texture2D" uid="uid://cvvls3m4o13sk" path="res://Sprites/Story/Plant Sentience/Flower Day 10/Flower Day 10 (Stem 1).png" id="42_02gvp"]
+[ext_resource type="Texture2D" uid="uid://cit2n8e0ug4im" path="res://Sprites/Story/Plant Sentience/Flower Day 10/Flower Day 10 (Stem 2).png" id="43_46t5p"]
+[ext_resource type="Texture2D" uid="uid://dp7jtvty5kjvq" path="res://Sprites/Story/Plant Sentience/Flower Day 10/Flower Day 10 (Stem 3).png" id="44_gme31"]
+[ext_resource type="Texture2D" uid="uid://ctvswquqcv8uc" path="res://Sprites/Story/Plant Sentience/Flower Day 10/Flower Day 10 (Flower).png" id="45_aa0fd"]
+[ext_resource type="Texture2D" uid="uid://danc54o4q28lg" path="res://Sprites/Story/Plant Sentience/Flower Day 10/Flower Day 10 (Leaf 3).png" id="46_ei1bu"]
+[ext_resource type="Script" uid="uid://qnm7uw2h67d5" path="res://Scenes/Story/Plant Sentience/day_10_flower.gd" id="46_xq8js"]
+[ext_resource type="Texture2D" uid="uid://p0n1ppvv21qo" path="res://Sprites/Story/Plant Sentience/Flower Day 10/Flower Day 10 (Leaf 4).png" id="47_qhjme"]
+[ext_resource type="Texture2D" uid="uid://dw4xqhxnap4u1" path="res://Sprites/Story/Plant Sentience/Flower Day 10/Flower Day 10 (Leaf 1).png" id="48_fi2ca"]
+[ext_resource type="Texture2D" uid="uid://ck4m6cx520vcy" path="res://Sprites/Story/Plant Sentience/Flower Day 10/Flower Day 10 (Leaf 2).png" id="49_cpr2w"]
+[ext_resource type="AudioStream" uid="uid://djoetqehs6k6l" path="res://Sounds/Story Sounds/Plant Sentience/Ungilation Jumpscare.mp3" id="50_fv24p"]
+[ext_resource type="Texture2D" uid="uid://bk5mnqn05tpov" path="res://Sprites/Story/Plant Sentience/Sound Machine/Camera Button.png" id="53_k0u5j"]
+[ext_resource type="Texture2D" uid="uid://6h3hk5bx6ex3" path="res://Sprites/Story/Plant Sentience/Sound Machine/Camera Button Outline.png" id="54_hjvjk"]
+[ext_resource type="Script" uid="uid://cmaeq8sx3i0a" path="res://Scenes/Story/Plant Sentience/Sound_Machine.gd" id="55_r7oof"]
+[ext_resource type="Script" uid="uid://cq04vlccldlew" path="res://Scenes/Story/Plant Sentience/harvest.gd" id="56_mm1ne"]
+[ext_resource type="Texture2D" uid="uid://8nfg5tp5s5by" path="res://Sprites/Story/Plant Sentience/Harvest Game/Harvest Game Table.png" id="57_w0ody"]
+[ext_resource type="Texture2D" uid="uid://dvwwupnswwh0y" path="res://Sprites/Story/Plant Sentience/Harvest Game/Needle1.png" id="58_wsnva"]
+[ext_resource type="Texture2D" uid="uid://ut46uen52jr2" path="res://Sprites/Story/Plant Sentience/Harvest Game/Needle2.png" id="59_v7wgu"]
+[ext_resource type="Texture2D" uid="uid://7i4umod6a2ck" path="res://Sprites/Story/Plant Sentience/Harvest Game/Needle3.png" id="60_w0ody"]
+[ext_resource type="Texture2D" uid="uid://dgeemsl5xggpo" path="res://Sprites/Story/Plant Sentience/Harvest Game/Needle4.png" id="61_pmhe1"]
+[ext_resource type="Texture2D" uid="uid://dtvulvaffuwhv" path="res://Sprites/Story/Plant Sentience/Harvest Game/Needle5.png" id="62_e8hhg"]
+[ext_resource type="Texture2D" uid="uid://cjxtmnne1rqc4" path="res://Sprites/Story/Plant Sentience/Harvest Game/Needle6.png" id="63_sf4sh"]
+[ext_resource type="Texture2D" uid="uid://co1e0xjl51idb" path="res://Sprites/Story/Plant Sentience/Harvest Game/Needle7.png" id="64_y2r3u"]
+[ext_resource type="Texture2D" uid="uid://clxdhifpcphto" path="res://Sprites/Story/Plant Sentience/Harvest Game/Book (Open).png" id="65_pmhe1"]
+[ext_resource type="Texture2D" uid="uid://jh0yyoiojmqs" path="res://Sprites/Story/Plant Sentience/Harvest Game/Book (Closed).png" id="66_e8hhg"]
+[ext_resource type="Texture2D" uid="uid://cp3w1cfeke7kb" path="res://Sprites/Story/Plant Sentience/Harvest Game/Book (Open) (Outline).png" id="66_sf4sh"]
+[ext_resource type="Script" uid="uid://dyk7jsh5t4rp7" path="res://Scenes/Story/Plant Sentience/closed_book_area_2d.gd" id="67_12au2"]
+[ext_resource type="Texture2D" uid="uid://bp2a4m135nio7" path="res://Sprites/Story/Plant Sentience/Harvest Game/Plate and Needles.png" id="67_sf4sh"]
+[ext_resource type="Texture2D" uid="uid://b53swiwdvoo7" path="res://Sprites/Story/Plant Sentience/Harvest Game/Book (Closed) (Outline).png" id="68_y2r3u"]
+[ext_resource type="Script" uid="uid://bll6mnr071m4j" path="res://Scenes/Story/Plant Sentience/open_book_area_2d.gd" id="70_fpld2"]
+[ext_resource type="Texture2D" uid="uid://hucmqyjpb1iv" path="res://Sprites/Story/Plant Sentience/Harvest Game/Plate and Needles (Outline).png" id="70_x8f4u"]
+[ext_resource type="Script" uid="uid://dm5p5ajkepw2u" path="res://Scenes/Story/Plant Sentience/dish_area_2d.gd" id="73_upviw"]
+[ext_resource type="Script" uid="uid://bhgm00eot36pc" path="res://Scenes/Story/Plant Sentience/mouse_tracker.gd" id="108_hjvjk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p1d0y"]
+shader = ExtResource("5_aae7i")
+shader_parameter/amount = 40.0
+shader_parameter/X = 1.0
+shader_parameter/Y = 67.0
+shader_parameter/fade_amount = 0.2
+
+[sub_resource type="Gradient" id="Gradient_n6g4q"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_khhxn"]
+gradient = SubResource("Gradient_n6g4q")
+width = 1980
+height = 1020
+
+[sub_resource type="Gradient" id="Gradient_ovxxq"]
+offsets = PackedFloat32Array(0.009090909)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qsuaf"]
+gradient = SubResource("Gradient_ovxxq")
+width = 1980
+height = 1020
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s1fef"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_khhxn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qsuaf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gpvh3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7dlc1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ebhw5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wb4oo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bowr3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xkrm3"]
+
+[sub_resource type="Gradient" id="Gradient_retap"]
+colors = PackedColorArray(1, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0f3ej"]
+gradient = SubResource("Gradient_retap")
+width = 10
+height = 10
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aae7i"]
+shader = ExtResource("27_x6q8p")
+shader_parameter/amount = 10.0
+shader_parameter/X = 72.0
+shader_parameter/Y = 11.0
+shader_parameter/fade_amount = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xpegn"]
+shader = ExtResource("5_a0kor")
+shader_parameter/amount = 10.0
+shader_parameter/X = 1.0
+shader_parameter/Y = 8.0
+shader_parameter/fade_amount = 0.0
+shader_parameter/brightness = 1.2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0f3ej"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_v633a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_v633a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_fv24p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_fv24p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_x6q8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_x6q8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_aae7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_aae7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_xpegn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_p1d0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_k0u5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_hjvjk")
+}],
+"loop": 0,
+"name": &"Jumpscare",
+"speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_b3w6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_1ovbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_sk55g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_4f40e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_lq06n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_75nbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_i1pk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_1x5ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_v633a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_fv24p")
+}],
+"loop": 0,
+"name": &"Ungliation",
+"speed": 6.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_x6q8p"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yuem5"]
+gradient = SubResource("Gradient_x6q8p")
+
+[sub_resource type="Gradient" id="Gradient_w0ody"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 0.58431375)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wb4oo"]
+gradient = SubResource("Gradient_w0ody")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1fef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("58_wsnva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_v7wgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_w0ody")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_pmhe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_e8hhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_sf4sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_y2r3u")
+}],
+"loop": 0,
+"name": &"Sampling",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0f3ej"]
+radius = 1.0
+
+[node name="Plant Sentience" type="Node2D" unique_id=1600149902]
+script = ExtResource("1_cpr2w")
+
+[node name="User Interface" type="Node2D" parent="." unique_id=1946692134]
+
+[node name="Background" type="Sprite2D" parent="User Interface" unique_id=1784309130]
+light_mask = 5
+position = Vector2(884, 350.34)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_og8ws")
+
+[node name="Pot" type="Sprite2D" parent="User Interface" unique_id=906308532]
+light_mask = 5
+position = Vector2(990, 730.25)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("2_wmd1o")
+
+[node name="X_Ray" type="Node2D" parent="User Interface" unique_id=2127786359]
+visible = false
+position = Vector2(990, 510)
+script = ExtResource("5_rk0mu")
+
+[node name="ColorRect" type="ColorRect" parent="User Interface/X_Ray" unique_id=613902070]
+z_index = 5
+material = SubResource("ShaderMaterial_p1d0y")
+offset_left = -990.0
+offset_top = -510.0
+offset_right = 994.0
+offset_bottom = 510.0
+color = Color(0.49121526, 0.2827793, 0.106126174, 0.39100003)
+
+[node name="PointLight2D" type="PointLight2D" parent="User Interface/X_Ray" unique_id=1993837384]
+energy = 10.0
+blend_mode = 2
+range_item_cull_mask = 4
+texture = SubResource("GradientTexture2D_khhxn")
+
+[node name="PointLight2D2" type="PointLight2D" parent="User Interface/X_Ray" unique_id=1972544539]
+position = Vector2(-13.999985, -40)
+scale = Vector2(0.8626263, 0.78333336)
+energy = 100.0
+range_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_qsuaf")
+
+[node name="Escape" type="TextEdit" parent="User Interface/X_Ray" unique_id=1093814527]
+z_index = 1
+offset_left = -950.0
+offset_top = -500.0
+offset_right = -793.0
+offset_bottom = -474.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s1fef")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_khhxn")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_qsuaf")
+text = "Press Escape to Exit"
+
+[node name="Nitrogen" type="Label" parent="User Interface/X_Ray" unique_id=355669951]
+z_index = 1
+offset_left = -950.0
+offset_top = -362.0
+offset_right = -750.0
+offset_bottom = -336.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s1fef")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_khhxn")
+
+[node name="Phosphorus" type="Label" parent="User Interface/X_Ray" unique_id=931583074]
+z_index = 1
+offset_left = -950.0
+offset_top = -282.0
+offset_right = -750.0
+offset_bottom = -256.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s1fef")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_khhxn")
+
+[node name="Potassium" type="Label" parent="User Interface/X_Ray" unique_id=615669519]
+z_index = 1
+offset_left = -950.0
+offset_top = -202.0
+offset_right = -750.0
+offset_bottom = -176.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s1fef")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_khhxn")
+
+[node name="Calcium" type="Label" parent="User Interface/X_Ray" unique_id=1988448367]
+z_index = 1
+offset_left = -950.0
+offset_top = -122.0
+offset_right = -750.0
+offset_bottom = -96.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s1fef")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_khhxn")
+
+[node name="Magnesium" type="Label" parent="User Interface/X_Ray" unique_id=1757424143]
+z_index = 1
+offset_left = -950.0
+offset_top = -42.0
+offset_right = -750.0
+offset_bottom = -16.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s1fef")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_khhxn")
+
+[node name="Sulfur" type="Label" parent="User Interface/X_Ray" unique_id=1299652540]
+z_index = 1
+offset_left = -950.0
+offset_top = 38.0
+offset_right = -750.0
+offset_bottom = 64.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s1fef")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_khhxn")
+
+[node name="Chitin" type="Label" parent="User Interface/X_Ray" unique_id=1412929463]
+z_index = 1
+offset_left = -950.0
+offset_top = 118.0
+offset_right = -750.0
+offset_bottom = 144.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s1fef")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_khhxn")
+
+[node name="Hydroxyapatite" type="Label" parent="User Interface/X_Ray" unique_id=529238861]
+z_index = 1
+offset_left = -950.0
+offset_top = 198.0
+offset_right = -750.0
+offset_bottom = 224.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s1fef")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_khhxn")
+
+[node name="Insulin" type="Label" parent="User Interface/X_Ray" unique_id=938825641]
+z_index = 1
+offset_left = -950.0
+offset_top = 278.0
+offset_right = -750.0
+offset_bottom = 304.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s1fef")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_khhxn")
+
+[node name="Hemoglobin" type="Label" parent="User Interface/X_Ray" unique_id=1761240503]
+z_index = 1
+offset_left = -950.0
+offset_top = 358.0
+offset_right = -750.0
+offset_bottom = 384.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s1fef")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_khhxn")
+
+[node name="Mat Answers Table" type="Node2D" parent="User Interface/X_Ray" unique_id=478964652]
+position = Vector2(-122, 0)
+
+[node name="Nit_Ans" type="LineEdit" parent="User Interface/X_Ray/Mat Answers Table" unique_id=104783306]
+z_index = 1
+offset_left = 570.09
+offset_top = -357.0
+offset_right = 615.465
+offset_bottom = -340.0
+scale = Vector2(4, 4)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_7dlc1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+max_length = 4
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Pho_Ans" type="LineEdit" parent="User Interface/X_Ray/Mat Answers Table" unique_id=417774795]
+z_index = 1
+offset_left = 570.09
+offset_top = -285.0
+offset_right = 615.465
+offset_bottom = -268.0
+scale = Vector2(4, 4)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_7dlc1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+max_length = 4
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Pot_Ans" type="LineEdit" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1699018866]
+z_index = 1
+offset_left = 570.09
+offset_top = -213.0
+offset_right = 615.465
+offset_bottom = -196.0
+scale = Vector2(4, 4)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_7dlc1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+max_length = 4
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Cal_Ans" type="LineEdit" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1466689839]
+z_index = 1
+offset_left = 570.09
+offset_top = -141.0
+offset_right = 615.465
+offset_bottom = -124.0
+scale = Vector2(4, 4)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_7dlc1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+max_length = 4
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Mag_Ans" type="LineEdit" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1094852129]
+z_index = 1
+offset_left = 570.09
+offset_top = -69.0
+offset_right = 615.465
+offset_bottom = -52.0
+scale = Vector2(4, 4)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_7dlc1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+max_length = 4
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Sul_Ans" type="LineEdit" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1374803542]
+z_index = 1
+offset_left = 570.09
+offset_top = 3.0
+offset_right = 615.465
+offset_bottom = 20.0
+scale = Vector2(4, 4)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_7dlc1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+max_length = 4
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Chi_Ans" type="LineEdit" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1085294519]
+visible = false
+z_index = 1
+offset_left = 570.09
+offset_top = 75.0
+offset_right = 615.465
+offset_bottom = 92.0
+scale = Vector2(4, 4)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_7dlc1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+max_length = 4
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Hyd_Ans" type="LineEdit" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1441318290]
+visible = false
+z_index = 1
+offset_left = 570.09
+offset_top = 147.0
+offset_right = 615.465
+offset_bottom = 164.0
+scale = Vector2(4, 4)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_7dlc1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+max_length = 4
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Ins_Ans" type="LineEdit" parent="User Interface/X_Ray/Mat Answers Table" unique_id=536075003]
+visible = false
+z_index = 1
+offset_left = 570.09
+offset_top = 219.0
+offset_right = 615.465
+offset_bottom = 236.0
+scale = Vector2(4, 4)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_7dlc1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+max_length = 4
+caret_blink = true
+caret_force_displayed = true
+
+[node name="Hem_Ans" type="LineEdit" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1605360067]
+visible = false
+z_index = 1
+offset_left = 570.09
+offset_top = 291.0
+offset_right = 615.465
+offset_bottom = 308.0
+scale = Vector2(4, 4)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_7dlc1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+max_length = 4
+caret_blink = true
+caret_force_displayed = true
+
+[node name="MatAnswerTable" type="Sprite2D" parent="User Interface/X_Ray/Mat Answers Table" unique_id=367225654]
+z_index = 1
+position = Vector2(700, 1.82)
+scale = Vector2(8, 8)
+texture = ExtResource("6_rk0mu")
+
+[node name="Nit_Label" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1218421332]
+z_index = 1
+offset_left = 331.00003
+offset_top = -344.0
+offset_right = 420.61002
+offset_bottom = -327.0
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Nitrogen"
+
+[node name="Pho_Label" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1068598864]
+z_index = 1
+offset_left = 331.00003
+offset_top = -272.0
+offset_right = 420.61002
+offset_bottom = -255.0
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Phosphorus"
+
+[node name="Pot_Label" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1922645337]
+z_index = 1
+offset_left = 331.00003
+offset_top = -200.0
+offset_right = 420.61002
+offset_bottom = -183.0
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Potassium"
+
+[node name="Cal_Label" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=482905131]
+z_index = 1
+offset_left = 331.00003
+offset_top = -128.0
+offset_right = 420.61002
+offset_bottom = -111.0
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Calcium"
+
+[node name="Mag_Label" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=650275734]
+z_index = 1
+offset_left = 331.00003
+offset_top = -56.0
+offset_right = 420.61002
+offset_bottom = -39.0
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Magnesium"
+
+[node name="Sul_Label" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=22470421]
+z_index = 1
+offset_left = 331.00003
+offset_top = 15.999999
+offset_right = 420.61002
+offset_bottom = 33.0
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Sulfur"
+
+[node name="Chi_Label" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=2087986674]
+visible = false
+z_index = 1
+offset_left = 331.00003
+offset_top = 88.0
+offset_right = 420.61002
+offset_bottom = 105.0
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Chitin"
+
+[node name="Hyd_Label" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=488359910]
+visible = false
+z_index = 1
+offset_left = 331.00003
+offset_top = 160.0
+offset_right = 421.00003
+offset_bottom = 177.0
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Hydroxyapatite"
+
+[node name="Ins_Label" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1545453335]
+visible = false
+z_index = 1
+offset_left = 331.00003
+offset_top = 232.0
+offset_right = 420.61002
+offset_bottom = 249.0
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Insulin"
+
+[node name="Hem_Label" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=868539430]
+visible = false
+z_index = 1
+offset_left = 331.00003
+offset_top = 304.0
+offset_right = 420.61002
+offset_bottom = 321.0
+scale = Vector2(2.5, 2.5)
+theme_override_colors/font_color = Color(0.5803922, 0.3254902, 0, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Hemoglobin"
+
+[node name="Nit_Approx" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=2048283088]
+z_index = 1
+offset_left = 774.0
+offset_top = -352.0
+offset_right = 856.0
+offset_bottom = -335.0
+scale = Vector2(3.5, 3.5)
+theme_override_colors/font_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Unclear"
+
+[node name="Pho_Approx" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1070753745]
+z_index = 1
+offset_left = 774.0
+offset_top = -280.0
+offset_right = 856.0
+offset_bottom = -263.0
+scale = Vector2(3.5, 3.5)
+theme_override_colors/font_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Unclear"
+
+[node name="Pot_Approx" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=235527846]
+z_index = 1
+offset_left = 774.0
+offset_top = -208.0
+offset_right = 856.0
+offset_bottom = -191.0
+scale = Vector2(3.5, 3.5)
+theme_override_colors/font_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Unclear"
+
+[node name="Cal_Approx" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=463989436]
+z_index = 1
+offset_left = 774.0
+offset_top = -136.0
+offset_right = 856.0
+offset_bottom = -119.0
+scale = Vector2(3.5, 3.5)
+theme_override_colors/font_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Unclear"
+
+[node name="Mag_Approx" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=868210702]
+z_index = 1
+offset_left = 774.0
+offset_top = -64.0
+offset_right = 856.0
+offset_bottom = -47.0
+scale = Vector2(3.5, 3.5)
+theme_override_colors/font_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Unclear"
+
+[node name="Sul_Approx" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1160022668]
+z_index = 1
+offset_left = 774.0
+offset_top = 7.9999995
+offset_right = 856.0
+offset_bottom = 25.0
+scale = Vector2(3.5, 3.5)
+theme_override_colors/font_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Unclear"
+
+[node name="Chi_Approx" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=189140310]
+visible = false
+z_index = 1
+offset_left = 774.0
+offset_top = 80.0
+offset_right = 856.0
+offset_bottom = 97.0
+scale = Vector2(3.5, 3.5)
+theme_override_colors/font_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Unclear"
+
+[node name="Hyd_Approx" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1790148863]
+visible = false
+z_index = 1
+offset_left = 774.0
+offset_top = 152.0
+offset_right = 856.0
+offset_bottom = 169.0
+scale = Vector2(3.5, 3.5)
+theme_override_colors/font_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Unclear"
+
+[node name="Ins_Approx" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=364289925]
+visible = false
+z_index = 1
+offset_left = 774.0
+offset_top = 224.0
+offset_right = 856.0
+offset_bottom = 241.0
+scale = Vector2(3.5, 3.5)
+theme_override_colors/font_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Unclear"
+
+[node name="Hem_Approx" type="Label" parent="User Interface/X_Ray/Mat Answers Table" unique_id=1864090538]
+visible = false
+z_index = 1
+offset_left = 774.0
+offset_top = 296.0
+offset_right = 856.0
+offset_bottom = 313.0
+scale = Vector2(3.5, 3.5)
+theme_override_colors/font_color = Color(0.4509804, 0.4509804, 0.4509804, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gpvh3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebhw5")
+text = "Unclear"
+
+[node name="ContainmentChamber" type="Sprite2D" parent="User Interface" unique_id=299940432]
+light_mask = 5
+position = Vector2(990, 520)
+scale = Vector2(7, 7)
+texture = ExtResource("8_nb2ls")
+
+[node name="Computer" type="Sprite2D" parent="User Interface" unique_id=323433262]
+light_mask = 4
+position = Vector2(538.5, 950.5)
+scale = Vector2(6.9999995, 6.9999995)
+texture = ExtResource("7_m4dcj")
+
+[node name="ComputerOutline" type="Sprite2D" parent="User Interface/Computer" unique_id=2110916853]
+visible = false
+light_mask = 4
+z_index = 2
+texture = ExtResource("8_vpha7")
+
+[node name="Area2D" type="Area2D" parent="User Interface/Computer" unique_id=2132266114]
+light_mask = 4
+script = ExtResource("9_lo6md")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Computer/Area2D" unique_id=199605956]
+light_mask = 4
+position = Vector2(-5.5, -0.35714722)
+scale = Vector2(0.14285715, 0.14285715)
+polygon = PackedVector2Array(84, -29, 84, 34, -7, 34, -7, -29)
+
+[node name="XRayMachine" type="Sprite2D" parent="User Interface" unique_id=1092307159]
+light_mask = 4
+position = Vector2(692.5, 926)
+scale = Vector2(7, 7)
+texture = ExtResource("8_f580x")
+
+[node name="XRayMachineOutline" type="Sprite2D" parent="User Interface/XRayMachine" unique_id=1240091900]
+visible = false
+light_mask = 4
+z_index = 2
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("10_lo6md")
+
+[node name="Area2D" type="Area2D" parent="User Interface/XRayMachine" unique_id=1475763668]
+light_mask = 4
+script = ExtResource("12_gpvh3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/XRayMachine/Area2D" unique_id=1854686778]
+light_mask = 4
+position = Vector2(-5.5, -0.35714722)
+scale = Vector2(0.14285715, 0.14285715)
+polygon = PackedVector2Array(105, -39.5, 105, -32.5, 112, -32.5, 112, -4.5, 126, -4.5, 126, 58.5, -49, 58.5, -49, -4.5, -35, -4.5, -35, -32.5, -28, -32.5, -28, -39.5)
+
+[node name="PetriDish" type="Sprite2D" parent="User Interface" unique_id=887348918]
+light_mask = 4
+position = Vector2(843, 971.5)
+scale = Vector2(7, 7)
+texture = ExtResource("9_m2g3u")
+
+[node name="PetriDishOutline" type="Sprite2D" parent="User Interface/PetriDish" unique_id=824407510]
+visible = false
+light_mask = 4
+z_index = 2
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("12_rk0mu")
+
+[node name="Area2D" type="Area2D" parent="User Interface/PetriDish" unique_id=1793139277]
+light_mask = 4
+script = ExtResource("16_w0ody")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/PetriDish/Area2D" unique_id=2105119980]
+light_mask = 4
+position = Vector2(-5.5, -0.35714722)
+scale = Vector2(0.14285715, 0.14285715)
+polygon = PackedVector2Array(87.5, -8, 87.5, -1, 80.5, -1, 80.5, 6, 73.5, 6, 73.5, 13, 3.5, 13, 3.5, 6, -3.5, 6, -3.5, -1, -10.5, -1, -10.5, -8)
+
+[node name="SoundMachine" type="Sprite2D" parent="User Interface" unique_id=742722740]
+light_mask = 4
+position = Vector2(1221, 957.5)
+scale = Vector2(7, 7)
+texture = ExtResource("10_l21iv")
+
+[node name="SoundMachineOutline" type="Sprite2D" parent="User Interface/SoundMachine" unique_id=854725588]
+visible = false
+light_mask = 4
+z_index = 2
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("14_gpvh3")
+
+[node name="Area2D" type="Area2D" parent="User Interface/SoundMachine" unique_id=2049598128]
+light_mask = 4
+script = ExtResource("18_7dlc1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/SoundMachine/Area2D" unique_id=226977447]
+light_mask = 4
+position = Vector2(-5.5, -0.35714722)
+scale = Vector2(0.14285715, 0.14285715)
+polygon = PackedVector2Array(143.5, -71, 143.5, -36, 262.5, -36, 262.5, 76, -185.5, 76, -185.5, -36, -66.5, -36, -66.5, -71)
+
+[node name="Sound Machine Game" type="Node2D" parent="User Interface" unique_id=1909591032]
+visible = false
+position = Vector2(990, 510)
+scale = Vector2(7, 7)
+script = ExtResource("20_uqqh6")
+
+[node name="SoundMachineGame" type="Sprite2D" parent="User Interface/Sound Machine Game" unique_id=498415540]
+z_index = 1
+texture = ExtResource("2_gpvh3")
+
+[node name="AudioVisualizer" parent="User Interface/Sound Machine Game" unique_id=1263990448 instance=ExtResource("21_7dlc1")]
+z_index = 1
+offset_left = 0.0
+offset_top = -20.28
+offset_right = 0.0
+offset_bottom = -20.28
+scale = Vector2(0.125, 0.111)
+
+[node name="Warning Text" type="TextEdit" parent="User Interface/Sound Machine Game" unique_id=765530940]
+visible = false
+z_index = 1
+offset_left = -66.85713
+offset_top = -7.857147
+offset_right = 360.7619
+offset_bottom = 40.714294
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0.53986263, 1.0348111e-06, 2.8878452e-07, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wb4oo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bowr3")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_xkrm3")
+text = "Too Many Inputs Detected!"
+
+[node name="Button1" type="Sprite2D" parent="User Interface/Sound Machine Game" unique_id=138015568]
+z_index = 1
+position = Vector2(-69.5, 39.5)
+texture = ExtResource("22_60mfq")
+script = ExtResource("23_60mfq")
+
+[node name="LED" type="Sprite2D" parent="User Interface/Sound Machine Game/Button1" unique_id=298319370]
+z_index = 1
+position = Vector2(0, -8)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_retap")
+
+[node name="PointLight2D" type="PointLight2D" parent="User Interface/Sound Machine Game/Button1/LED" unique_id=2010398896]
+visible = false
+texture = SubResource("GradientTexture2D_0f3ej")
+
+[node name="OutlineSoundMachineButton" type="Sprite2D" parent="User Interface/Sound Machine Game/Button1" unique_id=794851558]
+visible = false
+z_index = 1
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("24_vw2iq")
+
+[node name="Area2D" type="Area2D" parent="User Interface/Sound Machine Game/Button1" unique_id=411325569]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Sound Machine Game/Button1/Area2D" unique_id=404833954]
+position = Vector2(-6.5, -6.5)
+scale = Vector2(0.9999998, 0.9999998)
+polygon = PackedVector2Array(3.0000076, 5, 4.0000076, 5, 4, 4, 5, 4, 5, 3, 8.000008, 3, 8.000008, 4, 9.000008, 4, 9.000008, 5, 10.000008, 5, 10.000008, 8, 9.000008, 8, 9.000008, 9, 8.000008, 9, 8.000008, 10, 5.0000076, 10, 5.0000076, 9, 4.0000076, 9, 4.0000076, 8, 3.0000076, 8)
+
+[node name="Button2" type="Sprite2D" parent="User Interface/Sound Machine Game" unique_id=317838848]
+z_index = 1
+position = Vector2(-56.5, 39.5)
+texture = ExtResource("22_60mfq")
+script = ExtResource("23_60mfq")
+
+[node name="LED" type="Sprite2D" parent="User Interface/Sound Machine Game/Button2" unique_id=2024098935]
+z_index = 1
+position = Vector2(0, -8)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_retap")
+
+[node name="PointLight2D" type="PointLight2D" parent="User Interface/Sound Machine Game/Button2/LED" unique_id=874942331]
+visible = false
+texture = SubResource("GradientTexture2D_0f3ej")
+
+[node name="OutlineSoundMachineButton" type="Sprite2D" parent="User Interface/Sound Machine Game/Button2" unique_id=54481091]
+visible = false
+z_index = 1
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("24_vw2iq")
+
+[node name="Area2D" type="Area2D" parent="User Interface/Sound Machine Game/Button2" unique_id=2085968902]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Sound Machine Game/Button2/Area2D" unique_id=2021609344]
+position = Vector2(-6.5, -6.5)
+scale = Vector2(0.9999998, 0.9999998)
+polygon = PackedVector2Array(3.0000076, 5, 4.0000076, 5, 4, 4, 5, 4, 5, 3, 8.000008, 3, 8.000008, 4, 9.000008, 4, 9.000008, 5, 10.000008, 5, 10.000008, 8, 9.000008, 8, 9.000008, 9, 8.000008, 9, 8.000008, 10, 5.0000076, 10, 5.0000076, 9, 4.0000076, 9, 4.0000076, 8, 3.0000076, 8)
+
+[node name="Button3" type="Sprite2D" parent="User Interface/Sound Machine Game" unique_id=1190345264]
+z_index = 1
+position = Vector2(-43.5, 39.5)
+texture = ExtResource("22_60mfq")
+script = ExtResource("23_60mfq")
+
+[node name="LED" type="Sprite2D" parent="User Interface/Sound Machine Game/Button3" unique_id=192649637]
+z_index = 1
+position = Vector2(0, -8)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_retap")
+
+[node name="PointLight2D" type="PointLight2D" parent="User Interface/Sound Machine Game/Button3/LED" unique_id=1505907679]
+visible = false
+texture = SubResource("GradientTexture2D_0f3ej")
+
+[node name="OutlineSoundMachineButton" type="Sprite2D" parent="User Interface/Sound Machine Game/Button3" unique_id=462387348]
+visible = false
+z_index = 1
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("24_vw2iq")
+
+[node name="Area2D" type="Area2D" parent="User Interface/Sound Machine Game/Button3" unique_id=1213708396]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Sound Machine Game/Button3/Area2D" unique_id=179248411]
+position = Vector2(-6.5, -6.5)
+scale = Vector2(0.9999998, 0.9999998)
+polygon = PackedVector2Array(3.0000076, 5, 4.0000076, 5, 4, 4, 5, 4, 5, 3, 8.000008, 3, 8.000008, 4, 9.000008, 4, 9.000008, 5, 10.000008, 5, 10.000008, 8, 9.000008, 8, 9.000008, 9, 8.000008, 9, 8.000008, 10, 5.0000076, 10, 5.0000076, 9, 4.0000076, 9, 4.0000076, 8, 3.0000076, 8)
+
+[node name="Button4" type="Sprite2D" parent="User Interface/Sound Machine Game" unique_id=980730426]
+z_index = 1
+position = Vector2(-30.5, 39.5)
+texture = ExtResource("22_60mfq")
+script = ExtResource("23_60mfq")
+
+[node name="LED" type="Sprite2D" parent="User Interface/Sound Machine Game/Button4" unique_id=975852269]
+z_index = 1
+position = Vector2(0, -8)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_retap")
+
+[node name="PointLight2D" type="PointLight2D" parent="User Interface/Sound Machine Game/Button4/LED" unique_id=127276091]
+visible = false
+texture = SubResource("GradientTexture2D_0f3ej")
+
+[node name="OutlineSoundMachineButton" type="Sprite2D" parent="User Interface/Sound Machine Game/Button4" unique_id=782275994]
+visible = false
+z_index = 1
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("24_vw2iq")
+
+[node name="Area2D" type="Area2D" parent="User Interface/Sound Machine Game/Button4" unique_id=363168593]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Sound Machine Game/Button4/Area2D" unique_id=1518275115]
+position = Vector2(-6.5, -6.5)
+scale = Vector2(0.9999998, 0.9999998)
+polygon = PackedVector2Array(3.0000076, 5, 4.0000076, 5, 4, 4, 5, 4, 5, 3, 8.000008, 3, 8.000008, 4, 9.000008, 4, 9.000008, 5, 10.000008, 5, 10.000008, 8, 9.000008, 8, 9.000008, 9, 8.000008, 9, 8.000008, 10, 5.0000076, 10, 5.0000076, 9, 4.0000076, 9, 4.0000076, 8, 3.0000076, 8)
+
+[node name="Button5" type="Sprite2D" parent="User Interface/Sound Machine Game" unique_id=1122725883]
+z_index = 1
+position = Vector2(-17.5, 39.5)
+texture = ExtResource("22_60mfq")
+script = ExtResource("23_60mfq")
+
+[node name="LED" type="Sprite2D" parent="User Interface/Sound Machine Game/Button5" unique_id=1799285841]
+z_index = 1
+position = Vector2(0, -8)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("25_retap")
+
+[node name="PointLight2D" type="PointLight2D" parent="User Interface/Sound Machine Game/Button5/LED" unique_id=492933308]
+visible = false
+texture = SubResource("GradientTexture2D_0f3ej")
+
+[node name="OutlineSoundMachineButton" type="Sprite2D" parent="User Interface/Sound Machine Game/Button5" unique_id=1395521497]
+visible = false
+z_index = 1
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("24_vw2iq")
+
+[node name="Area2D" type="Area2D" parent="User Interface/Sound Machine Game/Button5" unique_id=115597862]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Sound Machine Game/Button5/Area2D" unique_id=731052581]
+position = Vector2(-6.5, -6.5)
+scale = Vector2(0.9999998, 0.9999998)
+polygon = PackedVector2Array(3.0000076, 5, 4.0000076, 5, 4, 4, 5, 4, 5, 3, 8.000008, 3, 8.000008, 4, 9.000008, 4, 9.000008, 5, 10.000008, 5, 10.000008, 8, 9.000008, 8, 9.000008, 9, 8.000008, 9, 8.000008, 10, 5.0000076, 10, 5.0000076, 9, 4.0000076, 9, 4.0000076, 8, 3.0000076, 8)
+
+[node name="ColorRect" type="ColorRect" parent="User Interface/Sound Machine Game" unique_id=1364021695]
+z_index = 2
+material = SubResource("ShaderMaterial_aae7i")
+offset_left = -68.0
+offset_top = -38.2
+offset_right = 68.25
+offset_bottom = -1.9099998
+color = Color(0.45646393, 0.456464, 0.456464, 0.39215687)
+
+[node name="Switch" type="Sprite2D" parent="User Interface/Sound Machine Game" unique_id=1624102790]
+light_mask = 4
+z_index = 2
+position = Vector2(-69.5, 19.5)
+texture = ExtResource("27_u7bht")
+
+[node name="SwitchOutline" type="Sprite2D" parent="User Interface/Sound Machine Game/Switch" unique_id=543403199]
+visible = false
+light_mask = 4
+z_index = 2
+texture = ExtResource("28_4axep")
+
+[node name="Area2D" type="Area2D" parent="User Interface/Sound Machine Game/Switch" unique_id=615293975]
+light_mask = 4
+script = ExtResource("29_c70hv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Sound Machine Game/Switch/Area2D" unique_id=1976689841]
+light_mask = 4
+position = Vector2(-6.5, -1.5000044)
+scale = Vector2(0.14285715, 0.14285715)
+polygon = PackedVector2Array(91, -14, 91, 0, 98, 0, 98, 35, -7, 35, -7, 0, 63, 0, 63, -7, 77, -7, 77, -14)
+
+[node name="Camera" type="Node2D" parent="User Interface/Sound Machine Game" unique_id=552663130]
+visible = false
+light_mask = 0
+script = ExtResource("30_b3w6a")
+
+[node name="ColorRect" type="ColorRect" parent="User Interface/Sound Machine Game/Camera" unique_id=202826229]
+visible = false
+z_index = 7
+material = SubResource("ShaderMaterial_xpegn")
+offset_left = -31.999985
+offset_top = -32.0
+offset_right = 96.000015
+offset_bottom = 96.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Camera" type="Sprite2D" parent="User Interface/Sound Machine Game/Camera" unique_id=1599083220]
+light_mask = 0
+z_index = 6
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("29_a0kor")
+
+[node name="Ungliation" type="AnimatedSprite2D" parent="User Interface/Sound Machine Game/Camera" unique_id=1112029636]
+visible = false
+light_mask = 0
+z_index = 6
+sprite_frames = SubResource("SpriteFrames_0f3ej")
+animation = &"Ungliation"
+
+[node name="Jumpscare" type="AudioStreamPlayer2D" parent="User Interface/Sound Machine Game/Camera" unique_id=2090179049]
+light_mask = 0
+stream = ExtResource("50_fv24p")
+
+[node name="Fade Out" type="Sprite2D" parent="User Interface/Sound Machine Game/Camera" unique_id=21659003]
+modulate = Color(1, 1, 1, 0)
+light_mask = 0
+visibility_layer = 2
+z_index = 5
+position = Vector2(-0.57143795, 0.14285433)
+scale = Vector2(4.535714, 2.3705356)
+texture = SubResource("GradientTexture2D_yuem5")
+
+[node name="Label" type="Label" parent="User Interface/Sound Machine Game/Camera" unique_id=1535983529]
+visible = false
+z_index = 6
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -29.142857
+offset_top = -5.857143
+offset_right = 98.57143
+offset_bottom = 17.142857
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.45348877, 0.34673288, 0, 1)
+text = "Repositioning"
+vertical_alignment = 1
+
+[node name="CameraButton" type="Sprite2D" parent="User Interface/Sound Machine Game" unique_id=2073960910]
+z_index = 1
+position = Vector2(-19.5, 16)
+texture = ExtResource("53_k0u5j")
+
+[node name="CameraButtonOutline" type="Sprite2D" parent="User Interface/Sound Machine Game/CameraButton" unique_id=1612553936]
+visible = false
+z_index = 1
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("54_hjvjk")
+
+[node name="Area2D" type="Area2D" parent="User Interface/Sound Machine Game/CameraButton" unique_id=1025954517]
+light_mask = 4
+script = ExtResource("55_r7oof")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Sound Machine Game/CameraButton/Area2D" unique_id=1205167797]
+light_mask = 4
+position = Vector2(-6.5, -1.5000044)
+scale = Vector2(0.14285715, 0.14285715)
+polygon = PackedVector2Array(-7, -17.5, 98, -17.5, 98, 38.5, -7, 38.5)
+
+[node name="Background" type="Sprite2D" parent="User Interface/Sound Machine Game" unique_id=1437939247]
+position = Vector2(2.6428528, 1.9285736)
+scale = Vector2(4.515625, 2.341518)
+texture = SubResource("GradientTexture2D_wb4oo")
+
+[node name="Harvest" type="Node2D" parent="User Interface" unique_id=1755136802]
+script = ExtResource("56_mm1ne")
+
+[node name="HarvestGameBackground" type="Sprite2D" parent="User Interface/Harvest" unique_id=1629368091]
+z_index = 1
+position = Vector2(990, 600)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("57_w0ody")
+
+[node name="Needle" type="AnimatedSprite2D" parent="User Interface/Harvest" unique_id=216002251]
+visible = false
+z_index = 1
+position = Vector2(1121.25, 468.75)
+scale = Vector2(7.5, 7.5)
+sprite_frames = SubResource("SpriteFrames_s1fef")
+animation = &"Sampling"
+
+[node name="Book" type="Node2D" parent="User Interface/Harvest" unique_id=27731588]
+
+[node name="Open" type="Sprite2D" parent="User Interface/Harvest/Book" unique_id=393029171]
+z_index = 1
+position = Vector2(607.5, 866.25)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("65_pmhe1")
+
+[node name="Book(open)(outline)" type="Sprite2D" parent="User Interface/Harvest/Book" unique_id=399982582]
+visible = false
+z_index = 1
+position = Vector2(607.5, 866.25)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("66_sf4sh")
+
+[node name="Open Book Area2D" type="Area2D" parent="User Interface/Harvest/Book" unique_id=1941592144]
+script = ExtResource("70_fpld2")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="User Interface/Harvest/Book/Open Book Area2D" unique_id=530513253]
+polygon = PackedVector2Array(622.5, 746.25, 622.5, 753.75, 592.5, 753.75, 592.5, 746.25, 375.16, 746.25, 375, 979, 592.5, 978.75, 592.5, 986.25, 622.5, 986.25, 622.5, 978.75, 840, 978.75, 840, 746.25)
+
+[node name="Closed" type="Sprite2D" parent="User Interface/Harvest/Book" unique_id=1169021993]
+visible = false
+z_index = 1
+position = Vector2(723.75, 847.5)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("66_e8hhg")
+
+[node name="Book(closed)(outline)" type="Sprite2D" parent="User Interface/Harvest/Book" unique_id=818472703]
+visible = false
+z_index = 1
+position = Vector2(723.75, 847.5)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("68_y2r3u")
+
+[node name="Closed Book Area2D" type="Area2D" parent="User Interface/Harvest/Book" unique_id=479551924]
+visible = false
+script = ExtResource("67_12au2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Harvest/Book/Closed Book Area2D" unique_id=174652144]
+polygon = PackedVector2Array(622.5, 716.25, 622.5, 723.75, 615, 723.75, 615, 731.25, 608, 731, 607.5, 963.75, 615, 963.75, 615, 971.25, 622.5, 971.25, 622.5, 978.75, 840, 978.75, 840, 716.25)
+
+[node name="Petri Dish" type="Node2D" parent="User Interface/Harvest" unique_id=1935047946]
+
+[node name="Dish" type="Sprite2D" parent="User Interface/Harvest/Petri Dish" unique_id=610458742]
+z_index = 1
+position = Vector2(1440.0001, 900.00006)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("67_sf4sh")
+
+[node name="PlateAndNeedles(outline)" type="Sprite2D" parent="User Interface/Harvest/Petri Dish" unique_id=132594673]
+visible = false
+z_index = 1
+position = Vector2(1507.5, 900)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("70_x8f4u")
+
+[node name="Dish Area2D" type="Area2D" parent="User Interface/Harvest/Petri Dish" unique_id=602399331]
+position = Vector2(1504, 896)
+script = ExtResource("73_upviw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Harvest/Petri Dish/Dish Area2D" unique_id=949949407]
+position = Vector2(-722, -839)
+polygon = PackedVector2Array(658, 820.5, 658, 805.5, 665.5, 805.5, 665.5, 798, 673, 798, 673, 790.5, 680.5, 790.5, 680.5, 783, 688, 783, 688, 775.5, 703, 775.5, 703, 768, 748, 768, 748, 775.5, 763, 775.5, 763, 783, 770.5, 783, 770.5, 790.5, 778, 790.5, 778, 798, 785.5, 798, 785.5, 805.5, 793, 805.5, 793, 820.5, 800.5, 820.5, 800.5, 865.5, 793, 865.5, 793, 880.5, 785.5, 880.5, 785.5, 888, 778, 888, 778, 895.5, 770.5, 895.5, 770.5, 903, 763, 903, 763, 910.5, 748, 910.5, 748, 918, 703, 918, 703, 910.5, 688, 910.5, 688, 903, 680.5, 903, 680.5, 895.5, 673, 895.5, 673, 888, 665.5, 888, 665.5, 880.5, 658, 880.5, 658, 865.5, 650.5, 865.5, 650.5, 820.5)
+
+[node name="Background" type="Sprite2D" parent="User Interface/Harvest" unique_id=92058853]
+position = Vector2(1017.25, 530.0357)
+scale = Vector2(31.835938, 16.811384)
+texture = SubResource("GradientTexture2D_wb4oo")
+
+[node name="Week 4 Flower" type="Node2D" parent="." unique_id=1964194720]
+light_mask = 3
+position = Vector2(980.75, 696.5)
+script = ExtResource("4_bsmxk")
+
+[node name="Stem 1" type="Sprite2D" parent="Week 4 Flower" unique_id=1247032481]
+light_mask = 3
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("5_gp6q4")
+offset = Vector2(1, -4)
+
+[node name="Stem 2" type="Sprite2D" parent="Week 4 Flower/Stem 1" unique_id=1799548122]
+light_mask = 3
+position = Vector2(2, -7)
+texture = ExtResource("6_cl0t8")
+offset = Vector2(-0.5, -2.5)
+
+[node name="Stem 3" type="Sprite2D" parent="Week 4 Flower/Stem 1/Stem 2" unique_id=1986763248]
+light_mask = 3
+position = Vector2(-2, -6.5)
+texture = ExtResource("7_btyfj")
+
+[node name="Flower" type="Sprite2D" parent="Week 4 Flower/Stem 1/Stem 2/Stem 3" unique_id=941606536]
+light_mask = 3
+position = Vector2(-1.5, -4)
+texture = ExtResource("8_6odrs")
+
+[node name="Leaf 1" type="Sprite2D" parent="Week 4 Flower/Stem 1/Stem 2" unique_id=1323720272]
+light_mask = 3
+position = Vector2(-1.5, -4)
+texture = ExtResource("6_6dnu1")
+offset = Vector2(1, -1)
+
+[node name="Root" type="Sprite2D" parent="Week 4 Flower" unique_id=2088942459]
+visible = false
+light_mask = 3
+position = Vector2(-2.25, 6.75)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("7_bsmxk")
+
+[node name="Week 5 Flower" type="Node2D" parent="." unique_id=1263841449]
+visible = false
+light_mask = 3
+position = Vector2(980.75, 696.5)
+script = ExtResource("11_qhjme")
+
+[node name="Stem 1" type="Sprite2D" parent="Week 5 Flower" unique_id=446398661]
+light_mask = 3
+position = Vector2(-2.25, 0)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("11_rt6kg")
+offset = Vector2(1, -4)
+
+[node name="Stem 2" type="Sprite2D" parent="Week 5 Flower/Stem 1" unique_id=1324545065]
+light_mask = 3
+position = Vector2(0.5, -9)
+texture = ExtResource("12_s4m2k")
+offset = Vector2(-0.5, -2.5)
+
+[node name="Stem 3" type="Sprite2D" parent="Week 5 Flower/Stem 1/Stem 2" unique_id=916969895]
+light_mask = 3
+position = Vector2(-1, -10.5)
+texture = ExtResource("13_ku1n0")
+
+[node name="Flower" type="Sprite2D" parent="Week 5 Flower/Stem 1/Stem 2/Stem 3" unique_id=873252830]
+light_mask = 3
+position = Vector2(1.5, -5)
+texture = ExtResource("8_6odrs")
+
+[node name="Leaf 2" type="Sprite2D" parent="Week 5 Flower/Stem 1/Stem 2/Stem 3" unique_id=2104688131]
+light_mask = 3
+position = Vector2(0.5, 0.5)
+texture = ExtResource("14_ku1n0")
+offset = Vector2(-1.5, -1)
+
+[node name="Leaf 1" type="Sprite2D" parent="Week 5 Flower/Stem 1/Stem 2" unique_id=859943809]
+light_mask = 3
+position = Vector2(-0.5, -2)
+texture = ExtResource("15_f3g7g")
+offset = Vector2(2.5, -1.5)
+
+[node name="Root" type="Sprite2D" parent="Week 5 Flower" unique_id=1859126268]
+visible = false
+light_mask = 3
+position = Vector2(0, 9)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("14_f3g7g")
+
+[node name="Week 6 Flower" type="Node2D" parent="." unique_id=1849183762]
+visible = false
+light_mask = 3
+position = Vector2(980.75, 696.5)
+script = ExtResource("18_fi2ca")
+
+[node name="Stem 1" type="Sprite2D" parent="Week 6 Flower" unique_id=2000050022]
+light_mask = 3
+position = Vector2(-11.25, -13.5)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("17_rtim6")
+offset = Vector2(1, -4)
+
+[node name="Stem 2" type="Sprite2D" parent="Week 6 Flower/Stem 1" unique_id=1918742481]
+light_mask = 3
+position = Vector2(3, -15)
+texture = ExtResource("18_lt125")
+offset = Vector2(-0.5, -2.5)
+
+[node name="Stem 3" type="Sprite2D" parent="Week 6 Flower/Stem 1/Stem 2" unique_id=1975291905]
+light_mask = 3
+position = Vector2(1, -13)
+texture = ExtResource("19_wc6v8")
+
+[node name="Flower" type="Sprite2D" parent="Week 6 Flower/Stem 1/Stem 2/Stem 3" unique_id=845313473]
+light_mask = 3
+position = Vector2(-3, -5)
+texture = ExtResource("20_0jdi3")
+
+[node name="Leaf 2" type="Sprite2D" parent="Week 6 Flower/Stem 1/Stem 2/Stem 3" unique_id=90424386]
+light_mask = 3
+position = Vector2(0, -1)
+texture = ExtResource("21_iehox")
+offset = Vector2(2, -1.5)
+
+[node name="Leaf 1" type="Sprite2D" parent="Week 6 Flower/Stem 1/Stem 2" unique_id=1639072005]
+light_mask = 3
+position = Vector2(1, -4)
+texture = ExtResource("22_qlupa")
+offset = Vector2(-3, -1.5)
+
+[node name="Root" type="Sprite2D" parent="Week 6 Flower" unique_id=869923650]
+visible = false
+light_mask = 3
+position = Vector2(6.75, 15.75)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("15_47s03")
+
+[node name="Week 8 Flower" type="Node2D" parent="." unique_id=385259370]
+visible = false
+light_mask = 3
+position = Vector2(980.75, 696.5)
+script = ExtResource("26_cpr2w")
+
+[node name="Stem 1" type="Sprite2D" parent="Week 8 Flower" unique_id=74995947]
+light_mask = 3
+position = Vector2(-11.25, -22.5)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("24_fye50")
+offset = Vector2(1, -4)
+
+[node name="Stem 2" type="Sprite2D" parent="Week 8 Flower/Stem 1" unique_id=1905789223]
+light_mask = 3
+position = Vector2(2.5, -20)
+texture = ExtResource("25_ebwsw")
+offset = Vector2(-0.5, -2.5)
+
+[node name="Stem 3" type="Sprite2D" parent="Week 8 Flower/Stem 1/Stem 2" unique_id=1335325297]
+light_mask = 3
+position = Vector2(-0.5, -17.5)
+texture = ExtResource("26_yfbei")
+
+[node name="Flower" type="Sprite2D" parent="Week 8 Flower/Stem 1/Stem 2/Stem 3" unique_id=1086698393]
+light_mask = 3
+position = Vector2(-4.5, -7)
+texture = ExtResource("27_tq0h5")
+
+[node name="Leaf 3" type="Sprite2D" parent="Week 8 Flower/Stem 1/Stem 2/Stem 3" unique_id=236167464]
+light_mask = 3
+position = Vector2(1, 0.5)
+texture = ExtResource("28_lyj0f")
+offset = Vector2(2.5, -2)
+
+[node name="Leaf 1" type="Sprite2D" parent="Week 8 Flower/Stem 1/Stem 2" unique_id=301987193]
+light_mask = 3
+position = Vector2(-2.5, 4)
+texture = ExtResource("29_3r5j5")
+offset = Vector2(3, -1.5)
+
+[node name="Leaf 2" type="Sprite2D" parent="Week 8 Flower/Stem 1/Stem 2" unique_id=158123468]
+light_mask = 3
+position = Vector2(0.5, -5)
+texture = ExtResource("30_wb4xx")
+offset = Vector2(-4, -2)
+
+[node name="Root" type="Sprite2D" parent="Week 8 Flower" unique_id=271980790]
+visible = false
+light_mask = 3
+position = Vector2(11.25, 20.25)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("16_c08kl")
+
+[node name="Week 9 Flower" type="Node2D" parent="." unique_id=1088449718]
+visible = false
+light_mask = 3
+position = Vector2(980.75, 696.5)
+script = ExtResource("35_gemuf")
+
+[node name="Stem 1" type="Sprite2D" parent="Week 9 Flower" unique_id=1078307982]
+light_mask = 3
+position = Vector2(-9, -25)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("32_q0nym")
+offset = Vector2(1, -4)
+
+[node name="Stem 2" type="Sprite2D" parent="Week 9 Flower/Stem 1" unique_id=1762112688]
+light_mask = 3
+position = Vector2(3, -22)
+texture = ExtResource("33_s5p7m")
+offset = Vector2(-0.5, -2.5)
+
+[node name="Stem 3" type="Sprite2D" parent="Week 9 Flower/Stem 1/Stem 2" unique_id=1363017274]
+light_mask = 3
+position = Vector2(-0.5, -22)
+texture = ExtResource("34_yvdkt")
+
+[node name="Flower" type="Sprite2D" parent="Week 9 Flower/Stem 1/Stem 2/Stem 3" unique_id=1945578063]
+light_mask = 3
+position = Vector2(-4.5, -8.5)
+texture = ExtResource("35_feqnq")
+
+[node name="Leaf 5" type="Sprite2D" parent="Week 9 Flower/Stem 1/Stem 2/Stem 3" unique_id=641656834]
+light_mask = 3
+position = Vector2(0, -2.5)
+texture = ExtResource("36_or7bv")
+offset = Vector2(4.5, -3.5)
+
+[node name="Leaf 3" type="Sprite2D" parent="Week 9 Flower/Stem 1/Stem 2" unique_id=1141356614]
+light_mask = 3
+position = Vector2(-0.5, -2.5)
+texture = ExtResource("37_10mfg")
+offset = Vector2(5.5, -3)
+
+[node name="Leaf 4" type="Sprite2D" parent="Week 9 Flower/Stem 1/Stem 2" unique_id=1014419977]
+light_mask = 3
+position = Vector2(1.5, -9.5)
+texture = ExtResource("38_ucuo3")
+offset = Vector2(-5, -2.5)
+
+[node name="Leaf 1" type="Sprite2D" parent="Week 9 Flower/Stem 1" unique_id=118343390]
+light_mask = 3
+position = Vector2(0.5, -3.5)
+texture = ExtResource("39_6v6k5")
+offset = Vector2(3, -2)
+
+[node name="Leaf 2" type="Sprite2D" parent="Week 9 Flower/Stem 1" unique_id=797035138]
+light_mask = 3
+position = Vector2(0.5, -9.5)
+texture = ExtResource("40_02gvp")
+offset = Vector2(-2, -1.5)
+
+[node name="Root" type="Sprite2D" parent="Week 9 Flower" unique_id=254504470]
+visible = false
+light_mask = 3
+position = Vector2(11.25, 22.5)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("17_dwcor")
+
+[node name="Week 10 Flower" type="Node2D" parent="." unique_id=118077216]
+visible = false
+light_mask = 3
+position = Vector2(980.75, 696.5)
+script = ExtResource("46_xq8js")
+
+[node name="Stem 1" type="Sprite2D" parent="Week 10 Flower" unique_id=1948617415]
+light_mask = 3
+position = Vector2(-11.25, -60.75)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("42_02gvp")
+offset = Vector2(1, -4)
+
+[node name="Stem 2" type="Sprite2D" parent="Week 10 Flower/Stem 1" unique_id=299375717]
+light_mask = 3
+position = Vector2(3, -35.75)
+texture = ExtResource("43_46t5p")
+offset = Vector2(-0.5, -2.5)
+
+[node name="Stem 3" type="Sprite2D" parent="Week 10 Flower/Stem 1/Stem 2" unique_id=591321932]
+light_mask = 3
+position = Vector2(1.5, -26.75)
+texture = ExtResource("44_gme31")
+
+[node name="Flower" type="Sprite2D" parent="Week 10 Flower/Stem 1/Stem 2/Stem 3" unique_id=1467885344]
+light_mask = 3
+position = Vector2(-1, -10)
+texture = ExtResource("45_aa0fd")
+
+[node name="Leaf 5" type="Sprite2D" parent="Week 10 Flower/Stem 1/Stem 2/Stem 3" unique_id=1297970654]
+light_mask = 3
+position = Vector2(0.5, 0.5)
+texture = ExtResource("36_or7bv")
+offset = Vector2(4.5, -3.5)
+
+[node name="Leaf 3" type="Sprite2D" parent="Week 10 Flower/Stem 1/Stem 2" unique_id=661248291]
+light_mask = 3
+position = Vector2(-1, -1.5)
+texture = ExtResource("46_ei1bu")
+offset = Vector2(6.5, -3)
+
+[node name="Leaf 4" type="Sprite2D" parent="Week 10 Flower/Stem 1/Stem 2" unique_id=1601618283]
+light_mask = 3
+position = Vector2(2, -12.5)
+texture = ExtResource("47_qhjme")
+offset = Vector2(-6, -1.5)
+
+[node name="Leaf 1" type="Sprite2D" parent="Week 10 Flower/Stem 1" unique_id=1522015552]
+light_mask = 3
+position = Vector2(1, 0.5)
+texture = ExtResource("48_fi2ca")
+offset = Vector2(4.5, -2.5)
+
+[node name="Leaf 2" type="Sprite2D" parent="Week 10 Flower/Stem 1" unique_id=1763083078]
+light_mask = 3
+position = Vector2(0, -15.5)
+texture = ExtResource("49_cpr2w")
+offset = Vector2(-3, -1.5)
+
+[node name="Root" type="Sprite2D" parent="Week 10 Flower" unique_id=139801049]
+visible = false
+light_mask = 3
+position = Vector2(15.75, 40.5)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("18_y0n8t")
+
+[node name="Mouse Tracker" type="Node2D" parent="." unique_id=222102480]
+script = ExtResource("108_hjvjk")
+
+[node name="Layer 4" type="Area2D" parent="Mouse Tracker" unique_id=1082812022]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse Tracker/Layer 4" unique_id=294030993]
+shape = SubResource("CircleShape2D_0f3ej")
+
+[node name="Layer 5" type="Area2D" parent="Mouse Tracker" unique_id=1672149908]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse Tracker/Layer 5" unique_id=1730262428]
+shape = SubResource("CircleShape2D_0f3ej")
+
+[node name="Layer 6" type="Area2D" parent="Mouse Tracker" unique_id=1255232243]
+collision_layer = 32
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse Tracker/Layer 6" unique_id=1530631169]
+shape = SubResource("CircleShape2D_0f3ej")
+
+[node name="Layer 7" type="Area2D" parent="Mouse Tracker" unique_id=2036039758]
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse Tracker/Layer 7" unique_id=73333203]
+shape = SubResource("CircleShape2D_0f3ej")
+
+[node name="Layer 8" type="Area2D" parent="Mouse Tracker" unique_id=119872703]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse Tracker/Layer 8" unique_id=495593786]
+shape = SubResource("CircleShape2D_0f3ej")
+
+[node name="Layer 9" type="Area2D" parent="Mouse Tracker" unique_id=1950181350]
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse Tracker/Layer 9" unique_id=679554100]
+shape = SubResource("CircleShape2D_0f3ej")
+
+[node name="Layer 10" type="Area2D" parent="Mouse Tracker" unique_id=1374741786]
+collision_layer = 512
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mouse Tracker/Layer 10" unique_id=1351316975]
+shape = SubResource("CircleShape2D_0f3ej")
+
+[connection signal="mouse_entered" from="User Interface/Computer/Area2D" to="User Interface/Computer/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Computer/Area2D" to="User Interface/Computer/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/XRayMachine/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="User Interface/XRayMachine/Area2D" to="User Interface/XRayMachine/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/XRayMachine/Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_exited" from="User Interface/XRayMachine/Area2D" to="User Interface/XRayMachine/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/PetriDish/Area2D" to="User Interface/PetriDish/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/PetriDish/Area2D" to="User Interface/PetriDish/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/SoundMachine/Area2D" to="User Interface/SoundMachine/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="User Interface/SoundMachine/Area2D" to="User Interface/Sound Machine Game" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/SoundMachine/Area2D" to="User Interface/SoundMachine/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="User Interface/SoundMachine/Area2D" to="User Interface/Sound Machine Game" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Sound Machine Game/Button1/Area2D" to="User Interface/Sound Machine Game/Button1" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Sound Machine Game/Button1/Area2D" to="User Interface/Sound Machine Game/Button1" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Sound Machine Game/Button2/Area2D" to="User Interface/Sound Machine Game/Button2" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Sound Machine Game/Button2/Area2D" to="User Interface/Sound Machine Game/Button2" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Sound Machine Game/Button3/Area2D" to="User Interface/Sound Machine Game/Button3" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Sound Machine Game/Button3/Area2D" to="User Interface/Sound Machine Game/Button3" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Sound Machine Game/Button4/Area2D" to="User Interface/Sound Machine Game/Button4" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Sound Machine Game/Button4/Area2D" to="User Interface/Sound Machine Game/Button4" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Sound Machine Game/Button5/Area2D" to="User Interface/Sound Machine Game/Button5" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Sound Machine Game/Button5/Area2D" to="User Interface/Sound Machine Game/Button5" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Sound Machine Game/Switch/Area2D" to="User Interface/Sound Machine Game/Switch/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Sound Machine Game/Switch/Area2D" to="User Interface/Sound Machine Game/Switch/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Sound Machine Game/CameraButton/Area2D" to="User Interface/Sound Machine Game/CameraButton/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Sound Machine Game/CameraButton/Area2D" to="User Interface/Sound Machine Game/CameraButton/Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Harvest/Book/Open Book Area2D" to="User Interface/Harvest/Book/Open Book Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Harvest/Book/Open Book Area2D" to="User Interface/Harvest/Book/Open Book Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Harvest/Book/Closed Book Area2D" to="User Interface/Harvest/Book/Closed Book Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Harvest/Book/Closed Book Area2D" to="User Interface/Harvest/Book/Closed Book Area2D" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Harvest/Petri Dish/Dish Area2D" to="User Interface/Harvest/Petri Dish/Dish Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Harvest/Petri Dish/Dish Area2D" to="User Interface/Harvest/Petri Dish/Dish Area2D" method="_on_mouse_exited"]
+[connection signal="area_entered" from="Mouse Tracker/Layer 4" to="Mouse Tracker" method="_on_layer_4_area_entered"]
+[connection signal="area_exited" from="Mouse Tracker/Layer 4" to="Mouse Tracker" method="_on_layer_4_area_exited"]
+[connection signal="area_entered" from="Mouse Tracker/Layer 5" to="Mouse Tracker" method="_on_layer_5_area_entered"]
+[connection signal="area_exited" from="Mouse Tracker/Layer 5" to="Mouse Tracker" method="_on_layer_5_area_exited"]
+[connection signal="area_entered" from="Mouse Tracker/Layer 6" to="Mouse Tracker" method="_on_layer_6_area_entered"]
+[connection signal="area_exited" from="Mouse Tracker/Layer 6" to="Mouse Tracker" method="_on_layer_6_area_exited"]
+[connection signal="area_entered" from="Mouse Tracker/Layer 7" to="Mouse Tracker" method="_on_layer_7_area_entered"]
+[connection signal="area_exited" from="Mouse Tracker/Layer 7" to="Mouse Tracker" method="_on_layer_7_area_exited"]
+[connection signal="area_entered" from="Mouse Tracker/Layer 8" to="Mouse Tracker" method="_on_layer_8_area_entered"]
+[connection signal="area_exited" from="Mouse Tracker/Layer 8" to="Mouse Tracker" method="_on_layer_8_area_exited"]
+[connection signal="area_entered" from="Mouse Tracker/Layer 9" to="Mouse Tracker" method="_on_layer_9_area_entered"]
+[connection signal="area_exited" from="Mouse Tracker/Layer 9" to="Mouse Tracker" method="_on_layer_9_area_exited"]
+[connection signal="area_entered" from="Mouse Tracker/Layer 10" to="Mouse Tracker" method="_on_layer_10_area_entered"]
+[connection signal="area_exited" from="Mouse Tracker/Layer 10" to="Mouse Tracker" method="_on_layer_10_area_exited"]

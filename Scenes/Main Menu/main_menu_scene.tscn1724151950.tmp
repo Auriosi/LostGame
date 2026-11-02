@@ -1,0 +1,370 @@
+[gd_scene format=3 uid="uid://bj7ox2rsrhvi6"]
+
+[ext_resource type="Script" uid="uid://cxwxbju0mm3uq" path="res://Scripts/Main Menu/Settings/menu_scene.gd" id="1_hjtrp"]
+[ext_resource type="Texture2D" uid="uid://ki2vqajs40x0" path="res://Sprites/Main Menu/Flower_V2.png" id="2_rxwm8"]
+[ext_resource type="Script" uid="uid://dlf2oqkw6ln3l" path="res://Scripts/Main Menu/mouse.gd" id="3_jixph"]
+[ext_resource type="Texture2D" uid="uid://cwwcaa7wdmmui" path="res://Sprites/Main Menu/Flower_V2_Stem.png" id="3_nq1jb"]
+[ext_resource type="Texture2D" uid="uid://c52lmpdmc5cuh" path="res://Sprites/Main Menu/Flower_V2_Growth.png" id="4_llnxg"]
+[ext_resource type="Texture2D" uid="uid://jurwmyhrviim" path="res://Sprites/Loading Bar.png" id="4_uuh5q"]
+[ext_resource type="AudioStream" uid="uid://c3fuakjlxiifd" path="res://Sounds/Main Menu Sounds/Wind.mp3" id="5_j1v2v"]
+[ext_resource type="AudioStream" uid="uid://cseyt6bbvrkpm" path="res://Sounds/Music Sound Effects/Rosa Incursio No Effects.mp3" id="6_gnrrv"]
+[ext_resource type="PackedScene" uid="uid://xsuyfac2yuho" path="res://Scenes/Main Menu/settings_menu.tscn" id="7_0w30e"]
+[ext_resource type="Texture2D" uid="uid://dppv3rgtkqj4l" path="res://Sprites/Settings Button.png" id="8_3mwju"]
+[ext_resource type="Texture2D" uid="uid://hiu0ha6l527p" path="res://Sprites/Settings Button Pressed.png" id="9_8a3yy"]
+[ext_resource type="Texture2D" uid="uid://4jn4v1l4dv25" path="res://Sprites/Settings Button Hover.png" id="10_4m60m"]
+[ext_resource type="Script" uid="uid://ch18ewqhlh46r" path="res://Scripts/Main Menu/Settings/start_button.gd" id="11_2i8q7"]
+[ext_resource type="Script" uid="uid://b5vssblfu2oxq" path="res://Scripts/Main Menu/Settings/quit_button.gd" id="12_ueqxl"]
+[ext_resource type="Script" uid="uid://tx4jg0vyi5gr" path="res://Scripts/Main Menu/Settings/settings_button.gd" id="13_se24r"]
+[ext_resource type="Script" uid="uid://cwa3thlkt0yhc" path="res://Scripts/Main Menu/Settings/credits_button.gd" id="14_tj41j"]
+[ext_resource type="PackedScene" uid="uid://c717v352sv2wo" path="res://Scenes/Main Menu/game_menu.tscn" id="15_cmsa4"]
+[ext_resource type="Shader" uid="uid://cygb4x4gcekuw" path="res://Scenes/Main Menu/static.gdshader" id="18_nq1jb"]
+[ext_resource type="AudioStream" uid="uid://bs7cfaexobcc2" path="res://Sounds/Main Menu Sounds/Intro Cutscene Static 1.mp3" id="19_llnxg"]
+
+[sub_resource type="Gradient" id="Gradient_dbs2q"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_en4t2"]
+gradient = SubResource("Gradient_dbs2q")
+
+[sub_resource type="Gradient" id="Gradient_en4t2"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oi0rk"]
+gradient = SubResource("Gradient_en4t2")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.85, 0.85)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iel11"]
+texture = ExtResource("8_3mwju")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n6ocn"]
+texture = ExtResource("9_8a3yy")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dbs2q"]
+texture = ExtResource("10_4m60m")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lx628"]
+texture = ExtResource("8_3mwju")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lx628"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_llnxg"]
+shader = ExtResource("18_nq1jb")
+shader_parameter/amount = 40.0
+shader_parameter/X = 0.0
+shader_parameter/Y = 0.0
+shader_parameter/fade_amount = 0.0
+
+[node name="Menu Scene" type="Node2D" unique_id=1126831865]
+script = ExtResource("1_hjtrp")
+metadata/_edit_vertical_guides_ = [-1484.0]
+
+[node name="Rose" type="Sprite2D" parent="." unique_id=1647699361]
+z_index = 1
+texture_filter = 1
+position = Vector2(-8, -32.062504)
+scale = Vector2(2.885, 2.885)
+texture = ExtResource("2_rxwm8")
+
+[node name="Stem" type="Sprite2D" parent="." unique_id=1290402840]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+texture_filter = 1
+position = Vector2(-8, -32.062504)
+scale = Vector2(2.885, 2.885)
+texture = ExtResource("3_nq1jb")
+
+[node name="Growth" type="Sprite2D" parent="." unique_id=1060046961]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+texture_filter = 1
+position = Vector2(-8, -32.062504)
+scale = Vector2(2.885, 2.885)
+texture = ExtResource("4_llnxg")
+
+[node name="Transitionary Background" type="Sprite2D" parent="." unique_id=511739685]
+visible = false
+position = Vector2(232.49997, 59.499954)
+scale = Vector2(61.07812, 30.046873)
+texture = SubResource("GradientTexture2D_en4t2")
+
+[node name="Background Text" type="Label" parent="." unique_id=1413679829]
+visible = false
+z_index = 1
+offset_left = -1078.955
+offset_top = -450.0
+offset_right = -160.03497
+offset_bottom = -285.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 120
+text = "WARNING ! ! !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Typed Text" type="Label" parent="." unique_id=1749684533]
+offset_left = -894.0
+offset_top = -124.42
+offset_right = 1223.0
+offset_bottom = 550.58
+theme_override_font_sizes/font_size = 80
+text = "RAPID MUTATION DETECTED, EMERGENCY 
+SYSTEM FAILURE! 
+SYSTEM DIAGNOSTICS DETECTS PLANT 
+FUNCTIONS: IT DESIRES TO HATEBURNWRITHEKILL
+YEARNBLEEDFIGHTBIRTHLOVEBREAKSCREAMSLEEP
+KISSSCORCHMELTLUSTTHRASHACHEFONDITCHDEVOTE"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=789865858]
+visible = false
+energy = 0.0
+texture = SubResource("GradientTexture2D_oi0rk")
+texture_scale = 43.33
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=824974751]
+
+[node name="Mouse" type="Node2D" parent="." unique_id=1547081620]
+scale = Vector2(0.025, 0.025)
+script = ExtResource("3_jixph")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Mouse" unique_id=1030758020]
+offset_left = -480.0
+offset_top = -480.0
+offset_right = 520.0
+offset_bottom = 520.0
+fill_mode = 4
+texture_progress = ExtResource("4_uuh5q")
+texture_progress_offset = Vector2(-20, -20)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=746855704]
+z_index = 1
+offset_left = 450.0
+offset_top = 399.0
+offset_right = 900.0
+offset_bottom = 454.0
+theme_override_font_sizes/font_size = 30
+text = "Hold any Mouse Button to Skip"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Wind" type="AudioStreamPlayer2D" parent="." unique_id=802850930]
+stream = ExtResource("5_j1v2v")
+volume_db = -80.0
+autoplay = true
+bus = &"Ambience"
+parameters/looping = true
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1121169572]
+stream = ExtResource("6_gnrrv")
+volume_db = 10.0
+bus = &"Music"
+
+[node name="Settings Menu" parent="." unique_id=1711529017 instance=ExtResource("7_0w30e")]
+visible = false
+z_index = 1
+offset_left = -742.5
+offset_top = -382.5
+offset_right = -742.5
+offset_bottom = -382.5
+scale = Vector2(0.75, 0.75)
+
+[node name="Title" type="Label" parent="." unique_id=20889900]
+z_index = 1
+offset_left = -414.0
+offset_top = -147.815
+offset_right = -138.0
+offset_bottom = -92.815
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+text = "Rosa Incramentum"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start Button" type="Button" parent="." unique_id=1491513157]
+visible = false
+z_index = 1
+offset_left = -700.0
+offset_right = -200.0
+offset_bottom = 150.0
+pivot_offset = Vector2(0.125, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_outline_color = Color(1.7567725e-06, 0.4157031, 0.40039545, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxTexture_iel11")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n6ocn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dbs2q")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_lx628")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lx628")
+disabled = true
+action_mode = 0
+alignment = 0
+autowrap_trim_flags = 0
+icon_alignment = 1
+script = ExtResource("11_2i8q7")
+
+[node name="Quit Button" type="Button" parent="." unique_id=648989082]
+visible = false
+z_index = 1
+offset_left = -700.0
+offset_top = 225.0
+offset_right = -200.0
+offset_bottom = 375.0
+pivot_offset = Vector2(0.125, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_outline_color = Color(1.7567725e-06, 0.4157031, 0.40039545, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxTexture_iel11")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n6ocn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dbs2q")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_lx628")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lx628")
+disabled = true
+action_mode = 0
+alignment = 0
+autowrap_trim_flags = 0
+icon_alignment = 1
+script = ExtResource("12_ueqxl")
+
+[node name="Settings Button" type="Button" parent="." unique_id=1377528681]
+visible = false
+z_index = 1
+offset_left = 200.0
+offset_right = 700.0
+offset_bottom = 150.0
+pivot_offset = Vector2(0.125, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_outline_color = Color(1.7567725e-06, 0.4157031, 0.40039545, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxTexture_iel11")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n6ocn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dbs2q")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_lx628")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lx628")
+disabled = true
+action_mode = 0
+alignment = 0
+autowrap_trim_flags = 0
+icon_alignment = 1
+script = ExtResource("13_se24r")
+
+[node name="Credits Button" type="Button" parent="." unique_id=1803759409]
+editor_description = "Credits Not Implimented Yet"
+visible = false
+z_index = 1
+offset_left = 200.0
+offset_top = 225.0
+offset_right = 700.0
+offset_bottom = 375.0
+pivot_offset = Vector2(0.125, 0)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_outline_color = Color(1.7567725e-06, 0.4157031, 0.40039545, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxTexture_iel11")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n6ocn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dbs2q")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_lx628")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lx628")
+disabled = true
+action_mode = 0
+alignment = 0
+autowrap_trim_flags = 0
+icon_alignment = 1
+script = ExtResource("14_tj41j")
+
+[node name="Game Menu" parent="." unique_id=253501048 instance=ExtResource("15_cmsa4")]
+visible = false
+
+[node name="Filter" type="Node2D" parent="." unique_id=874060190]
+position = Vector2(-26, -52)
+
+[node name="ColorRect" type="ColorRect" parent="Filter" unique_id=1613085472]
+light_mask = 0
+z_index = 1
+material = SubResource("ShaderMaterial_llnxg")
+offset_left = -964.00006
+offset_top = -458.0
+offset_right = -618.1551
+offset_bottom = -279.80002
+scale = Vector2(5.725, 5.725)
+mouse_filter = 2
+color = Color(0.4, 0.4, 0.4, 1)
+
+[node name="Intro Static" type="AudioStreamPlayer2D" parent="." unique_id=1134643876]
+stream = ExtResource("19_llnxg")
+
+[connection signal="pressed" from="Start Button" to="Start Button" method="_on_pressed"]
+[connection signal="pressed" from="Quit Button" to="Quit Button" method="_on_pressed"]
+[connection signal="pressed" from="Settings Button" to="Settings Button" method="_on_pressed"]

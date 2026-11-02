@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://bj7ox2rsrhvi6"]
+
+[ext_resource type="Script" uid="uid://cxwxbju0mm3uq" path="res://menu_scene.gd" id="1_hko7e"]
+[ext_resource type="Texture2D" uid="uid://5vtd5rrdqmjh" path="res://Flower.png" id="1_vbts7"]
+[ext_resource type="Script" uid="uid://dlf2oqkw6ln3l" path="res://mouse.gd" id="3_i4wrx"]
+[ext_resource type="Texture2D" uid="uid://jurwmyhrviim" path="res://Loading Bar.png" id="3_mfwt2"]
+[ext_resource type="AudioStream" uid="uid://c3fuakjlxiifd" path="res://Wind.mp3" id="5_n6o5i"]
+[ext_resource type="AudioStream" uid="uid://duc3ech7gf22l" path="res://Rosa Incursio.mp3" id="6_gnsb0"]
+[ext_resource type="Script" uid="uid://cj54gtxbruegq" path="res://title.gd" id="7_ibaye"]
+
+[node name="Menu Scene" type="Node2D"]
+script = ExtResource("1_hko7e")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(0, -250)
+scale = Vector2(3, 3)
+texture = ExtResource("1_vbts7")
+
+[node name="Mouse" type="Node2D" parent="."]
+scale = Vector2(0.025, 0.025)
+script = ExtResource("3_i4wrx")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Mouse"]
+offset_left = -480.0
+offset_top = -479.99997
+offset_right = 520.0
+offset_bottom = 520.0
+fill_mode = 4
+texture_progress = ExtResource("3_mfwt2")
+texture_progress_offset = Vector2(-20, -20)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 450.0
+offset_top = 400.0
+offset_right = 900.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 30
+text = "Hold any Mouse Button to Skip"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Wind" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_n6o5i")
+volume_db = -80.0
+autoplay = true
+parameters/looping = true
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_gnsb0")
+parameters/looping = true
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Title" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = -414.0
+offset_top = -147.815
+offset_right = -138.0
+offset_bottom = -92.815
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 30
+text = "Rosa Incramentum"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_ibaye")

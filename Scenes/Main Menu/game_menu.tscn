@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://c717v352sv2wo"]
+
+[ext_resource type="Texture2D" uid="uid://dppv3rgtkqj4l" path="res://Sprites/Misc/Settings Button.png" id="1_5a81j"]
+[ext_resource type="Script" uid="uid://dimxxikllyumo" path="res://Scripts/Lab/game_menu.gd" id="1_in7i6"]
+
+[sub_resource type="Gradient" id="Gradient_0cmel"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fllhd"]
+gradient = SubResource("Gradient_0cmel")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7qr8"]
+bg_color = Color(0.32915837, 0.3291584, 0.3291583, 0.41960785)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_in7i6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5a81j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_68yqx"]
+texture = ExtResource("1_5a81j")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t3vxx"]
+
+[node name="Game Menu" type="Control" unique_id=712278076]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_in7i6")
+
+[node name="Base Background" type="Sprite2D" parent="." unique_id=322008221]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 0.7529412)
+z_index = 2
+position = Vector2(8, -3)
+scale = Vector2(3, 1000)
+texture = SubResource("GradientTexture1D_fllhd")
+
+[node name="New Game Button" type="Button" parent="." unique_id=359632032]
+z_index = 2
+layout_mode = 0
+offset_left = -232.0
+offset_top = -428.00003
+offset_right = 268.0
+offset_bottom = -248.00003
+pivot_offset = Vector2(0.125, 0)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7qr8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_in7i6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5a81j")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_68yqx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t3vxx")
+action_mode = 0
+text = "New Game"
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="Load Game Button" type="Button" parent="." unique_id=689550740]
+z_index = 2
+layout_mode = 0
+offset_left = -232.0
+offset_top = -98.00003
+offset_right = 268.0
+offset_bottom = 82.00351
+pivot_offset = Vector2(0.125, 0)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7qr8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_in7i6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5a81j")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_68yqx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t3vxx")
+action_mode = 0
+text = "Load Game"
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="Last Save Button" type="Button" parent="." unique_id=1673015630]
+z_index = 2
+layout_mode = 0
+offset_left = -232.0
+offset_top = 231.99997
+offset_right = 268.0
+offset_bottom = 411.99997
+pivot_offset = Vector2(0.125, 0)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7qr8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_in7i6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5a81j")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_68yqx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t3vxx")
+action_mode = 0
+text = "Last Save"
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="Confirmation" type="Node2D" parent="." unique_id=179885398]
+visible = false
+
+[node name="New Game Confirmation Background" type="Sprite2D" parent="Confirmation" unique_id=1843667131]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 0.7529412)
+z_index = 2
+scale = Vector2(4, 300)
+texture = SubResource("GradientTexture1D_fllhd")
+
+[node name="Yes Button" type="Button" parent="Confirmation" unique_id=1007697514]
+z_index = 2
+offset_left = -450.0
+offset_top = -50.0
+offset_right = -150.0
+offset_bottom = 100.0
+pivot_offset = Vector2(0.125, 0)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7qr8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_in7i6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5a81j")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_68yqx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t3vxx")
+action_mode = 0
+text = "Yes"
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="No Button" type="Button" parent="Confirmation" unique_id=71228378]
+z_index = 2
+offset_left = 150.0
+offset_top = -50.0
+offset_right = 450.0
+offset_bottom = 100.0
+pivot_offset = Vector2(0.125, 0)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7qr8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_in7i6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5a81j")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_68yqx")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t3vxx")
+action_mode = 0
+text = "No"
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="Confirmation" unique_id=1709571301]
+z_index = 2
+offset_left = -300.0
+offset_top = -140.0
+offset_right = 300.0
+offset_bottom = -60.0
+theme_override_font_sizes/font_size = 46
+text = "Start New Game?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="New Game Button" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="Confirmation/Yes Button" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="Confirmation/No Button" to="." method="_on_no_button_pressed"]

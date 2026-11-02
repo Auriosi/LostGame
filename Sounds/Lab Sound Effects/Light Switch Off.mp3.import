@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b1jdmtb4r6lys"
+path="res://.godot/imported/Light Switch Off.mp3-a1f3e928c7dd7f14dea57921afccc42c.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Lab Sound Effects/Light Switch Off.mp3"
+dest_files=["res://.godot/imported/Light Switch Off.mp3-a1f3e928c7dd7f14dea57921afccc42c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

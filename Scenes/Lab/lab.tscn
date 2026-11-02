@@ -1,0 +1,2430 @@
+[gd_scene format=3 uid="uid://btws0f1jarcmf"]
+
+[ext_resource type="Script" uid="uid://psg5mrvn3us2" path="res://Scripts/Lab/lab.gd" id="1_l0wwh"]
+[ext_resource type="Shader" uid="uid://ci0ysfu1cbchp" path="res://Scenes/Lab/lab.gdshader" id="2_t5b0x"]
+[ext_resource type="Texture2D" uid="uid://niftt0n3cc3a" path="res://Sprites/Lab/Laboratory_background.png" id="2_xqgjf"]
+[ext_resource type="PackedScene" uid="uid://f3joinncifce" path="res://Scenes/Lab/blinds.tscn" id="3_vmn7i"]
+[ext_resource type="Script" uid="uid://caxk87v04h2p6" path="res://Scripts/Lab/Microscope.gd" id="4_tbijf"]
+[ext_resource type="Texture2D" uid="uid://l0ywbx67sg3r" path="res://Sprites/Lab/Microscope.png" id="5_f2d0m"]
+[ext_resource type="Texture2D" uid="uid://bd7bi2v7wwuei" path="res://Sprites/Lab/Microscope_Outline.png" id="6_mcao6"]
+[ext_resource type="AudioStream" uid="uid://b8jntd5vj6l6h" path="res://Sounds/UI Sound Effects/Mechanical Button Hover.mp3" id="7_nap0r"]
+[ext_resource type="Script" uid="uid://ho8k1kiwvf4r" path="res://Scripts/Lab/incubater.gd" id="7_qf25p"]
+[ext_resource type="AudioStream" uid="uid://bylkd0e7knfr8" path="res://Sounds/Lab Sound Effects/Genome Sequencing Sound 1.mp3" id="8_k81ov"]
+[ext_resource type="Texture2D" uid="uid://j6pesri0np1c" path="res://Sprites/Lab/Incubater.png" id="8_okqj1"]
+[ext_resource type="AudioStream" uid="uid://dxppipec81c7c" path="res://Sounds/Lab Sound Effects/Genome Sequencing Sound 2.mp3" id="8_tvcrn"]
+[ext_resource type="Texture2D" uid="uid://duyuc1scocgo0" path="res://Sprites/Lab/IncubaterOutline.png" id="9_8xgao"]
+[ext_resource type="Script" uid="uid://dmt0d8lervwhx" path="res://Scripts/Lab/computer.gd" id="10_mmb12"]
+[ext_resource type="Texture2D" uid="uid://bpqjfkwvbr8nk" path="res://Sprites/Lab/Computer (On).png" id="11_denkr"]
+[ext_resource type="Texture2D" uid="uid://df5snsa8e5mlt" path="res://Sprites/Lab/Computer Outline.png" id="12_m5t5c"]
+[ext_resource type="AudioStream" uid="uid://c4ln107jvphbg" path="res://Sounds/Lab Sound Effects/Crop Development Hover.mp3" id="13_aw15n"]
+[ext_resource type="Texture2D" uid="uid://c2q8pocosvvu6" path="res://Sprites/Lab/Light Switch (On).png" id="13_t513d"]
+[ext_resource type="Script" uid="uid://bgs0562tktxee" path="res://Scripts/Lab/Light Switch.gd" id="14_22lkq"]
+[ext_resource type="AudioStream" uid="uid://djnpia8rdh8tj" path="res://Sounds/Lab Sound Effects/Crop Development Click.mp3" id="14_jb8tp"]
+[ext_resource type="PackedScene" uid="uid://cs46a8kuxrh5l" path="res://Scenes/Games/Sequencing/sequencing_game.tscn" id="15_wo7h2"]
+[ext_resource type="PackedScene" uid="uid://duygbmx6bj7if" path="res://Scenes/Games/Plant Development/plant_development_game.tscn" id="16_ymurb"]
+[ext_resource type="AudioStream" uid="uid://cj2f0gmm81er7" path="res://Sounds/Lab Sound Effects/Crop Diagnosis Hover.mp3" id="18_3wcyd"]
+[ext_resource type="AudioStream" uid="uid://bg6twpv53lgvj" path="res://Sounds/Lab Sound Effects/Reserach Tree Interact.mp3" id="18_j3lsb"]
+[ext_resource type="Texture2D" uid="uid://cqcu8x6ovttr" path="res://Sprites/Lab/Bar.png" id="18_xv1cu"]
+[ext_resource type="AudioStream" uid="uid://4mp0kh18k3gu" path="res://Sounds/Lab Sound Effects/Light Switch On.mp3" id="19_83cst"]
+[ext_resource type="AudioStream" uid="uid://b3vxt8005f3nv" path="res://Sounds/Lab Sound Effects/Research Tree Click.mp3" id="19_af610"]
+[ext_resource type="AudioStream" uid="uid://d2myqebjvw672" path="res://Sounds/Lab Sound Effects/Crop Diagnosis Click.mp3" id="19_f83d8"]
+[ext_resource type="Texture2D" uid="uid://c6y84vt0e5oa3" path="res://Sprites/Lab/Bar2.png" id="19_vnfwo"]
+[ext_resource type="PackedScene" uid="uid://c6cjbi6mttu5d" path="res://Scenes/Games/Research Tree/Reserach Tree.tscn" id="20_dnwjl"]
+[ext_resource type="AudioStream" uid="uid://b1jdmtb4r6lys" path="res://Sounds/Lab Sound Effects/Light Switch Off.mp3" id="20_lyudi"]
+[ext_resource type="Texture2D" uid="uid://badefpixdt2mt" path="res://Sprites/Lab/Petri Dish Outline.png" id="20_tbijf"]
+[ext_resource type="Texture2D" uid="uid://bt47k5v5palcl" path="res://Sprites/Lab/Light Switch (outline).png" id="21_lyudi"]
+[ext_resource type="PackedScene" uid="uid://dcnbowixiarv8" path="res://Scenes/Games/Crop Diagnosis/crop_diagnosis.tscn" id="21_xqgjf"]
+[ext_resource type="Script" uid="uid://c1l1f1bsc1ks1" path="res://Scripts/Lab/petri_dish.gd" id="22_f2d0m"]
+[ext_resource type="Texture2D" uid="uid://bs5yvt35k42lf" path="res://Sprites/Lab/Petri Dish.png" id="23_f2d0m"]
+[ext_resource type="Texture2D" uid="uid://wce0xj04xyru" path="res://Sprites/Lab/Tutorial_Button.png" id="24_wo7h2"]
+[ext_resource type="Texture2D" uid="uid://drtx0skq0mxm7" path="res://Sprites/Reserach Tree/Bar.png" id="25_m5t5c"]
+[ext_resource type="Script" uid="uid://44gr1xginvhf" path="res://Scripts/Lab/Warning.gd" id="25_t513d"]
+[ext_resource type="Texture2D" uid="uid://bi1fh7kj4whaa" path="res://Sprites/Lab/Tutorial_Button (Pressed).png" id="25_ymurb"]
+[ext_resource type="Texture2D" uid="uid://b265yfa52c4hn" path="res://Sprites/Lab/Tutorial_Button (Hover).png" id="26_5bd6d"]
+[ext_resource type="Texture2D" uid="uid://ccqs05b3w4we0" path="res://Sprites/Misc/Close Button.png" id="26_t513d"]
+[ext_resource type="Texture2D" uid="uid://dss77d6p2200n" path="res://Sprites/Misc/Close Button (Pressed) .png" id="27_22lkq"]
+[ext_resource type="Script" uid="uid://c02jfaof372" path="res://Scenes/Lab/tutorial_button.gd" id="27_ymurb"]
+[ext_resource type="Texture2D" uid="uid://findqav2m2p3" path="res://Sprites/Reserach Tree/Stats Tab (Selected).png" id="28_wo7h2"]
+[ext_resource type="Texture2D" uid="uid://du1dnypvdtrn7" path="res://Sprites/Lab/Tutorial Back Button.png" id="29_dnwjl"]
+[ext_resource type="Texture2D" uid="uid://shud3x60gs8p" path="res://Sprites/Reserach Tree/Scientific Research Tree Tab.png" id="29_ymurb"]
+[ext_resource type="Texture2D" uid="uid://wc7ahlvm2m5" path="res://Sprites/Reserach Tree/Genome Research Tree Tab.png" id="30_5bd6d"]
+[ext_resource type="Texture2D" uid="uid://dfdilwdkaxtyn" path="res://Sprites/Lab/Tutorial Back Button (Pressed).png" id="30_m2xnl"]
+[ext_resource type="Texture2D" uid="uid://b1v73nvvwhxii" path="res://Sprites/Lab/Tutorial Back Button (Hover).png" id="31_0gpbn"]
+[ext_resource type="Texture2D" uid="uid://bdircysfhyn6p" path="res://Sprites/Reserach Tree/Specialized Research Tree Tab.png" id="31_xv1cu"]
+[ext_resource type="Texture2D" uid="uid://jrr7dmgu801w" path="res://Sprites/Misc/Close Button (Hover).png" id="34_d5xri"]
+[ext_resource type="Script" uid="uid://cv0oru5d824ra" path="res://Scenes/Lab/tutorial_button_2.gd" id="37_dnwjl"]
+[ext_resource type="Script" uid="uid://cu5o5316riyht" path="res://Scenes/Lab/menu.gd" id="40_o1jnq"]
+[ext_resource type="Script" uid="uid://2auv32rm5nvp" path="res://Scenes/Main Menu/settings_menu.gd" id="41_0gpbn"]
+[ext_resource type="AudioStream" uid="uid://bihhf5qxj3xuj" path="res://Sounds/UI Sound Effects/Mechanical Button Interact.mp3" id="41_f0ghh"]
+[ext_resource type="Script" uid="uid://chr5ors4c2nhy" path="res://Scripts/Main Menu/Settings/music_settings_menu.gd" id="41_o1jnq"]
+[ext_resource type="Texture2D" uid="uid://c10c4eromvtem" path="res://Sprites/Tutorial/New Tab Notifier.png" id="42_7da25"]
+[ext_resource type="Script" uid="uid://b5yk4frp5h8rb" path="res://Scenes/Lab/load_menu.gd" id="44_0o40r"]
+[ext_resource type="AudioStream" uid="uid://s0x8u1hxh58s" path="res://Sounds/Lab Sound Effects/Air Conditioning ~ Bretbernhoft.mp3" id="45_ddh43"]
+[ext_resource type="Texture2D" uid="uid://jurn10v8pa8" path="res://Sprites/Lab/hallway_background.png" id="47_wwlpd"]
+[ext_resource type="AudioStream" uid="uid://ctwls2lhnholn" path="res://Sounds/UI Sound Effects/Mechanical Button Fail.mp3" id="48_6gg0t"]
+[ext_resource type="AudioStream" uid="uid://bclsxrpe1k7q2" path="res://Sounds/UI Sound Effects/Digital Button Hover.mp3" id="49_6gg0t"]
+[ext_resource type="Texture2D" uid="uid://cqebjl0m7j5pa" path="res://Sprites/Misc/Tutorial Box Design..png" id="55_f3tan"]
+[ext_resource type="Texture2D" uid="uid://cym0ar14cvaox" path="res://Sprites/Reserach Tree/Text Box Visual.png" id="56_374qt"]
+[ext_resource type="Texture2D" uid="uid://dm0ef1737ipb4" path="res://Sprites/Reserach Tree/Stats Tab.png" id="56_uuh74"]
+[ext_resource type="Texture2D" uid="uid://ct6hwa5gvbbvt" path="res://Sprites/Reserach Tree/Scientific Research Tree Tab (Selected).png" id="57_0muxt"]
+[ext_resource type="Texture2D" uid="uid://cnc1jcriox7o6" path="res://Sprites/Lab/Tutorial Images/Screenshot 2026-05-16 153537.png" id="58_0muxt"]
+[ext_resource type="AudioStream" uid="uid://bpn184yutxdu" path="res://Sounds/Music Sound Effects/Rosa Incursio ~ Flow State (Real).mp3" id="66_0muxt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t5b0x"]
+shader = ExtResource("2_t5b0x")
+shader_parameter/blur_amount = 5.0
+
+[sub_resource type="Gradient" id="Gradient_lyudi"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t5b0x"]
+gradient = SubResource("Gradient_lyudi")
+
+[sub_resource type="Gradient" id="Gradient_uw7jv"]
+offsets = PackedFloat32Array(0, 0.7093496, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.020325184, 0.020325184, 0.020325184, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e2xd3"]
+gradient = SubResource("Gradient_uw7jv")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8888889, 0.9102564)
+
+[sub_resource type="Gradient" id="Gradient_ildyr"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_41hp0"]
+gradient = SubResource("Gradient_ildyr")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.495, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epn36"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vu75y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q077n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j8bva"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_64rup"]
+
+[sub_resource type="Gradient" id="Gradient_vnfwo"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.39308554, 0.3930855, 0.39308548, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xv1cu"]
+gradient = SubResource("Gradient_vnfwo")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vnfwo"]
+texture = ExtResource("26_t513d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o1jnq"]
+texture = ExtResource("27_22lkq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0o40r"]
+texture = ExtResource("34_d5xri")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ddh43"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2es5e"]
+
+[sub_resource type="Gradient" id="Gradient_b4uxt"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.18359044, 0.18359044, 0.18359044, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vnfwo"]
+gradient = SubResource("Gradient_b4uxt")
+fill_from = Vector2(0.021367522, 0.008547009)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dnwjl"]
+texture = ExtResource("26_t513d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2xnl"]
+texture = ExtResource("27_22lkq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0gpbn"]
+texture = ExtResource("34_d5xri")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o1jnq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nap0r"]
+
+[sub_resource type="Gradient" id="Gradient_m2xnl"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.39308554, 0.3930855, 0.39308548, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0gpbn"]
+gradient = SubResource("Gradient_m2xnl")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ddh43"]
+texture = ExtResource("26_t513d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wwlpd"]
+texture = ExtResource("27_22lkq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d5xri"]
+texture = ExtResource("34_d5xri")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ea7bg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_83cst"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f3tan"]
+texture = ExtResource("56_374qt")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[sub_resource type="Gradient" id="Gradient_64rup"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nm8l8"]
+gradient = SubResource("Gradient_64rup")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gpbn"]
+bg_color = Color(0.20152658, 0.20152658, 0.20152658, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1jnq"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nap0r"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0o40r"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ddh43"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="Gradient" id="Gradient_0cmel"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mlw3h"]
+gradient = SubResource("Gradient_0cmel")
+
+[sub_resource type="Gradient" id="Gradient_d5xri"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ea7bg"]
+gradient = SubResource("Gradient_d5xri")
+width = 300
+height = 300
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.49572653, 0.923077)
+
+[node name="User Interface" type="Node2D" unique_id=261578110]
+script = ExtResource("1_l0wwh")
+
+[node name="Filter" type="Node2D" parent="." unique_id=1328394919]
+position = Vector2(-26, -52)
+
+[node name="ColorRect" type="ColorRect" parent="Filter" unique_id=300266740]
+modulate = Color(0.4506483, 0.4506483, 0.45064825, 1)
+light_mask = 128
+material = SubResource("ShaderMaterial_t5b0x")
+offset_right = 52.0
+offset_bottom = 53.0
+
+[node name="UI Light" type="PointLight2D" parent="." unique_id=1366127710]
+light_mask = 0
+visibility_layer = 0
+position = Vector2(-5.9604645e-08, 2)
+scale = Vector2(7.9999995, 2.515625)
+range_item_cull_mask = 32
+texture = SubResource("GradientTexture2D_t5b0x")
+
+[node name="LaboratoryBackground" type="Sprite2D" parent="." unique_id=144395949]
+texture = ExtResource("2_xqgjf")
+
+[node name="Blinds" parent="." unique_id=432279925 instance=ExtResource("3_vmn7i")]
+offset_left = 60.0
+offset_top = -46.0
+offset_right = 140.0
+offset_bottom = -38.0
+mouse_filter = 1
+
+[node name="Blinds2" parent="." unique_id=1380804828 instance=ExtResource("3_vmn7i")]
+offset_left = 140.0
+offset_top = -46.0
+offset_right = 220.0
+offset_bottom = -38.0
+mouse_filter = 1
+
+[node name="Blinds3" parent="." unique_id=150097933 instance=ExtResource("3_vmn7i")]
+offset_left = -140.0
+offset_top = -46.0
+offset_right = -60.0
+offset_bottom = -38.0
+mouse_filter = 1
+
+[node name="Blinds4" parent="." unique_id=1487654047 instance=ExtResource("3_vmn7i")]
+offset_left = -220.0
+offset_top = -46.0
+offset_right = -140.0
+offset_bottom = -38.0
+mouse_filter = 1
+
+[node name="Ceiling Light" type="PointLight2D" parent="." unique_id=1447579041]
+position = Vector2(-200, -100)
+texture = SubResource("GradientTexture2D_e2xd3")
+
+[node name="Ceiling Light2" type="PointLight2D" parent="." unique_id=10175143]
+position = Vector2(-10, -87)
+texture = SubResource("GradientTexture2D_e2xd3")
+
+[node name="Ceiling Light3" type="PointLight2D" parent="." unique_id=853932028]
+position = Vector2(200, -100)
+texture = SubResource("GradientTexture2D_e2xd3")
+
+[node name="Microscope" type="Area2D" parent="." unique_id=2070879742]
+z_index = 2
+position = Vector2(-85, -5)
+script = ExtResource("4_tbijf")
+
+[node name="Microscope" type="Sprite2D" parent="Microscope" unique_id=1493663471]
+z_index = 2
+texture = ExtResource("5_f2d0m")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Microscope" unique_id=915522700]
+z_index = 2
+position = Vector2(1, -24)
+polygon = PackedVector2Array(4, -3, 4, -5, 7, -5, 7, -4, 9, -4, 9, -2, 8, -2, 8, 0, 7, 0, 7, 2, 6, 2, 6, 4, 5, 4, 5, 6, 4, 6, 4, 8, 5, 8, 5, 14, 6, 14, 6, 15, 7, 15, 7, 16, 8, 16, 8, 18, 9, 18, 9, 19, 10, 19, 10, 20, 11, 20, 11, 21, 12, 21, 12, 23, 13, 23, 13, 24, 14, 24, 14, 46, 16, 46, 16, 48, 17, 48, 17, 52, 18, 52, 18, 53, -9, 53, -9, 52, -8, 52, -8, 48, -7, 48, -7, 46, -6, 46, -6, 36, -20, 36, -20, 35, -17, 35, -17, 32, -13, 32, -13, 31, 4, 31, 4, 32, 8, 32, 8, 25, 7, 25, 7, 23, 6, 23, 6, 22, 5, 22, 5, 20, 4, 20, 4, 19, 3, 19, 3, 17, 1, 17, 1, 23, 3, 23, 3, 24, 4, 24, 4, 27, 3, 27, 3, 29, 2, 29, 2, 30, -1, 30, -1, 29, -2, 29, -2, 26, -3, 26, -3, 25, -4, 25, -4, 24, -7, 24, -7, 25, -8, 25, -8, 26, -10, 26, -10, 25, -12, 25, -12, 23, -11, 23, -11, 22, -10, 22, -10, 20, -11, 20, -11, 19, -10, 19, -10, 18, -9, 18, -9, 17, -8, 17, -8, 18, -6, 18, -6, 9, -5, 9, -5, 8, -4, 8, -4, 7, -3, 7, -3, 6, -2, 6, -2, 5, 0, 5, 0, 3, 1, 3, 1, 1, 2, 1, 2, -1, 3, -1, 3, -3)
+
+[node name="MicroscopeOutline" type="Sprite2D" parent="Microscope" unique_id=723506238]
+visible = false
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+light_mask = 32
+z_index = 2
+texture = ExtResource("6_mcao6")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Microscope" unique_id=1350167349]
+z_index = 2
+stream = ExtResource("8_tvcrn")
+volume_db = 14.0
+bus = &"UI"
+
+[node name="Click" type="AudioStreamPlayer2D" parent="Microscope" unique_id=1858671882]
+stream = ExtResource("8_k81ov")
+volume_db = 10.0
+bus = &"UI"
+
+[node name="Incubater" type="Area2D" parent="." unique_id=1942960340]
+z_index = 2
+script = ExtResource("7_qf25p")
+
+[node name="Incubater" type="Sprite2D" parent="Incubater" unique_id=411586501]
+z_index = 2
+position = Vector2(-189, 5)
+texture = ExtResource("8_okqj1")
+
+[node name="IncubaterOutline" type="Sprite2D" parent="Incubater" unique_id=794627910]
+visible = false
+light_mask = 32
+z_index = 2
+position = Vector2(-189, 5)
+texture = ExtResource("9_8xgao")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Incubater" unique_id=1422492852]
+z_index = 2
+position = Vector2(-0.5, 0)
+polygon = PackedVector2Array(-205, -14, -205, -13, -204, -13, -204, -9, -205, -9, -205, -8, -201, -8, -201, 24, -176, 24, -176, -8, -172, -8, -172, -9, -173, -9, -173, -13, -172, -13, -172, -14)
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Incubater" unique_id=1268554299]
+z_index = 2
+stream = ExtResource("13_aw15n")
+volume_db = 10.0
+bus = &"UI"
+
+[node name="Click" type="AudioStreamPlayer2D" parent="Incubater" unique_id=1914283324]
+stream = ExtResource("14_jb8tp")
+volume_db = 10.0
+bus = &"UI"
+
+[node name="Computer" type="Area2D" parent="." unique_id=1557727098]
+z_index = 2
+position = Vector2(169.5, 4.5)
+script = ExtResource("10_mmb12")
+
+[node name="Computer" type="Sprite2D" parent="Computer" unique_id=1139867635]
+z_index = 2
+texture = ExtResource("11_denkr")
+
+[node name="ComputerOutline" type="Sprite2D" parent="Computer" unique_id=1449937916]
+visible = false
+light_mask = 32
+z_index = 2
+texture = ExtResource("12_m5t5c")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Computer" unique_id=780404005]
+z_index = 2
+polygon = PackedVector2Array(-22.5, -17.5, 22.5, -17.5, 22.5, 8.5, 3.5, 8.5, 3.5, 12.5, 8.5, 12.5, 8.5, 14.5, 9.5, 14.5, 9.5, 16.5, 10.5, 16.5, 10.5, 17.5, -10.5, 17.5, -10.5, 16.5, -9.5, 16.5, -9.5, 14.5, -8.5, 14.5, -8.5, 12.5, -3.5, 12.5, -3.5, 8.5, -22.5, 8.5)
+
+[node name="PointLight2D" type="PointLight2D" parent="Computer" unique_id=58941547]
+visible = false
+z_index = 2
+position = Vector2(5.6624413e-06, -4.5000005)
+scale = Vector2(0.6406252, 0.34375)
+color = Color(0.25565878, 0.25565878, 0.25565878, 1)
+texture = SubResource("GradientTexture2D_41hp0")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Computer" unique_id=1292809579]
+z_index = 2
+stream = ExtResource("18_j3lsb")
+bus = &"UI"
+
+[node name="Click" type="AudioStreamPlayer2D" parent="Computer" unique_id=2014403555]
+stream = ExtResource("19_af610")
+bus = &"UI"
+
+[node name="PetriDish" type="Area2D" parent="." unique_id=1372875958]
+z_index = 2
+script = ExtResource("22_f2d0m")
+
+[node name="PetriDish" type="Sprite2D" parent="PetriDish" unique_id=975340243]
+z_index = 2
+position = Vector2(118, 7)
+texture = ExtResource("23_f2d0m")
+
+[node name="PetriDishOutline" type="Sprite2D" parent="PetriDish" unique_id=1625024452]
+visible = false
+light_mask = 32
+z_index = 2
+position = Vector2(107.5, 17.5)
+texture = ExtResource("20_tbijf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PetriDish" unique_id=64316324]
+z_index = 2
+polygon = PackedVector2Array(87, 20, 87, 21, 88, 21, 88, 22, 100, 22, 100, 21, 101, 21, 101, 20)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="PetriDish" unique_id=1115677846]
+z_index = 2
+position = Vector2(22, -2)
+polygon = PackedVector2Array(87, 20, 87, 22, 88, 22, 88, 23, 89, 23, 89, 24, 104, 24, 104, 23, 105, 23, 105, 22, 106, 22, 106, 20, 101, 20, 101, 17, 100, 17, 100, 15, 94, 15, 94, 16, 93, 16, 93, 18, 92, 18, 92.03927, 20)
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="PetriDish" unique_id=128602475]
+z_index = 2
+position = Vector2(119, 19)
+stream = ExtResource("18_3wcyd")
+bus = &"UI"
+
+[node name="Click" type="AudioStreamPlayer2D" parent="PetriDish" unique_id=760897848]
+stream = ExtResource("19_f83d8")
+bus = &"UI"
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1486601029]
+position = Vector2(-249, -83)
+color = Color(0.23753911, 0.23753914, 0.23753908, 1)
+
+[node name="Light Switch" type="Button" parent="." unique_id=7839621]
+offset_left = 43.0
+offset_top = -4.0
+offset_right = 51.0
+offset_bottom = 7.0
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxEmpty_epn36")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vu75y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_q077n")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_j8bva")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_64rup")
+toggle_mode = true
+icon = ExtResource("13_t513d")
+script = ExtResource("14_22lkq")
+
+[node name="Light Switch Off" type="AudioStreamPlayer2D" parent="Light Switch" unique_id=1007902897]
+stream = ExtResource("19_83cst")
+
+[node name="Light Switch On" type="AudioStreamPlayer2D" parent="Light Switch" unique_id=1808690156]
+stream = ExtResource("20_lyudi")
+
+[node name="Switch Outline" type="Sprite2D" parent="Light Switch" unique_id=217672600]
+visible = false
+light_mask = 32
+position = Vector2(4, 5.5)
+texture = ExtResource("21_lyudi")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Light Switch" unique_id=959941631]
+z_index = 2
+stream = ExtResource("7_nap0r")
+bus = &"UI"
+
+[node name="Sequencing Game" parent="." unique_id=844903092 instance=ExtResource("15_wo7h2")]
+scale = Vector2(0.9, 0.9)
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain/Nucleotide Set" parent_id_path=PackedInt32Array(844903092, 2032752921) index="6" unique_id=710123977]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain/Nucleotide Set2" parent_id_path=PackedInt32Array(844903092, 2107110083) index="6" unique_id=249578195]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain/Nucleotide Set3" parent_id_path=PackedInt32Array(844903092, 1885000252) index="6" unique_id=60132338]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain/Nucleotide Set4" parent_id_path=PackedInt32Array(844903092, 1021262740) index="6" unique_id=743090263]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain/Nucleotide Set5" parent_id_path=PackedInt32Array(844903092, 1215137428) index="8" unique_id=631490906]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain/Nucleotide Set6" parent_id_path=PackedInt32Array(844903092, 1046023191) index="8" unique_id=927770636]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain/Nucleotide Set7" parent_id_path=PackedInt32Array(844903092, 828368788) index="8" unique_id=1418541652]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain/Nucleotide Set8" parent_id_path=PackedInt32Array(844903092, 1804090505) index="6" unique_id=741548530]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain2/Nucleotide Set" parent_id_path=PackedInt32Array(844903092, 1880728702) index="6" unique_id=512800249]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain2/Nucleotide Set2" parent_id_path=PackedInt32Array(844903092, 663951778) index="6" unique_id=785522933]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain2/Nucleotide Set3" parent_id_path=PackedInt32Array(844903092, 1415211021) index="6" unique_id=491492699]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain2/Nucleotide Set4" parent_id_path=PackedInt32Array(844903092, 175500434) index="6" unique_id=1145480480]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain2/Nucleotide Set5" parent_id_path=PackedInt32Array(844903092, 708547952) index="8" unique_id=119350773]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain2/Nucleotide Set6" parent_id_path=PackedInt32Array(844903092, 1286450568) index="8" unique_id=1576643001]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain2/Nucleotide Set7" parent_id_path=PackedInt32Array(844903092, 1219458126) index="8" unique_id=2120961542]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain2/Nucleotide Set8" parent_id_path=PackedInt32Array(844903092, 1352751982) index="6" unique_id=1787842266]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain3/Nucleotide Set" parent_id_path=PackedInt32Array(844903092, 113751462) index="6" unique_id=1146732431]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain3/Nucleotide Set2" parent_id_path=PackedInt32Array(844903092, 1075144127) index="6" unique_id=1081452634]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain3/Nucleotide Set3" parent_id_path=PackedInt32Array(844903092, 1750039714) index="6" unique_id=313781326]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain3/Nucleotide Set4" parent_id_path=PackedInt32Array(844903092, 226446251) index="6" unique_id=2123720947]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain3/Nucleotide Set5" parent_id_path=PackedInt32Array(844903092, 1340224459) index="8" unique_id=755489375]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain3/Nucleotide Set6" parent_id_path=PackedInt32Array(844903092, 218022362) index="8" unique_id=972048715]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain3/Nucleotide Set7" parent_id_path=PackedInt32Array(844903092, 1138991394) index="8" unique_id=522057216]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Nucleotide Strain3/Nucleotide Set8" parent_id_path=PackedInt32Array(844903092, 1649133868) index="6" unique_id=2011512248]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Sequence Button" parent_id_path=PackedInt32Array(844903092, 1665373602) index="1" unique_id=688019825]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Refresh" parent_id_path=PackedInt32Array(844903092, 407731917) index="1" unique_id=1026483984]
+bus = &"UI"
+
+[node name="Close" parent="Sequencing Game/Close Button Sequencing" parent_id_path=PackedInt32Array(844903092, 968303321) index="1" unique_id=460642288]
+bus = &"UI"
+
+[node name="Close" parent="Sequencing Game/Result Tab/Close Button" parent_id_path=PackedInt32Array(844903092, 1367045542) index="1" unique_id=119461640]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Result Tab/Finalize Button" parent_id_path=PackedInt32Array(844903092, 1716399107) index="1" unique_id=1699825970]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Tutorial Tab/Tutorial Button" parent_id_path=PackedInt32Array(844903092, 633983558) index="1" unique_id=1022271689]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Tutorial Tab/Node2D/Left Movement" parent_id_path=PackedInt32Array(844903092, 1673041442) index="1" unique_id=253079678]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Tutorial Tab/Node2D/Right Movement" parent_id_path=PackedInt32Array(844903092, 2134461710) index="1" unique_id=1109386461]
+bus = &"UI"
+
+[node name="Close" parent="Sequencing Game/Tutorial Tab/Node2D/Close Button Sequencing" parent_id_path=PackedInt32Array(844903092, 1841958061) index="1" unique_id=134477900]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Tutorial Tab/Node2D/Basic" parent_id_path=PackedInt32Array(844903092, 40900355) index="1" unique_id=549632504]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Tutorial Tab/Node2D/Sequences" parent_id_path=PackedInt32Array(844903092, 2140290078) index="1" unique_id=1046643672]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Tutorial Tab/Node2D/Potencies" parent_id_path=PackedInt32Array(844903092, 1628251286) index="1" unique_id=1908381159]
+bus = &"UI"
+
+[node name="Interact" parent="Sequencing Game/Tutorial Tab/Node2D/Combos" parent_id_path=PackedInt32Array(844903092, 1384300538) index="1" unique_id=1871522405]
+bus = &"UI"
+
+[node name="Plant Development Game" parent="." unique_id=682265481 instance=ExtResource("16_ymurb")]
+visible = false
+position = Vector2(1, 0)
+
+[node name="Interact" parent="Plant Development Game/Iterate Button" parent_id_path=PackedInt32Array(682265481, 1898342614) index="1" unique_id=295384525]
+bus = &"UI"
+
+[node name="Interact" parent="Plant Development Game/Reset Button" parent_id_path=PackedInt32Array(682265481, 96010308) index="1" unique_id=1993181651]
+bus = &"UI"
+
+[node name="Interact" parent="Plant Development Game/Climate Button" parent_id_path=PackedInt32Array(682265481, 869025560) index="2" unique_id=816046108]
+bus = &"UI"
+
+[node name="Close" parent="Plant Development Game/Close Button Sequencing" parent_id_path=PackedInt32Array(682265481, 2000511187) index="1" unique_id=1012189176]
+bus = &"UI"
+
+[node name="Interact" parent="Plant Development Game/Tutorial Tab (Ref)/Tutorial Button" parent_id_path=PackedInt32Array(682265481, 1864357223) index="1" unique_id=1394769685]
+bus = &"UI"
+
+[node name="Interact" parent="Plant Development Game/Tutorial Tab (Ref)/Node2D/Left Movement" parent_id_path=PackedInt32Array(682265481, 292818584) index="1" unique_id=17283940]
+bus = &"UI"
+
+[node name="Interact" parent="Plant Development Game/Tutorial Tab (Ref)/Node2D/Right Movement" parent_id_path=PackedInt32Array(682265481, 1348304691) index="1" unique_id=187796073]
+bus = &"UI"
+
+[node name="Close" parent="Plant Development Game/Tutorial Tab (Ref)/Node2D/Close Button Sequencing" parent_id_path=PackedInt32Array(682265481, 1287535999) index="1" unique_id=1533336594]
+bus = &"UI"
+
+[node name="Interact" parent="Plant Development Game/Tutorial Tab (Ref)/Node2D/Basic" parent_id_path=PackedInt32Array(682265481, 1770287823) index="1" unique_id=1237000716]
+bus = &"UI"
+
+[node name="Interact" parent="Plant Development Game/Tutorial Tab (Ref)/Node2D/Plants" parent_id_path=PackedInt32Array(682265481, 1275537708) index="1" unique_id=1818597017]
+bus = &"UI"
+
+[node name="Interact" parent="Plant Development Game/Tutorial Tab (Ref)/Node2D/Environment" parent_id_path=PackedInt32Array(682265481, 2023286545) index="1" unique_id=1094877358]
+bus = &"UI"
+
+[node name="Interact" parent="Plant Development Game/Tutorial Tab (Ref)/Node2D/Combos" parent_id_path=PackedInt32Array(682265481, 541436010) index="1" unique_id=711354824]
+bus = &"UI"
+
+[node name="Crop Diagnosis" parent="." unique_id=747101563 instance=ExtResource("21_xqgjf")]
+visible = false
+
+[node name="Close" parent="Crop Diagnosis/Close Button" parent_id_path=PackedInt32Array(747101563, 1544887295) index="1" unique_id=1666299879]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Labels/Apples Button" parent_id_path=PackedInt32Array(747101563, 1376604170) index="1" unique_id=1436611786]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Labels/Oranges Button" parent_id_path=PackedInt32Array(747101563, 859487871) index="1" unique_id=750242661]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Labels/Bananas Button" parent_id_path=PackedInt32Array(747101563, 353641933) index="1" unique_id=703380365]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Labels/Strawberries Button" parent_id_path=PackedInt32Array(747101563, 21124497) index="1" unique_id=52677357]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Labels/Blueberries Button" parent_id_path=PackedInt32Array(747101563, 2028253691) index="1" unique_id=683014055]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Labels/Potatos Button" parent_id_path=PackedInt32Array(747101563, 1331251749) index="1" unique_id=611707106]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Labels/Tomatos Button" parent_id_path=PackedInt32Array(747101563, 1075241026) index="1" unique_id=1903820681]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Labels/Carrots Button" parent_id_path=PackedInt32Array(747101563, 1720580608) index="1" unique_id=1359454434]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Labels/Cucumbers Button" parent_id_path=PackedInt32Array(747101563, 1016111656) index="1" unique_id=2066683386]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Labels/Corn Button" parent_id_path=PackedInt32Array(747101563, 98472251) index="1" unique_id=2074135624]
+bus = &"UI"
+
+[node name="Examine Button" parent="Crop Diagnosis" index="6" unique_id=599158268]
+anchors_preset = -1
+
+[node name="Interact" parent="Crop Diagnosis/Examine Button" index="1" unique_id=1113774914]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Cancel Button" parent_id_path=PackedInt32Array(747101563, 1399686862) index="1" unique_id=689616019]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Research Button" parent_id_path=PackedInt32Array(747101563, 1988328109) index="1" unique_id=80199034]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Library Button" parent_id_path=PackedInt32Array(747101563, 699371479) index="1" unique_id=1880048735]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Research Tab/Scientific" parent_id_path=PackedInt32Array(747101563, 1312899760) index="1" unique_id=627969900]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Research Tab/Genome" parent_id_path=PackedInt32Array(747101563, 1454125468) index="1" unique_id=1967206937]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Research Tab/Specialized" parent_id_path=PackedInt32Array(747101563, 1291029287) index="1" unique_id=2011137812]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Research Tab/Balanced" parent_id_path=PackedInt32Array(747101563, 522077281) index="1" unique_id=415725174]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Research Tab/Conclusion" parent_id_path=PackedInt32Array(747101563, 190923877) index="1" unique_id=487960162]
+bus = &"UI"
+
+[node name="Close" parent="Crop Diagnosis/Research Tab/Close Button" parent_id_path=PackedInt32Array(747101563, 158077671) index="1" unique_id=2109776702]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Library Tab/Apples Upgrade" parent_id_path=PackedInt32Array(747101563, 1504019584) index="1" unique_id=1725898008]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Library Tab/Oranges Upgrade" parent_id_path=PackedInt32Array(747101563, 2105095226) index="1" unique_id=1912884005]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Library Tab/Banana Upgrade" parent_id_path=PackedInt32Array(747101563, 1301144948) index="1" unique_id=905655570]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Library Tab/Strawberries Upgrade" parent_id_path=PackedInt32Array(747101563, 1995906059) index="1" unique_id=2028479765]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Library Tab/Blueberries Upgrade" parent_id_path=PackedInt32Array(747101563, 261944486) index="1" unique_id=774271735]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Library Tab/Potato Upgrade" parent_id_path=PackedInt32Array(747101563, 1629525946) index="1" unique_id=950692027]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Library Tab/Tomato Upgrade" parent_id_path=PackedInt32Array(747101563, 1121551509) index="1" unique_id=1720866339]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Library Tab/Carrot Upgrade" parent_id_path=PackedInt32Array(747101563, 991856008) index="1" unique_id=2118568697]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Library Tab/Cucumber Upgrade" parent_id_path=PackedInt32Array(747101563, 1572405610) index="1" unique_id=1971393871]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Library Tab/Corn Upgrade" parent_id_path=PackedInt32Array(747101563, 498979404) index="1" unique_id=64843666]
+bus = &"UI"
+
+[node name="Close" parent="Crop Diagnosis/Library Tab/Close Button" parent_id_path=PackedInt32Array(747101563, 1366929815) index="1" unique_id=2039091565]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Tutorial Tab/Tutorial Button" parent_id_path=PackedInt32Array(747101563, 480601118) index="1" unique_id=1296042635]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Tutorial Tab/Node2D/Left Movement" parent_id_path=PackedInt32Array(747101563, 1553229715) index="1" unique_id=226223534]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Tutorial Tab/Node2D/Right Movement" parent_id_path=PackedInt32Array(747101563, 1989128613) index="1" unique_id=873207480]
+bus = &"UI"
+
+[node name="Close" parent="Crop Diagnosis/Tutorial Tab/Node2D/Close Button Sequencing" parent_id_path=PackedInt32Array(747101563, 143294005) index="1" unique_id=1161571172]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Tutorial Tab/Node2D/Basic" parent_id_path=PackedInt32Array(747101563, 262442978) index="1" unique_id=1862017362]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Tutorial Tab/Node2D/Plants" parent_id_path=PackedInt32Array(747101563, 645171849) index="1" unique_id=956289533]
+bus = &"UI"
+
+[node name="Interact" parent="Crop Diagnosis/Tutorial Tab/Node2D/Environment" parent_id_path=PackedInt32Array(747101563, 210916003) index="1" unique_id=1985066105]
+bus = &"UI"
+
+[node name="Research Tree" parent="." unique_id=1441102284 instance=ExtResource("20_dnwjl")]
+
+[node name="Scientific Research" parent="Research Tree" index="3" unique_id=1567099746]
+position = Vector2(330, 14)
+
+[node name="User Interface" type="CanvasLayer" parent="." unique_id=1487761655]
+offset = Vector2(-0.1, 611.655)
+scale = Vector2(6.8, 6.8)
+transform = Transform2D(6.8, 0, 0, 6.8, -0.1, 611.655)
+
+[node name="Basic UI" type="Control" parent="User Interface" unique_id=1538527829]
+light_mask = 4
+layout_mode = 3
+anchors_preset = 0
+offset_left = 0.30882353
+offset_top = -130.2434
+offset_right = 40.308823
+offset_bottom = -90.24339
+
+[node name="Bottom Left" type="Node2D" parent="User Interface/Basic UI" unique_id=1876045855]
+position = Vector2(0.882353, 130.00002)
+
+[node name="Bar2" type="Sprite2D" parent="User Interface/Basic UI/Bottom Left" unique_id=1637325174]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(19.92, 30.09)
+texture = ExtResource("19_vnfwo")
+
+[node name="Scientific Points Title" type="Label" parent="User Interface/Basic UI/Bottom Left" unique_id=830260153]
+light_mask = 4
+visibility_layer = 4
+offset_left = 0.57498777
+offset_top = 14.0
+offset_right = 185.57498
+offset_bottom = 127.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(3.6098064e-07, 0.30345005, 0.37369975, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 40
+text = "Scientific:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Scientific Points" type="Label" parent="User Interface/Basic UI/Bottom Left" unique_id=561659554]
+light_mask = 4
+visibility_layer = 4
+offset_left = 25.574987
+offset_top = 17.0
+offset_right = 150.57497
+offset_bottom = 72.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0, 0.3019608, 0.37254903, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 6
+visible_ratio = 6.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Genome Points Title" type="Label" parent="User Interface/Basic UI/Bottom Left" unique_id=209417360]
+light_mask = 4
+visibility_layer = 4
+offset_left = 0.575003
+offset_top = 24.999996
+offset_right = 174.575
+offset_bottom = 138.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(3.6098064e-07, 0.30345005, 0.37369975, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 40
+text = "Genome:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Genome Points" type="Label" parent="User Interface/Basic UI/Bottom Left" unique_id=55869910]
+light_mask = 4
+visibility_layer = 4
+offset_left = 25.575003
+offset_top = 28.000004
+offset_right = 150.575
+offset_bottom = 83.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0, 0.3019608, 0.37254903, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 6
+visible_ratio = 6.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Specialized Points Title" type="Label" parent="User Interface/Basic UI/Bottom Left" unique_id=1492763871]
+light_mask = 4
+visibility_layer = 4
+offset_left = 0.575003
+offset_top = 35.999996
+offset_right = 225.575
+offset_bottom = 149.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(3.6098064e-07, 0.30345005, 0.37369975, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 40
+text = "Specialized:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Specialized Points" type="Label" parent="User Interface/Basic UI/Bottom Left" unique_id=1561381693]
+light_mask = 4
+visibility_layer = 4
+offset_left = 25.575003
+offset_top = 39.000004
+offset_right = 150.575
+offset_bottom = 94.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0, 0.3019608, 0.37254903, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 6
+visible_ratio = 6.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Crops Title" type="Label" parent="User Interface/Basic UI/Bottom Left" unique_id=1795516194]
+light_mask = 4
+visibility_layer = 4
+offset_left = 0.57498777
+offset_top = 46.999996
+offset_right = 122.57499
+offset_bottom = 160.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(3.6098064e-07, 0.30345005, 0.37369975, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 40
+text = "Crops:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Crops" type="Label" parent="User Interface/Basic UI/Bottom Left" unique_id=120242103]
+light_mask = 4
+visibility_layer = 4
+offset_left = 25.574987
+offset_top = 49.999996
+offset_right = 150.57497
+offset_bottom = 105.0
+scale = Vector2(0.1, 0.1)
+theme_override_colors/font_color = Color(0, 0.3019608, 0.37254903, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 5
+visible_ratio = 5.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Bottom Right" type="Node2D" parent="User Interface/Basic UI" unique_id=422592805]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(291.49734, 190.09502)
+scale = Vector2(1.1, 1.1)
+
+[node name="2DSprite" type="Sprite2D" parent="User Interface/Basic UI/Bottom Right" unique_id=869275017]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-19.48, -15)
+texture = ExtResource("18_xv1cu")
+
+[node name="CS Title" type="Label" parent="User Interface/Basic UI/Bottom Right" unique_id=1888388016]
+light_mask = 4
+visibility_layer = 4
+offset_left = -39.090897
+offset_top = -14.545453
+offset_right = 177.9091
+offset_bottom = 98.454544
+scale = Vector2(0.11, 0.11)
+theme_override_colors/font_color = Color(3.6098064e-07, 0.30345005, 0.37369975, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 40
+text = "Completed
+Sequences:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Completed Sequences" type="Label" parent="User Interface/Basic UI/Bottom Right" unique_id=1070682690]
+light_mask = 4
+visibility_layer = 4
+offset_left = -12.727251
+offset_top = -12.72727
+offset_right = 55.27275
+offset_bottom = 42.272728
+scale = Vector2(0.15, 0.15)
+theme_override_colors/font_color = Color(0, 0.3019608, 0.37254903, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 6
+visible_ratio = 6.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Tutorial Tab" type="Node2D" parent="User Interface/Basic UI" unique_id=1330741764]
+position = Vector2(150, 120)
+
+[node name="Tutorial Button" type="TextureButton" parent="User Interface/Basic UI/Tutorial Tab" unique_id=1932669085]
+offset_left = -7.5
+offset_top = 57.0
+offset_right = 5.5
+offset_bottom = 70.0
+texture_normal = ExtResource("24_wo7h2")
+texture_pressed = ExtResource("25_ymurb")
+texture_hover = ExtResource("26_5bd6d")
+script = ExtResource("27_ymurb")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="User Interface/Basic UI/Tutorial Tab/Tutorial Button" unique_id=1186673074]
+z_index = 2
+stream = ExtResource("7_nap0r")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="User Interface/Basic UI/Tutorial Tab/Tutorial Button" unique_id=1443048495]
+stream = ExtResource("41_f0ghh")
+bus = &"UI"
+
+[node name="Upgrade Notifier" type="Sprite2D" parent="User Interface/Basic UI/Tutorial Tab/Tutorial Button" unique_id=1336328069]
+light_mask = 17
+position = Vector2(13, 1)
+rotation = 3.1415927
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("42_7da25")
+
+[node name="Node2D" type="Node2D" parent="User Interface/Basic UI/Tutorial Tab" unique_id=238437356]
+visible = false
+light_mask = 0
+z_index = 20
+position = Vector2(-38.529423, -71.0294)
+
+[node name="Left Movement" type="TextureButton" parent="User Interface/Basic UI/Tutorial Tab/Node2D" unique_id=711992990]
+light_mask = 0
+z_index = 20
+offset_top = 38.0
+offset_right = 12.999991
+offset_bottom = 51.0
+texture_normal = ExtResource("29_dnwjl")
+texture_pressed = ExtResource("30_m2xnl")
+texture_hover = ExtResource("31_0gpbn")
+flip_h = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="User Interface/Basic UI/Tutorial Tab/Node2D/Left Movement" unique_id=132702437]
+light_mask = 0
+z_index = 20
+stream = ExtResource("7_nap0r")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="User Interface/Basic UI/Tutorial Tab/Node2D/Left Movement" unique_id=50250323]
+light_mask = 0
+z_index = 20
+stream = ExtResource("41_f0ghh")
+bus = &"UI"
+
+[node name="Right Movement" type="TextureButton" parent="User Interface/Basic UI/Tutorial Tab/Node2D" unique_id=430806393]
+light_mask = 0
+z_index = 20
+offset_left = 61.76471
+offset_top = 38.0
+offset_right = 74.76471
+offset_bottom = 51.000008
+texture_normal = ExtResource("29_dnwjl")
+texture_pressed = ExtResource("30_m2xnl")
+texture_hover = ExtResource("31_0gpbn")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="User Interface/Basic UI/Tutorial Tab/Node2D/Right Movement" unique_id=1833802332]
+light_mask = 0
+z_index = 20
+stream = ExtResource("7_nap0r")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="User Interface/Basic UI/Tutorial Tab/Node2D/Right Movement" unique_id=1269354525]
+light_mask = 0
+z_index = 20
+stream = ExtResource("41_f0ghh")
+bus = &"UI"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="User Interface/Basic UI/Tutorial Tab/Node2D" unique_id=1601418838]
+light_mask = 0
+visibility_layer = 4
+z_index = 20
+offset_right = 845.36
+offset_bottom = 400.0
+scale = Vector2(0.089, 0.089)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Node Name" type="Label" parent="User Interface/Basic UI/Tutorial Tab/Node2D/ScrollContainer" unique_id=1820883377]
+light_mask = 0
+visibility_layer = 4
+z_index = 20
+custom_minimum_size = Vector2(829.36, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+autowrap_mode = 3
+
+[node name="PointLight2D" type="PointLight2D" parent="User Interface/Basic UI/Tutorial Tab/Node2D" unique_id=1996084674]
+position = Vector2(34.411774, 67.20589)
+scale = Vector2(4.6449995, 2.4999998)
+blend_mode = 2
+range_layer_max = 1
+range_item_cull_mask = 5
+texture = SubResource("GradientTexture2D_xv1cu")
+
+[node name="Close Button Sequencing" type="Button" parent="User Interface/Basic UI/Tutorial Tab/Node2D" unique_id=1007384542]
+light_mask = 0
+visibility_layer = 2
+z_index = 20
+offset_left = 78.23529
+offset_top = -0.73529816
+offset_right = 91.23529
+offset_bottom = 12.264702
+theme_override_styles/normal = SubResource("StyleBoxTexture_vnfwo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_o1jnq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0o40r")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ddh43")
+theme_override_styles/focus = SubResource("StyleBoxTexture_2es5e")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="User Interface/Basic UI/Tutorial Tab/Node2D/Close Button Sequencing" unique_id=2029381767]
+z_index = 2
+stream = ExtResource("7_nap0r")
+bus = &"UI"
+
+[node name="Close" type="AudioStreamPlayer2D" parent="User Interface/Basic UI/Tutorial Tab/Node2D/Close Button Sequencing" unique_id=2010653853]
+stream = ExtResource("48_6gg0t")
+bus = &"UI"
+
+[node name="Background" type="Sprite2D" parent="User Interface/Basic UI/Tutorial Tab/Node2D" unique_id=453765916]
+z_index = 10
+position = Vector2(37.5, 24.5)
+scale = Vector2(0.7774999, 0.51)
+texture = ExtResource("55_f3tan")
+
+[node name="Line2D" type="Line2D" parent="User Interface/Basic UI/Tutorial Tab/Node2D/Background" unique_id=1876733369]
+z_index = 10
+position = Vector2(0, 3.42)
+points = PackedVector2Array(49.5, -52.9, 49.5, 46.1, -49.5, 46.1, -49.5, -52.9)
+closed = true
+width = 1.0
+default_color = Color(0.1764706, 0.1764706, 0.1764706, 1)
+
+[node name="Research Tree UI" type="Control" parent="User Interface" unique_id=1223644056]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -39.985294
+offset_top = -88.47868
+offset_right = 0.014705658
+offset_bottom = -48.478683
+
+[node name="Bar" type="Sprite2D" parent="User Interface/Research Tree UI" unique_id=83024231]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+position = Vector2(185.55884, 9.533827)
+scale = Vector2(4.55, 0.36)
+texture = SubResource("GradientTexture2D_vnfwo")
+
+[node name="Scientific Points Title" type="Label" parent="User Interface/Research Tree UI" unique_id=1622453388]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+layout_mode = 0
+offset_left = 271.5588
+offset_top = 136.05882
+offset_right = 548.55884
+offset_bottom = 249.05882
+scale = Vector2(0.12, 0.12)
+theme_override_colors/font_color = Color(3.080368e-06, 0.60609865, 0.73682934, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 60
+text = "Scientific:"
+vertical_alignment = 1
+
+[node name="Scientific Points" type="Label" parent="User Interface/Research Tree UI" unique_id=1752695721]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+layout_mode = 0
+offset_left = 313.55884
+offset_top = 136.05882
+offset_right = 430.22546
+offset_bottom = 249.05882
+scale = Vector2(0.12, 0.12)
+theme_override_colors/font_color = Color(3.080368e-06, 0.60609865, 0.73682934, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Genome Points Title" type="Label" parent="User Interface/Research Tree UI" unique_id=1411726556]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+layout_mode = 0
+offset_left = 271.5588
+offset_top = 122.05883
+offset_right = 548.55884
+offset_bottom = 235.05884
+scale = Vector2(0.12, 0.12)
+theme_override_colors/font_color = Color(3.080368e-06, 0.60609865, 0.73682934, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 60
+text = "Genome:"
+vertical_alignment = 1
+
+[node name="Genome Points" type="Label" parent="User Interface/Research Tree UI" unique_id=895430771]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+layout_mode = 0
+offset_left = 313.55884
+offset_top = 122.05883
+offset_right = 430.22546
+offset_bottom = 235.05884
+scale = Vector2(0.12, 0.12)
+theme_override_colors/font_color = Color(3.080368e-06, 0.60609865, 0.73682934, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Specialized Points Title" type="Label" parent="User Interface/Research Tree UI" unique_id=1975512199]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+layout_mode = 0
+offset_left = 271.5588
+offset_top = 108.05883
+offset_right = 608.55884
+offset_bottom = 221.05884
+scale = Vector2(0.12, 0.12)
+theme_override_colors/font_color = Color(3.080368e-06, 0.60609865, 0.73682934, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 60
+text = "Specialized:"
+vertical_alignment = 1
+
+[node name="Specialized Points" type="Label" parent="User Interface/Research Tree UI" unique_id=483693481]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+layout_mode = 0
+offset_left = 313.5588
+offset_top = 108.05882
+offset_right = 430.22543
+offset_bottom = 221.0588
+scale = Vector2(0.12, 0.12)
+theme_override_colors/font_color = Color(3.080368e-06, 0.60609865, 0.73682934, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close Button Sequencing" type="Button" parent="User Interface/Research Tree UI" unique_id=827486483]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 270.55884
+offset_top = -36.941166
+offset_right = 283.55884
+offset_bottom = -23.941164
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_dnwjl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m2xnl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0gpbn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_o1jnq")
+theme_override_styles/focus = SubResource("StyleBoxTexture_nap0r")
+
+[node name="Research Tree Close Sound" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Close Button Sequencing" unique_id=1159773058]
+stream = ExtResource("19_af610")
+bus = &"UI"
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Close Button Sequencing" unique_id=1619081049]
+stream = ExtResource("49_6gg0t")
+bus = &"UI"
+
+[node name="Tutorial Button" type="TextureButton" parent="User Interface/Research Tree UI" unique_id=1361785802]
+z_index = 20
+layout_mode = 0
+offset_left = 293.97058
+offset_top = 2.9411774
+offset_right = 306.97058
+offset_bottom = 15.941177
+texture_normal = ExtResource("24_wo7h2")
+texture_pressed = ExtResource("25_ymurb")
+texture_hover = ExtResource("26_5bd6d")
+script = ExtResource("37_dnwjl")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Tutorial Button" unique_id=1505024031]
+stream = ExtResource("49_6gg0t")
+bus = &"UI"
+
+[node name="Click" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Tutorial Button" unique_id=486607998]
+stream = ExtResource("19_af610")
+bus = &"UI"
+
+[node name="Upgrade Notifier" type="Sprite2D" parent="User Interface/Research Tree UI/Tutorial Button" unique_id=499806030]
+light_mask = 17
+position = Vector2(13, 1)
+rotation = 3.1415927
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("42_7da25")
+
+[node name="Stats Area2D" type="Area2D" parent="User Interface/Research Tree UI" unique_id=98799455]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+position = Vector2(92.55882, 7.0588202)
+scale = Vector2(0.79999995, 0.79999995)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Research Tree UI/Stats Area2D" unique_id=1046129446]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+polygon = PackedVector2Array(-31.250008, -10, -31.250008, -6.25, -32.500008, -6.25, -32.500008, -2.5, -33.750008, -2.5, -33.750008, 1.25, -35.000008, 1.25, -35.000008, 5, -36.250008, 5, -36.250008, 8.75, -37.500008, 8.75, -37.500008, 12.5, -38.750008, 12.5, -38.750008, 16.25, 15, 16.25, 15, 12.5, 16.25, 12.5, 16.25, 8.75, 17.5, 8.75, 17.5, 5, 18.75, 5, 18.75, 1.25, 20, 1.25, 20, -2.5, 21.25, -2.5, 21.25, -6.25, 22.5, -6.25, 22.5, -10)
+
+[node name="Click" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Stats Area2D" unique_id=1181042492]
+position = Vector2(-65.71692, 101.77483)
+scale = Vector2(1.2500001, 1.2500001)
+stream = ExtResource("19_af610")
+bus = &"UI"
+
+[node name="Scientific Area2D" type="Area2D" parent="User Interface/Research Tree UI" unique_id=341879216]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+position = Vector2(-5.4411745, -57.94118)
+scale = Vector2(0.79999995, 0.79999995)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Research Tree UI/Scientific Area2D" unique_id=1410226249]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+position = Vector2(177.50002, 81.25001)
+polygon = PackedVector2Array(-31.250008, -10, -31.250008, -6.25, -32.500008, -6.25, -32.500008, -2.5, -33.750008, -2.5, -33.750008, 1.25, -35.000008, 1.25, -35.000008, 5, -36.250008, 5, -36.250008, 8.75, -37.500008, 8.75, -37.500008, 12.5, -38.750008, 12.5, -38.750008, 16.25, 15, 16.25, 15, 12.5, 16.25, 12.5, 16.25, 8.75, 17.5, 8.75, 17.5, 5, 18.75, 5, 18.75, 1.25, 20, 1.25, 20, -2.5, 21.25, -2.5, 21.25, -6.25, 22.5, -6.25, 22.5, -10)
+
+[node name="Click" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Scientific Area2D" unique_id=1498868759]
+position = Vector2(-65.71692, 101.77483)
+scale = Vector2(1.2500001, 1.2500001)
+stream = ExtResource("19_af610")
+bus = &"UI"
+
+[node name="Genome Area2D" type="Area2D" parent="User Interface/Research Tree UI" unique_id=1439224473]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+position = Vector2(180.55882, 7.0588202)
+scale = Vector2(0.79999995, 0.79999995)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Research Tree UI/Genome Area2D" unique_id=1029672857]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+polygon = PackedVector2Array(-31.250008, -10, -31.250008, -6.25, -32.500008, -6.25, -32.500008, -2.5, -33.750008, -2.5, -33.750008, 1.25, -35.000008, 1.25, -35.000008, 5, -36.250008, 5, -36.250008, 8.75, -37.500008, 8.75, -37.500008, 12.5, -38.750008, 12.5, -38.750008, 16.25, 15, 16.25, 15, 12.5, 16.25, 12.5, 16.25, 8.75, 17.5, 8.75, 17.5, 5, 18.75, 5, 18.75, 1.25, 20, 1.25, 20, -2.5, 21.25, -2.5, 21.25, -6.25, 22.5, -6.25, 22.5, -10)
+
+[node name="Click" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Genome Area2D" unique_id=1323403602]
+position = Vector2(-65.71692, 101.77483)
+scale = Vector2(1.2500001, 1.2500001)
+stream = ExtResource("19_af610")
+bus = &"UI"
+
+[node name="Specialized Area2D" type="Area2D" parent="User Interface/Research Tree UI" unique_id=1096071969]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+position = Vector2(82.55882, -57.94118)
+scale = Vector2(0.79999995, 0.79999995)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="User Interface/Research Tree UI/Specialized Area2D" unique_id=277208703]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+position = Vector2(177.50002, 81.25001)
+polygon = PackedVector2Array(-31.250008, -10, -31.250008, -6.25, -32.500008, -6.25, -32.500008, -2.5, -33.750008, -2.5, -33.750008, 1.25, -35.000008, 1.25, -35.000008, 5, -36.250008, 5, -36.250008, 8.75, -37.500008, 8.75, -37.500008, 12.5, -38.750008, 12.5, -38.750008, 16.25, 15, 16.25, 15, 12.5, 16.25, 12.5, 16.25, 8.75, 17.5, 8.75, 17.5, 5, 18.75, 5, 18.75, 1.25, 20, 1.25, 20, -2.5, 21.25, -2.5, 21.25, -6.25, 22.5, -6.25, 22.5, -10)
+
+[node name="Click" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Specialized Area2D" unique_id=1977089350]
+position = Vector2(-65.71692, 101.77483)
+scale = Vector2(1.2500001, 1.2500001)
+stream = ExtResource("19_af610")
+bus = &"UI"
+
+[node name="Stats Tab" type="Sprite2D" parent="User Interface/Research Tree UI" unique_id=118213086]
+light_mask = 4
+visibility_layer = 4
+z_index = 21
+z_as_relative = false
+position = Vector2(87.55884, 9.058836)
+texture = ExtResource("28_wo7h2")
+
+[node name="Label" type="Label" parent="User Interface/Research Tree UI/Stats Tab" unique_id=1696501675]
+light_mask = 4
+visibility_layer = 4
+z_index = 21
+z_as_relative = false
+offset_left = -10.0
+offset_top = -5.0
+offset_right = 67.0
+offset_bottom = 40.0
+scale = Vector2(0.22, 0.22)
+theme_override_colors/font_color = Color(0, 0.7137255, 0.74509805, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Stats"
+metadata/_edit_use_anchors_ = true
+
+[node name="Scientific Research Tab" type="Sprite2D" parent="User Interface/Research Tree UI" unique_id=1433049601]
+light_mask = 4
+visibility_layer = 4
+z_index = 21
+z_as_relative = false
+position = Vector2(131.55884, 9.058836)
+texture = ExtResource("29_ymurb")
+
+[node name="Label" type="Label" parent="User Interface/Research Tree UI/Scientific Research Tab" unique_id=1147784616]
+light_mask = 4
+visibility_layer = 4
+z_index = 21
+z_as_relative = false
+offset_left = -16.25
+offset_top = -4.9999924
+offset_right = 122.75
+offset_bottom = 40.000008
+scale = Vector2(0.22, 0.22)
+theme_override_colors/font_color = Color(0, 0.7137255, 0.74509805, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Scientific"
+metadata/_edit_use_anchors_ = true
+
+[node name="Genome Research Tab" type="Sprite2D" parent="User Interface/Research Tree UI" unique_id=679747995]
+light_mask = 4
+visibility_layer = 4
+z_index = 21
+z_as_relative = false
+position = Vector2(175.55884, 9.058836)
+texture = ExtResource("30_5bd6d")
+
+[node name="Label" type="Label" parent="User Interface/Research Tree UI/Genome Research Tab" unique_id=641854548]
+light_mask = 4
+visibility_layer = 4
+z_index = 21
+z_as_relative = false
+offset_left = -16.250004
+offset_top = -4.9999905
+offset_right = 122.75
+offset_bottom = 40.000008
+scale = Vector2(0.22, 0.22)
+theme_override_colors/font_color = Color(0, 0.7137255, 0.74509805, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Genome"
+metadata/_edit_use_anchors_ = true
+
+[node name="Specialized Research Tab" type="Sprite2D" parent="User Interface/Research Tree UI" unique_id=947835350]
+light_mask = 4
+visibility_layer = 4
+z_index = 21
+z_as_relative = false
+position = Vector2(219.55884, 9.058836)
+texture = ExtResource("31_xv1cu")
+
+[node name="Label" type="Label" parent="User Interface/Research Tree UI/Specialized Research Tab" unique_id=847885562]
+light_mask = 4
+visibility_layer = 4
+z_index = 21
+z_as_relative = false
+offset_left = -20.0
+offset_top = -4.9999905
+offset_right = 151.0
+offset_bottom = 40.000008
+scale = Vector2(0.22, 0.22)
+theme_override_colors/font_color = Color(0, 0.7137255, 0.74509805, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Specialized"
+metadata/_edit_use_anchors_ = true
+
+[node name="Tutorial Tab" type="Node2D" parent="User Interface/Research Tree UI" unique_id=191119047]
+position = Vector2(332.7941, 223.38235)
+
+[node name="Node2D" type="Node2D" parent="User Interface/Research Tree UI/Tutorial Tab" unique_id=176491506]
+visible = false
+position = Vector2(-186, -171)
+
+[node name="Level 2" type="Sprite2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D" unique_id=1951490777]
+visible = false
+light_mask = 16
+z_index = 21
+position = Vector2(170.70589, -42.97059)
+texture = ExtResource("26_t513d")
+
+[node name="Level 3" type="Node2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D" unique_id=205194064]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 3" unique_id=1612488209]
+light_mask = 16
+z_index = 21
+position = Vector2(-59.2941, -43.264698)
+texture = ExtResource("56_uuh74")
+
+[node name="Label" type="Label" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 3" unique_id=751549883]
+light_mask = 16
+visibility_layer = 4
+z_index = 22
+offset_left = -69.147
+offset_top = -48.417
+offset_right = 7.852997
+offset_bottom = -3.4169998
+scale = Vector2(0.22, 0.22)
+theme_override_colors/font_color = Color(0, 0.7137255, 0.74509805, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Stats"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 3" unique_id=1913937526]
+light_mask = 16
+z_index = 21
+position = Vector2(-15.32352, -43.26471)
+texture = ExtResource("29_ymurb")
+
+[node name="Label2" type="Label" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 3" unique_id=1916560387]
+light_mask = 16
+visibility_layer = 4
+z_index = 22
+offset_left = -31.499989
+offset_top = -48.41176
+offset_right = 107.500015
+offset_bottom = -3.4117584
+scale = Vector2(0.22, 0.22)
+theme_override_colors/font_color = Color(0, 0.7137255, 0.74509805, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Scientific"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 3" unique_id=753485588]
+light_mask = 16
+z_index = 21
+position = Vector2(28.794127, -43.264698)
+texture = ExtResource("30_5bd6d")
+
+[node name="Label3" type="Label" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 3" unique_id=1652396791]
+light_mask = 16
+visibility_layer = 4
+z_index = 22
+offset_left = 12.911772
+offset_top = -48.11764
+offset_right = 142.91177
+offset_bottom = -3.1176414
+scale = Vector2(0.22, 0.22)
+theme_override_colors/font_color = Color(0, 0.7137255, 0.74509805, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Genome"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 3" unique_id=349425689]
+light_mask = 16
+z_index = 21
+position = Vector2(72.76471, -43.26471)
+texture = ExtResource("31_xv1cu")
+
+[node name="Label4" type="Label" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 3" unique_id=1061697573]
+light_mask = 16
+visibility_layer = 4
+z_index = 22
+offset_left = 52.764725
+offset_top = -48.41176
+offset_right = 223.76472
+offset_bottom = -3.4117584
+scale = Vector2(0.22, 0.22)
+theme_override_colors/font_color = Color(0, 0.7137255, 0.74509805, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Specialized"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level 4" type="Node2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D" unique_id=1253655391]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 4" unique_id=509798998]
+light_mask = 16
+z_index = 21
+position = Vector2(-59.2941, -43.264698)
+texture = ExtResource("28_wo7h2")
+
+[node name="Label" type="Label" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 4" unique_id=1829205251]
+light_mask = 16
+visibility_layer = 4
+z_index = 22
+offset_left = -69.147
+offset_top = -48.417
+offset_right = 7.852997
+offset_bottom = -3.4169998
+scale = Vector2(0.22, 0.22)
+theme_override_colors/font_color = Color(0, 0.7137255, 0.74509805, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Stats"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level 5" type="Node2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D" unique_id=1221300726]
+visible = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 5" unique_id=99945825]
+light_mask = 16
+z_index = 21
+position = Vector2(-15.32352, -43.26471)
+texture = ExtResource("57_0muxt")
+
+[node name="Label2" type="Label" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 5" unique_id=1063575203]
+light_mask = 16
+visibility_layer = 4
+z_index = 22
+offset_left = -31.499989
+offset_top = -48.41176
+offset_right = 107.500015
+offset_bottom = -3.4117584
+scale = Vector2(0.22, 0.22)
+theme_override_colors/font_color = Color(0, 0.7137255, 0.74509805, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Scientific"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 5" unique_id=1155730777]
+light_mask = 16
+z_index = 21
+position = Vector2(28.794127, -43.264698)
+texture = ExtResource("30_5bd6d")
+
+[node name="Label3" type="Label" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 5" unique_id=1744675816]
+light_mask = 16
+visibility_layer = 4
+z_index = 22
+offset_left = 12.911772
+offset_top = -48.11764
+offset_right = 142.91177
+offset_bottom = -3.1176414
+scale = Vector2(0.22, 0.22)
+theme_override_colors/font_color = Color(0, 0.7137255, 0.74509805, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Genome"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 5" unique_id=916285392]
+light_mask = 16
+z_index = 21
+position = Vector2(72.76471, -43.26471)
+texture = ExtResource("31_xv1cu")
+
+[node name="Label4" type="Label" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Level 5" unique_id=191398843]
+light_mask = 16
+visibility_layer = 4
+z_index = 22
+offset_left = 52.764725
+offset_top = -48.41176
+offset_right = 223.76472
+offset_bottom = -3.4117584
+scale = Vector2(0.22, 0.22)
+theme_override_colors/font_color = Color(0, 0.7137255, 0.74509805, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "Specialized"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level 8" type="Sprite2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D" unique_id=1934158794]
+visible = false
+light_mask = 16
+z_index = 21
+position = Vector2(-72.08822, 32.323524)
+scale = Vector2(0.114, 0.114)
+texture = ExtResource("58_0muxt")
+
+[node name="Control" type="Control" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D" unique_id=186906624]
+z_index = 7
+layout_mode = 3
+anchors_preset = 0
+offset_left = -131.7941
+offset_top = -71.05882
+offset_right = 227.17651
+offset_bottom = 111.000015
+
+[node name="Left Movement" type="TextureButton" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D" unique_id=913233814]
+light_mask = 24
+visibility_layer = 4
+z_index = 20
+offset_top = 38.0
+offset_right = 12.999991
+offset_bottom = 51.0
+texture_normal = ExtResource("29_dnwjl")
+texture_pressed = ExtResource("30_m2xnl")
+texture_hover = ExtResource("31_0gpbn")
+flip_h = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Left Movement" unique_id=1519430230]
+light_mask = 24
+visibility_layer = 4
+z_index = 7
+stream = ExtResource("49_6gg0t")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Left Movement" unique_id=303355354]
+light_mask = 24
+visibility_layer = 4
+z_index = 7
+stream = ExtResource("19_af610")
+bus = &"UI"
+
+[node name="Right Movement" type="TextureButton" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D" unique_id=1790539764]
+light_mask = 0
+visibility_layer = 4
+z_index = 20
+offset_left = 61.76471
+offset_top = 38.0
+offset_right = 74.76471
+offset_bottom = 51.000008
+texture_normal = ExtResource("29_dnwjl")
+texture_pressed = ExtResource("30_m2xnl")
+texture_hover = ExtResource("31_0gpbn")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Right Movement" unique_id=1712801087]
+light_mask = 24
+visibility_layer = 4
+z_index = 7
+stream = ExtResource("49_6gg0t")
+bus = &"UI"
+
+[node name="Interact" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Right Movement" unique_id=1213194822]
+light_mask = 24
+visibility_layer = 4
+z_index = 7
+stream = ExtResource("19_af610")
+bus = &"UI"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D" unique_id=1229109356]
+light_mask = 24
+visibility_layer = 4
+z_index = 20
+offset_right = 845.36
+offset_bottom = 400.0
+scale = Vector2(0.089, 0.089)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Node Name" type="Label" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/ScrollContainer" unique_id=1795780308]
+light_mask = 24
+visibility_layer = 4
+z_index = 20
+custom_minimum_size = Vector2(829.36, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+autowrap_mode = 3
+
+[node name="PointLight2D" type="PointLight2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D" unique_id=1386815623]
+z_index = 7
+position = Vector2(40.85295, 24.088236)
+scale = Vector2(4.6449995, 2.4999998)
+blend_mode = 2
+range_layer_max = 1
+range_item_cull_mask = 7
+texture = SubResource("GradientTexture2D_0gpbn")
+
+[node name="Close Button Sequencing" type="Button" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D" unique_id=1682851934]
+light_mask = 24
+visibility_layer = 4
+z_index = 20
+offset_left = 78.23529
+offset_top = -0.73529816
+offset_right = 91.23529
+offset_bottom = 12.264702
+theme_override_styles/normal = SubResource("StyleBoxTexture_ddh43")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wwlpd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_d5xri")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ea7bg")
+theme_override_styles/focus = SubResource("StyleBoxTexture_83cst")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Close Button Sequencing" unique_id=986199323]
+z_index = 7
+stream = ExtResource("49_6gg0t")
+bus = &"UI"
+
+[node name="Close" type="AudioStreamPlayer2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Close Button Sequencing" unique_id=2040816055]
+z_index = 7
+stream = ExtResource("19_af610")
+bus = &"UI"
+
+[node name="Background" type="Sprite2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D" unique_id=682371552]
+z_index = 10
+position = Vector2(37.5, 24.5)
+scale = Vector2(0.7774999, 0.51)
+texture = ExtResource("55_f3tan")
+
+[node name="Line2D" type="Line2D" parent="User Interface/Research Tree UI/Tutorial Tab/Node2D/Background" unique_id=801062173]
+z_index = 10
+position = Vector2(0, 3.42)
+points = PackedVector2Array(49.5, -52.9, 49.5, 46.1, -49.5, 46.1, -49.5, -52.9)
+closed = true
+width = 1.0
+default_color = Color(0.1764706, 0.1764706, 0.1764706, 1)
+
+[node name="Research Node UI" type="Control" parent="User Interface" unique_id=809044786]
+layout_mode = 3
+anchor_left = 0.017
+anchor_top = -0.015000001
+anchor_right = 0.017
+anchor_bottom = -0.015000001
+offset_left = -33.660004
+offset_top = -51.413975
+offset_right = 33.707657
+offset_bottom = 75.35074
+
+[node name="Bar2" type="Sprite2D" parent="User Interface/Research Node UI" unique_id=1807929170]
+modulate = Color(3.6098065e-08, 0.15180048, 0.16841981, 1)
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+position = Vector2(34.894, 64.432)
+scale = Vector2(0.775, 2.146)
+texture = ExtResource("25_m5t5c")
+
+[node name="Info" type="Label" parent="User Interface/Research Node UI" unique_id=460719862]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+layout_mode = 0
+offset_left = 3.3970587
+offset_top = 6.3235292
+offset_right = 318.397
+offset_bottom = 51.32353
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(2.9841065e-06, 0.6569916, 0.6493858, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Research Info:"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="User Interface/Research Node UI/Info" unique_id=1189649972]
+z_index = -1
+layout_mode = 0
+offset_left = -15.0
+offset_top = -30.147055
+offset_right = 263.929
+offset_bottom = 49.999992
+theme_override_styles/disabled = SubResource("StyleBoxTexture_f3tan")
+disabled = true
+
+[node name="Button2" type="Button" parent="User Interface/Research Node UI/Info" unique_id=1779657448]
+z_index = -1
+layout_mode = 0
+offset_left = -15.0
+offset_top = 47.79414
+offset_right = 263.929
+offset_bottom = 136.02942
+theme_override_styles/disabled = SubResource("StyleBoxTexture_f3tan")
+disabled = true
+
+[node name="Button3" type="Button" parent="User Interface/Research Node UI/Info" unique_id=59194680]
+z_index = -1
+layout_mode = 0
+offset_left = -15.0
+offset_top = 135.29411
+offset_right = 263.929
+offset_bottom = 460.29413
+theme_override_styles/disabled = SubResource("StyleBoxTexture_f3tan")
+disabled = true
+
+[node name="Button4" type="Button" parent="User Interface/Research Node UI/Info" unique_id=925541130]
+z_index = -1
+layout_mode = 0
+offset_left = -15.0
+offset_top = 458.8235
+offset_right = 263.929
+offset_bottom = 605.147
+theme_override_styles/disabled = SubResource("StyleBoxTexture_f3tan")
+disabled = true
+
+[node name="Node Name" type="ScrollContainer" parent="User Interface/Research Node UI" unique_id=1051184008]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+layout_mode = 0
+offset_left = 3.344723
+offset_top = 17.367493
+offset_right = 426.02472
+offset_bottom = 119.3475
+scale = Vector2(0.15, 0.15)
+horizontal_scroll_mode = 0
+
+[node name="Node Name" type="Label" parent="User Interface/Research Node UI/Node Name" unique_id=887814130]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+z_as_relative = false
+custom_minimum_size = Vector2(414.68, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(2.9841065e-06, 0.6569916, 0.6493858, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Select a node to learn more about it."
+autowrap_mode = 3
+
+[node name="Node Effect" type="ScrollContainer" parent="User Interface/Research Node UI" unique_id=919331252]
+editor_description = "Description of Research Addition"
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+z_as_relative = false
+layout_mode = 0
+offset_left = 3.3447077
+offset_top = 35.3675
+offset_right = 426.0247
+offset_bottom = 635.07336
+scale = Vector2(0.1, 0.1)
+horizontal_scroll_mode = 0
+
+[node name="Node Name" type="Label" parent="User Interface/Research Node UI/Node Effect" unique_id=1480424215]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+z_as_relative = false
+custom_minimum_size = Vector2(414.68, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(2.9841065e-06, 0.6569916, 0.6493858, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Select a node to learn more about it."
+autowrap_mode = 3
+
+[node name="Node Cost" type="ScrollContainer" parent="User Interface/Research Node UI" unique_id=1578377924]
+editor_description = "Description of Research Cost
+"
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+z_as_relative = false
+layout_mode = 0
+offset_left = 3.3447077
+offset_top = 98.720436
+offset_right = 426.0247
+offset_bottom = 305.191
+scale = Vector2(0.1, 0.1)
+horizontal_scroll_mode = 0
+
+[node name="Node Name" type="Label" parent="User Interface/Research Node UI/Node Cost" unique_id=504833577]
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+z_as_relative = false
+custom_minimum_size = Vector2(414.68, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(2.9841065e-06, 0.6569916, 0.6493858, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Select a node to learn more about it."
+autowrap_mode = 3
+
+[node name="PointLight2D" type="PointLight2D" parent="User Interface/Research Node UI" unique_id=121562928]
+visible = false
+light_mask = 4
+z_as_relative = false
+position = Vector2(145.615, -14.905)
+scale = Vector2(4.55, 2.344)
+range_item_cull_mask = 4
+texture = SubResource("GradientTexture2D_nm8l8")
+
+[node name="Node Warning" type="ScrollContainer" parent="User Interface/Research Node UI" unique_id=810763887]
+editor_description = "Description of Research Cost
+"
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+z_as_relative = false
+layout_mode = 0
+offset_left = 44.426468
+offset_top = 113.52942
+offset_right = 1244.4265
+offset_bottom = 216.03088
+scale = Vector2(0.1, 0.1)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="Node Name" type="Label" parent="User Interface/Research Node UI/Node Warning" unique_id=1365789812]
+modulate = Color(0.81960785, 0.19607843, 0.23921569, 1)
+light_mask = 4
+visibility_layer = 4
+z_index = 20
+z_as_relative = false
+custom_minimum_size = Vector2(1200, 0)
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "You have not completed all prerequisites, read the descripton of the Node to learn more."
+autowrap_mode = 3
+script = ExtResource("25_t513d")
+
+[node name="Menu UI" type="Control" parent="User Interface" unique_id=789486062]
+visible = false
+z_index = 50
+layout_mode = 3
+anchors_preset = 0
+offset_top = -90.0
+offset_right = 40.0
+offset_bottom = -50.0
+
+[node name="Node2D" type="Node2D" parent="User Interface/Menu UI" unique_id=515921228]
+
+[node name="Menu" type="Control" parent="User Interface/Menu UI/Node2D" unique_id=947776681]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 0.0147058815
+offset_top = 0.050727844
+offset_right = 301.92648
+offset_bottom = 164.31546
+script = ExtResource("40_o1jnq")
+
+[node name="Continue Button" type="Button" parent="User Interface/Menu UI/Node2D/Menu" unique_id=1040594688]
+light_mask = 0
+z_index = 5
+layout_mode = 0
+offset_left = 120.0
+offset_top = 20.0
+offset_right = 410.0
+offset_bottom = 116.00003
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gpbn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o1jnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nap0r")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0o40r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ddh43")
+text = "Continue"
+
+[node name="Load Button" type="Button" parent="User Interface/Menu UI/Node2D/Menu" unique_id=613386399]
+light_mask = 0
+z_index = 5
+layout_mode = 0
+offset_left = 120.0
+offset_top = 50.0
+offset_right = 410.0
+offset_bottom = 146.00003
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gpbn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o1jnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nap0r")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0o40r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ddh43")
+text = "Load"
+
+[node name="Save Button (Temp)" type="Button" parent="User Interface/Menu UI/Node2D/Menu" unique_id=1909003312]
+light_mask = 0
+z_index = 5
+layout_mode = 0
+offset_left = 185.44116
+offset_top = 50.44118
+offset_right = 475.44116
+offset_bottom = 146.44121
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gpbn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o1jnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nap0r")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0o40r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ddh43")
+text = "Save (Temp)"
+
+[node name="Settings Button" type="Button" parent="User Interface/Menu UI/Node2D/Menu" unique_id=595046633]
+light_mask = 0
+z_index = 5
+layout_mode = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 410.0
+offset_bottom = 176.00006
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gpbn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o1jnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nap0r")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0o40r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ddh43")
+text = "Settings"
+
+[node name="Menu Button" type="Button" parent="User Interface/Menu UI/Node2D/Menu" unique_id=192210797]
+light_mask = 0
+z_index = 5
+layout_mode = 0
+offset_left = 120.0
+offset_top = 110.0
+offset_right = 410.0
+offset_bottom = 206.00006
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gpbn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o1jnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nap0r")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0o40r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ddh43")
+text = "Main Menu"
+autowrap_mode = 3
+autowrap_trim_flags = 192
+
+[node name="Sprite2D" type="Sprite2D" parent="User Interface/Menu UI/Node2D/Menu" unique_id=1082114728]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 0.7529412)
+z_index = 2
+position = Vector2(147.64705, 75.29412)
+scale = Vector2(1.2, 160)
+texture = SubResource("GradientTexture1D_mlw3h")
+
+[node name="Sprite2D2" type="Sprite2D" parent="User Interface/Menu UI/Node2D/Menu" unique_id=65621092]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 0.7529412)
+z_index = 2
+position = Vector2(148.362, 75.884)
+scale = Vector2(0.32, 130.35)
+texture = SubResource("GradientTexture1D_mlw3h")
+
+[node name="Settings Menu" type="Control" parent="User Interface/Menu UI/Node2D" unique_id=2127099621]
+visible = false
+z_index = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0147058815
+offset_top = 0.050727844
+offset_right = 0.0147058815
+offset_bottom = 0.050727844
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.15, 0.15)
+script = ExtResource("41_0gpbn")
+
+[node name="Sprite2D" type="Sprite2D" parent="User Interface/Menu UI/Node2D/Settings Menu" unique_id=1611758015]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 0.7529412)
+z_index = 2
+position = Vector2(990, 509.99994)
+scale = Vector2(7.7343745, 1019.99994)
+texture = SubResource("GradientTexture1D_mlw3h")
+
+[node name="Sound" type="Label" parent="User Interface/Menu UI/Node2D/Settings Menu" unique_id=1232479516]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 175.0
+offset_bottom = 75.0
+scale = Vector2(5, 5)
+text = "Sound"
+
+[node name="Sound Effects Volume" type="Label" parent="User Interface/Menu UI/Node2D/Settings Menu" unique_id=887536868]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 200.0
+offset_right = 174.99997
+offset_bottom = 225.00002
+scale = Vector2(3, 3)
+text = "Sound Effects"
+
+[node name="Sound Effect Slider" type="HSlider" parent="User Interface/Menu UI/Node2D/Settings Menu" unique_id=406398116]
+z_index = 2
+layout_mode = 0
+offset_left = 450.0
+offset_top = 200.0
+offset_right = 550.00006
+offset_bottom = 224.99998
+scale = Vector2(3, 3)
+max_value = 1.0
+step = 0.001
+script = ExtResource("41_o1jnq")
+bus_name = "Sound Effects"
+
+[node name="Music Volume" type="Label" parent="User Interface/Menu UI/Node2D/Settings Menu" unique_id=26100188]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 325.0
+offset_right = 175.0
+offset_bottom = 350.0
+scale = Vector2(3, 3)
+text = "Music"
+
+[node name="Music Volume Slider" type="HSlider" parent="User Interface/Menu UI/Node2D/Settings Menu" unique_id=1982924284]
+z_index = 2
+layout_mode = 0
+offset_left = 450.0
+offset_top = 325.0
+offset_right = 550.0
+offset_bottom = 350.00006
+scale = Vector2(3, 3)
+max_value = 1.0
+step = 0.001
+script = ExtResource("41_o1jnq")
+bus_name = "Music"
+
+[node name="UI Volume" type="Label" parent="User Interface/Menu UI/Node2D/Settings Menu" unique_id=1709403881]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 450.0
+offset_right = 174.99997
+offset_bottom = 474.99985
+scale = Vector2(3, 3)
+text = "UI"
+
+[node name="UI Volume Slider" type="HSlider" parent="User Interface/Menu UI/Node2D/Settings Menu" unique_id=2001566587]
+z_index = 2
+layout_mode = 0
+offset_left = 450.0
+offset_top = 450.0
+offset_right = 550.0
+offset_bottom = 475.0
+scale = Vector2(3, 3)
+max_value = 1.0
+step = 0.001
+script = ExtResource("41_o1jnq")
+bus_name = "UI"
+
+[node name="Ambient Volume" type="Label" parent="User Interface/Menu UI/Node2D/Settings Menu" unique_id=833782696]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 575.0
+offset_right = 174.99997
+offset_bottom = 599.99963
+scale = Vector2(3, 3)
+text = "Ambient"
+
+[node name="Ambient Volume Slider" type="HSlider" parent="User Interface/Menu UI/Node2D/Settings Menu" unique_id=386543170]
+z_index = 2
+layout_mode = 0
+offset_left = 450.0
+offset_top = 575.0
+offset_right = 550.0
+offset_bottom = 599.99963
+scale = Vector2(3, 3)
+max_value = 1.0
+step = 0.001
+script = ExtResource("41_o1jnq")
+bus_name = "Ambience"
+
+[node name="Resolution" type="Label" parent="User Interface/Menu UI/Node2D/Settings Menu" unique_id=1141838257]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 675.0
+offset_right = 190.0
+offset_bottom = 700.0
+scale = Vector2(5, 5)
+text = "Resolution"
+
+[node name="Resolution Options" type="OptionButton" parent="User Interface/Menu UI/Node2D/Settings Menu" unique_id=1762716632]
+z_index = 2
+layout_mode = 0
+offset_left = 50.0
+offset_top = 825.0
+offset_right = 750.0
+offset_bottom = 959.0
+
+[node name="Load Menu" type="Control" parent="User Interface/Menu UI/Node2D" unique_id=1814539161]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 291.755
+offset_bottom = 150.55
+script = ExtResource("44_0o40r")
+
+[node name="Sprite2D" type="Sprite2D" parent="User Interface/Menu UI/Node2D/Load Menu" unique_id=357370943]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 0.7529412)
+z_index = 2
+position = Vector2(147.64705, 75.29412)
+scale = Vector2(1.2, 160)
+texture = SubResource("GradientTexture1D_mlw3h")
+
+[node name="Sprite2D2" type="Sprite2D" parent="User Interface/Menu UI/Node2D/Load Menu" unique_id=577839599]
+modulate = Color(0.11372549, 0.11372549, 0.11372549, 0.7529412)
+z_index = 2
+position = Vector2(148.362, 75.884)
+scale = Vector2(0.32, 130.35)
+texture = SubResource("GradientTexture1D_mlw3h")
+
+[node name="Save 1" type="Button" parent="User Interface/Menu UI/Node2D/Load Menu" unique_id=1114954450]
+light_mask = 0
+z_index = 5
+layout_mode = 0
+offset_left = 120.0
+offset_top = 20.0
+offset_right = 410.0
+offset_bottom = 116.00003
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gpbn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o1jnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nap0r")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0o40r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ddh43")
+text = "Save 1"
+
+[node name="Save 2" type="Button" parent="User Interface/Menu UI/Node2D/Load Menu" unique_id=701077039]
+light_mask = 0
+z_index = 5
+layout_mode = 0
+offset_left = 120.0
+offset_top = 50.0
+offset_right = 410.0
+offset_bottom = 146.00003
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gpbn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o1jnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nap0r")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0o40r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ddh43")
+text = "Save 2
+"
+
+[node name="Save 3" type="Button" parent="User Interface/Menu UI/Node2D/Load Menu" unique_id=471216983]
+light_mask = 0
+z_index = 5
+layout_mode = 0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = 410.0
+offset_bottom = 176.00003
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gpbn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o1jnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nap0r")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0o40r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ddh43")
+text = "Save 3
+
+"
+
+[node name="Save 4" type="Button" parent="User Interface/Menu UI/Node2D/Load Menu" unique_id=2076367172]
+light_mask = 0
+z_index = 5
+layout_mode = 0
+offset_left = 120.0
+offset_top = 110.0
+offset_right = 410.0
+offset_bottom = 206.00003
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gpbn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_o1jnq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nap0r")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0o40r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ddh43")
+text = "Save 4
+
+"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="User Interface" unique_id=552749615]
+stream = ExtResource("66_0muxt")
+volume_db = 10.0
+bus = &"Music"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=349046353]
+light_mask = 2
+visibility_layer = 2
+zoom = Vector2(6.8, 6.8)
+
+[node name="Air Conditioning" type="AudioStreamPlayer2D" parent="." unique_id=734293125]
+position = Vector2(-308, 2)
+stream = ExtResource("45_ddh43")
+volume_db = -3.0
+bus = &"Ambience"
+
+[node name="Hallway Node" type="Node2D" parent="." unique_id=2098081479]
+
+[node name="HallwayBackground" type="Sprite2D" parent="Hallway Node" unique_id=725221994]
+light_mask = 132
+z_index = -1
+texture = ExtResource("47_wwlpd")
+
+[node name="PointLight2D" type="PointLight2D" parent="Hallway Node" unique_id=1498967319]
+position = Vector2(-200, -75)
+range_item_cull_mask = 128
+texture = SubResource("GradientTexture2D_ea7bg")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Hallway Node" unique_id=1703646091]
+position = Vector2(-10, -75)
+range_item_cull_mask = 128
+texture = SubResource("GradientTexture2D_ea7bg")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Hallway Node" unique_id=638151736]
+position = Vector2(180, -75)
+range_item_cull_mask = 128
+texture = SubResource("GradientTexture2D_ea7bg")
+
+[connection signal="mouse_entered" from="Microscope" to="Microscope" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Microscope" to="Microscope" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Incubater" to="Incubater" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Incubater" to="Incubater" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Computer" to="Computer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Computer" to="Computer" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PetriDish" to="PetriDish" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PetriDish" to="PetriDish" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Light Switch" to="Light Switch" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Light Switch" to="Light Switch" method="_on_mouse_exited"]
+[connection signal="pressed" from="Light Switch" to="Light Switch" method="_on_pressed"]
+[connection signal="mouse_entered" from="User Interface/Basic UI/Tutorial Tab/Tutorial Button" to="User Interface/Basic UI/Tutorial Tab/Tutorial Button" method="_on_mouse_entered"]
+[connection signal="pressed" from="User Interface/Basic UI/Tutorial Tab/Tutorial Button" to="User Interface/Basic UI/Tutorial Tab/Tutorial Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="User Interface/Basic UI/Tutorial Tab/Node2D/Left Movement" to="User Interface/Basic UI/Tutorial Tab/Tutorial Button" method="_on_left_movement_mouse_entered"]
+[connection signal="pressed" from="User Interface/Basic UI/Tutorial Tab/Node2D/Left Movement" to="User Interface/Basic UI/Tutorial Tab/Tutorial Button" method="_on_left_movement_pressed"]
+[connection signal="mouse_entered" from="User Interface/Basic UI/Tutorial Tab/Node2D/Right Movement" to="User Interface/Basic UI/Tutorial Tab/Tutorial Button" method="_on_right_movement_mouse_entered"]
+[connection signal="pressed" from="User Interface/Basic UI/Tutorial Tab/Node2D/Right Movement" to="User Interface/Basic UI/Tutorial Tab/Tutorial Button" method="_on_right_movement_pressed"]
+[connection signal="mouse_entered" from="User Interface/Basic UI/Tutorial Tab/Node2D/Close Button Sequencing" to="User Interface/Basic UI/Tutorial Tab/Tutorial Button" method="_on_close_button_sequencing_mouse_entered"]
+[connection signal="pressed" from="User Interface/Basic UI/Tutorial Tab/Node2D/Close Button Sequencing" to="User Interface/Basic UI/Tutorial Tab/Tutorial Button" method="_on_close_button_sequencing_pressed"]
+[connection signal="button_down" from="User Interface/Research Tree UI/Close Button Sequencing" to="." method="_on_close_button_sequencing_button_down"]
+[connection signal="mouse_entered" from="User Interface/Research Tree UI/Close Button Sequencing" to="." method="_on_close_button_sequencing_mouse_entered"]
+[connection signal="mouse_entered" from="User Interface/Research Tree UI/Tutorial Button" to="." method="_on_tutorial_button_mouse_entered"]
+[connection signal="pressed" from="User Interface/Research Tree UI/Tutorial Button" to="User Interface/Research Tree UI/Tutorial Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="User Interface/Research Tree UI/Stats Area2D" to="." method="_on_stats_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Research Tree UI/Stats Area2D" to="." method="_on_stats_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Research Tree UI/Scientific Area2D" to="." method="_on_scientific_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Research Tree UI/Scientific Area2D" to="." method="_on_scientific_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Research Tree UI/Genome Area2D" to="." method="_on_genome_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Research Tree UI/Genome Area2D" to="." method="_on_genome_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Research Tree UI/Specialized Area2D" to="." method="_on_specialized_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Research Tree UI/Specialized Area2D" to="." method="_on_specialized_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Research Tree UI/Tutorial Tab/Node2D/Left Movement" to="User Interface/Research Tree UI/Tutorial Button" method="_on_left_movement_mouse_entered"]
+[connection signal="pressed" from="User Interface/Research Tree UI/Tutorial Tab/Node2D/Left Movement" to="User Interface/Research Tree UI/Tutorial Button" method="_on_left_movement_pressed"]
+[connection signal="mouse_entered" from="User Interface/Research Tree UI/Tutorial Tab/Node2D/Right Movement" to="User Interface/Research Tree UI/Tutorial Button" method="_on_right_movement_mouse_entered"]
+[connection signal="pressed" from="User Interface/Research Tree UI/Tutorial Tab/Node2D/Right Movement" to="User Interface/Research Tree UI/Tutorial Button" method="_on_right_movement_pressed"]
+[connection signal="mouse_entered" from="User Interface/Research Tree UI/Tutorial Tab/Node2D/Close Button Sequencing" to="User Interface/Research Tree UI/Tutorial Button" method="_on_close_button_sequencing_mouse_entered"]
+[connection signal="pressed" from="User Interface/Research Tree UI/Tutorial Tab/Node2D/Close Button Sequencing" to="User Interface/Research Tree UI/Tutorial Button" method="_on_close_button_sequencing_pressed"]
+[connection signal="mouse_entered" from="User Interface/Research Node UI" to="." method="_on_research_node_ui_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Research Node UI" to="." method="_on_research_node_ui_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Research Node UI/Node Name" to="." method="_on_node_name_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Research Node UI/Node Name" to="." method="_on_node_name_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Research Node UI/Node Effect" to="." method="_on_node_effect_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Research Node UI/Node Effect" to="." method="_on_node_effect_mouse_exited"]
+[connection signal="mouse_entered" from="User Interface/Research Node UI/Node Cost" to="." method="_on_node_cost_mouse_entered"]
+[connection signal="mouse_exited" from="User Interface/Research Node UI/Node Cost" to="." method="_on_node_cost_mouse_exited"]
+[connection signal="button_down" from="User Interface/Menu UI/Node2D/Menu/Continue Button" to="User Interface/Menu UI/Node2D/Menu" method="_on_continue_button_button_down"]
+[connection signal="button_down" from="User Interface/Menu UI/Node2D/Menu/Load Button" to="User Interface/Menu UI/Node2D/Menu" method="_on_load_button_button_down"]
+[connection signal="button_down" from="User Interface/Menu UI/Node2D/Menu/Save Button (Temp)" to="User Interface/Menu UI/Node2D/Menu" method="_on_save_button_temp_button_down"]
+[connection signal="button_down" from="User Interface/Menu UI/Node2D/Menu/Settings Button" to="User Interface/Menu UI/Node2D/Menu" method="_on_settings_button_button_down"]
+[connection signal="button_down" from="User Interface/Menu UI/Node2D/Menu/Menu Button" to="User Interface/Menu UI/Node2D/Menu" method="_on_menu_button_button_down"]
+[connection signal="item_selected" from="User Interface/Menu UI/Node2D/Settings Menu/Resolution Options" to="User Interface/Menu UI/Node2D/Settings Menu" method="_on_resolution_options_item_selected"]
+[connection signal="button_down" from="User Interface/Menu UI/Node2D/Load Menu/Save 1" to="User Interface/Menu UI/Node2D/Load Menu" method="_on_save_1_button_down"]
+[connection signal="button_down" from="User Interface/Menu UI/Node2D/Load Menu/Save 2" to="User Interface/Menu UI/Node2D/Load Menu" method="_on_save_2_button_down"]
+[connection signal="button_down" from="User Interface/Menu UI/Node2D/Load Menu/Save 3" to="User Interface/Menu UI/Node2D/Load Menu" method="_on_save_3_button_down"]
+[connection signal="button_down" from="User Interface/Menu UI/Node2D/Load Menu/Save 4" to="User Interface/Menu UI/Node2D/Load Menu" method="_on_save_4_button_down"]
+
+[editable path="Sequencing Game"]
+[editable path="Plant Development Game"]
+[editable path="Plant Development Game/Sequence Inputs"]
+[editable path="Crop Diagnosis"]
+[editable path="Research Tree"]
+[editable path="Research Tree/Scientific Research/DNA Research Set 1"]
+[editable path="Research Tree/Scientific Research/DNA Research Set 1/1_1"]
+[editable path="Research Tree/Scientific Research/DNA Research Set 2"]
+[editable path="Research Tree/Scientific Research/DNA Research Set 3"]
+[editable path="Research Tree/Scientific Research/DNA Research Set 4"]
+[editable path="Research Tree/Scientific Research/DNA Research Set 5"]
+[editable path="Research Tree/Scientific Research/DNA Research Set Bonus 5"]
+[editable path="Research Tree/Scientific Research/DNA Research Set Bonus2 5"]
+[editable path="Research Tree/Genome Research/Ground Research Set 1"]
+[editable path="Research Tree/Genome Research/Ground Research Set 1/Base/1_1"]
+[editable path="Research Tree/Genome Research/Ground Research Set 2"]
+[editable path="Research Tree/Genome Research/Ground Research Set 3"]
+[editable path="Research Tree/Genome Research/Ground Research Set 4"]
+[editable path="Research Tree/Genome Research/Ground Research Set 5"]

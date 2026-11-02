@@ -1,0 +1,1953 @@
+[gd_scene format=3 uid="uid://dcnbowixiarv8"]
+
+[ext_resource type="Script" uid="uid://bivf2wgo73gcn" path="res://Scripts/Games/Crops/crop_diagnosis.gd" id="1_lmn86"]
+[ext_resource type="Texture2D" uid="uid://ccqs05b3w4we0" path="res://Sprites/Close Button.png" id="1_wvuh6"]
+[ext_resource type="Texture2D" uid="uid://dss77d6p2200n" path="res://Sprites/Close Button (Pressed) .png" id="2_lmn86"]
+[ext_resource type="Texture2D" uid="uid://cnvrjgbixya2f" path="res://Sprites/Crop Diagnosis/Text Box.png" id="4_g0wfs"]
+[ext_resource type="AudioStream" uid="uid://b8jntd5vj6l6h" path="res://Sounds/UI Sound Effects/Hover.mp3" id="4_k0wrs"]
+[ext_resource type="Texture2D" uid="uid://jrr7dmgu801w" path="res://Sprites/Close Button (Hover).png" id="4_ky0ho"]
+[ext_resource type="Texture2D" uid="uid://3spare77de4i" path="res://Sprites/Crop Diagnosis/Text Box Pressed.png" id="5_0qwel"]
+[ext_resource type="Texture2D" uid="uid://cfwypev6c1qnh" path="res://Sprites/Crop Diagnosis/Text Box Hover.png" id="6_c46hf"]
+[ext_resource type="Texture2D" uid="uid://c5itb6dbqevte" path="res://Sprites/Crop Diagnosis/Text Box Disabled.png" id="7_npkbx"]
+[ext_resource type="Texture2D" uid="uid://dppv3rgtkqj4l" path="res://Sprites/Settings Button.png" id="9_4q5wx"]
+[ext_resource type="Texture2D" uid="uid://dj8sc5yti1pmw" path="res://Sprites/Crop Diagnosis/Crop Examination Table (Outer).png" id="9_ei6ld"]
+[ext_resource type="Script" uid="uid://iav1b2edgit0" path="res://Scripts/Games/Crops/library_tab.gd" id="11_4q5wx"]
+[ext_resource type="Texture2D" uid="uid://wce0xj04xyru" path="res://Sprites/Lab/Tutorial_Button.png" id="12_p5680"]
+[ext_resource type="Texture2D" uid="uid://bi1fh7kj4whaa" path="res://Sprites/Lab/Tutorial_Button (Pressed).png" id="13_k0wrs"]
+[ext_resource type="Texture2D" uid="uid://b265yfa52c4hn" path="res://Sprites/Lab/Tutorial_Button (Hover).png" id="14_2u8v0"]
+[ext_resource type="Script" uid="uid://cqovwdyr4a3in" path="res://Scenes/Games/Crop Diagnosis/tutorial_button.gd" id="15_p5680"]
+[ext_resource type="Texture2D" uid="uid://du1dnypvdtrn7" path="res://Sprites/Lab/Tutorial Back Button.png" id="16_0ct2h"]
+[ext_resource type="Texture2D" uid="uid://dfdilwdkaxtyn" path="res://Sprites/Lab/Tutorial Back Button (Pressed).png" id="17_mjqb6"]
+[ext_resource type="Texture2D" uid="uid://b1v73nvvwhxii" path="res://Sprites/Lab/Tutorial Back Button (Hover).png" id="18_xapp0"]
+[ext_resource type="Texture2D" uid="uid://4jn4v1l4dv25" path="res://Sprites/Settings Button Hover.png" id="20_ky0ho"]
+[ext_resource type="Texture2D" uid="uid://hiu0ha6l527p" path="res://Sprites/Settings Button Pressed.png" id="21_0ct2h"]
+
+[sub_resource type="Gradient" id="Gradient_1p1je"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.088559814, 0.08855996, 0.08855983, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u34cv"]
+gradient = SubResource("Gradient_1p1je")
+
+[sub_resource type="Gradient" id="Gradient_pmv4g"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.008773377, 0.08191074, 0.09313341, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7kd4u"]
+gradient = SubResource("Gradient_pmv4g")
+
+[sub_resource type="Gradient" id="Gradient_b836b"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wvuh6"]
+gradient = SubResource("Gradient_b836b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g0wfs"]
+texture = ExtResource("1_wvuh6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wqjkh"]
+texture = ExtResource("2_lmn86")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iwayx"]
+texture = ExtResource("4_ky0ho")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0qwel"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c46hf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0qwel"]
+texture = ExtResource("4_g0wfs")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ei6ld"]
+texture = ExtResource("4_g0wfs")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4q5wx"]
+texture = ExtResource("5_0qwel")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nbiau"]
+texture = ExtResource("6_c46hf")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l1mwf"]
+texture = ExtResource("7_npkbx")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_epq0j"]
+
+[sub_resource type="Gradient" id="Gradient_ei6ld"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4q5wx"]
+gradient = SubResource("Gradient_ei6ld")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_epq0j"]
+texture = ExtResource("9_4q5wx")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+expand_margin_left = 8.0
+expand_margin_top = 3.0
+expand_margin_right = 8.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="Gradient" id="Gradient_ve373"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.39308554, 0.3930855, 0.39308548, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1r7kn"]
+gradient = SubResource("Gradient_ve373")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wo8j4"]
+texture = ExtResource("1_wvuh6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cn7er"]
+texture = ExtResource("2_lmn86")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s758o"]
+texture = ExtResource("4_ky0ho")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0w46j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wtv27"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mjqb6"]
+texture = ExtResource("20_ky0ho")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+modulate_color = Color(1, 1, 1, 0.44313726)
+
+[node name="Crop Diagnosis" type="Node2D" unique_id=164065889]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+script = ExtResource("1_lmn86")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=851999211]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+scale = Vector2(2.75, 2.25)
+texture = SubResource("GradientTexture2D_u34cv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1994074981]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+scale = Vector2(2.7, 2.2)
+texture = SubResource("GradientTexture2D_7kd4u")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=45299943]
+z_index = 3
+scale = Vector2(4, 2.5)
+range_item_cull_mask = 18
+texture = SubResource("GradientTexture2D_wvuh6")
+
+[node name="Close Button" type="Button" parent="." unique_id=1544887295]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 70.0
+offset_top = -67.0
+offset_right = 83.0
+offset_bottom = -54.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_g0wfs")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wqjkh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iwayx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0qwel")
+theme_override_styles/focus = SubResource("StyleBoxTexture_c46hf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Close Button" unique_id=1046000263]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Labels" type="Node2D" parent="." unique_id=117765135]
+z_index = 3
+position = Vector2(-80, -67)
+
+[node name="Apples" type="Label" parent="Labels" unique_id=2137649506]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 12.0
+offset_top = -1.0
+offset_right = 19.0
+offset_bottom = 50.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Oranges" type="Label" parent="Labels" unique_id=1485381001]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 19.0
+offset_bottom = 63.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Bananas" type="Label" parent="Labels" unique_id=1463081473]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 12.0
+offset_top = 25.0
+offset_right = 19.0
+offset_bottom = 76.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Strawberries" type="Label" parent="Labels" unique_id=1256402208]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 12.0
+offset_top = 38.0
+offset_right = 19.0
+offset_bottom = 89.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Blueberries" type="Label" parent="Labels" unique_id=113830629]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 12.0
+offset_top = 51.0
+offset_right = 19.0
+offset_bottom = 102.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Potatos" type="Label" parent="Labels" unique_id=590835213]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 12.0
+offset_top = 70.0
+offset_right = 19.0
+offset_bottom = 121.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Tomatos" type="Label" parent="Labels" unique_id=1188657556]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 12.0
+offset_top = 83.0
+offset_right = 19.0
+offset_bottom = 134.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Carrots" type="Label" parent="Labels" unique_id=1840632510]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 12.0
+offset_top = 96.0
+offset_right = 19.0
+offset_bottom = 147.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Cucumbers" type="Label" parent="Labels" unique_id=1011964796]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 12.0
+offset_top = 109.0
+offset_right = 19.0
+offset_bottom = 160.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Corn" type="Label" parent="Labels" unique_id=1850025374]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 12.0
+offset_top = 122.0
+offset_right = 19.0
+offset_bottom = 173.0
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+
+[node name="Apples Button" type="Button" parent="Labels" unique_id=1376604170]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 51.435
+offset_bottom = 54.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Labels/Apples Button" unique_id=1720657051]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Oranges Button" type="Button" parent="Labels" unique_id=859487871]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -4.0
+offset_top = 12.0
+offset_right = 51.435
+offset_bottom = 67.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Labels/Oranges Button" unique_id=1200622621]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Bananas Button" type="Button" parent="Labels" unique_id=353641933]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -4.0
+offset_top = 25.0
+offset_right = 51.435
+offset_bottom = 80.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Labels/Bananas Button" unique_id=2084712947]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Strawberries Button" type="Button" parent="Labels" unique_id=21124497]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -4.0
+offset_top = 38.0
+offset_right = 51.435
+offset_bottom = 93.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Labels/Strawberries Button" unique_id=1124405712]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Blueberries Button" type="Button" parent="Labels" unique_id=2028253691]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -4.0
+offset_top = 51.0
+offset_right = 51.435
+offset_bottom = 106.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Labels/Blueberries Button" unique_id=70380298]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Potatos Button" type="Button" parent="Labels" unique_id=1331251749]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -4.0
+offset_top = 70.0
+offset_right = 51.435
+offset_bottom = 125.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Labels/Potatos Button" unique_id=1633520693]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Tomatos Button" type="Button" parent="Labels" unique_id=1075241026]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -4.0
+offset_top = 83.0
+offset_right = 51.435
+offset_bottom = 138.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Labels/Tomatos Button" unique_id=1130084062]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Carrots Button" type="Button" parent="Labels" unique_id=1720580608]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -4.0
+offset_top = 96.0
+offset_right = 51.435
+offset_bottom = 151.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Labels/Carrots Button" unique_id=238375084]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Cucumbers Button" type="Button" parent="Labels" unique_id=1016111656]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -4.0
+offset_top = 109.0
+offset_right = 51.435
+offset_bottom = 164.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Labels/Cucumbers Button" unique_id=988020197]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Corn Button" type="Button" parent="Labels" unique_id=98472251]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -4.0
+offset_top = 122.0
+offset_right = 51.435
+offset_bottom = 177.435
+scale = Vector2(0.23, 0.23)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_ei6ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4q5wx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nbiau")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_l1mwf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_epq0j")
+toggle_mode = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Labels/Corn Button" unique_id=1919875211]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=137745989]
+z_index = 3
+position = Vector2(3, 2)
+scale = Vector2(0.5, 0.5)
+
+[node name="CropExaminationTable(outer)" type="Sprite2D" parent="Area2D" unique_id=1243826649]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+position = Vector2(88, -56)
+texture = ExtResource("9_ei6ld")
+
+[node name="Fruit" type="Sprite2D" parent="Area2D" unique_id=902047646]
+light_mask = 10
+visibility_layer = 10
+z_index = 3
+position = Vector2(88, -56.000004)
+scale = Vector2(1.5, 1.5)
+
+[node name="PointLight2D" type="PointLight2D" parent="Area2D" unique_id=283803807]
+z_index = 3
+position = Vector2(52.000008, -20.000008)
+rotation = 0.7853982
+scale = Vector2(0.5, 1)
+range_item_cull_mask = 8
+texture = SubResource("GradientTexture1D_4q5wx")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Area2D" unique_id=970654764]
+z_index = 3
+position = Vector2(52, -92)
+rotation = 2.3561945
+scale = Vector2(0.5, 1)
+range_item_cull_mask = 8
+texture = SubResource("GradientTexture1D_4q5wx")
+
+[node name="Examine Button" type="Button" parent="." unique_id=599158268]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_top = 2.0
+offset_right = 306.0
+offset_bottom = 102.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Examine"
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Examine Button" unique_id=968378647]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Cancel Button" type="Button" parent="." unique_id=1399686862]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_top = 19.0
+offset_right = 306.0
+offset_bottom = 119.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Cancel"
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Cancel Button" unique_id=71707358]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Research Button" type="Button" parent="." unique_id=1988328109]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_top = 36.0
+offset_right = 306.0
+offset_bottom = 136.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Research"
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Research Button" unique_id=75895778]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Library Button" type="Button" parent="." unique_id=699371479]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_top = 53.0
+offset_right = 306.0
+offset_bottom = 153.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Library"
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Library Button" unique_id=1513931760]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Conclusive Labels" type="Node2D" parent="." unique_id=74813533]
+z_index = 3
+position = Vector2(51.999996, 2)
+scale = Vector2(1.088, 1.088)
+
+[node name="Points Earned" type="Label" parent="Conclusive Labels" unique_id=531237105]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_right = 222.0
+offset_bottom = 51.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "Points Earned"
+
+[node name="Scientific" type="Label" parent="Conclusive Labels" unique_id=1631938308]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_top = 6.0
+offset_right = 222.0
+offset_bottom = 57.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "Scientific:"
+
+[node name="Scientific Points" type="Label" parent="Conclusive Labels" unique_id=219452794]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_top = 12.0
+offset_right = 222.0
+offset_bottom = 114.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "0"
+visible_characters = 6
+visible_ratio = 6.0
+
+[node name="Genome" type="Label" parent="Conclusive Labels" unique_id=607056784]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_top = 24.0
+offset_right = 222.0
+offset_bottom = 75.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "Genome:"
+
+[node name="Genome Points" type="Label" parent="Conclusive Labels" unique_id=1168688649]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_top = 30.0
+offset_right = 222.0
+offset_bottom = 132.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "0"
+visible_characters = 6
+visible_ratio = 6.0
+
+[node name="Specialized" type="Label" parent="Conclusive Labels" unique_id=254067235]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_top = 42.0
+offset_right = 222.0
+offset_bottom = 93.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "Specialized:"
+
+[node name="Specialized Points" type="Label" parent="Conclusive Labels" unique_id=947385756]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_top = 48.0
+offset_right = 222.0
+offset_bottom = 150.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "0"
+visible_characters = 6
+visible_ratio = 6.0
+
+[node name="Research Tab" type="Node2D" parent="." unique_id=201274571]
+visible = false
+z_index = 3
+position = Vector2(-33, 28)
+
+[node name="Sprite2D" type="Sprite2D" parent="Research Tab" unique_id=959550620]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+scale = Vector2(1, 1.25)
+texture = SubResource("GradientTexture2D_u34cv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Research Tab" unique_id=448389335]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+scale = Vector2(0.95, 1.2)
+texture = SubResource("GradientTexture2D_7kd4u")
+
+[node name="Scientific" type="Button" parent="Research Tab" unique_id=1312899760]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -27.0
+offset_top = -26.0
+offset_right = 146.325
+offset_bottom = 21.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Scientific"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Research Tab/Scientific" unique_id=1913397859]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Genome" type="Button" parent="Research Tab" unique_id=1454125468]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -27.0
+offset_top = -15.0
+offset_right = 146.325
+offset_bottom = 32.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Genome
+"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Research Tab/Genome" unique_id=1946362586]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Specialized" type="Button" parent="Research Tab" unique_id=1291029287]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -27.0
+offset_top = -4.0
+offset_right = 146.325
+offset_bottom = 43.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Specialized"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Research Tab/Specialized" unique_id=1253772065]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Balanced" type="Button" parent="Research Tab" unique_id=522077281]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -27.0
+offset_top = 7.0
+offset_right = 146.325
+offset_bottom = 54.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+text = "Balanced"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Research Tab/Balanced" unique_id=429260609]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Points Earned" type="Label" parent="Research Tab" unique_id=1612444332]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -27.0
+offset_top = -36.0
+offset_right = 195.0
+offset_bottom = 15.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "Choose Point Bonus Desired"
+
+[node name="Scientific Points" type="Label" parent="Research Tab" unique_id=984879154]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 2.0
+offset_top = -24.999998
+offset_right = 102.0
+offset_bottom = 20.000002
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Test"
+visible_characters = 5
+visible_ratio = 1.25
+
+[node name="Genome Points" type="Label" parent="Research Tab" unique_id=773369118]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 2.0
+offset_top = -14.0
+offset_right = 102.0
+offset_bottom = 31.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Test"
+visible_characters = 5
+visible_ratio = 1.25
+
+[node name="Specialized Points" type="Label" parent="Research Tab" unique_id=106901537]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 102.0
+offset_bottom = 42.0
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Test"
+visible_characters = 5
+visible_ratio = 1.25
+
+[node name="Conclusion" type="Button" parent="Research Tab" unique_id=190923877]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -27.0
+offset_top = 17.000002
+offset_right = 336.375
+offset_bottom = 69.542
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Conclude Research"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Research Tab/Conclusion" unique_id=801889585]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Close Button" type="Button" parent="Research Tab" unique_id=158077671]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 19.0
+offset_top = 27.0
+offset_right = 32.0
+offset_bottom = 40.0
+scale = Vector2(0.75, 0.75)
+theme_override_styles/normal = SubResource("StyleBoxTexture_g0wfs")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wqjkh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iwayx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0qwel")
+theme_override_styles/focus = SubResource("StyleBoxTexture_c46hf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Research Tab/Close Button" unique_id=2081266474]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Library Tab" type="Node2D" parent="." unique_id=154643610]
+visible = false
+z_index = 3
+position = Vector2(-33, 16)
+script = ExtResource("11_4q5wx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Library Tab" unique_id=1307041149]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+scale = Vector2(0.99, 1.65)
+texture = SubResource("GradientTexture2D_u34cv")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Library Tab" unique_id=1167199683]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+scale = Vector2(0.94, 1.6)
+texture = SubResource("GradientTexture2D_7kd4u")
+
+[node name="Apples Upgrade" type="Button" parent="Library Tab" unique_id=1504019584]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -29.0
+offset_top = -40.0
+offset_right = 111.0
+offset_bottom = 13.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Upgrade"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Library Tab/Apples Upgrade" unique_id=1138864852]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Oranges Upgrade" type="Button" parent="Library Tab" unique_id=2105095226]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -29.0
+offset_top = -31.0
+offset_right = 111.0
+offset_bottom = 22.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Upgrade
+"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Library Tab/Oranges Upgrade" unique_id=1470008383]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Banana Upgrade" type="Button" parent="Library Tab" unique_id=1301144948]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -29.0
+offset_top = -22.0
+offset_right = 111.0
+offset_bottom = 31.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Upgrade"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Library Tab/Banana Upgrade" unique_id=1859608474]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Strawberries Upgrade" type="Button" parent="Library Tab" unique_id=1995906059]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -29.0
+offset_top = -13.0
+offset_right = 111.0
+offset_bottom = 40.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Upgrade"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Library Tab/Strawberries Upgrade" unique_id=160775684]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Blueberries Upgrade" type="Button" parent="Library Tab" unique_id=261944486]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -29.0
+offset_top = -4.0
+offset_right = 111.0
+offset_bottom = 49.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Upgrade"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Library Tab/Blueberries Upgrade" unique_id=132118198]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Potato Upgrade" type="Button" parent="Library Tab" unique_id=1629525946]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -29.0
+offset_top = 5.0
+offset_right = 111.0
+offset_bottom = 58.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Upgrade"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Library Tab/Potato Upgrade" unique_id=1995749310]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Tomato Upgrade" type="Button" parent="Library Tab" unique_id=1121551509]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -29.0
+offset_top = 14.0
+offset_right = 111.0
+offset_bottom = 67.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Upgrade"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Library Tab/Tomato Upgrade" unique_id=1161216497]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Carrot Upgrade" type="Button" parent="Library Tab" unique_id=991856008]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -29.0
+offset_top = 23.0
+offset_right = 111.0
+offset_bottom = 76.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Upgrade"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Library Tab/Carrot Upgrade" unique_id=1184438034]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Cucumber Upgrade" type="Button" parent="Library Tab" unique_id=1572405610]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -29.0
+offset_top = 32.0
+offset_right = 111.0
+offset_bottom = 85.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Upgrade"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Library Tab/Cucumber Upgrade" unique_id=1796873402]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Corn Upgrade" type="Button" parent="Library Tab" unique_id=498979404]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -29.0
+offset_top = 41.0
+offset_right = 111.0
+offset_bottom = 94.0
+scale = Vector2(0.15, 0.15)
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.41568628, 0.4, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_epq0j")
+disabled = true
+text = "Upgrade"
+alignment = 0
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Library Tab/Corn Upgrade" unique_id=387531865]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Library Title Box" type="Label" parent="Library Tab" unique_id=619135675]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -28.0
+offset_top = -49.0
+offset_right = 326.8387
+offset_bottom = 11.762001
+scale = Vector2(0.124, 0.124)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_0qwel")
+text = "Library "
+
+[node name="Apples Required" type="Label" parent="Library Tab" unique_id=527004625]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -7.0
+offset_top = -40.0
+offset_right = 246.03
+offset_bottom = 53.0
+scale = Vector2(0.08, 0.08)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Apples 
+Required: N/A"
+autowrap_mode = 3
+
+[node name="Oranges Required" type="Label" parent="Library Tab" unique_id=496096515]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -7.0
+offset_top = -31.0
+offset_right = 246.03
+offset_bottom = 62.0
+scale = Vector2(0.08, 0.08)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Oranges 
+Required: N/A"
+autowrap_mode = 3
+
+[node name="Bananas Required" type="Label" parent="Library Tab" unique_id=942660179]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -7.0
+offset_top = -22.0
+offset_right = 246.03
+offset_bottom = 71.0
+scale = Vector2(0.08, 0.08)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Bananas 
+Required: N/A"
+autowrap_mode = 3
+
+[node name="Strawberries Required" type="Label" parent="Library Tab" unique_id=1968661359]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -7.0
+offset_top = -13.0
+offset_right = 246.03
+offset_bottom = 80.0
+scale = Vector2(0.08, 0.08)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Strawberries 
+Required: N/A"
+autowrap_mode = 3
+
+[node name="Blueberries Required" type="Label" parent="Library Tab" unique_id=505174136]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -7.0
+offset_top = -4.0
+offset_right = 246.03
+offset_bottom = 89.0
+scale = Vector2(0.08, 0.08)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Blueberries 
+Required: N/A"
+autowrap_mode = 3
+
+[node name="Potatos Required" type="Label" parent="Library Tab" unique_id=915556979]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -7.0
+offset_top = 5.0
+offset_right = 246.03
+offset_bottom = 98.0
+scale = Vector2(0.08, 0.08)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Potatos 
+Required: N/A"
+autowrap_mode = 3
+
+[node name="Tomatos Required" type="Label" parent="Library Tab" unique_id=2093383711]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -7.0
+offset_top = 14.0
+offset_right = 246.03
+offset_bottom = 107.0
+scale = Vector2(0.08, 0.08)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Tomatos 
+Required: N/A"
+autowrap_mode = 3
+
+[node name="Carrots Required" type="Label" parent="Library Tab" unique_id=369308006]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -7.0
+offset_top = 23.0
+offset_right = 246.03
+offset_bottom = 116.0
+scale = Vector2(0.08, 0.08)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Carrots 
+Required: N/A"
+autowrap_mode = 3
+
+[node name="Cucumbers Required" type="Label" parent="Library Tab" unique_id=1593011309]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -7.0
+offset_top = 32.0
+offset_right = 246.03
+offset_bottom = 125.0
+scale = Vector2(0.08, 0.08)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Cucumbers 
+Required: N/A"
+autowrap_mode = 3
+
+[node name="Corn Required" type="Label" parent="Library Tab" unique_id=1709624117]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = -7.0
+offset_top = 41.0
+offset_right = 246.03
+offset_bottom = 134.0
+scale = Vector2(0.08, 0.08)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Corn 
+Required: N/A"
+autowrap_mode = 3
+
+[node name="Close Button" type="Button" parent="Library Tab" unique_id=1366929815]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 19.0
+offset_top = -50.000004
+offset_right = 32.0
+offset_bottom = -37.000004
+scale = Vector2(0.75, 0.75)
+theme_override_styles/normal = SubResource("StyleBoxTexture_g0wfs")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wqjkh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_iwayx")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0qwel")
+theme_override_styles/focus = SubResource("StyleBoxTexture_c46hf")
+metadata/_edit_use_anchors_ = true
+
+[node name="Apples" type="Label" parent="Library Tab" unique_id=1424133411]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 14.0
+offset_top = -39.0
+offset_right = 221.5
+offset_bottom = 62.815002
+scale = Vector2(0.07, 0.07)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Apples:
+"
+autowrap_mode = 3
+
+[node name="Oranges" type="Label" parent="Library Tab" unique_id=381511459]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 14.0
+offset_top = -30.0
+offset_right = 221.5
+offset_bottom = 71.815
+scale = Vector2(0.07, 0.07)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Oranges:
+"
+autowrap_mode = 3
+
+[node name="Bananas" type="Label" parent="Library Tab" unique_id=400908036]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 14.0
+offset_top = -21.0
+offset_right = 221.5
+offset_bottom = 80.815
+scale = Vector2(0.07, 0.07)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Bananas:
+"
+autowrap_mode = 3
+
+[node name="Strawberries" type="Label" parent="Library Tab" unique_id=1057262038]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 14.0
+offset_top = -12.0
+offset_right = 221.5
+offset_bottom = 129.0
+scale = Vector2(0.07, 0.07)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Strawberries:
+"
+autowrap_mode = 3
+
+[node name="Blueberries" type="Label" parent="Library Tab" unique_id=1426935975]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 14.0
+offset_top = -3.0
+offset_right = 221.5
+offset_bottom = 138.0
+scale = Vector2(0.07, 0.07)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Blueberries:
+"
+autowrap_mode = 3
+
+[node name="Potatos" type="Label" parent="Library Tab" unique_id=358716227]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 14.0
+offset_top = 6.0
+offset_right = 221.5
+offset_bottom = 107.815
+scale = Vector2(0.07, 0.07)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Potatos:
+"
+autowrap_mode = 3
+
+[node name="Tomatos" type="Label" parent="Library Tab" unique_id=2063878857]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 14.0
+offset_top = 15.0
+offset_right = 221.5
+offset_bottom = 116.815
+scale = Vector2(0.07, 0.07)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Tomatos:
+"
+autowrap_mode = 3
+
+[node name="Carrots" type="Label" parent="Library Tab" unique_id=2004618079]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 14.0
+offset_top = 24.0
+offset_right = 221.5
+offset_bottom = 125.815
+scale = Vector2(0.07, 0.07)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Carrots:
+"
+autowrap_mode = 3
+
+[node name="Cucumbers" type="Label" parent="Library Tab" unique_id=150471002]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 14.0
+offset_top = 33.0
+offset_right = 221.5
+offset_bottom = 174.0
+scale = Vector2(0.07, 0.07)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Cucumbers:
+"
+autowrap_mode = 3
+
+[node name="Corn" type="Label" parent="Library Tab" unique_id=1714380577]
+light_mask = 2
+visibility_layer = 2
+z_index = 3
+offset_left = 14.0
+offset_top = 42.0
+offset_right = 221.5
+offset_bottom = 143.815
+scale = Vector2(0.07, 0.07)
+theme_override_colors/font_color = Color(2.887845e-06, 0.83983177, 0.8568722, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Corn:
+"
+autowrap_mode = 3
+
+[node name="Tutorial Tab" type="Node2D" parent="." unique_id=917964056]
+light_mask = 0
+z_index = 3
+position = Vector2(3, 0)
+
+[node name="Tutorial Button" type="TextureButton" parent="Tutorial Tab" unique_id=714735313]
+light_mask = 16
+z_index = 3
+offset_left = 52.0
+offset_top = -67.0
+offset_right = 65.0
+offset_bottom = -54.0
+texture_normal = ExtResource("12_p5680")
+texture_pressed = ExtResource("13_k0wrs")
+texture_hover = ExtResource("14_2u8v0")
+script = ExtResource("15_p5680")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Tutorial Tab/Tutorial Button" unique_id=1038263386]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Node2D" type="Node2D" parent="Tutorial Tab" unique_id=344086837]
+visible = false
+z_index = 3
+position = Vector2(-43, -17)
+
+[node name="Control" type="Control" parent="Tutorial Tab/Node2D" unique_id=757236941]
+z_index = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = -52.0
+offset_top = -60.0
+offset_right = 134.0
+offset_bottom = 94.0
+
+[node name="Left Movement" type="TextureButton" parent="Tutorial Tab/Node2D" unique_id=865368968]
+z_index = 3
+offset_top = 38.0
+offset_right = 12.999991
+offset_bottom = 51.0
+texture_normal = ExtResource("16_0ct2h")
+texture_pressed = ExtResource("17_mjqb6")
+texture_hover = ExtResource("18_xapp0")
+flip_h = true
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Tutorial Tab/Node2D/Left Movement" unique_id=1908294030]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Right Movement" type="TextureButton" parent="Tutorial Tab/Node2D" unique_id=446206412]
+z_index = 3
+offset_left = 61.76471
+offset_top = 38.0
+offset_right = 74.76471
+offset_bottom = 51.000008
+texture_normal = ExtResource("16_0ct2h")
+texture_pressed = ExtResource("17_mjqb6")
+texture_hover = ExtResource("18_xapp0")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Tutorial Tab/Node2D/Right Movement" unique_id=1575635370]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Tutorial Tab/Node2D" unique_id=419400181]
+visibility_layer = 4
+z_index = 3
+offset_right = 845.36
+offset_bottom = 400.0
+scale = Vector2(0.089, 0.089)
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Node Name" type="Label" parent="Tutorial Tab/Node2D/ScrollContainer" unique_id=663228917]
+visibility_layer = 4
+z_index = 3
+custom_minimum_size = Vector2(829.36, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+autowrap_mode = 3
+
+[node name="PointLight2D" type="PointLight2D" parent="Tutorial Tab/Node2D" unique_id=987904266]
+z_index = 3
+position = Vector2(18.999998, 24)
+scale = Vector2(6.055, 3.259)
+blend_mode = 2
+range_layer_max = 1
+range_item_cull_mask = 18
+texture = SubResource("GradientTexture2D_1r7kn")
+
+[node name="Close Button Sequencing" type="Button" parent="Tutorial Tab/Node2D" unique_id=1473665082]
+visibility_layer = 2
+z_index = 3
+offset_left = 78.23529
+offset_top = -0.73529816
+offset_right = 91.23529
+offset_bottom = 12.264702
+theme_override_styles/normal = SubResource("StyleBoxTexture_wo8j4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cn7er")
+theme_override_styles/hover = SubResource("StyleBoxTexture_s758o")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0w46j")
+theme_override_styles/focus = SubResource("StyleBoxTexture_wtv27")
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="Tutorial Tab/Node2D/Close Button Sequencing" unique_id=13778082]
+z_index = 2
+stream = ExtResource("4_k0wrs")
+volume_db = -10.0
+bus = &"UI"
+
+[node name="Label" type="Label" parent="." unique_id=106562987]
+visible = false
+z_index = 10
+offset_left = -85.0
+offset_top = -16.45
+offset_right = 155.0
+offset_bottom = 30.649998
+scale = Vector2(0.7, 0.7)
+theme_override_colors/font_color = Color(6.016344e-08, 0.23951283, 0.23959509, 1)
+theme_override_colors/font_outline_color = Color(1.0973811e-05, 0.89443445, 0.89443445, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_mjqb6")
+text = "Examining"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Label" unique_id=736737105]
+modulate = Color(1, 1, 1, 0.19607843)
+z_index = 10
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 10.0
+scale = Vector2(4.8, 4.71)
+max_value = 5.0
+step = 0.01
+texture_progress = ExtResource("21_0ct2h")
+
+[connection signal="button_up" from="Close Button" to="." method="_on_close_button_button_up"]
+[connection signal="mouse_entered" from="Close Button" to="." method="_on_close_button_mouse_entered"]
+[connection signal="mouse_entered" from="Labels/Apples Button" to="." method="_on_apples_button_mouse_entered"]
+[connection signal="toggled" from="Labels/Apples Button" to="." method="_on_apples_button_toggled"]
+[connection signal="mouse_entered" from="Labels/Oranges Button" to="." method="_on_oranges_button_mouse_entered"]
+[connection signal="toggled" from="Labels/Oranges Button" to="." method="_on_oranges_button_toggled"]
+[connection signal="mouse_entered" from="Labels/Bananas Button" to="." method="_on_bananas_button_mouse_entered"]
+[connection signal="toggled" from="Labels/Bananas Button" to="." method="_on_bananas_button_toggled"]
+[connection signal="mouse_entered" from="Labels/Strawberries Button" to="." method="_on_strawberries_button_mouse_entered"]
+[connection signal="toggled" from="Labels/Strawberries Button" to="." method="_on_strawberries_button_toggled"]
+[connection signal="mouse_entered" from="Labels/Blueberries Button" to="." method="_on_blueberries_button_mouse_entered"]
+[connection signal="toggled" from="Labels/Blueberries Button" to="." method="_on_blueberries_button_toggled"]
+[connection signal="mouse_entered" from="Labels/Potatos Button" to="." method="_on_potatos_button_mouse_entered"]
+[connection signal="toggled" from="Labels/Potatos Button" to="." method="_on_potatos_button_toggled"]
+[connection signal="mouse_entered" from="Labels/Tomatos Button" to="." method="_on_tomatos_button_mouse_entered"]
+[connection signal="toggled" from="Labels/Tomatos Button" to="." method="_on_tomatos_button_toggled"]
+[connection signal="mouse_entered" from="Labels/Carrots Button" to="." method="_on_carrots_button_mouse_entered"]
+[connection signal="toggled" from="Labels/Carrots Button" to="." method="_on_carrots_button_toggled"]
+[connection signal="mouse_entered" from="Labels/Cucumbers Button" to="." method="_on_cucumbers_button_mouse_entered"]
+[connection signal="toggled" from="Labels/Cucumbers Button" to="." method="_on_cucumbers_button_toggled"]
+[connection signal="mouse_entered" from="Labels/Corn Button" to="." method="_on_corn_button_mouse_entered"]
+[connection signal="toggled" from="Labels/Corn Button" to="." method="_on_corn_button_toggled"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="button_down" from="Examine Button" to="." method="_on_examine_button_button_down"]
+[connection signal="mouse_entered" from="Examine Button" to="." method="_on_examine_button_mouse_entered"]
+[connection signal="button_down" from="Cancel Button" to="." method="_on_cancel_button_button_down"]
+[connection signal="mouse_entered" from="Cancel Button" to="." method="_on_cancel_button_mouse_entered"]
+[connection signal="button_down" from="Research Button" to="." method="_on_research_button_button_down"]
+[connection signal="mouse_entered" from="Research Button" to="." method="_on_research_button_mouse_entered"]
+[connection signal="button_down" from="Library Button" to="." method="_on_library_button_button_down"]
+[connection signal="mouse_entered" from="Library Button" to="." method="_on_library_button_mouse_entered"]
+[connection signal="button_down" from="Research Tab/Scientific" to="." method="_on_scientific_button_down"]
+[connection signal="mouse_entered" from="Research Tab/Scientific" to="." method="_on_scientific_mouse_entered"]
+[connection signal="button_down" from="Research Tab/Genome" to="." method="_on_genome_button_down"]
+[connection signal="mouse_entered" from="Research Tab/Genome" to="." method="_on_genome_mouse_entered"]
+[connection signal="button_down" from="Research Tab/Specialized" to="." method="_on_specialized_button_down"]
+[connection signal="mouse_entered" from="Research Tab/Specialized" to="." method="_on_specialized_mouse_entered"]
+[connection signal="button_down" from="Research Tab/Balanced" to="." method="_on_balanced_button_down"]
+[connection signal="mouse_entered" from="Research Tab/Balanced" to="." method="_on_balanced_mouse_entered"]
+[connection signal="button_down" from="Research Tab/Conclusion" to="." method="_on_conclusion_button_down"]
+[connection signal="mouse_entered" from="Research Tab/Conclusion" to="." method="_on_conclusion_mouse_entered"]
+[connection signal="button_down" from="Research Tab/Close Button" to="." method="_on_close_button_button_down"]
+[connection signal="mouse_entered" from="Research Tab/Close Button" to="." method="_on_close_button_mouse_entered"]
+[connection signal="button_down" from="Library Tab/Apples Upgrade" to="Library Tab" method="_on_apples_upgrade_button_down"]
+[connection signal="mouse_entered" from="Library Tab/Apples Upgrade" to="." method="_on_apples_upgrade_mouse_entered"]
+[connection signal="button_down" from="Library Tab/Oranges Upgrade" to="Library Tab" method="_on_oranges_upgrade_button_down"]
+[connection signal="mouse_entered" from="Library Tab/Oranges Upgrade" to="." method="_on_oranges_upgrade_mouse_entered"]
+[connection signal="button_down" from="Library Tab/Banana Upgrade" to="Library Tab" method="_on_banana_upgrade_button_down"]
+[connection signal="mouse_entered" from="Library Tab/Banana Upgrade" to="." method="_on_banana_upgrade_mouse_entered"]
+[connection signal="button_down" from="Library Tab/Strawberries Upgrade" to="Library Tab" method="_on_strawberries_upgrade_button_down"]
+[connection signal="mouse_entered" from="Library Tab/Strawberries Upgrade" to="." method="_on_strawberries_upgrade_mouse_entered"]
+[connection signal="button_down" from="Library Tab/Blueberries Upgrade" to="Library Tab" method="_on_blueberries_upgrade_button_down"]
+[connection signal="mouse_entered" from="Library Tab/Blueberries Upgrade" to="." method="_on_blueberries_upgrade_mouse_entered"]
+[connection signal="button_down" from="Library Tab/Potato Upgrade" to="Library Tab" method="_on_potato_upgrade_button_down"]
+[connection signal="mouse_entered" from="Library Tab/Potato Upgrade" to="." method="_on_potato_upgrade_mouse_entered"]
+[connection signal="button_down" from="Library Tab/Tomato Upgrade" to="Library Tab" method="_on_tomato_upgrade_button_down"]
+[connection signal="mouse_entered" from="Library Tab/Tomato Upgrade" to="." method="_on_tomato_upgrade_mouse_entered"]
+[connection signal="button_down" from="Library Tab/Carrot Upgrade" to="Library Tab" method="_on_carrot_upgrade_button_down"]
+[connection signal="mouse_entered" from="Library Tab/Carrot Upgrade" to="." method="_on_carrot_upgrade_mouse_entered"]
+[connection signal="button_down" from="Library Tab/Cucumber Upgrade" to="Library Tab" method="_on_cucumber_upgrade_button_down"]
+[connection signal="mouse_entered" from="Library Tab/Cucumber Upgrade" to="." method="_on_cucumber_upgrade_mouse_entered"]
+[connection signal="button_down" from="Library Tab/Corn Upgrade" to="Library Tab" method="_on_corn_upgrade_button_down"]
+[connection signal="mouse_entered" from="Library Tab/Corn Upgrade" to="." method="_on_corn_upgrade_mouse_entered"]
+[connection signal="button_down" from="Library Tab/Close Button" to="." method="_on_close_button_button_down"]
+[connection signal="mouse_entered" from="Library Tab/Close Button" to="." method="_on_close_button_mouse_entered"]
+[connection signal="pressed" from="Tutorial Tab/Tutorial Button" to="Tutorial Tab/Tutorial Button" method="_on_pressed"]
+[connection signal="pressed" from="Tutorial Tab/Node2D/Left Movement" to="Tutorial Tab/Tutorial Button" method="_on_left_movement_pressed"]
+[connection signal="pressed" from="Tutorial Tab/Node2D/Right Movement" to="Tutorial Tab/Tutorial Button" method="_on_right_movement_pressed"]
+[connection signal="pressed" from="Tutorial Tab/Node2D/Close Button Sequencing" to="Tutorial Tab/Tutorial Button" method="_on_close_button_sequencing_pressed"]

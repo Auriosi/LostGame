@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cseyt6bbvrkpm"
+path="res://.godot/imported/Rosa Incursio No Effects.mp3-0b6db98d25dc201ca9436369b57fed5c.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Music Sound Effects/Rosa Incursio No Effects.mp3"
+dest_files=["res://.godot/imported/Rosa Incursio No Effects.mp3-0b6db98d25dc201ca9436369b57fed5c.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

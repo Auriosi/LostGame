@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpdswau7pxver"
+path="res://.godot/imported/Voice(4).mp3-9de315fcd8fdf5a29db5f639c05a20fc.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Story Sounds/Teaser/Voice(4).mp3"
+dest_files=["res://.godot/imported/Voice(4).mp3-9de315fcd8fdf5a29db5f639c05a20fc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
