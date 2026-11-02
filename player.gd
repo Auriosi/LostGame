@@ -61,6 +61,9 @@ var Lose_State = false
 @onready var Mouse_Area_2D = $"Mouse Light/Mouse Area 2D"
 @onready var Interaction_Area_2D = $"Interaction Area 2D"
 
+@onready var Flare_Ring = $"Flare Ring"
+@onready var Flare_Light = $"Mouse Light"
+
 const FLARE = preload("res://flare.tscn")
 
 func _process(delta):
@@ -158,7 +161,7 @@ func _player_camera():
 	Camera.position.y = ( (mouse.y - position.y) / 2)
 # Deals with the light charge animation
 func _player_charges(delta):
-	$"Flare Ring".rotation_degrees += 30 * delta
+	Flare_Ring.rotation_degrees += 30 * delta
 	if flares == 1:
 		Flare_1.visible = true
 		Flare_2.visible = false
@@ -298,13 +301,17 @@ func _Conceal(delta):
 			Concealment -= 5 * delta
 			Mouse_Light_Image.modulate = Color(1,1,1,Concealment)
 			Mouse_Light.color = Color(1,1,1,Concealment) 
-			Player_Light.color = Color(1,1,1,Concealment + 0.05)
+			Player_Light.color = Color(1,1,1,Concealment + 0.1)
 		else:
 			Concealment = 0
+			Flare_Ring.visible = false
+			Flare_Light.visible = false
 		flare_1_active = false
 		flare_2_active = false
 		flare_3_active = false
 	if Conceal == false:
+		Flare_Ring.visible = true
+		Flare_Light.visible = true
 		if Concealment_Slowdown < 1:
 			Concealment_Slowdown += 1 * delta
 		else:
@@ -313,7 +320,7 @@ func _Conceal(delta):
 			Concealment += 0.25 * delta
 			Mouse_Light_Image.modulate = Color(1,1,1,Concealment)
 			Mouse_Light.color = Color(1,1,1,Concealment) 
-			Player_Light.color = Color(1,1,1,Concealment + 0.05)
+			Player_Light.color = Color(1,1,1,Concealment + 0.1)
 # Deals with summoning a flare
 func _Flare_Light(delta):
 	if Input.is_action_just_pressed("Summon"):
